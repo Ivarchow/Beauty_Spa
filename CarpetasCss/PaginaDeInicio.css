@@ -1,7 +1,9 @@
 .borde{
   border: 3px black solid;
 }
-
+body{
+  background-image: linear-gradient(to bottom, white, #FFCCD3 );
+}
 .PuntoDeVista{
   min-height: 100vh;
   width: 100%;
