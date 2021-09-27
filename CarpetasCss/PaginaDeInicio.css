@@ -2,14 +2,12 @@
   border: 3px black solid;
 }
 
-.seccion1{
-  margin: 2%;
-  margin-bottom: 0;
-  padding: 2%;
+.PuntoDeVista{
+  min-height: 100vh;
+  width: 100%;
 }
 
 .seccion2{
-  margin: 2%;
   padding: 2%;
 }
 .cont{
@@ -33,14 +31,10 @@
   border: 3px #FFCCD3 solid;
 }
 
-.PuntoDeVista{
-  min-height: 100vh;
-  width: 100%;
+.espaciotitulocarrusel4{
+  padding-bottom: 5%;
 }
-
-.tamañoInstalacion{
-  min-height: 100vh;
-  padding: 2%;
-  max-width: 100%;
-  min-height: 80%;
+.tamañoimagencarrusel4{
+  max-width: 75%;
 }
+  
