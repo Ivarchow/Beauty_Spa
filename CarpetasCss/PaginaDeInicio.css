@@ -53,3 +53,35 @@ body{
 .tamañologo{
   max-width: 60%;
 }
+
+.letters{
+	animation: jsLetter 4s 1;
+}
+
+.logo{
+	animation: logoAnimation 3s 3s 1;
+}
+
+@keyframes jsLetter{
+  0%{ 
+		color: red;		
+    transform: rotate(0deg); 
+  }
+  100%{
+		color: white;		
+    transform: rotate(360deg);		
+  } 
+}
+@keyframes logoAnimation{
+  0%{ 
+		color: black;		
+    transform: scale(0.2) 
+  }
+  50%{ 	
+    transform: scale(1.5)
+  } 
+	100%{ 
+		color: yellow;		
+    transform: scale(1)
+  } 
+}
