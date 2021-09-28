@@ -36,25 +36,19 @@ body{
 .espaciotitulocarrusel4{
   padding-bottom: 5%;
 }
-#sm-icons-sidebar {
+.redesFixed{
   margin: 0;
   position: fixed;
   left: 0;
   top: 35%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  border-radius: 0 20px 20px 0;
-  background-color: #fff;
-  list-style-type: none;
-  padding: 7px 10px 7px 7px;
   z-index: 2;
   background-color: rgba(247, 186, 196, 0.336);
+  padding: 7px 10px 7px 7px;
+  border-radius: 0 20px 20px 0;
 }
-/*#sm-icons-sidebar img{
-  max-width: 3%;
-  min-width: 1%;
-}*/
+.imgTam{
+  padding-bottom: 5px;
+}
 
 .tamañologo{
   max-width: 60%;
