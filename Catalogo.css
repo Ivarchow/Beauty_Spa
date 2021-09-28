@@ -110,3 +110,8 @@ fieldset[disabled] .btn-samplex.active {
   padding: 10px;
   }
 
+  .centrarimagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
