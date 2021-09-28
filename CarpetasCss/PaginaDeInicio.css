@@ -15,10 +15,17 @@ body{
 .cont{
   width: 100%;
   margin: auto;
-  /*background-color: #FCA9B4;
-  color: white;*/
+  background-color: #ab3053;
+  color: white;
+  border: none;
 }
-
+.cont:hover{
+  background-color: #c5486bcb;
+}
+.cont:focus{
+  background-color: #c5486bcb;
+  border: none;
+}
 .formatocartaparrafo{
   display: flex;
   justify-content: center;
