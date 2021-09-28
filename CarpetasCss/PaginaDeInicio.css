@@ -48,10 +48,10 @@ body{
   background-color: #fff;
   list-style-type: none;
   padding: 7px 10px 7px 7px;
-  z-index: 10000;
+  z-index: 2;
   background-color: rgba(247, 186, 196, 0.336);
 }
-/*#sm-icons-sidebar img{
+#sm-icons-sidebar img{
   max-width: 3%;
   min-width: 1%;
-}*/
+}
