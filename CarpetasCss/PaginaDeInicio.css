@@ -75,13 +75,10 @@ body{
 @keyframes logoAnimation{
   0%{ 
 		color: black;		
-    transform: scale(0.2) 
+    transform: scale(0); 
   }
-  50%{ 	
-    transform: scale(1.5)
-  } 
 	100%{ 
 		color: yellow;		
-    transform: scale(1)
+    transform: scale(1);
   } 
 }
