@@ -1,4 +1,9 @@
-*
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .borde{
   border: 1px gray solid;
   border-radius: 4px;
@@ -93,9 +98,6 @@ fieldset[disabled] .btn-samplex.active {
 
 /*Final boton personalizado*/
 
-.tarjetarosa{
-  background-color: #ffddc3;
-}  
 
 /*Bolsita fuera de carta, prueba*/
 
@@ -146,10 +148,11 @@ fieldset[disabled] .btn-samplex.active {
     width: 100%;
    overflow: scroll;
    overflow-y: hidden;
+   overflow-x: auto;
   }
 
   .category_list .category_item{
-    display:flex;
+    display:block;
     width: 95%;
     
     padding: 15px 0;
@@ -160,8 +163,9 @@ fieldset[disabled] .btn-samplex.active {
     background: #e83db5;
     text-align:center;
     align-self: center;
+    place-items: center;
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 20px;
   }
   
@@ -175,7 +179,7 @@ fieldset[disabled] .btn-samplex.active {
 
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 700px){
 	.category_list,
 	.products-list{
 		width: 100%;
