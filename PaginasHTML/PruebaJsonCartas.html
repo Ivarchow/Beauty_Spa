@@ -30,41 +30,14 @@
 
 
 
-    <button id="crear">Crear</button>
+<!--    <button id="crear">Crear</button>
     <button id="mostrar">Mostrar</button>
     <button id="modificar">Modificar</button>
-    <button id="eliminar">Eliminar</button>
+    <button id="eliminar">Eliminar</button>-->
 <!--*****************************FORM****************************************-->
-    <div class="container">
-      <div class="row">
-          <div class="col-sm-6">
-  
-              <form id="Nueva-carta"> 
-
-                  <div class="form-group">
-  
-                      <label for="titulo"> Título</label>
-                      <input type="text" class="form-control" id="titulo">
-  
-                  </div>
-                  <div class="form-group">
-  
-                      <label for="precio">Precio</label>
-                      <input type="text" class="form-control" id="precio">
-                  </div>
-
-                  <div class="form-group">
-  
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" class="form-control" id="descripcion">
-
-                </div>
-
-                  <input type="submit" value="Registrar Nueva carta">
-              </form>
-          </div>
+    
 <!--*****************************BTONMOSTRAR****************************************-->          
-          <div class="col-sm-6">
+ <!--         <div class="col-sm-6">
               <div id="tabla-clasificacion"></div>
               <table class="table">
                   <thead>
@@ -77,52 +50,68 @@
                       </tbody>
                   </thead>
               </table>
-              <button id="mostrar-tabla"> Mostrar Tabla</button>
-          </div>
+              <button id="mostrar-carta"> Mostrar Tabla</button>
+          </div>-->
  <!--*****************************BOTONMOSTRAR****************************************--> 
       </div>
   
   </div>
  <!--*****************************FORM****************************************--> 
-<!--*****************************CARTAPRUEBA****************************************-->
-  <div id="list-items">
 
-  </div>
-  <!--*****************************CARTAPRUEBA****************************************-->
 <!--*****************************CARTABEAUTY****************************************-->
-  <div class="container">
-    <div class="row">
-  
-    <div class="row"></div>
-      <div class="col-sm">         
-        <div class="card mb-3" style="max-width: auto;">
-        <div class="row g-0">
-          <div class="col-md-4 tamañoimagenes">
-            <img src="/imagenes/gelish1.jpeg" class="img-fluid rounded-start" >
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
+<div class="row">
+    <div class="col-sm">         
+      <div class="card mb-3 h-100" style="max-width: auto; border-radius: 30px;">
+      <div class="row g-0">
+        <div class="col-md-4 tamañoimagenes centrarimagen ">
+          <img src="/images/Seccion1/imagen1.jpeg" class="img-fluid rounded-start" >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class = "circleBag">  
+              <i class="cp cp-shopping-bag" style="font-size: 30px; color: #d63031"></i></div>
+              <form id="Nueva-carta"> 
 
-              <h5 class="card-title" id="titulo1"></h5>
+                <div class="form-group">
 
-              <p class="card-text" id=" precio1"></p>
+                    <label for="titulo"> Título</label>
+                    <input type="text" class="form-control" id="titulo">
 
-              <p class="card-text global" id="descr"></p>
+                </div>
+                <div class="form-group">
 
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" type="button">Reservar</button>
-              </div>          
-            </div>
+                    <label for="precio">Precio</label>
+                    <input type="text" class="form-control" id="precio">
+                </div>
+
+                <div class="form-group">
+
+                  <label for="descripcion">Descripcion</label>
+                  <input type="text" class="form-control" id="descripcion">
+
+              </div>
+
+                <input type="submit" value="Crear Nueva carta">
+
+            </form>
+            <button id="mostrar-cartas">mostrar cartas </button>
+            <button ></button>
+            <div class="d-grid gap-2 col-6 mx-auto">
+            </div>          
           </div>
         </div>
       </div>
-      </div>
+    </div>
+    </div>
 <!--*****************************CARTABEAUTY****************************************-->
+<!--*****************************CARTAPRUEBA****************************************-->
+<div id="list-items">
+
+</div>
+<!--*****************************CARTAPRUEBA****************************************-->
 
     <script>
 
-
-        document.getElementById("mostrar").addEventListener("click", mostrar);
         document.getElementById("modificar").addEventListener("click", modificar);
         document.getElementById("eliminar").addEventListener("click", eliminar);
 

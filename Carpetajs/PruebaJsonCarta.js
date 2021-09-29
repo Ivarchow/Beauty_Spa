@@ -1,5 +1,7 @@
 document.getElementById("Nueva-carta").addEventListener("submit", agregarCargta)
 
+document.getElementById("mostrar-cartas").addEventListener("click", mostratCarta);
+
 var i = 0;
         function agregarCargta(event){
           event.preventDefault();
@@ -23,39 +25,51 @@ var i = 0;
             if(stored == "" || stored == null){
               localStorage.setItem("servicios", local);
             }
-/*ACUMULA LOS SERVICIOC O CARTAS*/
+            /*ACUMULA LOS SERVICIOC O CARTAS*/
             else if(stored != local){
               stored = stored + ", " + local;
               localStorage.setItem("servicios", stored);
             }
             console.log('servicios: ', JSON.parse(local));
+            addCarta(JSON.parse(local));
             i++;
-            addItem(JSON.parse(local));
-        }
-
-
-       function addItem(item){
-            const itemHTML = '<div class="card" style="width: 18rem;">\n' +
-                '    <img src="/images/Seccion1/imagen1.jpeg" class="card-img-top" alt="image">\n' +
-                '    <div class="card-body">\n' +
-                '        <h5 class="card-title">'+item.titulo+'</h5>\n' +
-                '        <h5 class="card-title">PRECIO: '+item.precio+'</h5>\n' +
-                '        <p class="card-text">'+item.descripcion+'</p>\n' +
-                '        <a href="#" class="btn btn-primary">Add</a>\n' +
-                '    </div>\n' +
-                '</div>\n' +
-                '<br/>';
-            const itemsContainer = document.getElementById("list-items");
-            itemsContainer.innerHTML += itemHTML;
+            
         }
         
         function addCarta(item){
-            const itemHTML = item.titulo
-            const itemsContainer = document.getElementById("titulo1");
-            itemsContainer.innerHTML += itemHTML;
+            const itemHTML = 
 
+           ' <div class="row">\n' +
+            '<div class="col-sm">\n' +         
+              '<div class="card mb-3 h-100" style="max-width: auto; border-radius: 30px;">\n' +
+              '<div class="row g-0">\n' +
+                '<div class="col-md-4 tamañoimagenes centrarimagen ">\n' +
+                  '<img src="/images/Seccion1/imagen1.jpeg" class="img-fluid rounded-start" >\n' +
+                '</div>\n' +
+                '<div class="col-md-8">\n' +
+                 '<div class="card-body">\n' +
+                    '<div class = "circleBag">\n' +  
+                      '<i class="cp cp-shopping-bag" style="font-size: 30px; color: #d63031"></i></div>\n' +
+                    '<h5 class="card-title">'+item.titulo+'</h5>\n' +
+                    '<p class="card-text">'+item.precio+'</p>\n' +
+                    '<p class="card-text global">'+item.descripcion+'</p>\n' +
+                    '<div class="d-grid gap-2 col-6 mx-auto">\n' +
+                   '</div>  \n' +        
+                  '</div>\n' +
+                '</div>\n' +
+              '</div>\n' +
+            '</div>\n' +
+            '</div>';
+
+            
+            const itemsContainer = document.getElementById("list-items");
+            itemsContainer.innerHTML += itemHTML;
         }
 
+
+            function mostratCarta(){
+                alert(localStorage.getItem("servicios"));
+            }
 
 
        /* addItem({"name":"juice",
