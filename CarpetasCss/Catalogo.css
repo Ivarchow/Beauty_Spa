@@ -208,9 +208,6 @@ fieldset[disabled] .btn-samplex.active {
 		width: 15%;
 		font-size: 14px;
 	}
-
-
-
 }
 
 @media screen and (max-width: 700px){
@@ -244,31 +241,6 @@ fieldset[disabled] .btn-samplex.active {
   position: absolute;
   top:40%;
   right: 1%;
-}
-
-
-
-
-@media screen and (min-width: 524px) and (max-width: 700px){
-
-  .myBox{
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 620px){
-
-
-  .myBox{
-    width: 300px;
-  }
-}
-@media screen and (max-width: 360px){
-
-
-  .myBox{
-    width: 200px;
-  }
 }
 
 
