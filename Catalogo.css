@@ -18,126 +18,7 @@ body {
   padding: 0;
   margin: 50px auto 0 auto;
 }
-/*CSS NavBar*/
 
-@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-  
-
-.header{
-  font-family: 'Lora', serif;
-  position: sticky;
-  top: 0px;
-  z-index: 2;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background-color:#FCA9B4;
-}
-
-.hamburger {
-  display: none;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-item {
-  margin-left: 5rem;
-}
-
-.nav-link{
-  font-size: 18px;
-  font-weight: 500;
-  color: #AB3053;
-}
-
-.shoppingBag i{
-  color: #d63031;
-  font-size: 30px;
-}
-.shoppingBag i:hover{
-  color: #fff;
-}
-
-.nav-link:hover{
-  color: #fff;
-}
-
-.nav-logo {
-  font-size: 20px;
-  font-weight: 500;
-  color:#fff;
-}
-
-.nav-logo:hover{
-  color: #AB3053;
-}
-
-@media only screen and (max-width: 800px) {
-  .nav-menu {
-      position: fixed;
-      z-index: 1;
-      left: -100%;
-      top: 3rem;
-      flex-direction: column;
-      background-color: #FCA9B4;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);}
-
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-      margin: 2.5rem 0;
-  }
-
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-}
 
 .borde{
   border: 1px gray solid;
@@ -305,7 +186,7 @@ fieldset[disabled] .btn-samplex.active {
   }
   
   .category_list .ct_item-active{
-    background: #347ac5;
+    background: #343ec5;
   }
   
 
