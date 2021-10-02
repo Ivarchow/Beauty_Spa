@@ -1,67 +1,52 @@
 .borde{
   border: 3px black solid;
 }
-body{
-  background-image: linear-gradient(to bottom, white, #FFCCD3 );
-}
-.PuntoDeVista{
-  min-height: 100vh;
+
+.cover {
+  height: 100vh;
   width: 100%;
 }
 
-.seccion2{
-  padding: 2%;
-}
-.cont{
+.parallax__container {
   width: 100%;
-  margin: auto;
-  background-color: #ab3053;
-  color: white;
-  border: none;
-}
-.cont:hover{
-  background-color: #c5486bcb;
-}
-.cont:focus{
-  background-color: #c5486bcb;
-  border: none;
-}
-.formatocartaparrafo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.EspacioCartaEntreTexto{
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-.ColorBoton{
-  background-color:white;
-  border: 3px #FFCCD3 solid;
-}
-
-.espaciotitulocarrusel4{
-  padding-bottom: 5%;
-}
-.redesFixed{
-  margin: 0;
+  height: 100vh;
   position: fixed;
+  overflow: hidden;
+  z-index: 0;
   left: 0;
-  top: 35%;
-  z-index: 2;
-  background-color: rgba(247, 186, 196, 0.336);
-  padding: 7px 10px 7px 7px;
-  border-radius: 0 20px 20px 0;
+  top: 0;
+  pointer-events: none;
+  transform: translateZ(0);
 }
-.imgTam{
-  padding-bottom: 5px;
+.cover video{
+  height: 100%;
+    width: 100%;
+    object-fit: cover;
+    font-family: "object-fit: cover;";
+    background: #000;
+}
+.wrapper {
+  position: relative;
+  z-index: 1;
+  background: rgb(255, 248, 248);
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: transform .91s ease;
 }
 
-.tamañologo{
-  max-width: 60%;
+.cover__logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin: -1.1618vw 0 0;
+  width: 15.7vw;
+  height: 2.3236vw;
+  color: #fff;
+  z-index: 4;
+  transition: color .3s ease;
 }
-
-.letters{
+/*.letters{
 	animation: jsLetter 4s 1;
 }
 
@@ -88,24 +73,4 @@ body{
 		color: yellow;		
     transform: scale(1);
   } 
-}
-.footer {
-  background-color: #634646;
-  position:relative;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  color: antiquewhite;
-}
-
-.footerText{
-  position: absolute;
-  top:40%;
-  left: 1%;
-}
-
-.footerTextDrcha{
-  position: absolute;
-  top:40%;
-  right: 1%;
-}
+}*/
