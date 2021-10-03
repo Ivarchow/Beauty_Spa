@@ -7,45 +7,64 @@
   width: 100%;
 }
 
+.parallax {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.cover .cover__logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin: -1.1618vw 0 0;
+  width: 50%;
+  height: 15%;
+  color: rgb(245, 240, 240);
+  z-index: 4;
+  transition: color .3s ease;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
 .parallax__container {
   width: 100%;
   height: 100vh;
   position: fixed;
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 0;
   left: 0;
   top: 0;
   pointer-events: none;
   transform: translateZ(0);
 }
-.cover video{
+
+.cover video {
   height: 100%;
-    width: 100%;
-    object-fit: cover;
-    font-family: "object-fit: cover;";
-    background: #000;
+  width: 100%;
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+  background: #000;
+  
 }
+
 .wrapper {
   position: relative;
   z-index: 1;
-  background: rgb(255, 248, 248);
+  background: #fff;
   overflow: hidden;
-  transform: translateZ(0);
-  transition: transform .91s ease;
 }
 
-.cover__logo {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  margin: -1.1618vw 0 0;
-  width: 15.7vw;
-  height: 2.3236vw;
-  color: #fff;
-  z-index: 4;
-  transition: color .3s ease;
-}
+
+
+
 /*.letters{
 	animation: jsLetter 4s 1;
 }
