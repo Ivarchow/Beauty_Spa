@@ -158,6 +158,9 @@ fieldset[disabled] .btn-samplex.active {
     flex-wrap: wrap;
   }
   
+  .filterbox{
+    width: 100%;
+  }
   .category_list{
     display: inline-flex;
     justify-content: space-between;
@@ -194,8 +197,7 @@ fieldset[disabled] .btn-samplex.active {
     min-width: 180px;
     margin-bottom: 25px;
     }
-
-  .category_list .category_item{
+    .category_list .category_item{
     display:inline-block;
     background: #FFCCD3;
 
