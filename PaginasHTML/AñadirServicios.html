@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+    <title>Añadir servicios</title>
+</head>
+
+<body>
+  <!--  Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">DIVINITÉ</a>
+      <ul class="nav-menu">
+
+        <li class="nav-item">
+          <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/aboutUs.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;About us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/Contacto.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/PaginaLogoInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
+        <li class="nav-item">
+          <a href="/LOGIN/LOGIN.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <!--  End Navbar -->
+
+  <!--  Card with form add services -->
+    <div class="card" style="width: 60%; margin: auto; margin-top: 20px; margin-bottom: 20px; border: 1px solid black;">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align: center;">Agregar servicios</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Nombre del producto:</label>
+                    <input type="text" class="form-control" id="exampleInputName"
+                        placeholder="Ingrese el nombre del producto" autofocus style="border: 1px solid black;">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDescription" class="form-label">Descripción del producto:</label>
+                    <input type="text" class="form-control" id="exampleInputDescription" placeholder="Descripción" style="border: 1px solid black;">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPrice" class="form-label">Costo:</label>
+                    <input type="text" class="form-control" id="exampleInputPrice" placeholder="Costo del producto" style="border: 1px solid black;">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputImage" class="form-label">Imagen:</label>
+                    <input type="text" class="form-control" id="exampleInputImage" placeholder="Link de la imagen" style="border: 1px solid black;">
+                </div>
+                <button type="button" class="btn btn-primary" id="Crear">Crear</button>
+                <button type="button" class="btn btn-primary" id="mostrar">Mostrar</button>
+                <button type="button" class="btn btn-primary" id="ocultar">Ocultar</button>
+            </form>
+        </div>
+    </div>
+    <!-- End card with form  -->
+
+    <!--  div to show the cards -->
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row" id="list-items" style="flex-wrap: nowrap; overflow-x: scroll;">
+            
+        </div>
+    </div>
+    <!-- End show cards -->
+
+</body>
+    <script src="../Carpetajs/ServiciosCRUD.js"></script>
+    <script src="/Carpetajs/navbar.js"></script>
+</html>
