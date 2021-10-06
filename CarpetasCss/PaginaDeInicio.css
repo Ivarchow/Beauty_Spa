@@ -15,23 +15,23 @@
   z-index: 0;
 }
 
-.cover .cover__logo {
-  position: absolute;
+.cover__logo {
+ /* position: absolute;
   text-align: center;
   align-items: flex-end;
   height: 100%;
   width: 100%;
-  z-index: 4;
+  z-index: 4;*/
 
-/*  position: fixed;
-  top: 55%;
-  left: 55%;
+ position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%);
-  margin: -1.1618vw 0 0;
+ margin: auto;
   width: 50%;
   height: 15%;
   color: rgb(252, 237, 237);
-  z-index: 4;*/
+  z-index: 4;
 
 }
 
@@ -135,7 +135,10 @@
   font-weight: bold;
 }
 
-
+.punto-vista{
+  min-height: 50vh;
+  width: 100%;
+}
 
 
 /*.letters{
