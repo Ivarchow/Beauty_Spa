@@ -107,6 +107,85 @@ a {
 .nav-logo:hover{
   color: #AB3053;
 }
+@media only screen and (max-width: 700px) {
+  .nav-menu {
+      position: fixed;
+      z-index: 1;
+      left: -100%;
+      top: 3rem;
+      flex-direction: column;
+      background-color: #070404;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+@media only screen and (max-width: 2500px) {
+  .nav-menu {
+      position: fixed;
+      z-index: 1;
+      left: -100%;
+      top: 3rem;
+      flex-direction: column;
+      background-color: #070404;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
 
 @media only screen and (max-width: 1000px) {
   .nav-menu {
@@ -212,7 +291,8 @@ ul {
 .contacts-form form button,
 .contacts-form form input,
 .contacts-form form textarea {
-  width: 100%;
+
+  width: 70%;
   padding: .9em;
   
   background: none;
@@ -225,7 +305,7 @@ ul {
   background: #d63031;
   color: antiquewhite;
   border: 0;
-  float: center;
+ 
   text-transform: uppercase;
   padding: 1em;
 }
