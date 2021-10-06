@@ -91,6 +91,7 @@
   transform: scale(1.25);
 }
 
+/*animacion cartas Ivar*/
 .animado{
   opacity: 0;
   transition: all 0.5s;
@@ -107,6 +108,28 @@
   transform: translateX(0);
 }
 }
+/*animacion cartas Ivar*/
+
+
+/*animacion boton Luis*/
+.btnanimado{
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.mostrarArriba1{
+  animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+0%{
+  transform: translateX(-60px);
+}
+100%{
+  transform: translateX(0);
+}
+}
+/*animacion boton Luis*/
+
 
 .image--overlay{
   position: absolute;
@@ -169,3 +192,55 @@
     transform: scale(1);
   } 
 }*/
+
+
+/*Btn flotante*/
+.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #FCA9B4; 
+  border: 0;
+  border-radius: 45px;
+  margin: 20px;
+} 
+ 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #AA3053; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  background-image: none; 
+} 
+ 
+.btn-sample.disabled, 
+.btn-sample[disabled], 
+fieldset[disabled] .btn-sample, 
+.btn-sample.disabled:hover, 
+.btn-sample[disabled]:hover, 
+fieldset[disabled] .btn-sample:hover, 
+.btn-sample.disabled:focus, 
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus, 
+.btn-sample.disabled:active, 
+.btn-sample[disabled]:active, 
+fieldset[disabled] .btn-sample:active, 
+.btn-sample.disabled.active, 
+.btn-sample[disabled].active, 
+fieldset[disabled] .btn-sample.active { 
+  background-color: #FCA9B4; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-sample .badge { 
+  color: #FCA9B4; 
+  background-color: #FFFFFF; 
+}
+/*Btn flotante*/
+
