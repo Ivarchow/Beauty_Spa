@@ -1,12 +1,19 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+.Buz{
+  text-align: center;
+}
+
+.bord{
+  text-align: center;
+  border: 5px solid #FFCCD3;
+}
 
 body {
-  /*background: linear-gradient(to bottom, white, #FFCCD3);*/
+  background: linear-gradient(to bottom, white);
   line-height: 1.6;
   font-family: 'Quicksand', sans-serif;
   padding: 0 ;
@@ -45,7 +52,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color:#FCA9B4;
+  background-color:#050404;
 }
 
 .hamburger {
@@ -75,11 +82,11 @@ a {
 .nav-link{
   font-size: 18px;
   font-weight: 500;
-  color: #AB3053;
+  color: #ffffff;
 }
 
 .shoppingBag i{
-  color: #d63031;
+  color: #ffffff;
   font-size: 30px;
 }
 .shoppingBag i:hover{
@@ -107,13 +114,12 @@ a {
       left: -100%;
       top: 3rem;
       flex-direction: column;
-      background-color: #FCA9B4;
+      background-color: #070404;
       width: 100%;
       border-radius: 10px;
       text-align: center;
       transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);}
+      }
 
   .nav-menu.active {
       left: 0;
@@ -141,202 +147,6 @@ a {
 }
 }
 
-
-/*INICIO DE CSS PARA FORMULARIO*/
-.content {
-  line-height: 1.6;
-  font-family: 'Quicksand', sans-serif;
-  padding: 0 1.5em;
-}
-
-.container2 {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.logo {
-  text-align: center;
-  font-size: 3em;
-  color: #d63031;
-}
-
-.contact-wrapper {
-  box-shadow: 0 0 20px;
-  color: #634646;
-}
-
-.contact-wrapper > * {
-  padding: 1em;
-}
-
-.contacts-form {
-  background: #FFCCD3
-  ;
-}
-
-.contacts-form form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.contacts-form form label {
-  display: block;
-}
-
-.contacts-form form p {
-  margin: 0;
-  padding: 1em;
-}
-
-.contacts-form form .block {
-  grid-column: 1 / 3;
-}
-
-.contacts-form form button,
-.contacts-form form input,
-.contacts-form form textarea {
-  width: 100%;
-  padding: .7em;
-  border: none;
-  background: none;
-  outline: 0;
-  color: #634646;
-  border-bottom: 1px solid #AB3053;
-}
-
-.contacts-form form button {
-  background: #d63031;
-  color: antiquewhite;
-  border: 0;
-  text-transform: uppercase;
-  padding: 1em;
-}
-
-.contacts-form form button:hover,
-.contacts-form form button:focus {
-  background:#AB3053;
-  color: antiquewhite;
-  transition: background-color 1s ease-out;
-  outline: 0;
-}
-
-/* CONTACT INFO */
-.contact-info {
-  background: #634646;
-  color: antiquewhite;
-}
-
-.contact-info h4, .contact-info ul, .contact-info p {
-  text-align: center;
-  margin: 0 0 1rem 0;
-}
-
-/* LARGE SIZE */
-@media(min-width: 700px) {
-  .content {
-    padding: 0 4em; 
-  }
-  .contact-wrapper {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-  }
-  .contact-wrapper > * {
-      padding: 2em;
-  }
-  .contact-info h4,
-  .contact-info ul,
-  .contact-info p {
-      text-align: left;
-  }
-}
-
-/*FIN DE CSS PARA FORMULARIO*/
-
-/****************************TAMAÑOS LOGOS CONTATO IVAR*********************************************/
-
-.tamañologo{
-  max-width: 300px;
-  min-height: 100px;
-}
-
-.imagesposition{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2%;
-  padding: 3%;
-  
-}
-
-.tamañosredes{
-  min-width: 10px;
-  max-width: 50px;
-}
-
-.redesposition{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-/****************************TAMAÑOS LOGOS CONTATO IVAR*********************************************/
-
-/*Estilos para el cuadro de nosotros*/
-
-@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap");
-
-.boxUno{
-position: relative;
-margin-left: auto;
-margin-right: auto;
-display: block;
-border-radius: 10px;
-width: 165px;
-height: 70px;
-background-color: #FC5162;
-color: antiquewhite;
-padding: 10px;
-z-index: 1;
-}
-
-/* Box styles */
-
-  
-
-.myBox {
-  position: relative;
-width: 600px;
-height: 400px; 
-margin-left: auto;
-margin-right: auto;
-margin-top: -20px;
-display: block;
-border-width: 2px;
-border-radius: 10px;
-background-color: #FFCCD3;
-padding: 30px;
-padding-top: 40px;
-overflow: scroll;
-}
-
-#boxUnoFont{
-  font-family: 'Shippori Mincho', serif;
-  font-size: 35px;
-  text-align: center;
-}
-
-#myBoxFont{
-  font: 24px/36px sans-serif;
-  color: #634646;
-}
-
 /* Scrollbar styles */
 ::-webkit-scrollbar{
 width: 8px;
@@ -360,12 +170,13 @@ background: #AB3053;
 /*Pie de página*/
 
 .footer {
-  background-color: #634646;
+  background-color: #000000;
   position:relative;
   bottom: 0;
   width: 100%;
   height: 60px;
   color: antiquewhite;
+  margin-top: 10%;
 }
 
 .footerText{
@@ -381,27 +192,16 @@ background: #AB3053;
 }
 
 
-
-
-@media screen and (min-width: 524px) and (max-width: 700px){
-
-  .myBox{
-    width: 400px;
-  }
+.punto-vista{
+  min-height: 50vh;
+  width: 100%;
 }
 
-@media screen and (max-width: 620px){
-
-
-  .myBox{
-    width: 300px;
-  }
+.carruselInstal{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
 }
-@media screen and (max-width: 360px){
-
-
-  .myBox{
-    width: 200px;
-  }
-}
-
