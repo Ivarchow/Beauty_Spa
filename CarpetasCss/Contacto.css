@@ -197,11 +197,95 @@ background: #AB3053;
   width: 100%;
 }
 
-.carruselInstal{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  overflow: scroll;
-  overflow-y: hidden;
-  overflow-x: auto;
+/*-----------------CARRUSEL---------------*/
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+  text-align: center;
+}
+
+ul {
+	padding: 0;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.wrapper ::before ::after{
+		position: absolute;
+		top: 0;
+		z-index: 1;
+
+		content: "";
+		display: block;
+		width: 20px;
+		height: 100%;
+	}
+
+  .wrapper ::before{
+    left: 0;
+		background: linear-gradient(90deg, #222, transparent);
+  }
+
+  .wrapper ::after{
+		right: 0;
+		background: linear-gradient(-90deg, #222, transparent);
+  }
+
+
+.items {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0;
+	cursor: pointer;
+}
+
+.items :active{
+  cursor: grab;
+}
+
+.item {
+	display: inline-block;
+	margin-left: 20px;
+	user-select: none;
+  
+	width: 50%;
+	height: 350px;
+	font-size: 33px;
+	font-weight: bold;
+	line-height: 130px;
+}
+
+.item :last-child{
+  margin-right: 20px;
+}
+
+
+@media screen and (min-width: 500px) {
+
+	.item {
+		width: 33%;	
+	}
+}
+
+@media screen and (min-width: 800px) {
+
+	.item {
+		width: 25%;	
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	.wrapper {
+		margin-left: -20px;
+	}
+
+	.item {
+		width: 50%;	
+	}
 }
