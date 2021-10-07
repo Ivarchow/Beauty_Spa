@@ -1,54 +1,145 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/CarpetasCss/cartaIvar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <title>Hello, world!</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
-<div class="card">
-    <div class="image">
-        <img src="/imagenes/dermapen1.jpeg">
-    </div>
-    <div class="content">
-        <div class="title">Gelish de no se qué</div>
-        <div class="sub-title">Precio: $500</div>
-        <div class="bottom">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
-        <button>Read more</button>
-    </div>
-    </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
 
 
-<script>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
 
-    $('.card').hover(function(){
 
-        if($(this).hasClass("active")){
-            $('.card .bottom').slideUp(function(){
-            $('.card').removeClass("active");
+                <div class="card">
+                    <div class="image">
+                        <img src="/imagenes/dermapen1.jpeg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gelish de no se qué</div>
+                        <div class="sub-title">Precio: $500</div>
+                        <div class="bottom">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                </div>
 
-            });
-        }else{
-            $('.card').addClass("active");
-            $('.card .bottom').stop().slideDown();
-        }
-    });
 
-</script>
-  </body>
+            </div>
+            <div class="col">
+
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/imagenes/dermapen1.jpeg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gelish de no se qué</div>
+                        <div class="sub-title">Precio: $500</div>
+                        <div class="bottom">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                </div> 
+
+
+            </div>
+            <div class="col">
+
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/imagenes/dermapen1.jpeg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gelish de no se qué</div>
+                        <div class="sub-title">Precio: $500</div>
+                        <div class="bottom">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col">
+
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/imagenes/dermapen1.jpeg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gelish de no se qué</div>
+                        <div class="sub-title">Precio: $500</div>
+                        <div class="bottom">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
+                            <button>Read more</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+<!--    <div class="card">
+        <div class="image">
+            <img src="/imagenes/dermapen1.jpeg">
+        </div>
+        <div class="content">
+            <div class="title">Gelish de no se qué</div>
+            <div class="sub-title">Precio: $500</div>
+            <div class="bottom">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis totam aperiam .</p>
+                <button>Read more</button>
+            </div>
+        </div>
+    </div>-->
+
+
+    <script>
+
+        $('.card').hover(function () {
+
+            if ($(this).hasClass("active")) {
+                $('.card .bottom').slideUp(function () {
+                    $('.card').removeClass("active");
+
+                });
+            } else {
+                $('.card').addClass("active");
+                $('.card .bottom').stop().slideDown();
+            }
+        });
+
+    </script>
+</body>
+
 </html>
