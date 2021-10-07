@@ -1,68 +1,91 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+html,body{
+    height: 100%;
 
-body{/*completo*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #16384c;
 }
-.container{/*completo*/
-    position: relative;
-    width: 1100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 30px;
+body{
+    display: grid;
+    place-items: center;
+    background: #f2f2f2;
 }
-.container .card{
+.card{
     position: relative;
-    max-width: 300px;
-    height: 215px;
+    height: 470px;
+    width: 340px;
+    display: block;
     background: white;
-    margin: 30px 10px;
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 202px rgba(0, 0, 0,0.5);
-    transition: 0.3s ease-in-out;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+    transition: 0.4s linear;
+}
+.card:hover{
+    box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
 }
 
-.container .card:hover{/*completo*/
-    height: 420px;
-}
-
-.container .card .imgBx{/*completo*/
-    position: relative;
-    width: 260px;
-    height: 260px;
-    top: -60px;
-    left: 20px;
-    z-index: 1;
-    box-shadow: 0 5px 20px rgba(0, 0, 0,0.2);
-}
-.container .card .imgBx img{/*completo*/
-    max-width: 100%;
-    border-radius: 4px;
+.card .image{
+    background: black;
+    height: 400px;
+    overflow: hidden;
 
 }
 
-.container .card .content{/*completo*/
-    position: relative;
-    margin-top: -140px;
-    padding: 10px 15px;
+.image img{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+}
+.card.active .image img{
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+.card .content{
+    position: absolute;
+    bottom: 0px;
+    background: white;
+    width: 100%;
     text-align: center;
-    color: #111;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
+    padding: 20px 30px;
 }
-.container .card:hover .content{/*completo*/
-    visibility: visible;
-    opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
+.content .title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+
+}
+.content .sub-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+.bottom p{
+    color: #666666;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.8em;
+}
+.bottom button{
+    float: left;
+    padding: 7px 15px;
+    font-size: 17px;
+    background: #e74c3c ;
+    color: white;
+    font-weight: 500;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.bottom button:hover{
+    transform: scale(0.9);
+    background: #e64533;
+
+}
+
+.bottom{
+    display: none;
 }
