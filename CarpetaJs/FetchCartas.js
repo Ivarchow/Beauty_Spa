@@ -15,19 +15,6 @@ fetch(URLS[varCtrlUrlsCol])
     .then(carta => carta.json())
     .then(carta =>{
 
-/*            let varCtrlCard=0;
-            for(varCtrlCard;varCtrlCard<arrIds.length;varCtrlCard++){
-                let col,CardsNum, elemento;
-                col = document.createElement('div');
-                col.class = "col";
-                col.style.paddingBottom = "2%";
-                col.id = arrIds[varCtlrUrlsRow];
-
-                
-                document.getElementsById("nails").appendChild(col);
-
-            }*/
-
             let col = document.createElement('div');
              col.class = "col";
              col.style.paddingBottom = "2%";
