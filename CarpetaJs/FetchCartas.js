@@ -13,7 +13,7 @@ for(varCtrlUrlsCol; varCtrlUrlsCol < URLS.length; varCtrlUrlsCol++){
 fetch(URLS[varCtrlUrlsCol])
     .then(user => user.json())
     .then(user =>{
-            
+
             let elemento = document.getElementById(arrIds[varCtlrUrlsRow]);
             elemento.innerHTML = 
 
