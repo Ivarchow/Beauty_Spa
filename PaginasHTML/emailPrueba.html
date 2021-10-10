@@ -120,16 +120,34 @@
     
         <div class="contacts-form">
 
-          <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain" >
-            FirstName:<input type="text" name="FirstName">
-            Email:<input type="text" name="Email">
-            <input type="button" value="Send Email" onclick="sendEmail()"><input type="submit" name="submit" value="Submit">
-            </form>
-       
-   
+          <form method="POST" class="contact-form">
+
+            <p class="block"><!--Contenedor para nombre-->
+                <input name="name" type="text" id="name"  placeholder="Enter to name" required>
+            </p>
+
+            <p class="block"><!--Contenedor para mail-->
+                <input name="email" type="email" id="email"  placeholder="Enter to email" required>
+            </p>
+
+            <p class="block"><!--Contenedor para mensaje-->
+            <textarea name="message" id="message" cols="" rows="2" placeholder="Enter to message" required></textarea>
+        </p> 
+
+        <div class="contenedor-terminos"><input type="checkbox" data-required="1" name="terminos" id="terminos" value=""><label for="terminos"><span class="span-terminos">Acepto la <a target="_blank" href="el enlace a la URL con tus terminos y condiciones" class="enlace-terminos">politica de privacidad</a></span>
+          <br><br>
+        </div>
+
+            <div class="block2">
+
+              <button type="button"  value="Send Email" onclick='sendEmail()'   ><a href="#bag" class="flecha"></a><i class="cp cp-arrow-right"></i> </button>
+            </div>
+          </div>
+        </form>
 
 
-       
+
+
     </div>
 
 </div>
