@@ -5,35 +5,37 @@ const URLS= ['https://jsonplaceholder.typicode.com/photos/1',
 'https://jsonplaceholder.typicode.com/photos/4',
 'https://jsonplaceholder.typicode.com/photos/5'];
 
-const arrIds=["dato-user1","dato-user2","dato-user3","dato-user4","dato-user5"];
+const arrIds=["nails","skin","pest","dato-user4","dato-user5"];
 
 var varCtrlUrlsCol = 0, varCtlrUrlsRow=0;
 for(varCtrlUrlsCol; varCtrlUrlsCol < URLS.length; varCtrlUrlsCol++){
 
 fetch(URLS[varCtrlUrlsCol])
-    .then(user => user.json())
-    .then(user =>{
+    .then(carta => carta.json())
+    .then(carta =>{
 
             let elemento = document.getElementById(arrIds[varCtlrUrlsRow]);
             elemento.innerHTML = 
 
 
+            '<div class="col" style="padding-bottom: 2%" id="dato-user1">\n' +
             '<figure class="image-block" style="margin: auto;">\n' +
-            '<h1>'+ user.id+'</h1>\n' +
-            '<img src="'+user.url +'"/>\n' +
-            '<figcaption>\n' +
-                '<h3>\n' +
-                    'Ver Más\n' +
-                '</h3>\n' +
-                '<div class="overflow-auto example" style="height: 250px; ">\n' +
-                '<p>Precio:'+user.albumId+'$</p>\n' +
-                '<p>'+user.title+'</p>\n' +
-            '</div>\n' +
-                '<button>\n' +
-                    'Reservar\n' +
-                '</button>\n' +
-            '</figcaption>\n' +
-        '</figure>';
+                '<h1>'+ carta.id+'</h1>\n' +
+                '<img src="'+carta.url +'"/>\n' +
+                '<figcaption>\n' +
+                    '<h3>\n' +
+                        'Ver Más\n' +
+                    '</h3>\n' +
+                    '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<p>Precio: '+carta.albumId+'$</p>\n' +
+                        '<p>'+carta.title+'</p>\n' +
+                    '</div>\n' +
+                    '<button>\n' +
+                        'Reservar\n' +
+                    '</button>\n' +
+                '</figcaption>\n' +
+            '</figure>'
+            '</div>';
             
             /*'<div class="card" style="width: 18rem;">\n' +
             '    <img src="'+user.url+'" class="card-img-top" alt="image">\n' +
@@ -45,9 +47,6 @@ fetch(URLS[varCtrlUrlsCol])
             '    </div>\n' +
             '</div>\n' +
             '<br/>';*/
-
-
-
             varCtlrUrlsRow++;
     })
     .catch(err => console.log(err))
