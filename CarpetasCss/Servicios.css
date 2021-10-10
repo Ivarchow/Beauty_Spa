@@ -63,56 +63,6 @@
       overflow-y: scroll;
   }
   
-  /*boton personalizado (tienes que eliminar la clase que le da color al boton en html)*/
-  
-  .btn-samplex { 
-    color: #FFF4F8; 
-    background-color: #AA3053; 
-    border-color: #FFF4F8; 
-  } 
-   
-  .btn-samplex:hover, 
-  .btn-samplex:focus, 
-  .btn-samplex:active, 
-  .btn-samplex.active, 
-  .open .dropdown-toggle.btn-samplex { 
-    color: #FFF4F8; 
-    background-color: #FDAAB5; 
-    border-color: #FFF4F8; 
-  } 
-   
-  .btn-samplex:active, 
-  .btn-samplex.active, 
-  .open .dropdown-toggle.btn-samplex { 
-    background-image: none; 
-  } 
-   
-  .btn-samplex.disabled, 
-  .btn-samplex[disabled], 
-  fieldset[disabled] .btn-samplex, 
-  .btn-samplex.disabled:hover, 
-  .btn-samplex[disabled]:hover, 
-  fieldset[disabled] .btn-samplex:hover, 
-  .btn-samplex.disabled:focus, 
-  .btn-samplex[disabled]:focus, 
-  fieldset[disabled] .btn-samplex:focus, 
-  .btn-samplex.disabled:active, 
-  .btn-samplex[disabled]:active, 
-  fieldset[disabled] .btn-samplex:active, 
-  .btn-samplex.disabled.active, 
-  .btn-samplex[disabled].active, 
-  fieldset[disabled] .btn-samplex.active { 
-    background-color: #AA3053; 
-    border-color: #FFF4F8; 
-  } 
-   
-  .btn-samplex .badge { 
-    color: #AA3053; 
-    background-color: #FFF4F8; 
-  }
-  
-  /*Final boton personalizado*/
-  
   
   /*Bolsita fuera de carta, prueba*/
   
