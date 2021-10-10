@@ -118,30 +118,12 @@
     <h1 class="logo">Contáctanos </h1><br>
   
     
-        <div class=" contacts-form">
-            <form method="POST" class="contact-form">
+        <div class="contacts-form">
 
-                <p class="block"><!--Contenedor para nombre-->
-                    <input name="name" type="text" id="name"  placeholder="Enter to name" >
-                </p>
-
-                <p class="block"><!--Contenedor para mail-->
-                    <input name="email" type="email" id="email"  placeholder="Enter to email" >
-                </p>
-       
-                <p class="block"><!--Contenedor para mensaje-->
-               <textarea name="Message" id="mesage" cols="" rows="2" placeholder="Enter to message"></textarea>
-            </p> 
-
-            <div class="contenedor-terminos"><input type="checkbox" data-required="1" name="terminos" id="terminos" value=""><label for="terminos"><span class="span-terminos">Acepto la <a target="_blank" href="el enlace a la URL con tus terminos y condiciones" class="enlace-terminos">politica de privacidad</a></span>
-              <br><br>
-            </div>
-    
-                <div class="block2">
-    
-                  <button type="button"  value="Send Email" onclick='sendEmail()'   ><a href="#bag" class="flecha"></a><i class="cp cp-arrow-right"></i> </button>
-                </div>
-              </div>
+          <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain" >
+            FirstName:<input type="text" name="FirstName">
+            Email:<input type="text" name="Email">
+            <input type="button" value="Send Email" onclick="sendEmail()"><input type="submit" name="submit" value="Submit">
             </form>
        
    
@@ -180,6 +162,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>-->
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="/Carpetajs/emailPrueba.js"></script>
 <script type="text/javascript" src="/Carpetajs/emailPrueba.js"></script>
 <script type="text/javascript" src="/Carpetajs/navBarContacto.js"></script>
 </script>

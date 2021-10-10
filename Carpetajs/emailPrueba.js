@@ -1,6 +1,35 @@
+const inputs = document.querySelector('form')
+function sendEmail() {
+  Email.send({
+      Host : "smtp.mailtrap.io",
+      Username : "71e4b9403ab5c0",
+      Password : "f932ba1e05391f",
+      To : "divinitebeautyspa@gmail.com",
+      From : inputs.elements["email"].value,
+      Subject : "Test email",
+      Body: inputs.elements["message"].value + "<br>" + inputs.elements["name"]
+    }).then(msg => alert("The email was successfully sent"))
+  }
+
+/*const btn = document.querySelector('button')
+const inputs = document.querySelector('form')
+btn.addEventListener('click', () => {
+  Email.send({
+    Host: "smtp.mailtrap.io",
+    Username: "71e4b9403ab5c0",
+    Password: "f932ba1e05391f",
+    To: "divinitebeautyspa@gmail.com",
+    From: inputs.elements["email"].value,
+    Subject: "Contact Us Beauty Spa", 
+    Body: inputs.elements["message"].value + "<br>" + inputs.elements["name"]
+  }).then(msg => alert("The email was successfully sent"))
+})*/
+
+
+
 //Código para enviar correos
 
-(function () {
+/*(function () {
   emailjs.init("user_nsfB75HsHb3gAeJ6RzBYc");
 })();
 
@@ -25,8 +54,5 @@ function sendMail() {
  function envi() {
   
   window.location.reload();
-}
+}*/
 
-
-
-//formulario
