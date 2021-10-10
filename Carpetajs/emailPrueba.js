@@ -8,7 +8,7 @@ function sendEmail() {
       From : inputs.elements["email"].value,
       Subject : "Test email",
       Body: inputs.elements["message"].value + "<br>" + inputs.elements["name"]
-    }).then(msg => alert("The email was successfully sent"))
+    }).then(msg => window.location.reload() )
   }
 
 /*const btn = document.querySelector('button')
@@ -50,9 +50,9 @@ function sendMail() {
 
   return true;
 }
-
+*/
  function envi() {
   
   window.location.reload();
-}*/
+}
 
