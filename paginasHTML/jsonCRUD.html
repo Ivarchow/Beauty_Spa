@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+    <title>Añadir servicios</title>
+</head>
+
+<body>
+    <br><br><br>
+
+    <div class="card" style="width: 60%; margin: auto;">
+        <div class="card-body">
+            <h5 class="card-title">Agregar servicios</h5>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Nombre del producto:</label>
+                    <input type="text" class="form-control" id="exampleInputName"
+                        placeholder="Ingrese el nombre del producto" autofocus>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputDescription" class="form-label">Descripción del producto:</label>
+                    <input type="text" class="form-control" id="exampleInputDescription" placeholder="Descripción">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPrice" class="form-label">Costo:</label>
+                    <input type="text" class="form-control" id="exampleInputPrice" placeholder="Costo del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputImage" class="form-label">Imagen:</label>
+                    <input type="text" class="form-control" id="exampleInputImage" placeholder="Link de la imagen">
+                </div>
+                <button type="submit" class="btn btn-primary" id="Crear">Crear</button>
+            </form>
+        </div>
+    </div><br><br><br>
+
+    <div class="container">
+        <div class="row" id="list-items" style="flex-wrap: nowrap; overflow-x: scroll;">
+            
+        </div>
+    </div>
+
+    <button id="mostrar">Mostrar</button>
+    <!--<button id="crear">Crear</button>
+    <button id="modificar">Modificar</button>
+    <button id="eliminar">Eliminar</button>-->
+</body>
+    <script src="../PaginasJS/jsonCRUD.js"></script>
+</html>
