@@ -261,11 +261,101 @@ fieldset[disabled] .btn-sample.active {
 .btnCrearCuenta{
   float: right;
 }
-
-
-
-
 /*Footer redes, ubi y contaco Luis*/
+
+/*Footer Luis*/
+
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+.telefonos2 ul{
+  display: block;
+}
+
+.telefonos2 li{
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.telefonos2 a{
+  color: black;
+}
+
+.footer{
+  display: webkit flex;
+  display: moz flex;
+  display: ms flex;
+  display: o flex;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: #fff;
+  background: #262626;
+  font-family: 'Lora', serif
+}
+.footer > *{
+  flex: 1 100%;
+}
+
+.titulosDebajo{
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.footer ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li{
+  line-height: 2em;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+.r-footer{
+  display: webkit flex;
+  display: moz flex;
+  display: ms flex;
+  display: o flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.r-footer > *{
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.tresCosas h2{
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 600px){
+  .r-footer > *{
+    flex: 1;
+  }
+  .features{
+    flex-grow: 2;
+  }
+  .r-footer{
+    flex: 2 0px;
+  }
+}
+/*Footer Luis*/
+
+
 
 
 
