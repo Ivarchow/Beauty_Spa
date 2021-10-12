@@ -117,6 +117,10 @@ a {
   margin-left: 5rem;
 }
 
+.nav-items {
+  margin-left: 5rem;
+}
+
 .nav-link{
   font-size: 18px;
   font-weight: 500;
@@ -165,6 +169,9 @@ a {
   .nav-item {
       margin: 2.5rem 0;
   }
+  .nav-items {
+    margin: 2.5rem 0;
+}
 
   .hamburger {
       display: block;
@@ -205,6 +212,10 @@ a {
   .nav-item {
       margin: 2.5rem 0;
   }
+  .nav-items {
+    margin: 2.5rem 0;
+}
+
 
   .hamburger {
       display: block;
@@ -245,6 +256,9 @@ a {
   .nav-item {
       margin: 2.5rem 0;
   }
+  .nav-items {
+    margin: 2.5rem 0;
+}
 
   .hamburger {
       display: block;

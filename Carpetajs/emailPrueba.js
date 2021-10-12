@@ -7,8 +7,28 @@ function sendEmail() {
       To : "divinitebeautyspa@gmail.com",
       From : inputs.elements["email"].value,
       Subject : "Test email",
-      Body: inputs.elements["message"].value + "<br>" + inputs.elements["name"]
-    }).then(msg => window.location.reload(alert("mensaje enviado")) )
+      
+      Body:  inputs.elements["name"].value + " con el correo: "+ inputs.elements["email"].value+ " te envió el siguiente mensaje: "+"<br>" +inputs.elements["message"].value 
+    }).then(message =>{
+      let p;
+      if(message!="OK"){
+        p = document.getElementById('alert');
+        p.removeAttribute("hidden")
+        
+        setTimeout(() => {
+          window.location.reload();
+         }, 4000);
+      }else{
+        console.log(message)
+        p = document.getElementById('goodAlert')
+        p.removeAttribute("hidden")
+        
+       setTimeout(() => {
+        window.location.reload();
+       }, 3000);
+        
+      }
+    })
   }
 
 /*const btn = document.querySelector('button')
