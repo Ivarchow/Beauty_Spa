@@ -1,72 +1,29 @@
 {
-    "Servicios": [
+    "Servicios": 
+    [
             {
-              "id": "Uñas",
-              "Título": {
-                "Gelish liso": {
-                  "precio": 150,
-                  "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
-                },
-                "Gelish Mate": {
-                  "precio": 180,
-                  "Descripcion": "Aplicación de esmalte semipermanente en gel en uña natural con terminado en mate"
-                },
-                "Gelish Frances": {
-                  "Precio": 280,
-                  "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
-                }
-              }
-            },
-            {
-              "id": "CuidadoPiel",
-              "Título": {
-                "Carboxiterapia": {
-                  "precio": 450,
-                  "Descripcion": "Ayuda a eliminar la celulitis, estrías, grasa localizada y la flacidez de la piel, esto debido a que el gas carbónico inyectado estimula la circulación celular y la oxigenación de los tejidos"
-                },
-                "Radiofrecuencia": {
-                  "precio": 300,
-                  "Descripcion": "Ayuda a eliminar celulitis y flacidez corporal va a provocar producción de nuevo colágeno (tensando la piel y los septos fibrosos), el drenaje del estasis linfático de la grasa, mejorando la circulación de la piel y tejido subcutáneo"
-                },
-                "Cavitacion": {
-                  "Precio": 300,
-                  "Descripcion": "Es un tratamiento indoloro donde se emplean ultrasonidos de baja frecuencia sobre la zona donde se ha localizado la grasa, rompiendo así la membrana celular de los adipocitos, favoreciendo a la eliminación de la grasa localizada y mejorando el aspecto de la piel de naranja"
-                }
-              }
-            },
-            {
-              "id": "Faciales",
-              "Título": {
-                "Facial de Radiofrecuencia": {
-                  "precio": 400,
-                  "Descripcion": "Es una técnica que combate de manera efectiva la flacidez. Consiste en aplicar energía de radiofrecuencia para calentar las capas internas de la piel y regenerar el colágeno para lucir una piel firme y tersa"
-                },
-                "Facial Galvanica": {
-                  "precio": 350,
-                  "Descripcion": "Básicamente proporciona un tratamiento antiarrugas de la piel envejecida. el desequilibrio químico en nuestro cuerpo es también un factor de envejecimiento prematuro, la corriente galvánica permite equilibrar estos procesos, por tanto aporta una mejor consistencia, ¡menos arrugas!"
-                },
-                "Facial de skin scrubber": {
-                  "Precio": 550,
-                  "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizo"
-                }
-              }
-            },
-            {
-              "id": "Pestañas",
-              "Título": {
-                "Pestañas clasicas": {
-                  "precio": 850,
-                  "Descripcion": "Técnica clásica de 1 por 1, para lucir una mirada muy natural"
-                },
-                "Pestañas hibridas": {
-                  "precio": 1200,
-                  "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
-                },
-                "Pestañas volumen Ruso": {
-                  "Precio": 1500,
-                  "Descripcion": "Técnica de máximo volumen, da saturación más espesa a las pestañas, dando también un efecto más oscuro"
-                }
-              }
-            }
-          ]
-  }
+              "Categoria": "Unas",
+                "id" : 1,
+                "titulo": "Gelish liso",
+                "img": "/imagenes/gelish1.jpeg",
+                "precio": 150,
+                "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
+        },
+        {
+            "Categoria": "Unas",
+              "id" : 2,
+              "titulo": "Gelish Mate",
+              "img": "/imagenes/gelish2.jpeg",
+              "precio": 180,
+              "Descripcion": "Aplicación de esmalte semipermanente en gel en uña natural con terminado en mate"
+        },
+        {
+            "Categoria": "Unas",
+              "id" : 3,
+              "titulo": "Gelish Frances",
+              "img": "/imagenes/gelish3.jpeg",
+              "precio": 280,
+              "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
+        }
+    ]
+}

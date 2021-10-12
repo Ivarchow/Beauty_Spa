@@ -1,9 +1,7 @@
 
-const URLS= ['https://jsonplaceholder.typicode.com/photos/1',
-'https://jsonplaceholder.typicode.com/photos/2',
-'https://jsonplaceholder.typicode.com/photos/3',
-'https://jsonplaceholder.typicode.com/photos/4',
-'https://jsonplaceholder.typicode.com/photos/5'];
+const URLS= ['http://localhost:3000/Servicios/1',
+'http://localhost:3000/Servicios/2',
+'http://localhost:3000/Servicios/3'];
 
 const arrIds=["carta1","carta2","carta3"];
 const arrSErvicios=["nails","skin","pest"];
@@ -24,21 +22,21 @@ window.onload=() =>{
         for(varCtrlUrlsCol; varCtrlUrlsCol < 2; varCtrlUrlsCol++){
 
             fetch(URLS[varCtrlUrlsCol])
-                .then(carta => carta.json())
-                .then(carta =>{
+                .then(Servicios => Servicios.json())
+                .then(Servicios =>{
 
                         let elemento = document.getElementById(col.id);
                         elemento.innerHTML = 
                         '<figure class="image-block" style="margin: auto;">\n' +
-                            '<h1>'+ carta.id+'</h1>\n' +
-                            '<img src="'+carta.url +'"/>\n' +
+                            '<h1>'+ Servicios.titulo+'</h1>\n' +
+                            '<img src="'+Servicios.img+'"/>\n' +
                             '<figcaption>\n' +
                                 '<h3>\n' +
                                     'Ver Más\n' +
                                 '</h3>\n' +
                                 '<div class="overflow-auto example" style="height: 250px; ">\n' +
-                                    '<p>Precio: '+carta.albumId+'$</p>\n' +
-                                    '<p>'+carta.title+'</p>\n' +
+                                    '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                    '<p>'+Servicios.Descripcion+'</p>\n' +
                                 '</div>\n' +
                                 '<button>\n' +
                                     'Reservar\n' +
