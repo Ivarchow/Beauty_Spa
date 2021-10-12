@@ -1,29 +1,196 @@
 {
-    "Servicios": 
-    [
-            {
-              "Categoria": "Unas",
-                "id" : 1,
-                "titulo": "Gelish liso",
-                "img": "/imagenes/gelish1.jpeg",
-                "precio": 150,
-                "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
-        },
-        {
-            "Categoria": "Unas",
-              "id" : 2,
-              "titulo": "Gelish Mate",
-              "img": "/imagenes/gelish2.jpeg",
-              "precio": 180,
-              "Descripcion": "Aplicación de esmalte semipermanente en gel en uña natural con terminado en mate"
-        },
-        {
-            "Categoria": "Unas",
-              "id" : 3,
-              "titulo": "Gelish Frances",
-              "img": "/imagenes/gelish3.jpeg",
-              "precio": 280,
-              "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
-        }
-    ]
+  "Servicios": [
+    {
+      "Categoria": "Unas",
+      "id": 1,
+      "titulo": "Gelish liso",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 150,
+      "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 2,
+      "titulo": "Gelish Mate",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 180,
+      "Descripcion": "Aplicación de esmalte semipermanente en gel en uña natural con terminado en mate"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 3,
+      "titulo": "Gelish Frances",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 280,
+      "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 4,
+      "titulo": "Gelish Frances con base color",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 300,
+      "Descripcion": "Aplicación de esmalte semipermanente en base nude o en color elegido, con la punta en color blanco o cualquier otro color de la gama"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 5,
+      "titulo": "Facil retiro de Gelish",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 40,
+      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 6,
+      "titulo": "Dificil retiro de Gelish",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 80,
+      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 7,
+      "titulo": "Retiro de Gelish con gel 4D",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 60,
+      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 8,
+      "titulo": "Retiro de Gelish en acrílico",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 80,
+      "Descripcion": "Si sólo quieres cambiar el color del gel, se retira el anterior de tus uñas acrílicas y se preparan para una nueva aplicación"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 9,
+      "titulo": "unas acrílicas con tip",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 350,
+      "Descripcion": "Se aplica uña postiza para alargar la uña al tamaño de tu elección"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 10,
+      "titulo": "Unas acrílicas esculturales",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 450,
+      "Descripcion": "Se aplica el acrílico sobre una forma que se retira posteriormente, elige el diseño a tu estilo"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 11,
+      "titulo": "Uñas acrílicas con francés permanente con tip",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 280,
+      "Descripcion": "Aplicación de tip en color blanco encapsulado con acrílico transparente, elige el tamaño y forma"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 12,
+      "titulo": "Uñas acrílicas con francés permanente escultural",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 550,
+      "Descripcion": "Aplicación de acrílico con punta francesa de cualquier color y combinación o el clásico nude y blanco"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 13,
+      "titulo": "Retoque de acrílico",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 300,
+      "Descripcion": "Se limpia y se deja el acrílico sano para hacer el relleno del crecimiento, elige el tamaño y forma nueva"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 14,
+      "titulo": "Acrílico sobre uña natural (corta)",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 320,
+      "Descripcion": "Se aplica una capa delgada de acrílico para dar grosor o refuerzo a la uña natural."
+    },
+    {
+      "Categoria": "Unas",
+      "id": 15,
+      "titulo": "Acrílico por uña con tip",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 40,
+      "Descripcion": "Se aplica uña postiza y acrílico de manera individual"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 16,
+      "titulo": "Acrílico por uña escultural",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 50,
+      "Descripcion": "Se aplica acrílico sobre una forma que se retira posteriormente, de forma individual"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 17,
+      "titulo": "Retiro de acrílico",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 120,
+      "Descripcion": "Se hace el retiro adecuado del acrílico, para cuidar tú uña natural"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 18,
+      "titulo": "Acripié",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 300,
+      "Descripcion": "Aplicación de acrílico sobre uña natural para hacer forma correcta o alargar"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 19,
+      "titulo": "Acrílico hallux",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 80,
+      "Descripcion": "Aplicación de acrílico sobre las uñas del dedo hallux (o gordas) del pie para alargar o dar forma deseada."
+    },
+    {
+      "Categoria": "Unas",
+      "id": 20,
+      "titulo": "Tratamiento nutragel",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 180,
+      "Descripcion": "Tratamiento reestructurante, acelera el crecimiento de la uña, devolviéndole su fuerza natural y ayudando a reestructurar por daño de acrílico o cualquier otro deterioro de la uña natural"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 21,
+      "titulo": "Gel 4D",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 130,
+      "Descripcion": "Capa gruesa de gel que ayuda a reforzar la uña para evitar el quiebre por uña natural débil o para encapsular diseños o efectos"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 22,
+      "titulo": "Tratamiento nutragel + Gel 4D",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 350,
+      "Descripcion": "Gel reestructurante + gel de refuerzo (para fortalecer y evitar el quiebre)"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 23,
+      "titulo": "Efectos",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 15,
+      "Descripcion": "Dale un toque diferente a tus uñas y decóralas a tu estilo!"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 24,
+      "titulo": "Decoración y mano alzada",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 20,
+      "Descripcion": "Dale un toque diferente a tus uñas y decóralas a tu estilo!"
+    }
+  ]
 }
