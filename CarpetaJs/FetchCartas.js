@@ -1,25 +1,89 @@
+const URLS= [];
+const arrIds=[];
+const arrSErvicios=["nails","skin","pest","pedi","makeup","estetica","massage"];
 
-const URLS= ['http://localhost:3000/Servicios/1',
-'http://localhost:3000/Servicios/2',
-'http://localhost:3000/Servicios/3',
-'http://localhost:3000/Servicios/4',
-'http://localhost:3000/Servicios/5',
-'http://localhost:3000/Servicios/6',
-'http://localhost:3000/Servicios/7',
-'http://localhost:3000/Servicios/8',
-'http://localhost:3000/Servicios/9'];
+main();
 
-const arrIds=["carta1","carta2","carta3","carta4","carta5","carta6"];
-const arrSErvicios=["nails","skin","pest"];
+function main(){
 
-var varCtrlUrlsCol = 0, varCtlrUrlsRow=0, varCtlrCards=0;
+    generatorArrys();
+    window.onload=() =>{
+        generatorCols();
+    };
+    getCartas();
+}
 
-window.onload=() =>{
+function generatorArrys(){
+    for(let varCtlrGenerator = 1;varCtlrGenerator<=14;varCtlrGenerator++){
+        let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
+        URLS.push(url);
+    }
+    for(let varCtlrIdsCards=0; varCtlrIdsCards<=48;varCtlrIdsCards++){
+        let ids = "carta" + varCtlrIdsCards;
+        arrIds.push(ids);
+    }
+}
 
-    for(let varCtlrService=0;varCtlrService<arrSErvicios.length;varCtlrService++ ){
-        console.log(arrSErvicios[varCtlrService])
+function generatorCols(){
+    
+        let varCtrlCols=1, varCtlrContinue=5;
+        
+    for(let varCtlrService=0; varCtlrService<3; varCtlrService++ ){
 
-        for(varCtlrCards;varCtlrCards<arrIds.length;varCtlrCards++){
+        console.log(arrSErvicios[varCtlrService]);
+
+        for(varCtrlCols; varCtrlCols<= varCtlrContinue ; varCtrlCols++ ){
+            let col = document.createElement('div');
+            col.className = "col";
+            col.style.paddingBottom = "2%";
+            col.id = arrIds[varCtrlCols];
+            document.getElementById(arrSErvicios[varCtlrService]).appendChild(col);
+        }
+        varCtrlCols = varCtlrContinue+1;
+        varCtlrContinue =varCtlrContinue+5;
+        if(varCtlrContinue>15){
+            varCtrlCols=0;
+            varCtlrContinue=0;
+        }
+    }
+}
+
+function getCartas(){
+    let varCtlrCards=1;
+
+    for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
+
+    fetch(URLS[varCtrlFetch])
+    .then(response => response.json())
+    .then(Servicios =>{
+
+            if(Servicios.Categoria=="Unas"){
+                let elemento = document.getElementById(arrIds[varCtlrCards]);
+                elemento.innerHTML = 
+                '<figure class="image-block" style="margin: auto;">\n' +
+                    '<h1>'+ Servicios.titulo+'</h1>\n' +
+                    '<img src="'+Servicios.img+'"/>\n' +
+                    '<figcaption>\n' +
+                        '<h3>\n' +
+                            'Ver Más\n' +
+                        '</h3>\n' +
+                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                            '<p>'+Servicios.Descripcion+'</p>\n' +
+                        '</div>\n' +
+                        '<button>\n' +
+                            'Reservar\n' +
+                        '</button>\n' +
+                    '</figcaption>\n' +
+                '</figure>';
+                varCtlrCards++;
+        }
+    })
+    .catch(err => console.log(err));
+}
+}
+
+/*window.onload=() =>{
 
                 let col = document.createElement('div');
                 col.className = "col";
@@ -29,34 +93,25 @@ window.onload=() =>{
                 document.getElementById(arrSErvicios[varCtlrService]).appendChild(col);  
 
 
-            fetch(URLS[varCtlrCards])
-                .then(Servicios => Servicios.json())
-                .then(Servicios =>{
-                    console.log(Servicios.Categoria)
+                let elemento = document.getElementById(col.id);
+            elemento.innerHTML = 
+            '<figure class="image-block" style="margin: auto;">\n' +
+                '<h1>'+ Servicios.titulo+'</h1>\n' +
+                '<img src="'+Servicios.img+'"/>\n' +
+                '<figcaption>\n' +
+                    '<h3>\n' +
+                        'Ver Más\n' +
+                    '</h3>\n' +
+                    '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                        '<p>'+Servicios.Descripcion+'</p>\n' +
+                    '</div>\n' +
+                    '<button>\n' +
+                        'Reservar\n' +
+                    '</button>\n' +
+                '</figcaption>\n' +
+            '</figure>';
 
-                    if(Servicios.Categoria == "Unas"){
 
-                        let elemento = document.getElementById(col.id);
-                        elemento.innerHTML = 
-                        '<figure class="image-block" style="margin: auto;">\n' +
-                            '<h1>'+ Servicios.titulo+'</h1>\n' +
-                            '<img src="'+Servicios.img+'"/>\n' +
-                            '<figcaption>\n' +
-                                '<h3>\n' +
-                                    'Ver Más\n' +
-                                '</h3>\n' +
-                                '<div class="overflow-auto example" style="height: 250px; ">\n' +
-                                    '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                                    '<p>'+Servicios.Descripcion+'</p>\n' +
-                                '</div>\n' +
-                                '<button>\n' +
-                                    'Reservar\n' +
-                                '</button>\n' +
-                            '</figcaption>\n' +
-                        '</figure>';
-                    }
-                })
-                .catch(err => console.log(err))
-        }
-    }
-}
+
+        }*/
