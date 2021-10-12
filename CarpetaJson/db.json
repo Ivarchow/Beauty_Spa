@@ -19,7 +19,7 @@
     {
       "Categoria": "Unas",
       "id": 3,
-      "titulo": "Gelish Frances",
+      "titulo": "Gelish Francés",
       "img": "/imagenes/gelish3.jpeg",
       "precio": 280,
       "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
@@ -27,7 +27,7 @@
     {
       "Categoria": "Unas",
       "id": 4,
-      "titulo": "Gelish Frances con base color",
+      "titulo": "Gelish Francés con base color",
       "img": "/imagenes/gelish1.jpeg",
       "precio": 300,
       "Descripcion": "Aplicación de esmalte semipermanente en base nude o en color elegido, con la punta en color blanco o cualquier otro color de la gama"
@@ -67,7 +67,7 @@
     {
       "Categoria": "Unas",
       "id": 9,
-      "titulo": "unas acrílicas con tip",
+      "titulo": "uñas acrílicas con tip",
       "img": "/imagenes/gelish3.jpeg",
       "precio": 350,
       "Descripcion": "Se aplica uña postiza para alargar la uña al tamaño de tu elección"
@@ -75,7 +75,7 @@
     {
       "Categoria": "Unas",
       "id": 10,
-      "titulo": "Unas acrílicas esculturales",
+      "titulo": "Uñas acrílicas esculturales",
       "img": "/imagenes/gelish1.jpeg",
       "precio": 450,
       "Descripcion": "Se aplica el acrílico sobre una forma que se retira posteriormente, elige el diseño a tu estilo"
@@ -191,6 +191,138 @@
       "img": "/imagenes/gelish3.jpeg",
       "precio": 20,
       "Descripcion": "Dale un toque diferente a tus uñas y decóralas a tu estilo!"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 25,
+      "titulo": "Carboxiterapia",
+      "img": "/imagenes/carboxiterapia1.jpeg",
+      "precio": 450,
+      "Descripcion": "Ayuda a eliminar la celulitis, estrías, grasa localizada y la flacidez de la piel, esto debido a que el gas carbónico inyectado estimula la circulación celular y la oxigenación de los tejidos"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 26,
+      "titulo": "Radiofrecuencia",
+      "img": "/imagenes/radiofrecuencia1.jpeg",
+      "precio": 300,
+      "Descripcion": "Ayuda a eliminar celulitis y flacidez corporal va a provocar producción de nuevo colágeno (tensando la piel y los septos fibrosos), el drenaje del estasis linfático de la grasa, mejorando la circulación de la piel y tejido subcutáneo"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 27,
+      "titulo": "Cavitación",
+      "img": "/imagenes/cavitacion2.jpeg",
+      "precio": 300,
+      "Descripcion": "Es un tratamiento indoloro donde se emplean ultrasonidos de baja frecuencia sobre la zona donde se ha localizado la grasa, rompiendo así la membrana celular de los adipocitos, favoreciendo a la eliminación de la grasa localizada y mejorando el aspecto de la piel de naranja"
+    },
+
+{
+      "Categoria": "Cuidado de la piel",
+      "id": 28,
+      "titulo": "Vacummterapia",
+      "img": "/imagenes/Vacummterapia.jpeg",
+      "precio": 300,
+      "Descripcion": "Ayuda a drenar el tejido adiposo movilizando la grasa localizada hacia el sistema linfático. Se utiliza como una alternativa para eliminar la grasa localizada"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 29,
+      "titulo": "Maderoterapia",
+      "img": "/imagenes/maderoterapia2.jpeg",
+      "precio": 250,
+      "Descripcion": "Consiste en aplicar un masaje empleando diferentes utensilios de madera especialmente diseñados para equilibrar la energía del paciente, reafirmar y tonificar su cuerpo, y combatir la celulitis. La sesión de maderoterapia empieza con un masaje que permite preparar la piel y remover la grasa acumulada"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 30,
+      "titulo": "Lipoláser",
+      "img": "/imagenes/limpiezalaser2.jpeg",
+      "precio": 300,
+      "Descripcion": "Es considerado como el procedimiento de moldeamiento corporal más sano para el cuerpo, ya que estimula la liberación natural de los excesos de grasa sin destruir ni alterar estructuralmente tanto el tejido adiposo como los demás tejidos adyacentes"
+    },
+    
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 31,
+      "titulo": "Mesoterapia",
+      "img": "/imagenes/mesoterapia.jpeg",
+      "precio": 300,
+      "Descripcion": "Mejora notoriamente el contorno de glúteos, muslos, abdomen, caderas, rostro o cualquier zona del cuerpo donde sea aplicada. La mesoterapia es la técnica más eficaz para eliminar la celulitis y reafirmar la piel. Esta técnica es utilizada para tratar arrugas, cicatrices e incluso lesiones deportivas"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 32,
+      "titulo": "Presoterapia",
+      "img": "/imagenes/presoterapia1.jpeg",
+      "precio": 350,
+      "Descripcion": "Es un tratamiento médico estético, no invasivo y no quirúrgico, que consiste en sesiones de drenaje linfático, y que se aplica en pacientes con problemas circulatorios, los cuales generan gran retención líquidos"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 33,
+      "titulo": "Limpieza de espalda",
+      "img": "/imagenes/limpiezalaser1.jpeg",
+      "precio": 700,
+      "Descripcion": "Limpia la espalda de impurezas, como puntos negros y espinillas, se hace limpieza profunda con extracciones y mascarillas según el tipo de piel"
+    },
+
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 34,
+      "titulo": "Limpieza facial profunda",
+      "img": "/imagenes/limpiezaprofunda1.jpeg",
+      "precio": 550,
+      "Descripcion": "Es un tratamiento para mejorar la salud y el aspecto de la piel del rostro. Permite eliminar puntos negros, comedones e impurezas que se acumulan día a día y hacen que la piel pierda vitalidad, frescura y luminosidad"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 35,
+      "titulo": "Microdermoabrasión punta de diamante",
+      "img": "/imagenes/microdermoabrasion1.jpeg",
+      "precio": 1200,
+      "Descripcion": "Es un tratamiento que a través de agua y puntas de diamante realiza una limpieza profunda de la piel, eliminando las células muertas superficiales, grasa y puntos negros acumulados, disminuye el tamaño de los poros, mejora la textura áspera del rostro y atenúa cicatrices"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 36,
+      "titulo": "Dermapen de acido hialurónico",
+      "img": "/imagenes/dermapen1.jpeg",
+      "precio": 1500,
+      "Descripcion": "Alisa los pliegues cutáneos, estimula la producción de colágeno. Es una sustancia natural que contiene nuestra piel que ayuda a reducir cicatrices y marcas, entre otros beneficios"
+    },
+
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 37,
+      "titulo": "Dermapen con vitaminas",
+      "img": "/imagenes/dermapen2.jpeg",
+      "precio": 1500,
+      "Descripcion": "Con este sistema, provocamos que la piel aumente la absorción de los productos que apliquemos después o simultáneamente al dermapen, como el cóctel de vitaminas para tener una piel hidratada y sana"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 38,
+      "titulo": "Dermapen antiacné",
+      "img": "/imagenes/dermapen1.jpeg",
+      "precio": 1500,
+      "Descripcion": "Consigue regular y disminuir las espinillas, el exceso de grasa y sebo, elimina las pieles muertas y bacterias y aporta un mayor efecto antiinflamatorio"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 39,
+      "titulo": "Dermapen plasma rico en plaquetas",
+      "img": "/imagenes/dermapen2.jpeg",
+      "precio": 1500,
+      "Descripcion": "Si desea reducir las arrugas, afirmar la piel o disminuir las cicatrices por acné, ¡usted verá resultados excepcionales con este tratamiento, no importando su tipo de piel!"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 40,
+      "titulo": "Mascara de luz led",
+      "img": "/imagenes/mascaraluz1.jpeg",
+      "precio": 350,
+      "Descripcion": "Estimula la producción de colágeno, repara y sustituye el tejido dañado. Esta luz es la indicada para mejorar las líneas finas y a reducir los poros de gran tamaño. Sirve como antiinflamatorio e inhibidor de la bacteria que causa el acné"
     }
   ]
 }
