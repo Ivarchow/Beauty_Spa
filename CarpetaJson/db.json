@@ -41,158 +41,6 @@
       "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
     },
     {
-      "Categoria": "Unas",
-      "id": 6,
-      "titulo": "Dificil retiro de Gelish",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 80,
-      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 7,
-      "titulo": "Retiro de Gelish con gel 4D",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 60,
-      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 8,
-      "titulo": "Retiro de Gelish en acrílico",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 80,
-      "Descripcion": "Si sólo quieres cambiar el color del gel, se retira el anterior de tus uñas acrílicas y se preparan para una nueva aplicación"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 9,
-      "titulo": "uñas acrílicas con tip",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 350,
-      "Descripcion": "Se aplica uña postiza para alargar la uña al tamaño de tu elección"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 10,
-      "titulo": "Uñas acrílicas esculturales",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 450,
-      "Descripcion": "Se aplica el acrílico sobre una forma que se retira posteriormente, elige el diseño a tu estilo"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 11,
-      "titulo": "Uñas acrílicas con francés permanente con tip",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 280,
-      "Descripcion": "Aplicación de tip en color blanco encapsulado con acrílico transparente, elige el tamaño y forma"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 12,
-      "titulo": "Uñas acrílicas con francés permanente escultural",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 550,
-      "Descripcion": "Aplicación de acrílico con punta francesa de cualquier color y combinación o el clásico nude y blanco"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 13,
-      "titulo": "Retoque de acrílico",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 300,
-      "Descripcion": "Se limpia y se deja el acrílico sano para hacer el relleno del crecimiento, elige el tamaño y forma nueva"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 14,
-      "titulo": "Acrílico sobre uña natural (corta)",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 320,
-      "Descripcion": "Se aplica una capa delgada de acrílico para dar grosor o refuerzo a la uña natural."
-    },
-    {
-      "Categoria": "Unas",
-      "id": 15,
-      "titulo": "Acrílico por uña con tip",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 40,
-      "Descripcion": "Se aplica uña postiza y acrílico de manera individual"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 16,
-      "titulo": "Acrílico por uña escultural",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 50,
-      "Descripcion": "Se aplica acrílico sobre una forma que se retira posteriormente, de forma individual"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 17,
-      "titulo": "Retiro de acrílico",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 120,
-      "Descripcion": "Se hace el retiro adecuado del acrílico, para cuidar tú uña natural"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 18,
-      "titulo": "Acripié",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 300,
-      "Descripcion": "Aplicación de acrílico sobre uña natural para hacer forma correcta o alargar"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 19,
-      "titulo": "Acrílico hallux",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 80,
-      "Descripcion": "Aplicación de acrílico sobre las uñas del dedo hallux (o gordas) del pie para alargar o dar forma deseada."
-    },
-    {
-      "Categoria": "Unas",
-      "id": 20,
-      "titulo": "Tratamiento nutragel",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 180,
-      "Descripcion": "Tratamiento reestructurante, acelera el crecimiento de la uña, devolviéndole su fuerza natural y ayudando a reestructurar por daño de acrílico o cualquier otro deterioro de la uña natural"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 21,
-      "titulo": "Gel 4D",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 130,
-      "Descripcion": "Capa gruesa de gel que ayuda a reforzar la uña para evitar el quiebre por uña natural débil o para encapsular diseños o efectos"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 22,
-      "titulo": "Tratamiento nutragel + Gel 4D",
-      "img": "/imagenes/gelish1.jpeg",
-      "precio": 350,
-      "Descripcion": "Gel reestructurante + gel de refuerzo (para fortalecer y evitar el quiebre)"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 23,
-      "titulo": "Efectos",
-      "img": "/imagenes/gelish2.jpeg",
-      "precio": 15,
-      "Descripcion": "Dale un toque diferente a tus uñas y decóralas a tu estilo!"
-    },
-    {
-      "Categoria": "Unas",
-      "id": 24,
-      "titulo": "Decoración y mano alzada",
-      "img": "/imagenes/gelish3.jpeg",
-      "precio": 20,
-      "Descripcion": "Dale un toque diferente a tus uñas y decóralas a tu estilo!"
-    },
-    {
       "Categoria": "Cuidado de la piel",
       "id": 25,
       "titulo": "Carboxiterapia",
@@ -216,8 +64,7 @@
       "precio": 300,
       "Descripcion": "Es un tratamiento indoloro donde se emplean ultrasonidos de baja frecuencia sobre la zona donde se ha localizado la grasa, rompiendo así la membrana celular de los adipocitos, favoreciendo a la eliminación de la grasa localizada y mejorando el aspecto de la piel de naranja"
     },
-
-{
+    {
       "Categoria": "Cuidado de la piel",
       "id": 28,
       "titulo": "Vacummterapia",
@@ -234,95 +81,204 @@
       "Descripcion": "Consiste en aplicar un masaje empleando diferentes utensilios de madera especialmente diseñados para equilibrar la energía del paciente, reafirmar y tonificar su cuerpo, y combatir la celulitis. La sesión de maderoterapia empieza con un masaje que permite preparar la piel y remover la grasa acumulada"
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 30,
-      "titulo": "Lipoláser",
-      "img": "/imagenes/limpiezalaser2.jpeg",
-      "precio": 300,
-      "Descripcion": "Es considerado como el procedimiento de moldeamiento corporal más sano para el cuerpo, ya que estimula la liberación natural de los excesos de grasa sin destruir ni alterar estructuralmente tanto el tejido adiposo como los demás tejidos adyacentes"
-    },
-    
-    {
-      "Categoria": "Cuidado de la piel",
-      "id": 31,
-      "titulo": "Mesoterapia",
-      "img": "/imagenes/mesoterapia.jpeg",
-      "precio": 300,
-      "Descripcion": "Mejora notoriamente el contorno de glúteos, muslos, abdomen, caderas, rostro o cualquier zona del cuerpo donde sea aplicada. La mesoterapia es la técnica más eficaz para eliminar la celulitis y reafirmar la piel. Esta técnica es utilizada para tratar arrugas, cicatrices e incluso lesiones deportivas"
+      "Categoria": "Faciales",
+      "id": 11,
+      "titulo": "Facial de radiofrecuencia",
+      "img": "/imagenes/radiofrecuencia-facial-1.jpeg",
+      "precio": 400,
+      "Descripcion": "Es una técnica que combate de manera efectiva la flacidez. Consiste en aplicar energía de radiofrecuencia para calentar las capas internas de la piel y regenerar el colágeno para lucir una piel firme y tersa"
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 32,
-      "titulo": "Presoterapia",
-      "img": "/imagenes/presoterapia1.jpeg",
+      "Categoria": "Faciales",
+      "id": 12,
+      "titulo": "Facial galvánica",
+      "img": "/imagenes/galvanicafacial.jpeg",
       "precio": 350,
-      "Descripcion": "Es un tratamiento médico estético, no invasivo y no quirúrgico, que consiste en sesiones de drenaje linfático, y que se aplica en pacientes con problemas circulatorios, los cuales generan gran retención líquidos"
+      "Descripcion": "Básicamente proporciona un tratamiento antiarrugas de la piel envejecida. el desequilibrio químico en nuestro cuerpo es también un factor de envejecimiento prematuro, la corriente galvánica permite equilibrar estos procesos, por tanto aporta una mejor consistencia, ¡menos arrugas!"
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 33,
-      "titulo": "Limpieza de espalda",
-      "img": "/imagenes/limpiezalaser1.jpeg",
-      "precio": 700,
-      "Descripcion": "Limpia la espalda de impurezas, como puntos negros y espinillas, se hace limpieza profunda con extracciones y mascarillas según el tipo de piel"
-    },
-
-    {
-      "Categoria": "Cuidado de la piel",
-      "id": 34,
-      "titulo": "Limpieza facial profunda",
-      "img": "/imagenes/limpiezaprofunda1.jpeg",
+      "Categoria": "Faciales",
+      "id": 13,
+      "titulo": "Facial de skin scrubber",
+      "img": "/imagenes/scrubber.jpeg",
       "precio": 550,
-      "Descripcion": "Es un tratamiento para mejorar la salud y el aspecto de la piel del rostro. Permite eliminar puntos negros, comedones e impurezas que se acumulan día a día y hacen que la piel pierda vitalidad, frescura y luminosidad"
+      "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizo."
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 35,
-      "titulo": "Microdermoabrasión punta de diamante",
-      "img": "/imagenes/microdermoabrasion1.jpeg",
-      "precio": 1200,
-      "Descripcion": "Es un tratamiento que a través de agua y puntas de diamante realiza una limpieza profunda de la piel, eliminando las células muertas superficiales, grasa y puntos negros acumulados, disminuye el tamaño de los poros, mejora la textura áspera del rostro y atenúa cicatrices"
+      "Categoria": "Faciales",
+      "id": 14,
+      "titulo": "Mascarilla diferentes tipo de piel",
+      "img": "/imagenes/Mascarillas-para-todo-tipo-de-pieles-00.jpeg",
+      "precio": 250,
+      "Descripcion": "Las mascarillas faciales son un producto cosmético que se emplea de manera puntual para complementar de forma sencilla el ritual de belleza diario. Para que los beneficios que ostentan sean realmente efectivos hay que buscar la que más se adecue a cada tipo de piel y que contenga los activos necesarios que ayuden a mejorar la dermis facial"
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 36,
-      "titulo": "Dermapen de acido hialurónico",
-      "img": "/imagenes/dermapen1.jpeg",
-      "precio": 1500,
-      "Descripcion": "Alisa los pliegues cutáneos, estimula la producción de colágeno. Es una sustancia natural que contiene nuestra piel que ayuda a reducir cicatrices y marcas, entre otros beneficios"
-    },
-
-    {
-      "Categoria": "Cuidado de la piel",
-      "id": 37,
-      "titulo": "Dermapen con vitaminas",
-      "img": "/imagenes/dermapen2.jpeg",
-      "precio": 1500,
-      "Descripcion": "Con este sistema, provocamos que la piel aumente la absorción de los productos que apliquemos después o simultáneamente al dermapen, como el cóctel de vitaminas para tener una piel hidratada y sana"
+      "Categoria": "Faciales",
+      "id": 15,
+      "titulo": "Limp. facial + anti edad",
+      "img": "/imagenes/antiedad.jpeg",
+      "precio": 850,
+      "Descripcion": "Limpieza rostro, exfoliación, vapor ozono, extracción manual/skin scrubber, alta frecuencia, mascarilla antiedad, mascarilla led antiedad."
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 38,
-      "titulo": "Dermapen antiacné",
-      "img": "/imagenes/dermapen1.jpeg",
-      "precio": 1500,
-      "Descripcion": "Consigue regular y disminuir las espinillas, el exceso de grasa y sebo, elimina las pieles muertas y bacterias y aporta un mayor efecto antiinflamatorio"
+      "Categoria": "Pedicure y manicure",
+      "id": 16,
+      "titulo": "Manicure spa",
+      "img": "/imagenes/manicurespa1.jpeg",
+      "precio": 280,
+      "Descripcion": "Remojo de cutícula con sales y removedores, se hace limpieza de cutícula, limado de uñas a tu elección, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
     },
     {
-      "Categoria": "Cuidado de la piel",
-      "id": 39,
-      "titulo": "Dermapen plasma rico en plaquetas",
-      "img": "/imagenes/dermapen2.jpeg",
-      "precio": 1500,
-      "Descripcion": "Si desea reducir las arrugas, afirmar la piel o disminuir las cicatrices por acné, ¡usted verá resultados excepcionales con este tratamiento, no importando su tipo de piel!"
-    },
-    {
-      "Categoria": "Cuidado de la piel",
-      "id": 40,
-      "titulo": "Mascara de luz led",
-      "img": "/imagenes/mascaraluz1.jpeg",
+      "Categoria": "Pedicure y manicure",
+      "id": 17,
+      "titulo": "Manicure spa + ruso",
+      "img": "/imagenes/manicurespa2.jpeg",
       "precio": 350,
-      "Descripcion": "Estimula la producción de colágeno, repara y sustituye el tejido dañado. Esta luz es la indicada para mejorar las líneas finas y a reducir los poros de gran tamaño. Sirve como antiinflamatorio e inhibidor de la bacteria que causa el acné"
+      "Descripcion": "Remojo de cutícula con sales, remoción de cutícula interior y exterior con fresas especiales, limado de uña, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 18,
+      "titulo": "Pedicure spa",
+      "img": "/imagenes/pedicurespa2.jpeg",
+      "precio": 380,
+      "Descripcion": "Remojo con sales y removedores, remoción de callos y asperezas, retiro de cutícula, limado de uñas, exfoliación y masaje con crema hidratante. ¡gelish gratis!      "
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 19,
+      "titulo": "Pedicure detox",
+      "img": "/imagenes/pedicurespa1.jpeg",
+      "precio": 450,
+      "Descripcion": "Permite desintoxicar y reequilibrar energéticamente el organismo. Su acción se basa en la ionización y magnetización de la solución salina que se utiliza en él, mediante electrólisis, solución que al entrar en contacto con el cuerpo, lo estimula mejorando sus funciones."
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 20,
+      "titulo": "Pedicure spa + detox + ruso",
+      "img": "/imagenes/pedicurespa2.jpeg",
+      "precio": 750,
+      "Descripcion": "Los tres tipos de pedicure juntos en una misma sesión para relajarte, desintoxicarte y lucir los pies increíbles. ¡gelish gratis!"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 21,
+      "titulo": "Maquillaje social",
+      "img": "/imagenes/maquillaje.jpeg",
+      "precio": 950,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos en su mayoría de marcas premium, incluye pestañas compuestas"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 22,
+      "titulo": "Maquillaje de novia",
+      "img": "/imagenes/maquillaje2.jpeg",
+      "precio": 3500,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos premium, incluye pestañas de mink (tira), peinado y prueba."
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 23,
+      "titulo": "Maquillaje xv años",
+      "img": "/imagenes/maquillaje.jpeg",
+      "precio": 3000,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos premium, incluye pestañas de mink (tira), peinado y prueba"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 24,
+      "titulo": "Maquillaje exprés",
+      "img": "/imagenes/maquillaje2.jpeg",
+      "precio": 550,
+      "Descripcion": "Limpieza de piel, maquillaje de rostro sencillo, productos varios, no incluye pestañas."
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 25,
+      "titulo": "Peinados",
+      "img": "/imagenes/peinado.jpeg",
+      "precio": 400,
+      "Descripcion": "Elige el peinado que desees para diversas ocasiones"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 26,
+      "titulo": "Planchado de cabello",
+      "img": "/imagenes/planchado.jpeg",
+      "precio": 300,
+      "Descripcion": "Alaciado de cabello tradicional recto"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 27,
+      "titulo": "Rulos o chinos con plancha o ferro",
+      "img": "/imagenes/rulos.jpeg",
+      "precio": 300,
+      "Descripcion": "Chinos con ferro o plancha según petición. Técnica tradicional"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 28,
+      "titulo": "Corte bordado",
+      "img": "/imagenes/peinado.jpeg",
+      "precio": 400,
+      "Descripcion": "Corta solo las puntas dañadas de tu cabello sin perjudicar el largo de tu cabello, incluye planchado previo"
+    },
+    {
+      "Categoria": "Masajes",
+      "id": 29,
+      "titulo": "Masaje relajante de dama",
+      "img": "/imagenes/masaje1.jpeg",
+      "precio": 500,
+      "Descripcion": "Desvanece el estrés físico y mental, mejora la circulación sanguínea de tu cuerpo, esta técnica tradicional logrará relajar tu sistema nervioso, al mismo tiempo que se usa una mezcla ideal de aromaterapia"
+    },
+    {
+      "Categoria": "Masajes",
+      "id": 30,
+      "titulo": "Masaje relajante para caballero",
+      "img": "/imagenes/masaje2.jpeg",
+      "precio": 650,
+      "Descripcion": "Desvanece el estrés físico y mental, mejora la circulación sanguínea de tu cuerpo, esta técnica tradicional logrará relajar tu sistema nervioso, al mismo tiempo que se usa una mezcla ideal de aromaterapia.    "
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 31,
+      "titulo": "Pestañas clásicas (1x1)",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 850,
+      "Descripcion": "Técnica clásica de 1 por 1, para lucir una mirada muy natural"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 32,
+      "titulo": "Pestañas híbridas",
+      "img": "/imagenes/pestanamink2.jpeg",
+      "precio": 1200,
+      "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 33,
+      "titulo": "Pestañas volumen ruso",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 1500,
+      "Descripcion": "Técnica de máximo volumen, da saturación más espesa a las pestañas, dando también un efecto más oscuro"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 34,
+      "titulo": "Retoque pestañas clásicas (1X1)",
+      "img": "/imagenes/microblading1.jpeg",
+      "precio": 500,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 35,
+      "titulo": "Retoque pestañas híbridas",
+      "img": "/imagenes/microblading2.jpeg",
+      "precio": 700,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
     }
   ]
 }
