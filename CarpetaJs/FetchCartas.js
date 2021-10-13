@@ -1,15 +1,18 @@
+window.onload=() =>{
+
 const URLS= [];
 const arrIds=[];
-const arrSErvicios=["nails","skin","pest","pedi","makeup","estetica","massage"];
+const arrServicios=["nails","skin","pest","pedi","makeup","estetica","massage"];
 
 main();
 
 function main(){
 
     generatorArrys();
-    window.onload=() =>{
+   
         generatorCols();
-    };
+   
+
     getCartas();
 }
 
@@ -18,32 +21,35 @@ function generatorArrys(){
         let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
         URLS.push(url);
     }
-    for(let varCtlrIdsCards=0; varCtlrIdsCards<=48;varCtlrIdsCards++){
+    for(let varCtlrIdsCards=1; varCtlrIdsCards<=48;varCtlrIdsCards++){
         let ids = "carta" + varCtlrIdsCards;
         arrIds.push(ids);
     }
+    console.log(arrIds);
 }
 
 function generatorCols(){
     
         let varCtrlCols=1, varCtlrContinue=5;
         
-    for(let varCtlrService=0; varCtlrService<3; varCtlrService++ ){
+    for(let varCtlrService=0; varCtlrService < 3; varCtlrService++ ){
 
-        console.log(arrSErvicios[varCtlrService]);
+        console.log(arrServicios[varCtlrService]);
 
         for(varCtrlCols; varCtrlCols<= varCtlrContinue ; varCtrlCols++ ){
             let col = document.createElement('div');
             col.className = "col";
             col.style.paddingBottom = "2%";
             col.id = arrIds[varCtrlCols];
-            document.getElementById(arrSErvicios[varCtlrService]).appendChild(col);
+            console.log(col);
+            document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
+            
         }
         varCtrlCols = varCtlrContinue+1;
-        varCtlrContinue =varCtlrContinue+5;
-        if(varCtlrContinue>15){
-            varCtrlCols=0;
-            varCtlrContinue=0;
+        varCtlrContinue = varCtlrContinue+5;
+        if(varCtlrContinue>50){
+            varCtrlCols=1;
+            varCtlrContinue=5;
         }
     }
 }
@@ -78,11 +84,53 @@ function getCartas(){
                 '</figure>';
                 varCtlrCards++;
         }
+        if(Servicios.Categoria=="Cuidado de la piel"){
+            let elemento1 = document.getElementById(arrIds[varCtlrCards]);
+            elemento1.innerHTML = 
+            '<figure class="image-block" style="margin: auto;">\n' +
+                '<h1>'+ Servicios.titulo+'</h1>\n' +
+                '<img src="'+Servicios.img+'"/>\n' +
+                '<figcaption>\n' +
+                    '<h3>\n' +
+                        'Ver Más\n' +
+                    '</h3>\n' +
+                    '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                        '<p>'+Servicios.Descripcion+'</p>\n' +
+                    '</div>\n' +
+                    '<button>\n' +
+                        'Reservar\n' +
+                    '</button>\n' +
+                '</figcaption>\n' +
+            '</figure>';
+            varCtlrCards++;
+        }
+        if(Servicios.Categoria=="Faciales"){
+            let elemento2 = document.getElementById(arrIds[varCtlrCards]);
+            elemento2.innerHTML = 
+            '<figure class="image-block" style="margin: auto;">\n' +
+                '<h1>'+ Servicios.titulo+'</h1>\n' +
+                '<img src="'+Servicios.img+'"/>\n' +
+                '<figcaption>\n' +
+                    '<h3>\n' +
+                        'Ver Más\n' +
+                    '</h3>\n' +
+                    '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                        '<p>'+Servicios.Descripcion+'</p>\n' +
+                    '</div>\n' +
+                    '<button>\n' +
+                        'Reservar\n' +
+                    '</button>\n' +
+                '</figcaption>\n' +
+            '</figure>';
+            varCtlrCards++;
+        }
     })
     .catch(err => console.log(err));
 }
 }
-
+};
 /*window.onload=() =>{
 
                 let col = document.createElement('div');
