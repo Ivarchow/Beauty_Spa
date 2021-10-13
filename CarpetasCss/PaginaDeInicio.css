@@ -246,21 +246,24 @@ fieldset[disabled] .btn-sample.active {
 
 
 /*Footer redes, ubi y contaco Luis*/
-.redes1{
-  width: 5%;
+.containerLuisFooter1 {
+  margin-top: 5%;
 }
 
-.conocenos{
+.horarioServ{
+  margin-left: 50px;
+  font-family: Century Gothic;
+}
+
+.figuritas69{
   float: right;
 }
+
 .mapita{
   float: right;
   margin: 50px;
 }
 
-.btnCrearCuenta{
-  float: right;
-}
 /*Footer redes, ubi y contaco Luis*/
 
 /*Footer Luis*/
@@ -269,21 +272,6 @@ fieldset[disabled] .btn-sample.active {
 *:before,
 *:after{
   box-sizing: border-box;
-}
-
-.telefonos2 ul{
-  display: block;
-}
-
-.telefonos2 li{
-  float: left;
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-.telefonos2 a{
-  color: black;
 }
 
 .footer{
@@ -296,7 +284,8 @@ fieldset[disabled] .btn-sample.active {
   padding: 50px;
   color: #fff;
   background: #262626;
-  font-family: 'Lora', serif
+  font-family: 'Lora', serif;
+  margin-top: 0px;
 }
 .footer > *{
   flex: 1 100%;
