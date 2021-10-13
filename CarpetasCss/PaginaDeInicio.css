@@ -245,14 +245,32 @@ fieldset[disabled] .btn-sample.active {
 /*Btn flotante*/
 
 
-/*Footer redes, ubi y contaco Luis*/
-.containerLuisFooter1 {
-  margin-top: 5%;
+/*continer bootstrap prueba luis*/
+.figuritas69 {
+  font-size: 50px;
+  margin-right: 50%;
+}
+
+.redesLink :hover{
+  color: #AA3053;
+}
+
+.redesLink{
+  color: #FCA9B4;
+}
+
+.horarioServ0{ 
+  padding: 15%;
 }
 
 .horarioServ{
   margin-left: 50px;
   font-family: Century Gothic;
+}
+
+.conocenosText{
+  font-size: 300%;
+  text-align: center;
 }
 
 .figuritas69{
@@ -261,10 +279,11 @@ fieldset[disabled] .btn-sample.active {
 
 .mapita{
   float: right;
-  margin: 50px;
+  margin-top: 2%;
+  margin-right: 15%;
 }
 
-/*Footer redes, ubi y contaco Luis*/
+/*continer bootstrap prueba luis*/
 
 /*Footer Luis*/
 
