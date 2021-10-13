@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(to bottom, white, #FFCCD3);
+  background-color: white;
   line-height: 1.6;
   font-family: 'Quicksand', sans-serif;
   padding: 0 ;
