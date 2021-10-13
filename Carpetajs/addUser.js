@@ -54,7 +54,7 @@ function crear(){
 
       //Se da un alert avisando que se creo la cuenta y se redirige a otra página.
       alert("Cuenta creada satisfactoriamente");
-      location.href ="../PaginasHTML/PaginaLogoInicio.html";
+      location.href ="../PaginasHTML/PaginaDeInicio.html";
 
       //Se incrementa el contador de usuarios y se actualiza
       j++;
