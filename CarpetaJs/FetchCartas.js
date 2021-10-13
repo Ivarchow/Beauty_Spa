@@ -102,7 +102,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Faciales"){
+        if(Servicios.Categoria=="Pestañas y cejas"){
             let elemento2 = document.getElementById(arrIds[varCtlrCards]);
             elemento2.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
@@ -123,7 +123,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Pedicure y manicure"){
+        if(Servicios.Categoria=="Faciales"){
             let elemento3 = document.getElementById(arrIds[varCtlrCards]);
             elemento3.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
@@ -144,7 +144,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Maquillaje"){
+        if(Servicios.Categoria=="Pedicure y manicure"){
             let elemento4 = document.getElementById(arrIds[varCtlrCards]);
             elemento4.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
@@ -165,7 +165,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Estetica"){
+        if(Servicios.Categoria=="Maquillaje"){
             let elemento5 = document.getElementById(arrIds[varCtlrCards]);
             elemento5.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
@@ -186,7 +186,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Masajes"){
+        if(Servicios.Categoria=="Estetica"){
             let elemento6 = document.getElementById(arrIds[varCtlrCards]);
             elemento6.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
@@ -207,7 +207,7 @@ function getCartas(){
             '</figure>';
             varCtlrCards++;
         }
-        if(Servicios.Categoria=="Pestañas y cejas"){
+        if(Servicios.Categoria=="Masajes"){
             let elemento7 = document.getElementById(arrIds[varCtlrCards]);
             elemento7.innerHTML = 
             '<figure class="image-block" style="margin: auto;">\n' +
