@@ -82,7 +82,7 @@
     },
     {
       "Categoria": "Pestañas y cejas",
-      "id": 31,
+      "id": 11,
       "titulo": "Pestañas clásicas (1x1)",
       "img": "/imagenes/pestanamink1.jpeg",
       "precio": 850,
@@ -90,7 +90,7 @@
     },
     {
       "Categoria": "Pestañas y cejas",
-      "id": 32,
+      "id": 12,
       "titulo": "Pestañas híbridas",
       "img": "/imagenes/pestanamink2.jpeg",
       "precio": 1200,
@@ -98,7 +98,7 @@
     },
     {
       "Categoria": "Pestañas y cejas",
-      "id": 33,
+      "id": 13,
       "titulo": "Pestañas volumen ruso",
       "img": "/imagenes/pestanamink1.jpeg",
       "precio": 1500,
@@ -106,7 +106,7 @@
     },
     {
       "Categoria": "Pestañas y cejas",
-      "id": 34,
+      "id": 14,
       "titulo": "Retoque pestañas clásicas (1X1)",
       "img": "/imagenes/microblading1.jpeg",
       "precio": 500,
@@ -114,7 +114,7 @@
     },
     {
       "Categoria": "Pestañas y cejas",
-      "id": 35,
+      "id": 15,
       "titulo": "Retoque pestañas híbridas",
       "img": "/imagenes/microblading2.jpeg",
       "precio": 700,
@@ -122,7 +122,7 @@
     },
     {
       "Categoria": "Faciales",
-      "id": 11,
+      "id": 16,
       "titulo": "Facial de radiofrecuencia",
       "img": "/imagenes/radiofrecuencia-facial-1.jpg",
       "precio": 400,
@@ -130,7 +130,7 @@
     },
     {
       "Categoria": "Faciales",
-      "id": 12,
+      "id": 17,
       "titulo": "Facial galvánica",
       "img": "/imagenes/galvanicafacial.jpeg",
       "precio": 350,
@@ -138,7 +138,7 @@
     },
     {
       "Categoria": "Faciales",
-      "id": 13,
+      "id": 18,
       "titulo": "Facial de skin scrubber",
       "img": "/imagenes/scrubber.jpg",
       "precio": 550,
@@ -146,7 +146,7 @@
     },
     {
       "Categoria": "Faciales",
-      "id": 14, 
+      "id": 19, 
       "titulo": "Mascarilla diferentes tipo de piel",
       "img": "/imagenes/Mascarillas-para-todo-tipo-de-pieles-00.jpg",
       "precio": 250,
@@ -154,7 +154,7 @@
     },
     {
       "Categoria": "Faciales",
-      "id": 15,
+      "id": 20,
       "titulo": "Limp. facial + anti edad",
       "img": "/imagenes/antiedad.jpg",
       "precio": 850,
@@ -162,7 +162,7 @@
     },
     {
       "Categoria": "Pedicure y manicure",
-      "id": 16,
+      "id": 21,
       "titulo": "Manicure spa",
       "img": "/imagenes/manicurespa1.jpeg",
       "precio": 280,
@@ -170,7 +170,7 @@
     },
     {
       "Categoria": "Pedicure y manicure",
-      "id": 17,
+      "id": 22,
       "titulo": "Manicure spa + ruso",
       "img": "/imagenes/manicurespa2.jpeg",
       "precio": 350,
@@ -178,7 +178,7 @@
     },
     {
       "Categoria": "Pedicure y manicure",
-      "id": 18,
+      "id": 23,
       "titulo": "Pedicure spa",
       "img": "/imagenes/pedicurespa2.jpeg",
       "precio": 380,
@@ -186,7 +186,7 @@
     },
     {
       "Categoria": "Pedicure y manicure",
-      "id": 19,
+      "id": 24,
       "titulo": "Pedicure detox",
       "img": "/imagenes/pedicurespa1.jpeg",
       "precio": 450,
@@ -194,7 +194,7 @@
     },
     {
       "Categoria": "Pedicure y manicure",
-      "id": 20,
+      "id": 25,
       "titulo": "Pedicure spa + detox + ruso",
       "img": "/imagenes/pedicurespa2.jpeg",
       "precio": 750,
@@ -202,7 +202,7 @@
     },
     {
       "Categoria": "Maquillaje",
-      "id": 21,
+      "id": 26,
       "titulo": "Maquillaje social",
       "img": "/imagenes/maquillaje.jpeg",
       "precio": 950,
@@ -210,7 +210,7 @@
     },
     {
       "Categoria": "Maquillaje",
-      "id": 22,
+      "id": 27,
       "titulo": "Maquillaje de novia",
       "img": "/imagenes/maquillaje2.jpeg",
       "precio": 3500,
@@ -218,7 +218,7 @@
     },
     {
       "Categoria": "Maquillaje",
-      "id": 23,
+      "id": 28,
       "titulo": "Maquillaje xv años",
       "img": "/imagenes/maquillaje.jpeg",
       "precio": 3000,
@@ -226,7 +226,7 @@
     },
     {
       "Categoria": "Maquillaje",
-      "id": 24,
+      "id": 29,
       "titulo": "Maquillaje exprés",
       "img": "/imagenes/maquillaje2.jpeg",
       "precio": 550,
@@ -234,7 +234,7 @@
     },
     {
       "Categoria": "Estetica",
-      "id": 25,
+      "id": 30,
       "titulo": "Peinados",
       "img": "/imagenes/peinado.jpg",
       "precio": 400,
@@ -242,7 +242,7 @@
     },
     {
       "Categoria": "Estetica",
-      "id": 26,
+      "id": 31,
       "titulo": "Planchado de cabello",
       "img": "/imagenes/planchado.jpg",
       "precio": 300,
@@ -250,7 +250,7 @@
     },
     {
       "Categoria": "Estetica",
-      "id": 27,
+      "id": 32,
       "titulo": "Rulos o chinos con plancha o ferro",
       "img": "/imagenes/rulos.jpg",
       "precio": 300,
@@ -258,7 +258,7 @@
     },
     {
       "Categoria": "Estetica",
-      "id": 28,
+      "id": 33,
       "titulo": "Corte bordado",
       "img": "/imagenes/peinado.jpg",
       "precio": 400,
@@ -266,7 +266,7 @@
     },
     {
       "Categoria": "Masajes",
-      "id": 29,
+      "id": 34,
       "titulo": "Masaje relajante de dama",
       "img": "/imagenes/masaje1.jpeg",
       "precio": 500,
@@ -274,7 +274,7 @@
     },
     {
       "Categoria": "Masajes",
-      "id": 30,
+      "id": 35,
       "titulo": "Masaje relajante para caballero",
       "img": "/imagenes/masaje2.jpeg",
       "precio": 650,
