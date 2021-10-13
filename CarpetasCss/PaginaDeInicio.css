@@ -279,8 +279,9 @@ fieldset[disabled] .btn-sample.active {
 
 .mapita{
   float: right;
-  margin-top: 2%;
-  margin-right: 15%;
+  margin-top: 0%;
+  
+  margin-right: 18%;
 }
 
 /*continer bootstrap prueba luis*/
