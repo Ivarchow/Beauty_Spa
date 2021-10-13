@@ -42,7 +42,7 @@
     },
     {
       "Categoria": "Cuidado de la piel",
-      "id": 25,
+      "id": 6,
       "titulo": "Carboxiterapia",
       "img": "/imagenes/carboxiterapia1.jpeg",
       "precio": 450,
@@ -50,7 +50,7 @@
     },
     {
       "Categoria": "Cuidado de la piel",
-      "id": 26,
+      "id": 7,
       "titulo": "Radiofrecuencia",
       "img": "/imagenes/radiofrecuencia1.jpeg",
       "precio": 300,
@@ -58,7 +58,7 @@
     },
     {
       "Categoria": "Cuidado de la piel",
-      "id": 27,
+      "id": 8,
       "titulo": "Cavitación",
       "img": "/imagenes/cavitacion2.jpeg",
       "precio": 300,
@@ -66,7 +66,7 @@
     },
     {
       "Categoria": "Cuidado de la piel",
-      "id": 28,
+      "id": 9,
       "titulo": "Vacummterapia",
       "img": "/imagenes/Vacummterapia.jpeg",
       "precio": 300,
@@ -74,7 +74,7 @@
     },
     {
       "Categoria": "Cuidado de la piel",
-      "id": 29,
+      "id": 10,
       "titulo": "Maderoterapia",
       "img": "/imagenes/maderoterapia2.jpeg",
       "precio": 250,
