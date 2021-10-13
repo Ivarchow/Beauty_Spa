@@ -4,123 +4,131 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVINITE-SignUp</title>
-  <link rel="stylesheet" href="LOGIN.CSS" type="text/css">
-
-<!-- Google login --> 
-  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-
+  <title>DIVINITE-CrearCuenta</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CarpetasCss/CrearCuenta.css" type="text/css">
+    <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-
-<!-- ingresar codigo de navbar -->
-    <div class="navbar">
-      <p>navbar</p>
-    </div>
-
-<!-- codigo de login -->
-<div class="wrapper">
-  <div class="logo"></a><img src="Logo.svg" alt=""></a></div>
-  <div></a class = "titulo">Crea tu cuenta de forma Gratuita</a></div>
-
-  <div class="form">
-    <form action="#" class="login">
-      <div class="field">
-        <input type="text" placeholder="Nombre" required>
-        </div>
-        <div class="field">
-        <input type="text" placeholder="Apellido" required>
-        </div>
-        <div class="field"> 
-          <input type="text" placeholder="Inserte su email" required> 
-        </div>
-        <div class="field1">
-          <input type="password" id="myInput2" placeholder="Contraseña" required>
-            <Span class="eye" onclick="myFunction2()">
-            <i id="hide3" ><img src="eye_brown.svg" alt=""></i>
-            <i id="hide4" ><img src="eyeslash_gray.svg" alt=""></i>
-            </Span>
-        </div>
-        <div class="field1">
-          <input type="password" id="myInput3" onkeyup="Habilitar" placeholder="Confirmar contraseña" required>
-            <Span class="eye" onclick="myFunction3()">
-            <i id="hide5" ><img src="eye_brown.svg" alt=""></i>
-            <i id="hide6" ><img src="eyeslash_gray.svg" alt=""></i>
-            </Span>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox"><span>Aceptar terminos y condiciones</span>
-        </div>  
-      <div class="aviso">
-        Leer <a href="">Aviso de privacidad</a>
+  <div class="grid">
+  <!-- ingresar codigo de navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="#" class="nav-logo">DIVINITÉ</a>
+      <ul class="nav-menu">
+  
+        <li class="nav-item">
+          <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/aboutUs.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;About us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/Contacto.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/PaginasHTML/PaginaLogoInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
+        <li class="nav-item">
+          <a href="/LOGIN/LOGIN.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-        
-        <div class="btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Crear cuenta">  
-        </div>
-        <div>
-          <hr>
-        </div>
-        <div class="divisior">
-          <a> Tambien puedes crear tu cuenta con: </a>
-        </div>
-        <div class="icon">
-          <div class="iconn"><a href="#"></a><img src="google_red.svg" alt=""></a></div> 
-          <div class="iconn"><a href="#"></a><img src="facebook_red.svg" alt=""></a></div> 
-        </div>
-        <div>
-          <hr>
-        </div>
-        <div class="signup-link">
-          ¿Ya tienes cuenta? <a href="">Inicia Sesion</a>
-        </div>
-  </div><!-- form -->
-</div><!-- wrapper -->
-
-<!-- ingresar codigo del contact -->
-    <div class="footer">
-      <p>contact</p>
+    </nav>
+  </header>
+  <!-- navbar -->
+  
+  <!-- codigo de login -->
+  <div class="content">
+    <div class="box1">
+      <div class="logo"></a><img src="Logo.svg" alt=""></a></div>
+    </div><!-- box1 -->
+  <div class="box2">
+    <a>Crear cuenta de forma gratuita</a>
+  </div><!-- box2 -->
+  <div class="box3 field">
+    <input type="text" id="InputName" placeholder="Nombre y Apellido" required> 
+  </div><!-- box3 -->
+  <div class="box4 field1">
+    <input type="tel" id="InputPhone" placeholder="Telefono" title="Un número de teléfono válido debe tener 10 dígitos" required> 
+  </div><!-- box4 -->
+  <div class="box5 field2">
+    <input type="email" id="InputEmail" name="emails" multiple placeholder="Inserte su email" required> 
+  </div><!-- box5 -->
+  <div class="box6 field3">
+    <input type="password" id="Show" placeholder="Contraseña" required>
+  </div><!-- box6 -->
+  <div class="box7 field4">
+    <input type="password" id="Show1" placeholder="Confirmar contraseña" required>
+  </div><!-- box7 -->
+  <div class="box8">
+      <input type="checkbox" id="" onclick="viewpassword(), viewpassword2()">Mostrar contraseña
+  </div><!-- box8 -->
+  <div class="box9">
+    <div class="checkbox">
+      <input type="checkbox" id="terms">Aceptar terminos y condiciones
+    </div> 
+  </div><!-- box9 -->
+  <div class="box10">
+    <div class="aviso">
+      Leer <a href="">Aviso de privacidad</a>
     </div>
-
-</div> <!-- container -->
-
-<script>
-    function myFunction2(){
-    var a = document.getElementById("myInput2");
-    var b = document.getElementById("hide3");
-    var c = document.getElementById("hide4");
-    if(a.type === 'password'){
-      a.type = "text";
-      b.style.display = "block";
-      c.style.display = "none";
+  </div><!-- box10 -->
+  <div class="box11">
+    <button class="btn-layer" id="Crear" type="submit" >Crear cuenta</button>
+  </div><!-- box11 -->
+  <div class="box12">
+    <div><hr></div>
+    <div class="divisior">
+      <a> Tambien puedes crear tu cuenta con: </a>
+    </div>
+    <div class="icon">
+      <div class="iconn"><a href="#"><i class="fab fa-facebook-square"></i></div> 
+      <div class="iconn"><a href="#"><i class="fab fa-google"></i></div> 
+    </div>
+    <div><hr></div>
+  </div><!-- box12 -->
+  <div class="box13">
+    <a>¿Ya tienes cuenta? </a>
+    <div class="signup-link">
+      <a href="LOGIN.HTML"> Iniciar sesion </a></div>
+  </div><!-- box13 -->
+  </div><!-- content -->
+  <!-- ingresar codigo del contact -->
+      <div class="footer">
+        <p>contact</p>
+      </div><!-- footer -->
+    </div><!-- grid -->
+  </body>
+  <!-- display password -->
+  <script type="text/javascript">
+    function viewpassword(){
+      var show = document.getElementById('Show')
+        if(show.type =='password'){show.type='text';}
+        else{show.type='password';}
     }
-      else{
-      a.type = "password";
-      b.style.display = "none";
-      c.style.display = "block";
+    function viewpassword2(){
+      var show = document.getElementById('Show1')
+      if(show.type =='password'){show.type='text';}
+        else{show.type='password';}
     }
-  }
-
-    function myFunction3(){
-    var x = document.getElementById("myInput3");
-    var y = document.getElementById("hide5");
-    var z = document.getElementById("hide6");
-    if(x.type === 'password'){
-      x.type = "text";
-      y.style.display = "block";
-      z.style.display = "none";
-    }
-      else{
-      x.type = "password";
-      y.style.display = "none";
-      z.style.display = "block";
-    }
-  }
-
-</script>
-
-
-</body>
-</html>
+    
+    
+    
+    
+    </script>
+    <script src="../Carpetajs/addUser.js"></script>
+    <script src="/Carpetajs/navbar.js"></script>
+  </html>

@@ -4,93 +4,116 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVINITE-LogIn</title>
-  <link rel="stylesheet" href="LOGIN.CSS" type="text/css">
-
-<!-- Google login --> 
-  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-
+  <title>DIVINITE-Ingreso</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../CarpetasCss/Ingreso.css" type="text/css">
+  <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+  <script src="//pull.cappuccicons.com/cpf.js"></script>
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-
+<div class="grid">
 <!-- ingresar codigo de navbar -->
-    <div class="navbar">
-      <p>navbar</p>
+<header class="header">
+  <nav class="navbar">
+    <a href="#" class="nav-logo">DIVINITÉ</a>
+    <ul class="nav-menu">
+
+      <li class="nav-item">
+        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Services</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/aboutUs.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;About us</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/Contacto.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contact us</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/PaginaLogoInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
+      <li class="nav-item">
+        <a href="/LOGIN/LOGIN.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
+  </nav>
+</header>
+<!-- navbar -->
 
 <!-- codigo de login -->
-<div class="wrapper">
+<div class="content">
+<div class="box1">
   <div class="logo"></a><img src="Logo.svg" alt=""></a></div>
-  <div></a class = "titulo">Ingresar</a></div>
-
-  <div class="form">
-    <form action="#" class="login">
-        <div class="field"> 
-          <input type="text" placeholder="Inserte su email" required> 
-        </div>
-        <div class="field1">
-          <input type="password" id="myInput" placeholder="Contraseña" required>
-          <Span class="eye" onclick="myFunction()">
-          <i id="hide1" ><img src="eye_brown.svg" alt=""></i>
-          <i id="hide2" ><img src="eyeslash_gray.svg" alt=""></i>
-          </Span>
-        </div>
-          <div class="pass-link">
-            <a href="#">¿Olvidaste contraseña? </a>
-          </div>
-        
-        <div class="checkbox">
-          <input type="checkbox"><span>Permanecer conectado</span>
-        </div>
-        <div class="btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Ingresar">  
-        </div>
-        <div>
-          <hr>
-        </div>
-        <div class="divisior">
-          <a> Iniciar sesion con: </a>
-        </div>
-        <div class="icon">
-          <div class="iconn"><a href="#"></a><img src="google_red.svg" alt=""></a></div> 
-          <div class="iconn"><a href="#"></a><img src="facebook_red.svg" alt=""></a></div> 
-        </div>
-        <div>
-          <hr>
-        </div>
-        <div class="signup-link">
-          ¿No tienes cuenta? <a href="">Crear cuenta</a>
-        </div>
-  </div><!-- form -->
-</div><!-- wrapper -->
-
+</div><!-- box1 -->
+<div class="box2">
+  <a>Ingresar</a>
+</div><!-- box2 -->
+<div class="box3 field">
+  <input type="email" name="emails" id="InputEmail" multiple placeholder="Inserte su email" required> 
+</div><!-- box3 -->
+<div class="box4 field1">
+  <input type="password" id="Show" placeholder="Contraseña" required>
+</div><!-- box4 -->
+<div class="box5 pass-link">
+  <div class="b51">
+  <input type="checkbox" id="" onclick="viewpassword()">Mostrar contraseña
+</div>
+<div class="b52">
+  <a href="EnvioEmailRecuperarcuenta.html">¿Olvidaste contraseña? </a>
+</div>
+</div><!-- box5 -->
+<div class="box6 checkbox ">
+  <input type="checkbox" id="terms" onchange="openSubmit()">Permanecer conectado
+</div><!-- box6 -->
+<div class="box7 btn" id="enter">
+  <!-- <div class="btn-layer"></div> -->
+  <button class="btn-layer" type="button" id="Login">Ingresar</button>
+  <!-- <input type="submit" value="Ingresar">  -->
+</div><!-- box7 -->
+<div class="box8">
+  <div><hr></div>
+  <div class="divisior">
+    <a> Iniciar sesion con: </a>
+  </div>
+  <div class="icon">
+    <div class="iconn"><a href="#"><i class="fab fa-facebook-square"></i></div> 
+    <div class="iconn"><a href="#"><i class="fab fa-google"></i></div> 
+  </div>
+  <div><hr></div>
+</div><!-- box8 -->
+<div class="box9 text">
+  <a>¿No tienes cuenta?</a>
+  <div class="signup-link"> <a href="SIGNUP.html">Crear cuenta </a></div>
+</div><!-- box9 -->
+</div><!-- content -->
 <!-- ingresar codigo del contact -->
     <div class="footer">
       <p>contact</p>
-    </div>
-
-</div> <!-- container -->
-
-<script>
-    function myFunction(){
-    var a = document.getElementById("myInput");
-    var b = document.getElementById("hide1");
-    var c = document.getElementById("hide2");
-    if(a.type === 'password'){
-      a.type = "text";
-      b.style.display = "block";
-      c.style.display = "none";
-    }
-      else{
-      a.type = "password";
-      b.style.display = "none";
-      c.style.display = "block";
-    }
-  }
-</script>
-
-
+    </div><!-- footer -->
+  </div><!-- grid -->
 </body>
+<!-- display password -->
+<script type="text/javascript">
+function viewpassword(){
+  var show = document.getElementById('Show')
+    if(show.type =='password'){
+      show.type='text';
+    }
+    else{
+    show.type='password';
+    }
+}
+</script>
+<script src="../Carpetajs/login.js"></script>
+<script src="/Carpetajs/navbar.js"></script>
 </html>
