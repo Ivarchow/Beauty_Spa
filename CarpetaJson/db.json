@@ -81,6 +81,46 @@
       "Descripcion": "Consiste en aplicar un masaje empleando diferentes utensilios de madera especialmente diseñados para equilibrar la energía del paciente, reafirmar y tonificar su cuerpo, y combatir la celulitis. La sesión de maderoterapia empieza con un masaje que permite preparar la piel y remover la grasa acumulada"
     },
     {
+      "Categoria": "Pestañas y cejas",
+      "id": 31,
+      "titulo": "Pestañas clásicas (1x1)",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 850,
+      "Descripcion": "Técnica clásica de 1 por 1, para lucir una mirada muy natural"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 32,
+      "titulo": "Pestañas híbridas",
+      "img": "/imagenes/pestanamink2.jpeg",
+      "precio": 1200,
+      "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 33,
+      "titulo": "Pestañas volumen ruso",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 1500,
+      "Descripcion": "Técnica de máximo volumen, da saturación más espesa a las pestañas, dando también un efecto más oscuro"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 34,
+      "titulo": "Retoque pestañas clásicas (1X1)",
+      "img": "/imagenes/microblading1.jpeg",
+      "precio": 500,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 35,
+      "titulo": "Retoque pestañas híbridas",
+      "img": "/imagenes/microblading2.jpeg",
+      "precio": 700,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
+    },
+    {
       "Categoria": "Faciales",
       "id": 11,
       "titulo": "Facial de radiofrecuencia",
@@ -239,46 +279,6 @@
       "img": "/imagenes/masaje2.jpeg",
       "precio": 650,
       "Descripcion": "Desvanece el estrés físico y mental, mejora la circulación sanguínea de tu cuerpo, esta técnica tradicional logrará relajar tu sistema nervioso, al mismo tiempo que se usa una mezcla ideal de aromaterapia.    "
-    },
-    {
-      "Categoria": "Pestañas y cejas",
-      "id": 31,
-      "titulo": "Pestañas clásicas (1x1)",
-      "img": "/imagenes/pestanamink1.jpeg",
-      "precio": 850,
-      "Descripcion": "Técnica clásica de 1 por 1, para lucir una mirada muy natural"
-    },
-    {
-      "Categoria": "Pestañas y cejas",
-      "id": 32,
-      "titulo": "Pestañas híbridas",
-      "img": "/imagenes/pestanamink2.jpeg",
-      "precio": 1200,
-      "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
-    },
-    {
-      "Categoria": "Pestañas y cejas",
-      "id": 33,
-      "titulo": "Pestañas volumen ruso",
-      "img": "/imagenes/pestanamink1.jpeg",
-      "precio": 1500,
-      "Descripcion": "Técnica de máximo volumen, da saturación más espesa a las pestañas, dando también un efecto más oscuro"
-    },
-    {
-      "Categoria": "Pestañas y cejas",
-      "id": 34,
-      "titulo": "Retoque pestañas clásicas (1X1)",
-      "img": "/imagenes/microblading1.jpeg",
-      "precio": 500,
-      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
-    },
-    {
-      "Categoria": "Pestañas y cejas",
-      "id": 35,
-      "titulo": "Retoque pestañas híbridas",
-      "img": "/imagenes/microblading2.jpeg",
-      "precio": 700,
-      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
     }
   ]
 }
