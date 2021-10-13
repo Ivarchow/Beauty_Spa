@@ -68,7 +68,7 @@
       "Categoria": "Cuidado de la piel",
       "id": 9,
       "titulo": "Vacummterapia",
-      "img": "/imagenes/Vacummterapia.jpeg",
+      "img": "/imagenes/Vacummterapia.jpg",
       "precio": 300,
       "Descripcion": "Ayuda a drenar el tejido adiposo movilizando la grasa localizada hacia el sistema linfático. Se utiliza como una alternativa para eliminar la grasa localizada"
     },
@@ -84,7 +84,7 @@
       "Categoria": "Faciales",
       "id": 11,
       "titulo": "Facial de radiofrecuencia",
-      "img": "/imagenes/radiofrecuencia-facial-1.jpeg",
+      "img": "/imagenes/radiofrecuencia-facial-1.jpg",
       "precio": 400,
       "Descripcion": "Es una técnica que combate de manera efectiva la flacidez. Consiste en aplicar energía de radiofrecuencia para calentar las capas internas de la piel y regenerar el colágeno para lucir una piel firme y tersa"
     },
@@ -100,15 +100,15 @@
       "Categoria": "Faciales",
       "id": 13,
       "titulo": "Facial de skin scrubber",
-      "img": "/imagenes/scrubber.jpeg",
+      "img": "/imagenes/scrubber.jpg",
       "precio": 550,
       "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizo."
     },
     {
       "Categoria": "Faciales",
-      "id": 14,
+      "id": 14, 
       "titulo": "Mascarilla diferentes tipo de piel",
-      "img": "/imagenes/Mascarillas-para-todo-tipo-de-pieles-00.jpeg",
+      "img": "/imagenes/Mascarillas-para-todo-tipo-de-pieles-00.jpg",
       "precio": 250,
       "Descripcion": "Las mascarillas faciales son un producto cosmético que se emplea de manera puntual para complementar de forma sencilla el ritual de belleza diario. Para que los beneficios que ostentan sean realmente efectivos hay que buscar la que más se adecue a cada tipo de piel y que contenga los activos necesarios que ayuden a mejorar la dermis facial"
     },
