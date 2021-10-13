@@ -2,26 +2,23 @@ window.onload=() =>{
 
 const URLS= [];
 const arrIds=[];
-const arrServicios=["nails","skin","pest","pedi","makeup","estetica","massage"];
+const arrServicios=["nails","skin","pest","fac","pedi","makeup","estetica","massage"];
 
 main();
 
 function main(){
 
     generatorArrys();
-   
-        generatorCols();
-   
-
+    generatorCols();
     getCartas();
 }
 
 function generatorArrys(){
-    for(let varCtlrGenerator = 1;varCtlrGenerator<=14;varCtlrGenerator++){
+    for(let varCtlrGenerator = 1;varCtlrGenerator<=35;varCtlrGenerator++){
         let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
         URLS.push(url);
     }
-    for(let varCtlrIdsCards=1; varCtlrIdsCards<=48;varCtlrIdsCards++){
+    for(let varCtlrIdsCards=0; varCtlrIdsCards<=35;varCtlrIdsCards++){
         let ids = "carta" + varCtlrIdsCards;
         arrIds.push(ids);
     }
@@ -32,7 +29,7 @@ function generatorCols(){
     
         let varCtrlCols=1, varCtlrContinue=5;
         
-    for(let varCtlrService=0; varCtlrService < 3; varCtlrService++ ){
+    for(let varCtlrService=0; varCtlrService <3; varCtlrService++ ){
 
         console.log(arrServicios[varCtlrService]);
 
