@@ -1,0 +1,284 @@
+{
+  "Servicios": [
+    {
+      "Categoria": "Unas",
+      "id": 1,
+      "titulo": "Gelish liso",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 150,
+      "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 2,
+      "titulo": "Gelish Mate",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 180,
+      "Descripcion": "Aplicación de esmalte semipermanente en gel en uña natural con terminado en mate"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 3,
+      "titulo": "Gelish Francés",
+      "img": "/imagenes/gelish3.jpeg",
+      "precio": 280,
+      "Descripcion": "Aplicación de esmalte semipermanente en base transparente de uña natural, con la punta en color blanco o cualquier otro color de la gama"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 4,
+      "titulo": "Gelish Francés con base color",
+      "img": "/imagenes/gelish1.jpeg",
+      "precio": 300,
+      "Descripcion": "Aplicación de esmalte semipermanente en base nude o en color elegido, con la punta en color blanco o cualquier otro color de la gama"
+    },
+    {
+      "Categoria": "Unas",
+      "id": 5,
+      "titulo": "Facil retiro de Gelish",
+      "img": "/imagenes/gelish2.jpeg",
+      "precio": 40,
+      "Descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 6,
+      "titulo": "Carboxiterapia",
+      "img": "/imagenes/carboxiterapia1.jpeg",
+      "precio": 450,
+      "Descripcion": "Ayuda a eliminar la celulitis, estrías, grasa localizada y la flacidez de la piel, esto debido a que el gas carbónico inyectado estimula la circulación celular y la oxigenación de los tejidos"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 7,
+      "titulo": "Radiofrecuencia",
+      "img": "/imagenes/radiofrecuencia1.jpeg",
+      "precio": 300,
+      "Descripcion": "Ayuda a eliminar celulitis y flacidez corporal va a provocar producción de nuevo colágeno (tensando la piel y los septos fibrosos), el drenaje del estasis linfático de la grasa, mejorando la circulación de la piel y tejido subcutáneo"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 8,
+      "titulo": "Cavitación",
+      "img": "/imagenes/cavitacion2.jpeg",
+      "precio": 300,
+      "Descripcion": "Es un tratamiento indoloro donde se emplean ultrasonidos de baja frecuencia sobre la zona donde se ha localizado la grasa, rompiendo así la membrana celular de los adipocitos, favoreciendo a la eliminación de la grasa localizada y mejorando el aspecto de la piel de naranja"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 9,
+      "titulo": "Vacummterapia",
+      "img": "/imagenes/Vacummterapia.jpg",
+      "precio": 300,
+      "Descripcion": "Ayuda a drenar el tejido adiposo movilizando la grasa localizada hacia el sistema linfático. Se utiliza como una alternativa para eliminar la grasa localizada"
+    },
+    {
+      "Categoria": "Cuidado de la piel",
+      "id": 10,
+      "titulo": "Maderoterapia",
+      "img": "/imagenes/maderoterapia2.jpeg",
+      "precio": 250,
+      "Descripcion": "Consiste en aplicar un masaje empleando diferentes utensilios de madera especialmente diseñados para equilibrar la energía del paciente, reafirmar y tonificar su cuerpo, y combatir la celulitis. La sesión de maderoterapia empieza con un masaje que permite preparar la piel y remover la grasa acumulada"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 11,
+      "titulo": "Pestañas clásicas (1x1)",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 850,
+      "Descripcion": "Técnica clásica de 1 por 1, para lucir una mirada muy natural"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 12,
+      "titulo": "Pestañas híbridas",
+      "img": "/imagenes/pestanamink2.jpeg",
+      "precio": 1200,
+      "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 13,
+      "titulo": "Pestañas volumen ruso",
+      "img": "/imagenes/pestanamink1.jpeg",
+      "precio": 1500,
+      "Descripcion": "Técnica de máximo volumen, da saturación más espesa a las pestañas, dando también un efecto más oscuro"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 14,
+      "titulo": "Retoque pestañas clásicas (1X1)",
+      "img": "/imagenes/microblading1.jpeg",
+      "precio": 500,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
+    },
+    {
+      "Categoria": "Pestañas y cejas",
+      "id": 15,
+      "titulo": "Retoque pestañas híbridas",
+      "img": "/imagenes/microblading2.jpeg",
+      "precio": 700,
+      "Descripcion": "Retiro de pestañas despeinadas y/o enredadas, se rellena los espacios vacíos por pestañas naturales nuevas o faltantes. Se aplica la extensión según la técnica. Se recomienda el retoque cada 2 semanas"
+    },
+    {
+      "Categoria": "Faciales",
+      "id": 16,
+      "titulo": "Facial de radiofrecuencia",
+      "img": "/imagenes/radiofrecuencia-facial-1.jpg",
+      "precio": 400,
+      "Descripcion": "Es una técnica que combate de manera efectiva la flacidez. Consiste en aplicar energía de radiofrecuencia para calentar las capas internas de la piel y regenerar el colágeno para lucir una piel firme y tersa"
+    },
+    {
+      "Categoria": "Faciales",
+      "id": 17,
+      "titulo": "Facial galvánica",
+      "img": "/imagenes/galvanicafacial.jpeg",
+      "precio": 350,
+      "Descripcion": "Básicamente proporciona un tratamiento antiarrugas de la piel envejecida. el desequilibrio químico en nuestro cuerpo es también un factor de envejecimiento prematuro, la corriente galvánica permite equilibrar estos procesos, por tanto aporta una mejor consistencia, ¡menos arrugas!"
+    },
+    {
+      "Categoria": "Faciales",
+      "id": 18,
+      "titulo": "Facial de skin scrubber",
+      "img": "/imagenes/scrubber.jpg",
+      "precio": 550,
+      "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizo."
+    },
+    {
+      "Categoria": "Faciales",
+      "id": 19, 
+      "titulo": "Mascarilla diferentes tipo de piel",
+      "img": "/imagenes/Mascarillas-para-todo-tipo-de-pieles-00.jpg",
+      "precio": 250,
+      "Descripcion": "Las mascarillas faciales son un producto cosmético que se emplea de manera puntual para complementar de forma sencilla el ritual de belleza diario. Para que los beneficios que ostentan sean realmente efectivos hay que buscar la que más se adecue a cada tipo de piel y que contenga los activos necesarios que ayuden a mejorar la dermis facial"
+    },
+    {
+      "Categoria": "Faciales",
+      "id": 20,
+      "titulo": "Limp. facial + anti edad",
+      "img": "/imagenes/antiedad.jpg",
+      "precio": 850,
+      "Descripcion": "Limpieza rostro, exfoliación, vapor ozono, extracción manual/skin scrubber, alta frecuencia, mascarilla antiedad, mascarilla led antiedad."
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 21,
+      "titulo": "Manicure spa",
+      "img": "/imagenes/manicurespa1.jpeg",
+      "precio": 280,
+      "Descripcion": "Remojo de cutícula con sales y removedores, se hace limpieza de cutícula, limado de uñas a tu elección, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 22,
+      "titulo": "Manicure spa + ruso",
+      "img": "/imagenes/manicurespa2.jpeg",
+      "precio": 350,
+      "Descripcion": "Remojo de cutícula con sales, remoción de cutícula interior y exterior con fresas especiales, limado de uña, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 23,
+      "titulo": "Pedicure spa",
+      "img": "/imagenes/pedicurespa2.jpeg",
+      "precio": 380,
+      "Descripcion": "Remojo con sales y removedores, remoción de callos y asperezas, retiro de cutícula, limado de uñas, exfoliación y masaje con crema hidratante. ¡gelish gratis!      "
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 24,
+      "titulo": "Pedicure detox",
+      "img": "/imagenes/pedicurespa1.jpeg",
+      "precio": 450,
+      "Descripcion": "Permite desintoxicar y reequilibrar energéticamente el organismo. Su acción se basa en la ionización y magnetización de la solución salina que se utiliza en él, mediante electrólisis, solución que al entrar en contacto con el cuerpo, lo estimula mejorando sus funciones."
+    },
+    {
+      "Categoria": "Pedicure y manicure",
+      "id": 25,
+      "titulo": "Pedicure spa + detox + ruso",
+      "img": "/imagenes/pedicurespa2.jpeg",
+      "precio": 750,
+      "Descripcion": "Los tres tipos de pedicure juntos en una misma sesión para relajarte, desintoxicarte y lucir los pies increíbles. ¡gelish gratis!"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 26,
+      "titulo": "Maquillaje social",
+      "img": "/imagenes/maquillaje.jpeg",
+      "precio": 950,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos en su mayoría de marcas premium, incluye pestañas compuestas"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 27,
+      "titulo": "Maquillaje de novia",
+      "img": "/imagenes/maquillaje2.jpeg",
+      "precio": 3500,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos premium, incluye pestañas de mink (tira), peinado y prueba."
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 28,
+      "titulo": "Maquillaje xv años",
+      "img": "/imagenes/maquillaje.jpeg",
+      "precio": 3000,
+      "Descripcion": "Limpieza y preparación de piel, maquillaje de rostro con productos premium, incluye pestañas de mink (tira), peinado y prueba"
+    },
+    {
+      "Categoria": "Maquillaje",
+      "id": 29,
+      "titulo": "Maquillaje exprés",
+      "img": "/imagenes/maquillaje2.jpeg",
+      "precio": 550,
+      "Descripcion": "Limpieza de piel, maquillaje de rostro sencillo, productos varios, no incluye pestañas."
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 30,
+      "titulo": "Peinados",
+      "img": "/imagenes/peinado.jpg",
+      "precio": 400,
+      "Descripcion": "Elige el peinado que desees para diversas ocasiones"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 31,
+      "titulo": "Planchado de cabello",
+      "img": "/imagenes/planchado.jpg",
+      "precio": 300,
+      "Descripcion": "Alaciado de cabello tradicional recto"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 32,
+      "titulo": "Rulos o chinos con plancha o ferro",
+      "img": "/imagenes/rulos.jpg",
+      "precio": 300,
+      "Descripcion": "Chinos con ferro o plancha según petición. Técnica tradicional"
+    },
+    {
+      "Categoria": "Estetica",
+      "id": 33,
+      "titulo": "Corte bordado",
+      "img": "/imagenes/peinado.jpg",
+      "precio": 400,
+      "Descripcion": "Corta solo las puntas dañadas de tu cabello sin perjudicar el largo de tu cabello, incluye planchado previo"
+    },
+    {
+      "Categoria": "Masajes",
+      "id": 34,
+      "titulo": "Masaje relajante de dama",
+      "img": "/imagenes/masaje1.jpeg",
+      "precio": 500,
+      "Descripcion": "Desvanece el estrés físico y mental, mejora la circulación sanguínea de tu cuerpo, esta técnica tradicional logrará relajar tu sistema nervioso, al mismo tiempo que se usa una mezcla ideal de aromaterapia"
+    },
+    {
+      "Categoria": "Masajes",
+      "id": 35,
+      "titulo": "Masaje relajante para caballero",
+      "img": "/imagenes/masaje2.jpeg",
+      "precio": 650,
+      "Descripcion": "Desvanece el estrés físico y mental, mejora la circulación sanguínea de tu cuerpo, esta técnica tradicional logrará relajar tu sistema nervioso, al mismo tiempo que se usa una mezcla ideal de aromaterapia.    "
+    }
+  ]
+}
