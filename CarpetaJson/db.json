@@ -196,7 +196,7 @@
       "Categoria": "Estetica",
       "id": 25,
       "titulo": "Peinados",
-      "img": "/imagenes/peinado.jpeg",
+      "img": "/imagenes/peinado.jpg",
       "precio": 400,
       "Descripcion": "Elige el peinado que desees para diversas ocasiones"
     },
@@ -204,7 +204,7 @@
       "Categoria": "Estetica",
       "id": 26,
       "titulo": "Planchado de cabello",
-      "img": "/imagenes/planchado.jpeg",
+      "img": "/imagenes/planchado.jpg",
       "precio": 300,
       "Descripcion": "Alaciado de cabello tradicional recto"
     },
@@ -212,7 +212,7 @@
       "Categoria": "Estetica",
       "id": 27,
       "titulo": "Rulos o chinos con plancha o ferro",
-      "img": "/imagenes/rulos.jpeg",
+      "img": "/imagenes/rulos.jpg",
       "precio": 300,
       "Descripcion": "Chinos con ferro o plancha según petición. Técnica tradicional"
     },
@@ -220,7 +220,7 @@
       "Categoria": "Estetica",
       "id": 28,
       "titulo": "Corte bordado",
-      "img": "/imagenes/peinado.jpeg",
+      "img": "/imagenes/peinado.jpg",
       "precio": 400,
       "Descripcion": "Corta solo las puntas dañadas de tu cabello sin perjudicar el largo de tu cabello, incluye planchado previo"
     },
