@@ -3,7 +3,13 @@ main{ /*Esto tambien ayuda al footer*/
   min-height: 80vh;
 }
 
+.tituloPerfil{
+  text-align: center;
+  color: black;
+}
+
 /*Footer Luis Responsivo*/
+
 footer{
   color: white;
   background-color: black;
