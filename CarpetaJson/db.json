@@ -94,7 +94,7 @@
       "titulo": "Pestañas híbridas",
       "img": "/imagenes/pestanamink2.jpeg",
       "precio": 1200,
-      "Descripcion": "Técnica 3d, para añadir un volumen medio a tu pestaña, elige el largo!"
+      "Descripcion": "Técnica 3D, para añadir un volumen medio a tu pestaña, ¡elige el largo!"
     },
     {
       "Categoria": "Pestañas y cejas",
@@ -142,7 +142,7 @@
       "titulo": "Facial de skin scrubber",
       "img": "/imagenes/scrubber.jpg",
       "precio": 550,
-      "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizo."
+      "Descripcion": "Es una nueva técnica que permite eliminar las impurezas y células muertas de la piel y limpiar profundamente el poro de grasa, impurezas o maquillaje de una forma amable, sin agresiones a la piel y con alto nivel de profesionalizmo."
     },
     {
       "Categoria": "Faciales",
@@ -166,7 +166,7 @@
       "titulo": "Manicure spa",
       "img": "/imagenes/manicurespa1.jpeg",
       "precio": 280,
-      "Descripcion": "Remojo de cutícula con sales y removedores, se hace limpieza de cutícula, limado de uñas a tu elección, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
+      "Descripcion": "Remojo de cutícula con sales y removedores, se hace limpieza de cutícula, limado de uñas a tu elección, exfoliación y masaje con crema hidratante. ¡Gelish gratis!"
     },
     {
       "Categoria": "Pedicure y manicure",
@@ -174,7 +174,7 @@
       "titulo": "Manicure spa + ruso",
       "img": "/imagenes/manicurespa2.jpeg",
       "precio": 350,
-      "Descripcion": "Remojo de cutícula con sales, remoción de cutícula interior y exterior con fresas especiales, limado de uña, exfoliación y masaje con crema hidratante. ¡gelish gratis!"
+      "Descripcion": "Remojo de cutícula con sales, remoción de cutícula interior y exterior con fresas especiales, limado de uña, exfoliación y masaje con crema hidratante. ¡Gelish gratis!"
     },
     {
       "Categoria": "Pedicure y manicure",
@@ -182,7 +182,7 @@
       "titulo": "Pedicure spa",
       "img": "/imagenes/pedicurespa2.jpeg",
       "precio": 380,
-      "Descripcion": "Remojo con sales y removedores, remoción de callos y asperezas, retiro de cutícula, limado de uñas, exfoliación y masaje con crema hidratante. ¡gelish gratis!      "
+      "Descripcion": "Remojo con sales y removedores, remoción de callos y asperezas, retiro de cutícula, limado de uñas, exfoliación y masaje con crema hidratante. ¡Gelish gratis!      "
     },
     {
       "Categoria": "Pedicure y manicure",
@@ -190,7 +190,7 @@
       "titulo": "Pedicure detox",
       "img": "/imagenes/pedicurespa1.jpeg",
       "precio": 450,
-      "Descripcion": "Permite desintoxicar y reequilibrar energéticamente el organismo. Su acción se basa en la ionización y magnetización de la solución salina que se utiliza en él, mediante electrólisis, solución que al entrar en contacto con el cuerpo, lo estimula mejorando sus funciones."
+      "Descripcion": "Permite desintoxicar y re-equilibrar energéticamente el organismo. Su acción se basa en la ionización y magnetización de la solución salina que se utiliza en él, mediante electrólisis, solución que al entrar en contacto con el cuerpo lo estimula mejorando sus funciones."
     },
     {
       "Categoria": "Pedicure y manicure",
@@ -198,7 +198,7 @@
       "titulo": "Pedicure spa + detox + ruso",
       "img": "/imagenes/pedicurespa2.jpeg",
       "precio": 750,
-      "Descripcion": "Los tres tipos de pedicure juntos en una misma sesión para relajarte, desintoxicarte y lucir los pies increíbles. ¡gelish gratis!"
+      "Descripcion": "Los tres tipos de pedicure juntos en una misma sesión para relajarte, desintoxicarte y lucir los pies increíbles. ¡Gelish gratis!"
     },
     {
       "Categoria": "Maquillaje",
