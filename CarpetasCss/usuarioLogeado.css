@@ -1,0 +1,19 @@
+
+main{ /*Esto tambien ayuda al footer*/
+  min-height: 80vh;
+}
+
+/*Footer Luis Responsivo*/
+footer{
+  color: white;
+  background-color: black;
+  font-family: Century Gothic;
+  text-align: center;
+  padding: 1%;
+  margin-top: auto;
+}
+
+footer a{
+  color: white;
+}
+/*Footer Luis Responsivo*/
