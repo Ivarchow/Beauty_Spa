@@ -5,3 +5,28 @@
   font-family: 'Quicksand', sans-serif;
 
 }
+
+.cartalarga{
+  padding: 2%;
+}
+
+.cuerpoCartaReservados{
+  border: 2px black solid;
+}
+
+.contenido1{
+display: inline-block;
+text-align: justify;
+padding: 4%;
+}
+
+.botonRes{
+  color: #FFF4F8; 
+  background-color: #AA3053; 
+  border-color: #FFF4F8;
+}
+
+.BotonReservar{
+  display: flex;
+  text-align: center;
+}
