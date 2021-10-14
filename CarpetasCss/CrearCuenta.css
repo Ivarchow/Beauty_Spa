@@ -271,6 +271,9 @@ hr{
   }
 }
 @media only screen and (max-width: 400px){
+  .grid{
+    grid-template-rows: 70px auto 200px;
+  }
   .content{
     grid-template-rows: 10rem 4rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 1.5rem 1.5rem 1.5rem 4rem 7rem 4em;
     width: 16rem;
