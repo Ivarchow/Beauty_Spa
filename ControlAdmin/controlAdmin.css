@@ -93,6 +93,17 @@ html, body{
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
 
 .navbar{
   z-index: 5;
@@ -230,10 +241,6 @@ html, body{
 /*Footer Luis*/
 
 .footer{
-  display: webkit flex;
-  display: moz flex;
-  display: ms flex;
-  display: o flex;
   display: flex;
   flex-flow: row wrap;
   padding: 20px;
@@ -262,10 +269,6 @@ html, body{
 }
 
 .r-footer{
-  display: webkit flex;
-  display: moz flex;
-  display: ms flex;
-  display: o flex;
   display: flex;
   flex-flow: row wrap;
 }
@@ -293,3 +296,72 @@ html, body{
   }
 }
 /*Footer Luis*/
+
+/* Scrollbar styles */
+::-webkit-scrollbar{
+  width: 8px;
+  height: 0px;
+  }
+  
+  ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FC5162;  
+    border-radius: 10px;
+    }
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background: #AB3053;  
+  }
+
+
+  @media only screen and (max-width: 600px){
+    .content{
+      grid-template-rows: 15rem 3rem 5rem 4rem 4rem;
+      width: 20rem;
+    }
+    .logo img{
+      width: 7rem;
+      height: 7rem;
+    }
+    .box2{
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .box3{
+      font-size: .8rem;
+    }
+
+    .btn-layer{
+      border-radius: .3rem;
+      font-size: 1rem;
+      width: 13rem;
+      height: 2rem;
+    }
+  }
+  @media only screen and (max-width: 400px){
+    .content{
+      grid-template-rows: 10rem 3rem 5rem 3rem 3rem ;
+      width: 16rem;
+    }
+    .logo img{
+      width: 7rem;
+      height: 7rem;
+    }
+    .box2{
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .box3{
+      font-size: .7rem;
+    }
+
+    .btn-layer{
+      border-radius: .3rem;
+      font-size: .8rem;
+      width: 11rem;
+      height: 1.8rem;
+    }
+  }
