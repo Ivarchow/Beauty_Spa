@@ -70,7 +70,7 @@ window.onload=() =>{
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
-                            '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios.precio+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
@@ -91,7 +91,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -112,7 +112,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -133,7 +133,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -154,7 +154,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -175,7 +175,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -196,7 +196,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -217,7 +217,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
@@ -252,7 +252,7 @@ window.onload=() =>{
                         '<h3>\n' +
                             'Ver Más\n' +
                         '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 250px; ">\n' +
+                        '<div class="overflow-auto example" style="height: 140px; ">\n' +
                             '<p>Precio: '+Servicios.precio+'$</p>\n' +
                             '<p>'+Servicios.Descripcion+'</p>\n' +
                         '</div>\n' +
