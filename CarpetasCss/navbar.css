@@ -19,9 +19,10 @@
   top: 0;
 }
 .header {
-  background: rgb(34, 29, 29);
+  background-color: rgba(0, 0, 0, 0.842) ;
   padding: 10px 20px 10px 20px;
   color: white;
+  align-self: center;
 }
 
 .header-top {
@@ -35,8 +36,16 @@
   color: white;
 }
 .LogoEmpresa{
-  margin-left: 2rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
 }
+.LogoEmpresa a{
+  color: white;
+  align-self: center;
+  height: fit-content;
+  width: fit-content;
+}
+
 .p1{
   font-size: 20px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -50,27 +59,15 @@
   font-size: 17px;
   color: #FFCCD3;
 }
-.fa-bars{
-  font-size: 23px;
+.fas{
+  font-size: 22px;
   color: white;
-}
-.fa-shopping-bag{
-  font-size: 23px;
   cursor: pointer;
 }
-.fa-user-circle{
-  font-size: 23px;
-  cursor: pointer;
-}
-.fa-shopping-bag:hover,.fa-user-circle:hover,.fa-bars:hover{
-  font-size: 23px;
-  cursor: pointer;
+.fas:hover{
   color: #FFCCD3;
 }
-.fa-bars{
-  font-size: 23px;
-  cursor: pointer;
-}
+
 
 .header-btn {
   font-size: 20px;
@@ -78,7 +75,6 @@
 
 .header-menu {
   display: none;
-  /* padding-bottom: 10px; */
   animation: header_menu_active 2s;
 }
 
@@ -93,7 +89,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -105,8 +100,9 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding-top: 18px;
+  gap: .5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
   align-items: flex-end;
   z-index: 5;
   position: sticky;
@@ -118,30 +114,26 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 10000px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (max-width: 400px) {
+  .navbar{
+    height: 70px;
+    padding: 0;
   }
-
-  .header-top  {
-    padding-bottom: 0;
+  .navbar > .nav-header > .LogoEmpresa {
+    padding: 0;
+    margin: 0;
   }
-
-  .header-menu {
-    padding-top: 0;
-    display: block !important;
+  .header-top {
+    margin: 0;
   }
-
-  .header-menu ul {
-    flex-direction: row;
+  .LogoEmpresa{
+    margin-left: 0px;
   }
-
-  .header-btn {
-    display: none;
+  .n3 .fas{
+    padding: .3rem;
   }
 }
+
 
 
 

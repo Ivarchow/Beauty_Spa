@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 80px auto 200px;
+  grid-template-rows: 80px auto auto;
   display: grid;
   height: 100%;
   width: 100%;
@@ -29,8 +29,6 @@ html, body{
 /* ingresar codigo del contact */
 .footer{
   grid-row: 3;
-  background:#644747; 
-  color: white;
 }
 /* ingresar codigo del contenido */
 .content{
@@ -231,6 +229,9 @@ font-weight: 400;
 }
 }
 @media only screen and (max-width: 400px){
+  .grid{
+    grid-template-rows: 70px auto 200px;
+  }
   .content{
     grid-template-rows: 10rem 4rem 3.1rem 3.1rem 1.5rem 1.5rem 4rem 7rem 4rem;
     width: 16rem;

@@ -7,9 +7,10 @@
   <title>DIVINITE-Ingreso</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../CarpetasCss/Ingreso.css" type="text/css">
-  <!-- <link rel="stylesheet" href="/CarpetasCss/navbar.css"> -->
+  <link rel="stylesheet" href="/CarpetasCss/navbar.css">
+  <link rel="shortcut icon" href="/images/logo/image2.png">
+  <link rel="stylesheet" href="/CarpetasCss/footer.css">
 
-  <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
   <script src="//pull.cappuccicons.com/cpf.js"></script>
   <!-- Iconos -->
   <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
@@ -22,37 +23,53 @@
 <div class="grid">
 
 
-<!-- ingresar codigo de navbar -->
-<header class="header">
-  <nav class="navbar">
-    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-    <ul class="nav-menu">
-
-      <li class="nav-item">
-        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Services</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;About us</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contact us</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Home</a>
-      </li>
-      <li class="nav-item">
-        <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
-      <li class="nav-item">
-        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </nav>
-</header>
-</div><!-- navbar -->
+<!-- ingresar codigo de navbar  -->
+      <div class="navbar">
+        <header class="header">
+          <div class="header-top">
+            <div class="LogoEmpresa">
+              <a href="/PaginasHTML/PaginaDeInicio.html">
+                <div class="p1">DIVINITE</div>
+                <div class="p2">BEAUTY SPA</div>
+                </a>
+            </div><!--LogoEmpresa -->
+            <div class="n3">
+              <div class="nav-links2">
+              <a class = "active" href="/PaginasHTML/AñadirServicios.html"></a><i class="fas fa-shopping-bag"></i></a>
+              <span></span>
+              <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
+              <span></span>
+              </div><!--nav-links2 -->
+              <div class="header-btn"><i class="fas fa-bars"></i></a></div>
+          </div>
+            </div><!--n3 -->
+            
+          <nav  class="header-menu">
+            <ul>
+              <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+              <li><a href="/PaginasHTML/aboutUs.html">Nosotros</a></li>
+              <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+              <li><a href="#">Reservados</a></li>
+              <li><a href="/PaginasHTML/aboutUsContacto.html">Contacto</a></li>
+              <li><a href="Ingreso.HTML">Ingresar</a></li>
+            </ul>
+          </nav>
+        </header>
+      
+        <script>
+          const header_btn = document.querySelector('.header-btn')
+          const header_menu = document.querySelector('.header-menu')
+          header_btn.addEventListener('click', () => {
+            if (header_menu.style.display != 'block') {
+              header_menu.style.display = 'block'
+              header_btn.innerHTML = '<i class="fas fa-times"></i>'
+            } else {
+              header_menu.style.display = 'none'
+              header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+            }
+          })
+        </script>
+      </div><!-- navbar -->
 
 <!-- codigo de login -->
 <div class="content">
@@ -100,10 +117,41 @@
   <div class="signup-link"> <a href="CrearCuenta.html">Crear cuenta </a></div>
 </div><!-- box9 -->
 </div><!-- content -->
-<!-- ingresar codigo del contact -->
-    <div class="footer">
-      <p>contact</p>
-    </div><!-- footer -->
+  <!-- ingresar codigo del contact -->
+  <div class="footer">
+        
+    <div class="foo1">
+    <div class="foo2">
+      <i class="fas fa-phone"></i>
+      <p> 83-8888-8888 </p>
+    </div><!-- foo2 -->
+    <div class="foo3">
+      <i class="fab fa-whatsapp"></i>
+      <p>  (+52) 81-4566-7890</p>
+    </div><!-- foo3 -->
+    <div class="foo4">
+      <i class="fas fa-envelope"></i>
+      <p> email@divinite.com</p>
+    </div><!-- foo4 --></div><!-- foo1 -->
+    <div class="foo5">
+    <div class="foo6">
+      <a href="#"> Buzon de sugerencias</a>
+    </div><!-- foo6 -->
+    <div class="foo7">
+      <p>(c) DIVINITE Guadalajara</p>
+    </div><!-- foo7 -->
+    <div class="foo8">
+      <a href="#"> Politica de Privacidad </a>
+      <p>  |  </p>
+      <a href="#"> Cultura </a>
+      <p>  |  </p>
+      <a href="#"> FAQs </a>
+    </div><!-- foo8 --></div><!-- foo5 -->
+    <div class="foo9">
+      <p> Elaborado por MCLARICH dev studio </p>
+      </div><!-- foo9 -->
+
+  </div><!-- footer -->
   </div><!-- grid -->
 </body>
 <!-- display password -->
