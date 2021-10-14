@@ -1,9 +1,9 @@
 // Se crea una variable para los usuarios Ejemplo: usuario${j} => usuario0 y se actualiza cada que se agrega un usuario.
-var j = localStorage.setItem("j", 0);
+//var j = localStorage.setItem("j", 0);
 if(localStorage.getItem("j") != 0){
   j = localStorage.getItem("j");
 }else{
-  j = 0;
+  var j = localStorage.setItem("j", 0);
 }
 
 document.getElementById("Crear").addEventListener("click", crear);
@@ -54,7 +54,7 @@ function crear(){
 
       //Se da un alert avisando que se creo la cuenta y se redirige a otra página.
       alert("Cuenta creada satisfactoriamente");
-      location.href ="PaginasHTML/PaginaDeInicio.html";
+      location.href ="/PaginasHTML/PaginaDeInicio.html";
 
       //Se incrementa el contador de usuarios y se actualiza
       j++;

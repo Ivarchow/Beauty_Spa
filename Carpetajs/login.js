@@ -14,7 +14,7 @@ function login(){
     }
   }
   if(bandera){
-    location.href ="PaginasHTML/PaginaDeInicio.html";
+    location.href ="/PaginasHTML/PaginaDeInicio.html";
   }else{
     alert("Correo o contraseña invalidos");
   }
