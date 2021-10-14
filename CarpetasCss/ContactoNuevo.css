@@ -8,7 +8,12 @@
   color: #634646;
   text-align: center;
 }
-
+#goodAlert{
+  text-align: center;
+}
+#alert{
+  text-align: center;
+}
 .bord{
 color: #634646;
   font-size: 170%;
@@ -38,14 +43,21 @@ padding-left: 19%;
 padding-right: 19%;
 padding-bottom: 3%;
 }
-
+.accordion-body{
+  font-size: 130%;
+}
+.accordion-button:not(.collapsed) {
+  color: #000000;
+}
+.pregunta{
+  font-size: 170%;
+  
+}
 .accordion-button:not(.collapsed){
   border: 3px solid #AB3053;
   background-color: #ffffff;
   z-index: 0;
  
- 
-
    }
 
   

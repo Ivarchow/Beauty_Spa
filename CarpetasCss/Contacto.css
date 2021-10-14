@@ -1,8 +1,9 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 .Buz{
   text-align: center;
 }
@@ -12,11 +13,21 @@
   border: 5px solid #FFCCD3;
 }
 
-body {
+html, body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  
   background: linear-gradient(to bottom, white);
   line-height: 1.6;
-  font-family: 'Quicksand', sans-serif;
-  padding: 0 ;
+  padding: 0;
+}
+
+.grid{
+  grid-template-rows: 60px auto 200px;
+  display: grid;
+  height: 100%;
+  width: 100%;
 }
 
 .linea {
@@ -29,8 +40,6 @@ body {
 
 /*CSS NavBar*/
 
-@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
-
 li {
     list-style: none;
 }
@@ -41,7 +50,6 @@ a {
   
 
 .header{
-  font-family: 'Lora', serif;
   position: sticky;
   top: 0px;
   z-index: 2;
@@ -53,6 +61,7 @@ a {
   align-items: center;
   padding: 1rem 1.5rem;
   background-color:#050404;
+  font-family: 'Poppins', sans-serif;
 }
 
 .hamburger {
@@ -72,7 +81,6 @@ a {
 .nav-menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav-item {
