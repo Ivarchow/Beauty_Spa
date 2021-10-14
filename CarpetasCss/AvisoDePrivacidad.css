@@ -1,0 +1,15 @@
+body{
+    background-color: #c5679b;
+}
+
+.borde{
+    border: 3px black solid;
+}
+.wrapper {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-left: 5%;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+  }
