@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 60px auto 200px;
+  grid-template-rows: 60px auto auto;
   display: grid;
   height: 100%;
   width: 100%;
