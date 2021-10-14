@@ -303,7 +303,7 @@ fieldset[disabled] .btn-sample.active {
   flex-flow: row wrap;
   padding: 50px;
   color: #fff;
-  background: #262626;
+  background: #000;
   font-family: 'Lora', serif;
   margin-top: 0px;
 }
