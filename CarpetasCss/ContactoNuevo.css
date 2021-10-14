@@ -191,49 +191,7 @@ a {
 }
 }
 
-@media only screen and (max-width: 2500px) {
-  .nav-menu {
-      position: fixed;
-      z-index: 1;
-      left: -100%;
-      top: 3rem;
-      flex-direction: column;
-      background-color: #070404;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      }
 
-  .nav-menu.active {
-      left: 0;
-  }
-
-  .nav-item {
-      margin: 2.5rem 0;
-  }
-  .nav-items {
-    margin: 2.5rem 0;
-}
-
-
-  .hamburger {
-      display: block;
-      cursor: pointer;
-  }
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-}
 
 @media only screen and (max-width: 1000px) {
   .nav-menu {
@@ -670,4 +628,59 @@ background: #AB3053;
     width: 200px;
   }
 }
+/*continer bootstrap prueba luis*/
+.figuritas69 {
+  font-size: 50px;
+  margin-right: 50%;
+}
 
+.redesLink :hover{
+  color: #AA3053;
+}
+
+.redesLink{
+  color: #FCA9B4;
+}
+
+.horarioServ0{ 
+  padding: 15%;
+}
+
+.horarioServ{
+  margin-left: 50px;
+  font-family: Century Gothic;
+}
+
+.conocenosText{
+  font-size: 300%;
+  text-align: center;
+}
+
+.figuritas69{
+  float: right;
+}
+
+.mapita{
+  float: right;
+  margin-top: 0%;
+  
+  margin-right: 18%;
+}
+.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #FCA9B4; 
+  border: 0;
+  border-radius: 45px;
+  margin: 20px;
+} 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #AA3053; 
+  border-color: #FFFFFF; 
+} 
+
+/*continer bootstrap prueba luis*/
