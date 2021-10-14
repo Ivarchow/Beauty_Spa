@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+.footer{
+  grid-template-rows: 40px 80px 40px;
+  display: grid;
+}
+.foo1{
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: small;
+}
+.fa-envelope,.fa-whatsapp,.fa-phone {
+  color: black;
+  margin-right: .6rem;
+  font-size: small;
+  justify-content: center;
+  place-self: center;
+}
+.foo2{
+  display: inline-flex;
+  place-self: center;
+  justify-content: center;
+}
+.foo3{
+  display: inline-flex;
+  place-self: center;
+  justify-content: center;
+}
+.foo4{
+  display: inline-flex;
+  place-self: center;
+  justify-content: center;
+}
+.foo5{
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: black;
+  color: white;
+}
+
+.foo6{
+  grid-column: 1;
+  display: grid;
+  font-size: small;
+  display: flex;
+  place-self: center;
+  color: white;
+  justify-content: right;
+  align-items: right;
+}
+.foo6 a{
+  color: white;
+  text-decoration: none;
+  align-self: right;
+  justify-content: right;
+  align-self: right;
+}
+
+.foo7{
+  grid-column: 2;
+  display: flex;
+  place-self: center;
+  justify-content: center;
+  font-size: x-small;
+}
+.foo8{
+  grid-column: 3;
+  display: flex;
+  place-self: center;
+  font-size: small;
+  justify-content: left;
+}
+.foo8 a{
+  color: white;
+  text-decoration: none;
+  justify-content: left;
+}
+
+
+
+.foo9{
+  grid-row: 3;
+  display: grid;
+  place-self: center;
+  justify-content: center;
+  background-color: orange;
+}
