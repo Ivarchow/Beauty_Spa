@@ -7,8 +7,8 @@ if(localStorage.getItem("i") != 0){
 document.getElementById("Crear").addEventListener("click", crear);
 document.getElementById("mostrar").addEventListener("click", mostrar);
 document.getElementById("ocultar").addEventListener("click", ocultar);
-/*document.getElementById("modificar").addEventListener("click", modificar);
-document.getElementById("eliminar").addEventListener("click", eliminar);*/
+document.getElementById("editar").addEventListener("click", editar);
+document.getElementById("eliminar").addEventListener("click", eliminar);
 
 function crear(){
   let nom = document.getElementById("exampleInputName").value;
@@ -38,17 +38,23 @@ function mostrar(){
   var j = localStorage.getItem("i");
   for(var cont=0; cont<j; cont++){
       var serv = JSON.parse(localStorage.getItem(`servicios${cont}`));
-      const itemHTML = '<div class="col-md-4 col-sm-6 col-xs-6>\n' +
-          '       <div class="card" style="width: 18rem;">\n' +
-          '           <img src="'+serv.img +'" class="card-img-top"alt="image">\n' +
-          '           <div class="card-body">\n' +
-          '               <h5 class="card-title" style="text-align: center;"><b>'+serv.nombre+'</b></h5>\n' +
-          '               <p class="card-text"><b>Precio:</b> '+serv.precio+'</p>\n' +
-          '               <p class="card-text"><b>Descripción:</b> '+serv.texto+'</p>\n' +
-          '           </div>\n' +
-          '       </div>\n' + 
-          '   </div>'
-          '   <br>';
+      const itemHTML = 
+      '<figure class="image-block" style="margin: auto;">\n' +
+        '<h1>'+ serv.nombre+'</h1>\n' +
+        '<img src="'+serv.img+'"/>\n' +
+        '<figcaption>\n' +
+          '<h3>\n' +
+              'Ver Más\n' +
+          '</h3>\n' +
+          '<div class="overflow-auto example" style="height: 200px; ">\n' +
+              '<p>Precio: '+serv.precio+'$</p>\n' +
+              '<p>'+serv.texto+'</p>\n' +
+          '</div>\n' +
+          '<button>\n' +
+              'Reservar\n' +
+          '</button>\n' +
+        '</figcaption>\n' +
+      '</figure>';
       const itemsContainer = document.getElementById("list-items");
       itemsContainer.innerHTML += itemHTML;
   }
@@ -58,12 +64,40 @@ function ocultar(){
   document.getElementById("list-items").innerHTML = "";
 }
 
-function modificar(){
-  /*localStorage.setItem("nombre", "David")
-  localStorage.setItem("apellido", "Gordillo")*/
+function editar(){
+  let cambio = Number(window.prompt("Ingrese el id del producto que desea editar: ",""));
+  for(let cont=0; cont<i; cont++){
+    let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+    if(service.id == cambio){
+      let nom = document.getElementById("exampleInputName").value;
+      let text = document.getElementById("exampleInputDescription").value;
+      let pre = document.getElementById("exampleInputPrice").value;
+      let imgn = document.getElementById("exampleInputImage").value;
+
+      if(nom == "" && pre == "" && text == "" && imgn == ""){
+        alert("No puedes agregar tarjetas vacias.");
+      }else{
+      var requisitos = new Object();
+      requisitos.id = cambio;
+      requisitos.nombre = nom;
+      requisitos.precio = pre;
+      requisitos.texto = text;
+      requisitos.img = imgn; 
+
+      var local = JSON.stringify(requisitos);
+      localStorage.setItem(`servicios${cambio}`, local);
+      console.log('local: ', JSON.parse(local));
+      }
+    }
+  }
 }
 
 function eliminar(){
-  /*localStorage.removeItem("nombre")
-  localStorage.removeItem("apellido")*/
+  let borrar = Number(window.prompt("Ingrese el id del producto que desea eliminar: ",""));
+  for(let cont=0; cont<i; cont++){
+    let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+    if(service.id == borrar){
+      localStorage.removeItem(`servicios${cont}`);
+    }
+  }
 }
