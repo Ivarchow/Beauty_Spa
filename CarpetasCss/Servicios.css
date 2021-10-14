@@ -287,13 +287,6 @@ fieldset[disabled] .btn-samplex.active {
 }
 
 /*****************************CARTA SERVICIO IVAR*******************************************/
-@import "bourbon";
- @import "neat";
-
-.borde{
-    border: 5px red solid;
-}
-
  *, *:before, *:after {
 	 box-sizing: border-box;
 	 outline: none;
@@ -327,9 +320,9 @@ fieldset[disabled] .btn-samplex.active {
 	 margin-right: 5%;
 	 padding: 0;
 	 color: rgb(250, 250, 250);
-   background-color: #f1a5f16c;
-	 font-size: 50px;
-	 font-weight: 900;
+   background-color: #AA3053;
+	 font-size: 40px;
+	 font-weight: 900px;
 	 line-height: 1;
 }
  figure img {
@@ -388,6 +381,3 @@ fieldset[disabled] .btn-samplex.active {
 
 /*****************************CARTA SERVICIO IVAR*******************************************/
 
-.tituloDivinite{
-  
-}
