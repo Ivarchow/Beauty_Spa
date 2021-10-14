@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: auto auto 200px;
+  grid-template-rows: 80px auto 200px;
   display: grid;
 }
 /* ingresar codigo de navbar */
@@ -114,6 +114,9 @@ html, body{
   }
 }
 @media only screen and (max-width: 400px){
+  .grid{
+    grid-template-rows: 70px auto 200px;
+  }
   .content{
     grid-template-rows: 10rem 3rem 5rem 3rem 3rem ;
     width: 16rem;
