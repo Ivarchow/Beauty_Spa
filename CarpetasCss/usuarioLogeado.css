@@ -1,11 +1,23 @@
 
 main{ /*Esto tambien ayuda al footer*/
-  min-height: 80vh;
+  min-height: 77vh;
 }
 
 .tituloPerfil{
   text-align: center;
   color: black;
+}
+
+.serviciosFav{
+  float: left;
+}
+
+.botonGuardar{
+  background-color: #FD5060;
+  color: white;
+}
+.botonGuardar:hover{
+  background-color: #AA3053;
 }
 
 /*Footer Luis Responsivo*/
