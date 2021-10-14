@@ -29,8 +29,7 @@ html, body{
 /* ingresar codigo del contact */
 .footer{
   grid-row: 3;
-  background:#644747; 
-  color: white;
+
 }
 /* ingresar codigo del contenido */
 .content{
