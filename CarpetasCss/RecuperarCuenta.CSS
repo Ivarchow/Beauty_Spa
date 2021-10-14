@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 80px auto 200px;
+  grid-template-rows: 80px auto auto;
   display: grid;
 }
 /* ingresar codigo de navbar */
@@ -27,15 +27,13 @@ html, body{
 /* ingresar codigo del contact */
 .footer{
   grid-row: 3;
-  background:#644747; 
-  color: white;
 }
 /* ingresar codigo del contenido */
 .content{
   grid-row: 2;
   color: #644747;
   display: grid; 
-  grid-template-rows: 14rem 5rem 8rem 6rem 6rem;
+  grid-template-rows: 14rem 5rem 8rem 6rem 6rem 6rem;
   text-align: center;
   place-items: center;
   width: 30rem;
@@ -81,6 +79,9 @@ html, body{
   font-size: large;
   border-radius: .5rem;
   border: none;
+}
+.space{
+  grid-row: 6;
 }
 @media only screen and (max-width: 600px){
   .content{
