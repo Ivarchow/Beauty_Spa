@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 80px auto 200px;
+  grid-template-rows: auto auto 200px;
   display: grid;
 }
 /* ingresar codigo de navbar */
