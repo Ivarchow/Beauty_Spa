@@ -11,22 +11,29 @@
 }
 
 .cuerpoCartaReservados{
-  border: 2px black solid;
+  border: 2px rgb(48, 47, 47) solid;
+  border-radius: 5px;
 }
 
 .contenido1{
-display: inline-block;
-text-align: justify;
-padding: 4%;
+text-align: center;
+padding-top: 25%;
+}
+
+.contenido2{
+text-align: left;
+padding-top: 5%;
+
 }
 
 .botonRes{
   color: #FFF4F8; 
-  background-color: #AA3053; 
+  background-color: #fd5060; 
   border-color: #FFF4F8;
 }
 
 .BotonReservar{
-  display: flex;
   text-align: center;
+  padding-top: 25%;
+  
 }
