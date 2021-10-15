@@ -20,7 +20,7 @@ function crear(){
   // Se verifica que las contraseñas sean iguales y se manda mun alert si no lo son
   if(pass != pass1){
     alert("Las contraseñas no coinciden.");
-  }if(pass.length < 8){  //se verifica el largo de la contraseña
+  }else if(pass.length < 8){  //se verifica el largo de la contraseña
     alert("La contraseña debe tener al menos 8 carácteres.");
   }else{
 
