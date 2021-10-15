@@ -37,6 +37,7 @@ function crear(){
 function mostrar(){
   var j = localStorage.getItem("i");
   for(var cont=0; cont<j; cont++){
+    if(localStorage.getItem(`servicios${cont}`) != null){
       var serv = JSON.parse(localStorage.getItem(`servicios${cont}`));
       const itemHTML = 
       '<figure class="image-block" style="margin: auto;">\n' +
@@ -57,6 +58,7 @@ function mostrar(){
       '</figure>';
       const itemsContainer = document.getElementById("list-items");
       itemsContainer.innerHTML += itemHTML;
+    }
   }
 }
 
