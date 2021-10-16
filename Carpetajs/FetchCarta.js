@@ -81,7 +81,7 @@ async function countServicesLenght() {
 
 function generatorCols() {
 
-    let varCtrlCols = 0;
+    let varCtrlCols = 0, varCtlrIds=0;
 
     for (let varCtlrService = 0; varCtlrService < arrServicios.length; varCtlrService++) {
 
@@ -89,14 +89,17 @@ function generatorCols() {
         
 
         for (varCtrlCols; varCtrlCols < arrNUmberServices[varCtlrService]; varCtrlCols++) {
+            
             let col = document.createElement('div');
             col.className = "col";
             col.style.paddingBottom = "2%";
-            col.id = arrIds[varCtrlCols];
+            col.id = arrIds[varCtlrIds];
             console.log(col);
             document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
+            varCtlrIds++;
         }
         varCtrlCols=0;
+        
     }
     getCartas();
 }
@@ -134,6 +137,132 @@ function getCartas(){
                 if(Servicios.Categoria=="Cuidado de la piel"){
                     let elemento1 = document.getElementById(arrIds[varCtlrCards]);
                     elemento1.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Pestañas y cejas"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Faciales"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Pedicure y manicure"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Maquillaje"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Estetica"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.Categoria=="Masajes"){
+                    let elemento = document.getElementById(arrIds[varCtlrCards]);
+                    elemento.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
                         '<h1>'+ Servicios.titulo+'</h1>\n' +
                         '<img src="'+Servicios.img+'"/>\n' +
