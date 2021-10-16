@@ -1,125 +1,108 @@
-
-    const URLS= [];
-    const arrIds=[];
-    const arrServicios=["nails","skin","pest","fac","pedi","makeup","estetica","massage"];
-
-    window.onload=() =>{   
+const URLS = [];
+const arrIds = [];
+const arrNUmberServices=[];
+const arrServicios = ["nails", "skin", "pest", "fac", "pedi", "makeup", "estetica", "massage"];
+var banderaCols=0;
+window.onload = () => {
     main();
-    };
+};
 
-    function main(){
-        let banderArrays=0;
-        countServicesLenght();
-        //generatorArrys(35);
-        if(banderArrays==1){
-            countServices();
-        }
-        
-        //generatorCols();
-        //getCartas();
-    }
-    
-    function generatorArrys(tamañoJson){
-        for(let varCtlrGenerator = 1; varCtlrGenerator<=tamañoJson; varCtlrGenerator++){
-            let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
-            let ids = "carta" + varCtlrGenerator;
-            URLS.push(url);
-            arrIds.push(ids);
-        }
-        console.log(arrIds);
-        console.log(URLS);
-        banderArrays=1;
-    }
+function main() {
+    countServicesLenght();
+    //countServices();
+    //while(banderaCols!=1);
 
-function countServicesLenght(){
-        let Jsonlength=0;
-        fetch("http://localhost:3000/Servicios")
-        .then(response1 => response1.json())
-        .then(TodosLosServicios =>{
-
-                Jsonlength = Object.keys(TodosLosServicios).length;
-                console.log(Jsonlength);
-                generatorArrys(Jsonlength);
-        })
-        .catch(err1 => console.log(err1));
 }
 
-function countServices(){
-        let Servicio1=0,Servicio2=0,Servicio3=0,Servicio4=0,Servicio5=0,Servicio6=0,Servicio7=0,Servicio8=0;
-    
-        for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
-    
-        fetch(URLS[varCtrlFetch])
-        .then(response => response.json())
-        .then(Servicios =>{
+function generatorArrys(tamañoJson) {
+    for (let varCtlrGenerator = 0; varCtlrGenerator < tamañoJson; varCtlrGenerator++) {
+        let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
+        let ids = "carta" + varCtlrGenerator;
+        URLS.push(url);
+        arrIds.push(ids);
+    }
+    console.log(arrIds);
+    console.log(URLS);
+}
 
-            if(Servicios.Categoria == "Unas"){
+async function countServicesLenght() {
+
+    try {
+        let Servicio1 = 0, Servicio2 = 0, Servicio3 = 0, Servicio4 = 0, Servicio5 = 0, Servicio6 = 0, Servicio7 = 0, Servicio8 = 0;
+        const respuestaServicios = await fetch("http://localhost:3000/Servicios");
+        const jsonServicios = await respuestaServicios.json();
+        const lengthServicios = await jsonServicios.length;
+        console.log(lengthServicios);
+        generatorArrys(lengthServicios);
+
+        for(Servicios of jsonServicios){
+            if (Servicios.Categoria == "Unas") {
                 Servicio1++;
-                console.log(Servicio1);
             }
-            if(Servicios.Categoria == "Cuidado de la piel"){
+            if (Servicios.Categoria == "Cuidado de la piel") {
                 Servicio2++;
-                console.log(Servicio2);
             }
-            if(Servicios.Categoria == "Pestañas y cejas"){
+            if (Servicios.Categoria == "Pestañas y cejas") {
                 Servicio3++;
-                console.log(Servicio3);
             }
-            if(Servicios.Categoria == "Faciales"){
+            if (Servicios.Categoria == "Faciales") {
                 Servicio4++;
-                console.log(Servicio4);
             }
-            if(Servicios.Categoria == "Pedicure y manicure"){
+            if (Servicios.Categoria == "Pedicure y manicure") {
                 Servicio5++;
-                console.log(Servicio5);
             }
-            if(Servicios.Categoria == "Maquillaje"){
+            if (Servicios.Categoria == "Maquillaje") {
                 Servicio6++;
-                console.log(Servicio6);
             }
-            if(Servicios.Categoria == "Estetica"){
+            if (Servicios.Categoria == "Estetica") {
                 Servicio7++;
-                console.log(Servicio7);
             }
-            if(Servicios.Categoria == "Masajes"){
+            if (Servicios.Categoria == "Masajes") {
                 Servicio8++;
-                console.log(Servicio8);
             }
-        })
-        .catch(err => console.log(err));
-    } 
+            
+        }
+        arrNUmberServices.push(Servicio1);
+        arrNUmberServices.push(Servicio2);
+        arrNUmberServices.push(Servicio3);
+        arrNUmberServices.push(Servicio4);
+        arrNUmberServices.push(Servicio5);
+        arrNUmberServices.push(Servicio6);
+        arrNUmberServices.push(Servicio7);
+        arrNUmberServices.push(Servicio8);
+        console.log(arrNUmberServices);
+        generatorCols();
+
+
+    } catch (error) {
+        console.error("ERROR DE RESPUESTA DE SERVIDOR");
+    } finally { }
+}
+
+function generatorCols() {
+
+    let varCtrlCols = 0;
+
+    for (let varCtlrService = 0; varCtlrService < arrServicios.length; varCtlrService++) {
+
+        console.log(arrServicios[varCtlrService]);
+        
+
+        for (varCtrlCols; varCtrlCols < arrNUmberServices[varCtlrService]; varCtrlCols++) {
+            let col = document.createElement('div');
+            col.className = "col";
+            col.style.paddingBottom = "2%";
+            col.id = arrIds[varCtrlCols];
+            console.log(col);
+            document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
+        }
+        varCtrlCols=0;
+    }
+    getCartas();
 }
     
-    function generatorCols(){
-        
-            let varCtrlCols=1, varCtlrContinue=5;
-            
-        for(let varCtlrService=0; varCtlrService < arrServicios.length; varCtlrService++ ){
-    
-            console.log(arrServicios[varCtlrService]);
-    
-            for(varCtrlCols; varCtrlCols<= varCtlrContinue ; varCtrlCols++ ){
-                let col = document.createElement('div');
-                col.className = "col";
-                col.style.paddingBottom = "2%";
-                col.id = arrIds[varCtrlCols];
-                console.log(col);
-                document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
-                
-            }
-            varCtrlCols = varCtlrContinue+1;
-            varCtlrContinue = varCtlrContinue+5;
-            if(varCtlrContinue>50){
-                varCtrlCols=1;
-                varCtlrContinue=5;
-            }
-        }
-    }
-
-
-    
-/*    function getCartas(){
-        let varCtlrCards=1;
+function getCartas(){
+        let varCtlrCards=0;
     
         for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
     
@@ -148,154 +131,28 @@ function countServices(){
                     '</figure>';
                     varCtlrCards++;
                 }
-            if(Servicios.Categoria=="Cuidado de la piel"){
-                let elemento1 = document.getElementById(arrIds[varCtlrCards]);
-                elemento1.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Pestañas y cejas"){
-                let elemento2 = document.getElementById(arrIds[varCtlrCards]);
-                elemento2.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Faciales"){
-                let elemento3 = document.getElementById(arrIds[varCtlrCards]);
-                elemento3.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Pedicure y manicure"){
-                let elemento4 = document.getElementById(arrIds[varCtlrCards]);
-                elemento4.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Maquillaje"){
-                let elemento5 = document.getElementById(arrIds[varCtlrCards]);
-                elemento5.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Estetica"){
-                let elemento6 = document.getElementById(arrIds[varCtlrCards]);
-                elemento6.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
-            if(Servicios.Categoria=="Masajes"){
-                let elemento7 = document.getElementById(arrIds[varCtlrCards]);
-                elemento7.innerHTML = 
-                '<figure class="image-block" style="margin: auto;">\n' +
-                    '<h1>'+ Servicios.titulo+'</h1>\n' +
-                    '<img src="'+Servicios.img+'"/>\n' +
-                    '<figcaption>\n' +
-                        '<h3>\n' +
-                            'Ver Más\n' +
-                        '</h3>\n' +
-                        '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                            '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                            '<p>'+Servicios.Descripcion+'</p>\n' +
-                        '</div>\n' +
-                        '<button>\n' +
-                            'Reservar\n' +
-                        '</button>\n' +
-                    '</figcaption>\n' +
-                '</figure>';
-                varCtlrCards++;
-            }
+                if(Servicios.Categoria=="Cuidado de la piel"){
+                    let elemento1 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento1.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button>\n' +
+                                'Reservar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
         })
         .catch(err => console.log(err));
     }
-}*/
+}
