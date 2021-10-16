@@ -9,11 +9,11 @@ window.addEventListener('scroll', mostrarbtn);
 function mostrarScroll(){
     let scrollTop = document.documentElement.scrollTop;
 
-    for(var i=0; i<animado.length; i++){
-        let alturaAnimado = animado[i].offsetTop;
-        if(alturaAnimado+150<scrollTop){
-            animado[i].style.opacity = 1;
-            animado[i].classList.add("mostrarArriba");
+    for(var varCtrlScroll=0; varCtrlScroll<animado.length; varCtrlScroll++){
+        let alturaAnimado = animado[varCtrlScroll].offsetTop;
+        if(alturaAnimado-500<scrollTop){
+            animado[varCtrlScroll].style.opacity = 1;
+            animado[varCtrlScroll].classList.add("mostrarArriba");
         }
     }
 }
