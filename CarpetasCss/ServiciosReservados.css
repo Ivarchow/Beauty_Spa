@@ -3,30 +3,143 @@
   color: #aa3053;
   font-size: 25px;
   font-family: 'Quicksand', sans-serif;
-
+  padding: 5px;
 }
 
 .cartalarga{
   padding: 2%;
+
 }
 
 .cuerpoCartaReservados{
-  border: 2px black solid;
+  border: 2px rgb(48, 47, 47) solid;
+  border-radius: 5px;
 }
 
 .contenido1{
-display: inline-block;
-text-align: justify;
-padding: 4%;
+text-align: center;
+padding-top: 50%;
+}
+
+.contenido2{
+text-align: left;
+padding-top: 5%;
+
 }
 
 .botonRes{
   color: #FFF4F8; 
-  background-color: #AA3053; 
+  background-color: #fd5060; 
   border-color: #FFF4F8;
 }
 
 .BotonReservar{
-  display: flex;
   text-align: center;
+  padding-top: 25%;
+  
+}
+
+/* -------- FILTRO -------------- */
+
+
+.category_list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.category_list .category_item{
+  font-family: 'Quicksand', sans-serif;
+  display:auto;
+  width: 50%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align:center;
+  text-overflow: initial;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.category_list .ct_item-active{
+  text-decoration: underline #644747;
+}
+
+
+
+/* RESPONSIVE */
+
+
+
+@media screen and (max-width: 500px){
+
+.products-list{
+  width: 100%;
+}
+
+.category_list{
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15vw;
+}
+
+.category_list {
+  align-self: flex-start;
+  width: 10%;
+  font-size: 14px;
+}
+}
+@media screen and (max-width: 700px){
+
+.products-list{
+  width: 100%;
+}
+
+.category_list{
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15vw;
+}
+
+.category_list {
+  align-self: flex-start;
+  width: 10%;
+  font-size: 14px;
+}
+
+}
+@media screen and (max-width: 500px){
+.category_list{
+  flex-direction: row;
+}
+.category_list {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 15vw;
+}
+}
+@media screen and (max-width: 600px){
+.category_list{
+  flex-direction: row;
+}
+.category_list {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 15vw;
+}
+}
+@media screen and (max-width: 700px){
+.category_list{
+  flex-direction: row;
+}
+.category_list {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 15vw;
+}
 }
