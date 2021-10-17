@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
+    <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <link rel="stylesheet" href="/ControlAdmin/CarpetaCss/ControlDeREservaciones.css">
+    <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
+
+    <!--Js-->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+    <script src="/ControlAdmin/CarpetaJS/FetchUsuarios.js"></script>
+    <script src="/ControlAdmin/CarpetaJS/ServiciosCRUD.js"></script>
+
+    <title>Control De Servicios</title>
+</head>
+
+<body>
+    <!--Navbar!-->
+    <header class="header">
+        <nav class="navbar">
+            <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
+            <ul class="nav-menu">
+
+                <li class="nav-item">
+                    <a href="/PaginasHTML/Servicios.html" class="nav-link"><i
+                            class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i
+                            class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i
+                            class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i
+                            class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
+                <li class="nav-item">
+                    <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <!--End Navbar!-->
+
+
+    <!--NAVEGACION-->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: space-around; margin-top: 2%;">
+
+            <button class="nav-link active disñoNavBar" id="nav-home-tab" data-bs-toggle="tab"
+                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                aria-selected="true">Servicios</button>
+
+            <button class="nav-link disñoNavBar" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Añadir Servicio</button>
+
+            <button class="nav-link disñoNavBar" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Añdir Usuario</button>
+
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <!--SERVICIO-->
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+            <table class="table table-hover" style="width: 96%; text-align: center; margin: auto;">
+                <thead>
+                    <tr>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Reservado</th>
+                        <th scope="col">Cliente_Id</th>
+                        <th scope="col">Nombre del cliente</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Código Canjeado</th>
+                        <th scope="col">Télefono Cliente</th>
+                        <th scope="col">Correo del cliente</th>
+                        <th scope="col">Cumpleaños</th>
+
+                    </tr>
+                </thead>
+
+                <tbody id="Tabla-Usuarios">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <!--SERVICIO-->
+
+        <!--AÑADIR SERVICIO-->
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+            alkjdshfkjah
+        </div>
+        <!--AÑADIR SERVICIO-->
+
+        <!--AÑADIR USUARIO-->
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label for="Nombre-usuario" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="Nombre-usuario"
+                                    aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="apellido-user" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido-user" aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cumpleaños-usuario" class="form-label">Fecha de nacimiento</label>
+                                <input type="text" class="form-control" id="cumpleaños-usuario"
+                                    aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email-usuario" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email-usuario">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Añadir</button>
+                        </form>
+                    </div>
+
+                    <div class="col-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--AÑADIR USUARIO-->
+    <!--NAVEGACION-->
+
+
+    <!--Footer Luis-->
+
+    <div class="container contactosV" style="text-align: center;">
+        <div class="row">
+            <div class="col">
+                <i class="cp cp-phone"></i> 83 8888 8888
+            </div>
+            <div class="col">
+                <i class="cp cp-whatsapp-o"></i> (+52) 123 456 7890
+            </div>
+            <div class="col">
+                <i class="cp cp-envelope"></i> emai@divinite.com
+            </div>
+        </div>
+    </div>
+
+    <footer class="footerPrueba">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="">Buzón de sugerencias</a>
+                </div>
+                <div class="col">
+                    (c) DIVINITÉ Guadalajara
+                </div>
+                <div class="col">
+                    <a href="#">Políticas de privacidad</a>|<a href="#">FAQs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer Luis-->
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

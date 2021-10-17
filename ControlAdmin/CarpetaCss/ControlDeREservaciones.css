@@ -1,0 +1,8 @@
+.disñoNavBar{
+    color: rgb(109, 107, 107);
+    font-size: 25px;
+}
+.disñoNavBar:hover{
+    transform: scale(1.2);
+    color: rgb(248, 43, 231);
+}

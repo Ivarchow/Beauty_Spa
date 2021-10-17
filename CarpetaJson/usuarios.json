@@ -1,0 +1,12 @@
+{
+    "Usuarios": [
+      {
+        "Categoria": "Unas",
+        "id": 0,
+        "titulo": "Gelish liso 1 PRUEBA/BORRAR",
+        "img": "/imagenes/gelish1.jpeg",
+        "precio": 150,
+        "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
+      }
+    ]
+  }
