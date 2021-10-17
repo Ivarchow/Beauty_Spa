@@ -16,15 +16,23 @@ function crear(){
   let email = document.getElementById("InputEmail").value;
   let pass = document.getElementById("Show").value;
   let pass1 = document.getElementById("Show1").value;
+  let terms = document.getElementById("terms").checked;
+  //Se cre una variable con la exprecion regular que validara a los correos
+  let expReg =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
-  // Se verifica que las contraseñas sean iguales y se manda mun alert si no lo son
-  if(pass != pass1){
+  if(!expReg.test(email)){                                    //Se verifica que el correo sea valido
+    alert("Debes utilizar una cuenta de correo valida.");
+  }if(pass != pass1){                                         //Se verifica que las contraseñas coincidan
     alert("Las contraseñas no coinciden.");
-  }else if(pass.length < 8){  //se verifica el largo de la contraseña
+  }else if(pass.length < 8){                                  //Se verifica el largo de la contraseña
     alert("La contraseña debe tener al menos 8 carácteres.");
+  }else if(phone.length < 8 || phone.length > 15){            //Se verifica que el numero de telefono este dentro del rango 
+    alert("Número de telefono invalido");
+  }else if(!terms){                                           //Se verifica que se acepten los términos y condiciones
+    alert("Debes aceptar los términos y condiciones.");
   }else{
 
-    // Si las las contraseñas cumplen las condiciones se encriptan con base64
+    // Si se cumplen las condiciones, las contraseñas se encriptan con base64
     pass = btoa(pass);
 
     // Se crea una variable que servira como bandera para saber si un correo ya esta dado de alta
@@ -41,8 +49,10 @@ function crear(){
     // Con un bucle se busca usuario a usuario si el correo ya fue dado de alta, si es así la bandera cambia a true
     for(let cont=0; cont<j; cont++){
       let usuario = JSON.parse(localStorage.getItem(`usuario${cont}`));
-      if(usuario.mail === user.mail){
-        corr = true;
+      if(usuario != null){   //Esto previene que el programa se detenga si se borraron usuarios
+        if(usuario.mail === user.mail){
+          corr = true;
+        }
       }
     }
     if(corr){  // Si la bandera es true da un alert
@@ -52,10 +62,10 @@ function crear(){
       var local = JSON.stringify(user);
       localStorage.setItem(`usuario${j}`, local);
 
-      //Se da un alert avisando que se creo la cuenta y se redirige a otra página.
+      //Se da un alert avisando que se creo la cuenta
       alert("Cuenta creada satisfactoriamente");
 
-      //Se incrementa el contador de usuarios y se actualiza
+      //Se incrementa el contador de usuarios y se actualiza en el almacenamiento local
       j++;
       localStorage.setItem("j", j);
 

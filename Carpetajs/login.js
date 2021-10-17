@@ -9,8 +9,10 @@ function login(){
 
   for(let cont=0; cont<j; cont++){
     let usuario = JSON.parse(localStorage.getItem(`usuario${cont}`));
-    if(usuario.mail === email && usuario.password === pass){
-      bandera = true;
+    if(usuario != null){
+      if(usuario.mail === email && usuario.password === pass){
+        bandera = true;
+      }
     }
   }
   if(bandera){
