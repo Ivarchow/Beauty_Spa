@@ -100,15 +100,20 @@ function editar(){
 }
 
 function eliminar(){
-  let borrar = Number(window.prompt("Ingrese el id del producto que desea eliminar: ",""));
-  for(let cont=0; cont<i; cont++){
-    let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-    if(service != null){
-      if(service.id == borrar){
-        localStorage.removeItem(`servicios${cont}`);
+  let borrar = window.prompt("Ingrese el id del producto que desea eliminar: ","");
+  if(borrar != ""){ 
+    Number(borrar);
+    for(let cont=0; cont<i; cont++){
+      let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+      if(service != null){
+        if(service.id == borrar){
+          localStorage.removeItem(`servicios${cont}`);
+        }
       }
     }
+    ocultar();
+    mostrar();
+  }else{
+    alert("Debes ingresar un número.");
   }
-  ocultar();
-  mostrar();
 }
