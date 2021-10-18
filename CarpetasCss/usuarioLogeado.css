@@ -35,7 +35,7 @@ img{
   transform: translateX(-50%);
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  color: wheat;
+  color: white;
   line-height: 30px;
   font-family: sans-serif;
   font-size: 15px;
@@ -44,8 +44,6 @@ img{
 }
 
 /*Foto de perfil*/
-
-
 
 
 .form-control{
