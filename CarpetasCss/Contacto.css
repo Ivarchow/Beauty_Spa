@@ -24,7 +24,7 @@ html, body {
   height: 1px;
   max-width: 400px;
   padding: 0;
-  margin: 50px auto 0 auto;
+  margin: 4% auto 4% auto;
 }
 
 /*CSS NavBar*/
@@ -232,6 +232,10 @@ background: #AB3053;
   text-decoration: none;
 }
 
+.containerLuisFooter1{
+  margin-bottom: 60px;
+}
+
 
 @media screen and (min-width: 600px){
   .r-footer > *{
@@ -252,37 +256,14 @@ main {
 	max-width: 1200px;
 	margin: 0 auto;
   text-align: center;
+  padding: 50px 0;
 }
 
 .wrapper {
   position: relative;
 }
 
-
-/*.wrapper ::before ::after{
-		position: absolute;
-		top: 0;
-		z-index: 1;
-
-		content: "";
-		display: block;
-		width: 20px;
-		height: 100%;
-	}
-
-  .wrapper ::before{
-    left: 0;
-		background: linear-gradient(90deg, #222, transparent);
-  }
-
-  .wrapper ::after{
-		right: 0;
-		background: linear-gradient(-90deg, #222, transparent);
-  }*/
-
-
 .items {
-  padding: 0;
 	position: relative;
 	width: 100%;
 	overflow: hidden;
@@ -323,6 +304,7 @@ main {
   margin-bottom: 60px;
 }
 
-.containerLuisFooter1{
-  margin-bottom: 60px;
-}
+
+
+
+

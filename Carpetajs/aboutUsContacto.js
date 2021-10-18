@@ -25,23 +25,23 @@ const slider = document.querySelector('.items');
 
 const end = () => {
 	isDown = false;
-    slider.classList.remove('active');
+  slider.classList.remove('active');
 }
 
 const start = (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;	
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;	
 }
 
 const move = (e) => {
 	if(!isDown) return;
 
-    e.preventDefault();
-    const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-    const dist = (x - startX);
-    slider.scrollLeft = scrollLeft - dist;
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const dist = (x - startX);
+  slider.scrollLeft = scrollLeft - dist;
 }
 
 (() => {

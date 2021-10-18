@@ -252,11 +252,11 @@ fieldset[disabled] .btn-sample.active {
 
 /*continer bootstrap prueba luis*/
 .figuritas69 {
-  font-size: 50px;
-  margin-right: 50%;
+  font-size: 70px;
+
 }
 
-.redesLink :hover{
+.figuritas69 :hover{
   color: #AA3053;
 }
 
@@ -266,10 +266,10 @@ fieldset[disabled] .btn-sample.active {
 
 .horarioServ0{ 
   padding: 15%;
+  font-family: Century Gothic;
 }
 
-.horarioServ{
-  margin-left: 50px;
+.horarioServ{ 
   font-family: Century Gothic;
 }
 
@@ -278,16 +278,11 @@ fieldset[disabled] .btn-sample.active {
   text-align: center;
 }
 
-.figuritas69{
-  float: right;
-}
-
 .mapita{
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 13%;
 }
 
 .btnCrearCuenta a{
