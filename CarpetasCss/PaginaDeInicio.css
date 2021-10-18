@@ -278,10 +278,11 @@ fieldset[disabled] .btn-sample.active {
 }
 
 .mapita{
-  float: right;
-  margin-top: 0%;
-  
-  margin-right: 18%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 13%;
 }
 
 /*continer bootstrap prueba luis*/

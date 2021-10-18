@@ -326,28 +326,3 @@ main {
 .containerLuisFooter1{
   margin-bottom: 60px;
 }
-
-/*@media screen and (min-width: 500px) {
-
-	.item {
-		width: 50%;	
-	}
-}
-
-@media screen and (min-width: 800px) {
-
-	.item {
-		width: 50%;	
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	
-	.wrapper {
-		margin-left: -20px;
-	}
-
-  .item {
-		width: 50%;	
-	}
-}*/
