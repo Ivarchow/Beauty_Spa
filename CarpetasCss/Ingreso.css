@@ -35,7 +35,8 @@ html, body{
   grid-row: 2;
   color: #644747;
   display: grid; 
-  grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 10rem 3rem;
+  /* grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 10rem 3rem 6rem; */
+  grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 3rem 6rem;
   text-align: center;
   place-items: center;
   width: 30rem;
@@ -118,7 +119,7 @@ font-size: small;
   border-radius: .5rem;
   border: none;
 }
-.box8{
+/* .box8{
   grid-row: 8;
 }
 hr{
@@ -145,9 +146,10 @@ font-weight: 400;
 }
 .iconn .fab{
   color: #AA3053
-}
+} */
 .box9{
-  grid-row: 9;
+  /* grid-row: 9; */
+  grid-row: 8;
   display: inline-flex;
 }
 .text a{
@@ -162,9 +164,14 @@ font-weight: 400;
 .pass-link a:hover, .signup-link a:hover{
   text-decoration: underline;
 }
+.space{
+  /* grid-row: 10; */
+  grid-row: 9;
+}
 @media only screen and (max-width: 600px){
   .content{
-    grid-template-rows: 12rem 4rem 3.5rem 3.5rem 1.5rem 1.5rem 4rem 7rem 4rem;
+    /* grid-template-rows: 12rem 4rem 3.5rem 3.5rem 1.5rem 1.5rem 4rem 7rem 4rem 3rem; */
+    grid-template-rows: 12rem 4rem 3.5rem 3.5rem 1.5rem 1.5rem 4rem 4rem 3rem;
     width: 20rem;
   }
   .logo img{
@@ -210,7 +217,7 @@ font-weight: 400;
     font-size: medium;
     border-radius: .5rem;
   }
-  hr{
+  /* hr{
     background-color: #636262;
     height: 1.5px;
     margin-bottom: 15px;
@@ -223,7 +230,7 @@ font-weight: 400;
   }
   .iconn{
     font-size: 2rem;
-  }
+  } */
 .text{
   font-size: small;
 }
@@ -233,7 +240,8 @@ font-weight: 400;
     grid-template-rows: 70px auto 200px;
   }
   .content{
-    grid-template-rows: 10rem 4rem 3.1rem 3.1rem 1.5rem 1.5rem 4rem 7rem 4rem;
+    /* grid-template-rows: 10rem 4rem 3.1rem 3.1rem 1.5rem 1.5rem 4rem 7rem 4rem 3rem; */
+    grid-template-rows: 10rem 4rem 3.1rem 3.1rem 1.5rem 1.5rem 4rem 4rem 3rem;
     width: 16rem;
   }
   .box2{
@@ -260,7 +268,7 @@ font-weight: 400;
   .btn-layer{
     border-radius: .3rem;
   }
-  hr{
+  /* hr{
 
     width: 14rem;
   }
@@ -270,7 +278,7 @@ font-weight: 400;
   }
   .text{
     font-size: smaller;
-  }
+  } */
   .text a{
     margin-left: 5px; 
   }
