@@ -117,49 +117,47 @@
         <!--AÑADIR SERVICIO-->
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <!-- Form para agregar servicios  -->
-            <div class="container" style="width: 100%;">
+            <div class="container">
                 <div class="row">
                     <div class="col-4">
-                        <!--  Card with form add services -->
-                        <div class="card"
-                            style="width: 100%; margin: auto; margin-top: 20px; margin-bottom: 20px; border: 1px solid black;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Agregar servicios</h5>
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputName" class="form-label">Nombre del producto:</label>
-                                        <input type="text" class="form-control" id="exampleInputName"
-                                            placeholder="Ingrese el nombre del producto" autofocus style="border: 1px solid black;">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputDescription" class="form-label">Descripción del producto:</label>
-                                        <input type="text" class="form-control" id="exampleInputDescription"
-                                            placeholder="Descripción" style="border: 1px solid black;">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPrice" class="form-label">Costo:</label>
-                                        <input type="text" class="form-control" id="exampleInputPrice"
-                                            placeholder="Costo del producto" style="border: 1px solid black;">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputImage" class="form-label">Imagen:</label>
-                                        <input type="text" class="form-control" id="exampleInputImage"
-                                            placeholder="Link de la imagen" style="border: 1px solid black;">
-                                    </div>
-                                    <button type="button" style="margin: 5px;" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                        id="Crear">create</button>
-                                    <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                        id="mostrar">show</button>
-                                    <button type="button" style="margin: 5px;" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                        id="ocultar">hide</button>
-                                    <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                        id="editar">edit</button>
-                                    <button type="button" style="margin: 5px;" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                        id="eliminar">delete</button>
-                                </form>
+                        <!-- Inicio del form addServices -->
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputName" class="form-label">Nombre del producto:</label>
+                                <input type="text" class="form-control" id="exampleInputName"
+                                    placeholder="Ingrese el nombre del producto" autofocus>
                             </div>
-                        </div>
-                        <!-- End card with form  -->
+                            <div class="mb-3">
+                                <label for="exampleInputDescription" class="form-label">Descripción del producto:</label>
+                                <input type="text" class="form-control" id="exampleInputDescription"
+                                    placeholder="Descripción">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleImputDuration" class="form-label">Duración:</label>
+                                <input type="text" class="form-control" id="exampleImputDuration" placeholder="Duración del servicio">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPrice" class="form-label">Costo:</label>
+                                <input type="text" class="form-control" id="exampleInputPrice" placeholder="Costo del producto">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputImage" class="form-label">Imagen:</label>
+                                <input type="text" class="form-control" id="exampleInputImage"
+                                    placeholder="Link de la imagen">
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12" id="Crear">create</button>
+                                <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12" id="editar">edit</button>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12" id="mostrar">show</button>
+                                <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12" id="ocultar">hide</button>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary col-md-10 col-sm-12 col-xs-12" id="eliminar">delete</button>
+                            </div>
+                        </form>
+                        <!-- Fin del form addServices -->
                     </div>
                     <div class="col-8">
                         <!--  div to show the cards -->
@@ -174,7 +172,6 @@
                 </div>
             </div>
             <!-- Fin del form para añadir servicios -->
-            
         </div>
         <!--AÑADIR SERVICIO-->
 

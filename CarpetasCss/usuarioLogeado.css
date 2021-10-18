@@ -1,4 +1,55 @@
 
+/*Foto de perfil*/
+
+img{
+  height: 200px;
+}
+
+.profile-pic-div{
+  height: 200px;
+  width: 200px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid grey;
+}
+
+#photo{
+  height: 100%;
+  width: 100%;
+}
+
+#file{
+  display: none;
+}
+
+#uploadBtn{
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  line-height: 30px;
+  font-family: sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+/*Foto de perfil*/
+
+
+.form-control{
+  margin: 10px;
+}
+
 main{ /*Esto tambien ayuda al footer*/
   min-height: 77vh;
 }
@@ -15,10 +66,21 @@ main{ /*Esto tambien ayuda al footer*/
 .botonGuardar{
   background-color: #FD5060;
   color: white;
+  padding: 0.25rem 4.75rem;
 }
 .botonGuardar:hover{
   background-color: #AA3053;
 }
+
+/*Checked Buttons*/
+
+.btn-outline-danger{
+  border-radius: 20px;
+  margin: 5px;
+}
+
+/*Checked Buttons*/
+
 
 /*Footer Luis Responsivo*/
 

@@ -1,5 +1,11 @@
 //var i = localStorage.setItem("i", 0);
+window.onload = () => {
+  
+
 if(localStorage.getItem("i") != 0){
+  if(localStorage.getItem("i") == null){
+    localStorage.setItem("i", 0);
+  }
   i = localStorage.getItem("i");
 }else{
   i = 0;
@@ -117,3 +123,4 @@ function eliminar(){
     alert("Debes ingresar un número.");
   }
 }
+};
