@@ -10,6 +10,24 @@ body {
   font-family: 'Quicksand', sans-serif;
   padding: 0 ;
 }
+/* /////////////////////////////////////// */
+.grid{
+  grid-template-rows: 80px auto auto;
+  display: grid;
+}
+.navbar{
+  grid-row: 1;
+  background:#000000;
+  display: grid; 
+  color: white;
+}
+.content{
+  grid-row: 2;
+}
+.footer{
+  grid-row: 3;
+}
+/* /////////////////////////////////////// */
 
 .linea {
   border-top: 2px solid #634646;
