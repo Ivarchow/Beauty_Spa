@@ -1,6 +1,9 @@
 // Se crea una variable para los usuarios Ejemplo: usuario${j} => usuario0 y se actualiza cada que se agrega un usuario.
 //var j = localStorage.setItem("j", 0);
 if(localStorage.getItem("j") != 0){
+  if(localStorage.getItem("j") == null){
+    localStorage.setItem("j", 0);
+  }
   j = localStorage.getItem("j");
 }else{
   j=0;
