@@ -128,6 +128,11 @@
   transform: translateX(0);
 }
 }
+
+.btnanimado a{
+  color: white;
+}
+
 /*animacion boton Luis*/
 
 
@@ -283,6 +288,10 @@ fieldset[disabled] .btn-sample.active {
   margin-left: auto;
   margin-right: auto;
   padding: 0 13%;
+}
+
+.btnCrearCuenta a{
+  color: white;
 }
 
 /*continer bootstrap prueba luis*/

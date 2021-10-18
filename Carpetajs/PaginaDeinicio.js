@@ -23,7 +23,7 @@ function mostrarbtn(){
 
     for(var i=0; i<btnanimado.length; i++){
         let alturaBtnAnimado = btnanimado[i].offsetTop;
-        if(alturaBtnAnimado+200<scrollTop){
+        if(alturaBtnAnimado+60<scrollTop){
             btnanimado[i].style.opacity = 1;
             btnanimado[i].classList.add("mostrarArriba1");
         }if (alturaBtnAnimado+600<scrollTop) {
