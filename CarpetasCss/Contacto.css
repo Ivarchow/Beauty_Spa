@@ -301,16 +301,11 @@ main {
 }
 
 .carrusel{
-  margin-bottom: 60px;
+  width: 60%;
+  height: 60%;
+  margin: 3% auto 3% auto;
 }
 
-.botonCarrusel1{
-  margin-left: -55px; 
-}
-
-.botonCarrusel2{
-  margin-right: -55px;
-}
 
 
 
