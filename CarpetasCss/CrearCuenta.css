@@ -36,7 +36,9 @@ html, body{
   grid-row: 2;
   color: #644747;
   display: grid; 
-  grid-template-rows: 15rem 5rem 4rem 4rem 4rem 4rem 4rem 2rem 2rem 2rem 6rem 10rem 5rem;
+  /* grid-template-rows: 15rem 5rem 4rem 4rem 4rem 4rem 4rem 2rem 2rem 2rem 6rem 10rem 5rem 6rem; */
+  /* grid-template-rows: 15rem 5rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 2rem 2rem 2rem 6rem 10rem 5rem 6rem; */
+  grid-template-rows: 15rem 5rem 4rem 4rem 4rem 4rem 4rem 4rem 4rem 2rem 2rem 2rem 6rem 5rem 6rem;
   text-align: center;
   place-items: center;
   width: 30rem;
@@ -57,6 +59,12 @@ html, body{
 .box3{
   grid-row: 3;
 }
+.box3.1{
+  grid-row: 4;
+}
+.box3.2{
+  grid-row: 5;
+}
 .field input{
   width: 30rem;
   height: 3rem;
@@ -65,7 +73,8 @@ html, body{
   font-size: large;
 }
 .box4{
-  grid-row: 4;
+  /* grid-row: 4; */
+  grid-row: 6;
 }
 .field1 input{
   width: 30rem;
@@ -75,7 +84,8 @@ html, body{
   font-size: large;
 }
 .box5{
-  grid-row: 5;
+  /* grid-row: 5; */
+  grid-row: 7;
 }
 .field2 input{
   width: 30rem;
@@ -85,7 +95,8 @@ html, body{
   font-size: large;
 }
 .box6{
-  grid-row: 6;
+  /* grid-row: 6; */
+  grid-row: 8;
 }
 .field3 input{
   width: 30rem;
@@ -95,7 +106,8 @@ html, body{
   font-size: large;
 }
 .box7{
-  grid-row: 7;
+  /* grid-row: 7; */
+  grid-row: 9;
 }
 .field4 input{
   width: 30rem;
@@ -105,25 +117,29 @@ html, body{
   font-size: large;
 }
 .box8{
-  grid-row: 8; 
-  justify-self: left;
-  margin-left: 10px;
-  font-size: small;
-}
-.box9{
-  grid-row: 9;
-  justify-self: left;
-  margin-left: 10px;
-  font-size: small;
-}
-.box10{
+  /* grid-row: 8;  */
   grid-row: 10;
   justify-self: left;
   margin-left: 10px;
   font-size: small;
 }
-.box11{
+.box9{
+  /* grid-row: 9; */
   grid-row: 11;
+  justify-self: left;
+  margin-left: 10px;
+  font-size: small;
+}
+.box10{
+  /* grid-row: 10; */
+  grid-row: 12;
+  justify-self: left;
+  margin-left: 10px;
+  font-size: small;
+}
+.box11{
+  /* grid-row: 11; */
+  grid-row: 13;
 }
 .btn-layer{
   cursor: pointer;
@@ -136,10 +152,11 @@ html, body{
   border-radius: .5rem;
   border: none;
 }
-.box12{
-  grid-row: 12;
-}
-hr{
+/* .box12{ */
+  /* grid-row: 12; */
+  /* grid-row: 14;
+} */
+/* hr{
   background-color: #636262;
   height: 3px;
   margin-bottom: 20px;
@@ -163,9 +180,11 @@ hr{
 }
 .iconn .fab{
   color: #AA3053
-}
+} */
 .box13{
-  grid-row: 13;
+  /* grid-row: 13; */
+  /* grid-row: 15; */
+  grid-row: 14;
   display: inline-flex;
 }
 .text a{
@@ -181,9 +200,16 @@ hr{
 .signup-link a:hover{
   text-decoration: underline;
 }
+.space{
+  /* grid-row: 14; */
+  /* grid-row: 16; */
+  grid-row: 15;
+}
 @media only screen and (max-width: 600px){
   .content{
-    grid-template-rows: 12rem 4rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 1.5rem 1.5rem 1.5rem 5rem 7rem 3em;
+    /* grid-template-rows: 12rem 4rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 1.5rem 1.5rem 1.5rem 5rem 7rem 3em 3rem; */
+    /* grid-template-rows: 12rem 4rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 1.5rem 1.5rem 1.5rem 5rem 7rem 3rem 3rem; */
+    grid-template-rows: 12rem 4rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 3.5rem 1.5rem 1.5rem 1.5rem 5rem 3rem 3rem;
     width: 20rem;
   }
   .logo img{
@@ -248,7 +274,7 @@ hr{
     font-size: medium;
     border-radius: .5rem;
   }
-  hr{
+  /* hr{
     background-color: #636262;
     height: 1.5px;
     margin-bottom: 15px;
@@ -261,7 +287,7 @@ hr{
   }
   .iconn{
     font-size: 2rem;
-  }
+  } */
   .box13{
     font-size: small;
   }
@@ -274,7 +300,9 @@ hr{
     grid-template-rows: 70px auto 200px;
   }
   .content{
-    grid-template-rows: 10rem 4rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 1.5rem 1.5rem 1.5rem 4rem 7rem 4em;
+    /* grid-template-rows: 10rem 4rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 1.5rem 1.5rem 1.5rem 4rem 7rem 4em 3rem; */
+    /* grid-template-rows: 10rem 4rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 1.5rem 1.5rem 1.4rem 4rem 7rem 3rem 3rem; */
+    grid-template-rows: 10rem 4rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 3.1rem 1.5rem 1.5rem 1.4rem 4rem 3rem 3rem;
     width: 16rem;
   }
   .box2{
@@ -315,7 +343,7 @@ hr{
   }
   .btn-layer{
     border-radius: .3rem;
-  }
+  /* }
   hr{
     width: 14rem;
   }
@@ -331,5 +359,5 @@ hr{
   }
   .box13 a .signup-link a{
     font-size: x-small;
-  }
+  } */
 }
