@@ -20,6 +20,15 @@ main{ /*Esto tambien ayuda al footer*/
   background-color: #AA3053;
 }
 
+/*Checked Buttons*/
+
+.btn-outline-danger{
+  border-radius: 20px;
+  margin: 5px;
+}
+
+/*Checked Buttons*/
+
 /*Footer Luis Responsivo*/
 
 footer{
