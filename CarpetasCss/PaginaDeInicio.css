@@ -281,13 +281,13 @@ fieldset[disabled] .btn-sample.active {
 .mapita{
   position: relative;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 5%;
 }
 
 .btnCrearCuenta a{
   color: white;
 }
+
 
 /*continer bootstrap prueba luis*/
 
