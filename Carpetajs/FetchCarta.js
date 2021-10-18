@@ -2,17 +2,12 @@ const URLS = [];
 const arrIds = [];
 const arrNUmberServices=[];
 const arrServicios = ["nails", "skin", "pest", "fac", "pedi", "makeup", "estetica", "massage"];
-var banderaCols=0;
+
+
 window.onload = () => {
-    main();
+    countServicesLenght();
 };
 
-function main() {
-    countServicesLenght();
-    //countServices();
-    //while(banderaCols!=1);
-
-}
 
 function generatorArrys(tamañoJson) {
     for (let varCtlrGenerator = 0; varCtlrGenerator < tamañoJson; varCtlrGenerator++) {
