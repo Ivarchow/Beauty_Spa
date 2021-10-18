@@ -1,4 +1,8 @@
 
+.form-control{
+  margin: 10px;
+}
+
 main{ /*Esto tambien ayuda al footer*/
   min-height: 77vh;
 }
@@ -15,6 +19,7 @@ main{ /*Esto tambien ayuda al footer*/
 .botonGuardar{
   background-color: #FD5060;
   color: white;
+  padding: 0.25rem 4.75rem;
 }
 .botonGuardar:hover{
   background-color: #AA3053;
@@ -28,6 +33,7 @@ main{ /*Esto tambien ayuda al footer*/
 }
 
 /*Checked Buttons*/
+
 
 /*Footer Luis Responsivo*/
 
