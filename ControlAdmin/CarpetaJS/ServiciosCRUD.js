@@ -154,7 +154,9 @@ window.onload = () => {
   function buscar(){
     ocultar1();
     let search = document.getElementById("searchService").value;
-    if(search != ""){
+    if(search == ""){
+      alert("ID invalido");
+    }else if(search != ""){
       Number(search);
       for(let cont=0; cont<i; cont++){
         var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
