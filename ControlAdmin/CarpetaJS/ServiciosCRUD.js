@@ -18,12 +18,14 @@ window.onload = () => {
   function crear(){
     let nom = document.getElementById("exampleInputName").value;
     let text = document.getElementById("exampleInputDescription").value;
-    let pre = document.getElementById("exampleInputPrice").value;
+    let pre = Number(document.getElementById("exampleInputPrice").value);
     let imgn = document.getElementById("exampleInputImage").value;
-    let duracion = document.getElementById("exampleImputDuration").value;
+    let duracion = Number(document.getElementById("exampleImputDuration").value);
   
     if(nom == "" && pre == "" && text == "" && imgn == ""){
       alert("No puedes agregar tarjetas vacias.");
+    }else if(isNaN(pre) || isNaN(duracion)){
+      alert("Debes ingresar solo los números en el precio y la duración.");
     }else{
       var duplicado = false
       var requisitos = new Object();
@@ -108,12 +110,14 @@ window.onload = () => {
         if(service.id == cambio){
           let nom = name;
           let text = desc;
-          let pre = pri;
+          let pre = Number(pri);
           let imgn = ima;
-          let duracion = dur;
+          let duracion = Number(dur);
     
           if(nom == "" && pre == "" && text == "" && imgn == ""){
             alert("No puedes agregar tarjetas vacias.");
+          }else if(isNaN(pre) || isNaN(duracion)){
+            alert("Debes ingresar solo los números en el precio y la duración.");
           }else{
           var requisitos = new Object();
           requisitos.id = cambio;
@@ -125,11 +129,12 @@ window.onload = () => {
     
           var local = JSON.stringify(requisitos);
           localStorage.setItem(`servicios${cambio}`, local);
-          console.log('local: ', JSON.parse(local));
           }
         }
       }
     }
+    //ocultar1();
+    search(cambio);
   }
   
   function eliminar(){
@@ -154,44 +159,48 @@ window.onload = () => {
   function buscar(){
     ocultar1();
     let search = document.getElementById("searchService").value;
-    if(search == ""){
-      alert("ID invalido");
-    }else if(search != ""){
-      Number(search);
-      for(let cont=0; cont<i; cont++){
-        var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-        if(service != null){
-          if(service.id == search){
-            const itemHTML1 = 
-            '<figure class="image-block" style="margin: auto;">\n' +
-              '<h1>'+ service.nombre+'</h1>\n' +
-              '<img src="'+service.img+'"/>\n' +
-              '<figcaption>\n' +
-                '<h3>\n' +
-                  'Ver Más\n' +
-                '</h3>\n' +
-                '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                  '<p>ID: '+service.id+'</p>\n' +
-                  '<p>Precio: $'+service.precio+'</p>\n' +
-                  '<p>'+service.texto+'</p>\n' +
-                '</div>\n' +
-                '<button>\n' +
-                  'Reservar\n' +
-                '</button>\n' +
-              '</figcaption>\n' +
-            '</figure>';
-            const itemsContainer = document.getElementById("list-items1");
-            itemsContainer.innerHTML += itemHTML1;
+    if(search != ""){
+      search = Number(search);
+      if(isNaN(search)){
+        alert("El ID debe ser un numero.");
+      }else{
+        for(let cont=0; cont<i; cont++){
+          var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+          if(service != null){
+            if(service.id == search){
+              const itemHTML1 = 
+              '<figure class="image-block" style="margin: auto;">\n' +
+                '<h1>'+ service.nombre+'</h1>\n' +
+                '<img src="'+service.img+'"/>\n' +
+                '<figcaption>\n' +
+                  '<h3>\n' +
+                    'Ver Más\n' +
+                  '</h3>\n' +
+                  '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                    '<p>ID: '+service.id+'</p>\n' +
+                    '<p>Precio: $'+service.precio+'</p>\n' +
+                    '<p>'+service.texto+'</p>\n' +
+                  '</div>\n' +
+                  '<button>\n' +
+                    'Reservar\n' +
+                  '</button>\n' +
+                '</figcaption>\n' +
+              '</figure>';
+              const itemsContainer = document.getElementById("list-items1");
+              itemsContainer.innerHTML += itemHTML1;
+            }
           }
         }
+        let servi = JSON.parse(localStorage.getItem(`servicios${search}`));
+        document.getElementById("exampleInputName1").value = servi.nombre;
+        document.getElementById("exampleInputDescription1").value = servi.texto;
+        document.getElementById("exampleInputPrice1").value = servi.precio;
+        document.getElementById("exampleInputImage1").value = servi.img;
+        document.getElementById("exampleImputDuration1").value = servi.duracion;
       }
+    }else{
+      alert("Debes ingresar un ID");
     }
-    let servi = JSON.parse(localStorage.getItem(`servicios${search}`));
-    document.getElementById("exampleInputName1").value = servi.nombre;
-    document.getElementById("exampleInputDescription1").value = servi.texto;
-    document.getElementById("exampleInputPrice1").value = servi.precio;
-    document.getElementById("exampleInputImage1").value = servi.img;
-    document.getElementById("exampleImputDuration1").value = servi.duracion;
   }
   
   function clean(){
@@ -207,6 +216,43 @@ window.onload = () => {
     document.getElementById("exampleInputPrice1").value = null;
     document.getElementById("exampleInputImage1").value = null;
     document.getElementById("exampleImputDuration1").value = null;
+  }
+
+  function search(ser){
+    ocultar1();
+    for(let cont=0; cont<i; cont++){
+      var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+      if(service != null){
+        if(service.id == ser){
+          const itemHTML1 = 
+          '<figure class="image-block" style="margin: auto;">\n' +
+            '<h1>'+ service.nombre+'</h1>\n' +
+            '<img src="'+service.img+'"/>\n' +
+            '<figcaption>\n' +
+              '<h3>\n' +
+                'Ver Más\n' +
+              '</h3>\n' +
+              '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                '<p>ID: '+service.id+'</p>\n' +
+                '<p>Precio: $'+service.precio+'</p>\n' +
+                '<p>'+service.texto+'</p>\n' +
+              '</div>\n' +
+              '<button>\n' +
+                'Reservar\n' +
+              '</button>\n' +
+            '</figcaption>\n' +
+          '</figure>';
+          const itemsContainer = document.getElementById("list-items1");
+          itemsContainer.innerHTML += itemHTML1;
+        }
+      }
+    }
+    let servi = JSON.parse(localStorage.getItem(`servicios${ser}`));
+    document.getElementById("exampleInputName1").value = servi.nombre;
+    document.getElementById("exampleInputDescription1").value = servi.texto;
+    document.getElementById("exampleInputPrice1").value = servi.precio;
+    document.getElementById("exampleInputImage1").value = servi.img;
+    document.getElementById("exampleImputDuration1").value = servi.duracion;
   }
   
   };
