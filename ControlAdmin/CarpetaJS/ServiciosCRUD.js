@@ -1,126 +1,210 @@
-//var i = localStorage.setItem("i", 0);
 window.onload = () => {
-  
 
-if(localStorage.getItem("i") != 0){
-  if(localStorage.getItem("i") == null){
-    localStorage.setItem("i", 0);
-  }
-  i = localStorage.getItem("i");
-}else{
-  i = 0;
-}
-document.getElementById("Crear").addEventListener("click", crear);
-document.getElementById("mostrar").addEventListener("click", mostrar);
-document.getElementById("ocultar").addEventListener("click", ocultar);
-document.getElementById("editar").addEventListener("click", editar);
-document.getElementById("eliminar").addEventListener("click", eliminar);
-
-function crear(){
-  let nom = document.getElementById("exampleInputName").value;
-  let text = document.getElementById("exampleInputDescription").value;
-  let pre = document.getElementById("exampleInputPrice").value;
-  let imgn = document.getElementById("exampleInputImage").value;
-
-  if(nom == "" && pre == "" && text == "" && imgn == ""){
-    alert("No puedes agregar tarjetas vacias.");
-  }else{
-    var requisitos = new Object();
-    requisitos.id = i;
-    requisitos.nombre = nom;
-    requisitos.precio = pre;
-    requisitos.texto = text;
-    requisitos.img = imgn; 
-
-    var local = JSON.stringify(requisitos);
-    localStorage.setItem(`servicios${i}`, local);
-    i++;
-    localStorage.setItem("i", i);
-  }
-  mostrar();
-}
-
-function mostrar(){
-  ocultar();
-  var j = localStorage.getItem("i");
-  for(var cont=0; cont<j; cont++){
-    if(localStorage.getItem(`servicios${cont}`) != null){
-      var serv = JSON.parse(localStorage.getItem(`servicios${cont}`));
-      const itemHTML = 
-      '<figure class="image-block" style="margin: auto;">\n' +
-        '<h1>'+ serv.nombre+'</h1>\n' +
-        '<img src="'+serv.img+'"/>\n' +
-        '<figcaption>\n' +
-          '<h3>\n' +
-              'Ver Más\n' +
-          '</h3>\n' +
-          '<div class="overflow-auto example" style="height: 200px; ">\n' +
-              '<p>Precio: '+serv.precio+'$</p>\n' +
-              '<p>'+serv.texto+'</p>\n' +
-          '</div>\n' +
-          '<button>\n' +
-              'Reservar\n' +
-          '</button>\n' +
-        '</figcaption>\n' +
-      '</figure>';
-      const itemsContainer = document.getElementById("list-items");
-      itemsContainer.innerHTML += itemHTML;
+  if(localStorage.getItem("i") != 0){
+    if(localStorage.getItem("i") == null){
+      localStorage.setItem("i", 0);
     }
+    i = localStorage.getItem("i");
+  }else{
+    i = 0;
   }
-}
-
-function ocultar(){
-  document.getElementById("list-items").innerHTML = "";
-}
-
-function editar(){
-  let cambio = Number(window.prompt("Ingrese el id del producto que desea editar: ",""));
-  for(let cont=0; cont<i; cont++){
-    let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-    if(service != null){
-      if(service.id == cambio){
-        let nom = document.getElementById("exampleInputName").value;
-        let text = document.getElementById("exampleInputDescription").value;
-        let pre = document.getElementById("exampleInputPrice").value;
-        let imgn = document.getElementById("exampleInputImage").value;
+  document.getElementById("Crear").addEventListener("click", crear);
+  document.getElementById("mostrar").addEventListener("click", mostrar);
+  document.getElementById("ocultar").addEventListener("click", ocultar);
+  document.getElementById("editar").addEventListener("click", editar);
+  document.getElementById("eliminar").addEventListener("click", eliminar);
+  document.getElementById("buscar").addEventListener("click", buscar);
   
-        if(nom == "" && pre == "" && text == "" && imgn == ""){
-          alert("No puedes agregar tarjetas vacias.");
-        }else{
-        var requisitos = new Object();
-        requisitos.id = cambio;
-        requisitos.nombre = nom;
-        requisitos.precio = pre;
-        requisitos.texto = text;
-        requisitos.img = imgn; 
+  function crear(){
+    let nom = document.getElementById("exampleInputName").value;
+    let text = document.getElementById("exampleInputDescription").value;
+    let pre = document.getElementById("exampleInputPrice").value;
+    let imgn = document.getElementById("exampleInputImage").value;
+    let duracion = document.getElementById("exampleImputDuration").value;
   
-        var local = JSON.stringify(requisitos);
-        localStorage.setItem(`servicios${cambio}`, local);
-        console.log('local: ', JSON.parse(local));
+    if(nom == "" && pre == "" && text == "" && imgn == ""){
+      alert("No puedes agregar tarjetas vacias.");
+    }else{
+      var duplicado = false
+      var requisitos = new Object();
+      requisitos.id = i;
+      requisitos.nombre = nom;
+      requisitos.precio = pre;
+      requisitos.texto = text;
+      requisitos.img = imgn;
+      requisitos.duracion = duracion;
+  
+      var local = JSON.stringify(requisitos);
+      for(let cont=0; cont<i; cont++){
+        let servicio = JSON.parse(localStorage.getItem(`servicios${cont}`));
+        if(servicio != null){
+          if(requisitos.nombre == servicio.nombre || requisitos.texto == servicio.texto){
+            duplicado = true;
+          }
         }
+      }
+      if(duplicado){
+        alert("Servicio duplicado");
+      }else{
+        localStorage.setItem(`servicios${i}`, local);
+        i++;
+        localStorage.setItem("i", i);
+      }
+    }
+    clean();
+    mostrar();
+  }
+  
+  function mostrar(){
+    clean();
+    ocultar();
+    var j = localStorage.getItem("i");
+    for(var cont=0; cont<j; cont++){
+      if(localStorage.getItem(`servicios${cont}`) != null){
+        var serv = JSON.parse(localStorage.getItem(`servicios${cont}`));
+        const itemHTML = 
+        '<figure class="image-block" style="margin: auto;">\n' +
+          '<h1>'+ serv.nombre+'</h1>\n' +
+          '<img src="'+serv.img+'"/>\n' +
+          '<figcaption>\n' +
+            '<h3>\n' +
+                'Ver Más\n' +
+            '</h3>\n' +
+            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                '<p>ID: '+serv.id+'</p>\n' +
+                '<p>Precio: $'+serv.precio+'</p>\n' +
+                '<p>'+serv.texto+'</p>\n' +
+            '</div>\n' +
+            '<button>\n' +
+                'Reservar\n' +
+            '</button>\n' +
+          '</figcaption>\n' +
+        '</figure>';
+        const itemsContainer = document.getElementById("list-items");
+        itemsContainer.innerHTML += itemHTML;
       }
     }
   }
-  ocultar();
-  mostrar();
-}
-
-function eliminar(){
-  let borrar = window.prompt("Ingrese el id del producto que desea eliminar: ","");
-  if(borrar != ""){ 
-    Number(borrar);
+  
+  function ocultar(){
+    clean();
+    document.getElementById("list-items").innerHTML = "";
+  }
+  function ocultar1(){
+    clean1();
+    document.getElementById("list-items1").innerHTML = "";
+  }
+  
+  function editar(){
+    let cambio = document.getElementById("searchService").value;
+    let name = document.getElementById("exampleInputName1").value;
+    let desc = document.getElementById("exampleInputDescription1").value;
+    let pri = document.getElementById("exampleInputPrice1").value;
+    let ima = document.getElementById("exampleInputImage1").value;
+    let dur = document.getElementById("exampleImputDuration1").value;
     for(let cont=0; cont<i; cont++){
       let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
       if(service != null){
-        if(service.id == borrar){
-          localStorage.removeItem(`servicios${cont}`);
+        if(service.id == cambio){
+          let nom = name;
+          let text = desc;
+          let pre = pri;
+          let imgn = ima;
+          let duracion = dur;
+    
+          if(nom == "" && pre == "" && text == "" && imgn == ""){
+            alert("No puedes agregar tarjetas vacias.");
+          }else{
+          var requisitos = new Object();
+          requisitos.id = cambio;
+          requisitos.nombre = nom;
+          requisitos.precio = pre;
+          requisitos.texto = text;
+          requisitos.img = imgn;
+          requisitos.duracion = duracion; 
+    
+          var local = JSON.stringify(requisitos);
+          localStorage.setItem(`servicios${cambio}`, local);
+          console.log('local: ', JSON.parse(local));
+          }
         }
       }
     }
-    ocultar();
-    mostrar();
-  }else{
-    alert("Debes ingresar un número.");
   }
-}
-};
+  
+  function eliminar(){
+    let borrar = window.prompt("Ingrese el id del producto que desea eliminar: ","");
+    if(borrar != ""){ 
+      Number(borrar);
+      for(let cont=0; cont<i; cont++){
+        let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+        if(service != null){
+          if(service.id == borrar){
+            localStorage.removeItem(`servicios${cont}`);
+          }
+        }
+      }
+      ocultar();
+      mostrar();
+    }else{
+      alert("Debes ingresar un número.");
+    }
+  }
+  
+  function buscar(){
+    ocultar1();
+    let search = document.getElementById("searchService").value;
+    if(search != ""){
+      Number(search);
+      for(let cont=0; cont<i; cont++){
+        var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
+        if(service != null){
+          if(service.id == search){
+            const itemHTML1 = 
+            '<figure class="image-block" style="margin: auto;">\n' +
+              '<h1>'+ service.nombre+'</h1>\n' +
+              '<img src="'+service.img+'"/>\n' +
+              '<figcaption>\n' +
+                '<h3>\n' +
+                  'Ver Más\n' +
+                '</h3>\n' +
+                '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                  '<p>ID: '+service.id+'</p>\n' +
+                  '<p>Precio: $'+service.precio+'</p>\n' +
+                  '<p>'+service.texto+'</p>\n' +
+                '</div>\n' +
+                '<button>\n' +
+                  'Reservar\n' +
+                '</button>\n' +
+              '</figcaption>\n' +
+            '</figure>';
+            const itemsContainer = document.getElementById("list-items1");
+            itemsContainer.innerHTML += itemHTML1;
+          }
+        }
+      }
+    }
+    let servi = JSON.parse(localStorage.getItem(`servicios${search}`));
+    document.getElementById("exampleInputName1").value = servi.nombre;
+    document.getElementById("exampleInputDescription1").value = servi.texto;
+    document.getElementById("exampleInputPrice1").value = servi.precio;
+    document.getElementById("exampleInputImage1").value = servi.img;
+    document.getElementById("exampleImputDuration1").value = servi.duracion;
+  }
+  
+  function clean(){
+    document.getElementById("exampleInputName").value = null;
+    document.getElementById("exampleInputDescription").value = null;
+    document.getElementById("exampleInputPrice").value = null;
+    document.getElementById("exampleInputImage").value = null;
+    document.getElementById("exampleImputDuration").value = null;
+  }
+  function clean1(){
+    document.getElementById("exampleInputName1").value = null;
+    document.getElementById("exampleInputDescription1").value = null;
+    document.getElementById("exampleInputPrice1").value = null;
+    document.getElementById("exampleInputImage1").value = null;
+    document.getElementById("exampleImputDuration1").value = null;
+  }
+  
+  };
