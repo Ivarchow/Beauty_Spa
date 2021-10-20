@@ -52,9 +52,9 @@ window.onload = () => {
         i++;
         localStorage.setItem("i", i);
       }
-    }
     clean();
     mostrar();
+    }
   }
   
   function mostrar(){
