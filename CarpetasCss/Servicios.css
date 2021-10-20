@@ -10,7 +10,6 @@ body {
   font-family: 'Quicksand', sans-serif;
   padding: 0 ;
 }
-/* /////////////////////////////////////// */
 .grid{
   grid-template-rows: 80px auto auto;
   display: grid;
@@ -27,7 +26,6 @@ body {
 .footer{
   grid-row: 3;
 }
-/* /////////////////////////////////////// */
 
 .linea {
   border-top: 2px solid #634646;

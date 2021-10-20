@@ -6,20 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIVINITE-CrearCuenta</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../CarpetasCss/CrearCuenta.css" type="text/css">
+    <link rel="stylesheet" href="../CarpetasCss/PerfilUsuario.css" type="text/css">
     <link rel="stylesheet" href="/CarpetasCss/navbar.css">
     <link rel="stylesheet" href="/CarpetasCss/footer.css">
-    <script src="//pull.cappuccicons.com/cpf.js"></script>
     <link rel="shortcut icon" href="/images/logo/image2.png">
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <div class="grid">
+<div class="grid">
 <!-- ingresar codigo de navbar  -->
 <div class="navbar">
   <header class="header">
@@ -67,76 +68,74 @@
     })
   </script>
 </div><!-- navbar -->
-  
-  <!-- codigo de login -->
-  <div class="content">
-    <div class="box1">
-      <div class="logo"></a><img src="/images/logo/image2.png" alt=""></a></div>
-    </div><!-- box1 -->
-  <div class="box2">
-    <a>Crear cuenta de forma gratuita</a>
-  </div><!-- box2 -->
-  <div class="box3 field">
-    <input type="text" id="InputName" placeholder="Nombre y Apellido" required> 
-  </div><!-- box3 -->
-  <div class="box3.1 field">
-    <input type="text" id="InputBirth" placeholder="Fecha de nacimiento" required> 
-  </div><!-- box3.1 -->
-  <div class="box3.2 field">
-    <input type="text" id="InputGender" list="listgender" placeholder="Genero" required> 
-      <datalist id="listgender">
-      <option label="Mujer" value="Mujer">
-      <option label="Hombre" value="Hombre">
-      <option label="Otr@" value="Otr@">
-      </datalist>
-  </div><!-- box3.2 -->
-  <div class="box4 field1">
-    <input type="tel" id="InputPhone" placeholder="Telefono" title="Un número de teléfono válido debe tener 10 dígitos" required> 
-  </div><!-- box4 -->
-  <div class="box5 field2">
-    <input type="email" id="InputEmail" name="emails" multiple placeholder="Inserte su email" required> 
-  </div><!-- box5 -->
-  <div class="box6 field3">
-    <input type="password" id="Show" placeholder="Contraseña" required>
-  </div><!-- box6 -->
-  <div class="box7 field4">
-    <input type="password" id="Show1" placeholder="Confirmar contraseña" required>
-  </div><!-- box7 -->
-  <div class="box8">
-      <input type="checkbox" id="" onclick="viewpassword(), viewpassword2()">Mostrar contraseña
-  </div><!-- box8 -->
-  <div class="box9">
-    <div class="checkbox">
-      <input type="checkbox" id="terms">Aceptar terminos y condiciones
-    </div> 
-  </div><!-- box9 -->
-  <div class="box10">
-    <div class="aviso">
-      Leer <a href="">Aviso de privacidad</a>
-    </div>
-  </div><!-- box10 -->
-  <div class="box11">
-    <button class="btn-layer" id="Crear" type="submit" >Crear cuenta</button>
-  </div><!-- box11 -->
-  <!-- <div class="box12">
-    <div><hr></div>
-    <div class="divisior">
-      <a> Tambien puedes crear tu cuenta con: </a>
-    </div>
-    <div class="icon">
-      <div class="iconn"><a href="#"><i class="fab fa-facebook-square"></i></div> 
-      <div class="iconn"><a href="#"><i class="fab fa-google"></i></div> 
-    </div>
-    <div><hr></div>
-  </div>box12 -->
-  <div class="box13">
-    <a>¿Ya tienes cuenta? </a>
-    <div class="signup-link">
-      <a href="Ingreso.HTML"> Iniciar sesion </a></div>
-  </div><!-- box13 -->
-  <div class="space">
-  </div>
-  </div><!-- content -->
+
+<div class="content">
+<div class="box1">
+  <a>Perfil</a>
+</div><!-- box1 -->
+<div class="box2">
+  <i class="uil uil-user-circle"></i>
+  <i class="uil uil-camera-plus"></i>
+</div><!-- box2 -->
+<div class="box3">
+<input type="text" id="InputName editor" placeholder="Nombre y Apellido" contenteditable="true" required> 
+</div><!-- box3 -->
+<div class="box4">
+  <input type="tel" id="InputPhone editor" placeholder="Telefono" title="Un número de teléfono válido debe tener 10 dígitos" required> 
+</div><!-- box4 -->
+<div class="box5">
+<input type="email" id="InputEmail editor" name="emails" multiple placeholder="E-mail" required>  
+</div><!-- box5 -->
+<div class="box6">
+<input type="text" id="InputBirth editor" id="validationDefault03" placeholder="Fecha de nacimiento" required> 
+
+</div><!-- box6 -->
+<div class="box7">
+  <input type="text" id="InputGender editor" list="listgender" placeholder="Genero" required> 
+  <datalist id="listgender editor">
+  <option label="Mujer" value="Mujer">
+  <option label="Hombre" value="Hombre">
+  <option label="Otr@" value="Otr@">
+  </datalist>
+
+</div><!-- box7 -->
+<div class="box8">
+<a>Servicios favoritos</a>
+</div><!-- box8 -->
+<div class="box9">
+  <a>Porfavor seleccione los servicios de los cuales le gustaria mantenerse informado de promociones.</a>
+</div><!-- box9 -->
+<div class="box10">
+
+  <ul class="ks-cboxtags">
+    <li><input type="checkbox" id="checkboxOne" value="Masajes"><label for="checkboxOne">Masajes</label></li>
+
+    <li><input type="checkbox" id="checkboxTwo" value="Uñas"><label for="checkboxTwo">Uñas</label></li>
+
+    <li><input type="checkbox" id="checkboxThree" value="Cejas"><label for="checkboxThree">Cejas</label></li>
+
+    <li><input type="checkbox" id="checkboxFour" value="Limpieza"><label for="checkboxFour">Limpieza</label></li>
+
+    <li><input type="checkbox" id="checkboxFive" value="Maquillaje"><label for="checkboxFive">Maquillaje</label></li>
+
+    <li><input type="checkbox" id="checkboxSix" value="Pestañas"><label for="checkboxSix">Pestañas</label></li>
+
+    <li><input type="checkbox" id="checkboxSeven" value="Peinados"><label for="checkboxSeven">Peinados</label></li>
+
+    <li><input type="checkbox" id="checkboxEight" value="Piel"><label for="checkboxEight">Piel</label></li>
+
+    <li><input type="checkbox" id="checkboxNine" value="Eventos"><label for="checkboxNine">Eventos</label></li>
+  </ul>
+
+</div><!-- box10 -->
+<div class="box11">
+  <button id="editorBtn" type="button">Editar</button>
+</div><!-- box11 -->
+<div class="box12">
+
+</div><!-- box12 -->
+
+</div><!-- content -->
   <!-- ingresar codigo del contact -->
   <div class="footer">
     <div class="foo1">
@@ -179,25 +178,27 @@
     </div><!-- foo11 -->
   </div><!-- foo9 -->
   </div><!-- footer -->
-  </div><!-- grid -->
-  </body>
-  <!-- display password -->
-  <script type="text/javascript">
-    function viewpassword(){
-      var show = document.getElementById('Show')
-        if(show.type =='password'){show.type='text';}
-        else{show.type='password';}
-    }
-    function viewpassword2(){
-      var show = document.getElementById('Show1')
-      if(show.type =='password'){show.type='text';}
-        else{show.type='password';}
-    }
-    
-    
-    
-    
-    </script>
-    <script src="../Carpetajs/addUser.js"></script>
-    <script src="/Carpetajs/navbar.js"></script>
-  </html>
+</div><!-- grid -->
+
+<!-- Codigo para editar contenido -->
+<script>
+var editorBtn = document.getElementById('editorBtn');
+	var element = document.getElementById('editor');
+
+	editorBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  if (element.isContentEditable) {
+    // Disable Editing
+    element.contentEditable = 'false';
+    editorBtn.innerHTML = 'Editar';
+    // You could save any changes here.
+  } else {
+    element.contentEditable = 'true';
+    editorBtn.innerHTML = 'Guardar';
+  }
+	});
+</script>
+
+</body>
+</html>

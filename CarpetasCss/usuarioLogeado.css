@@ -67,6 +67,7 @@ main{ /*Esto tambien ayuda al footer*/
   background-color: #FD5060;
   color: white;
   padding: 0.25rem 4.75rem;
+  border: none;
 }
 .botonGuardar:hover{
   background-color: #AA3053;
