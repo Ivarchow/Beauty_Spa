@@ -19,6 +19,8 @@ function crear(){
   let email = document.getElementById("InputEmail").value;
   let pass = document.getElementById("Show").value;
   let pass1 = document.getElementById("Show1").value;
+  let cumple = document.getElementById("InputBirth").value;
+  let gender = document.getElementById("InputGender").value;
   let terms = document.getElementById("terms").checked;
   //Se cre una variable con la exprecion regular que validara a los correos
   let expReg =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -48,6 +50,8 @@ function crear(){
     user.phone = phone;
     user.mail = email;
     user.password = pass;
+    user.gender = gender;
+    user.cumple = cumple;
 
     // Con un bucle se busca usuario a usuario si el correo ya fue dado de alta, si es así la bandera cambia a true
     for(let cont=0; cont<j; cont++){
