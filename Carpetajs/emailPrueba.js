@@ -1,5 +1,8 @@
 const inputs = document.querySelector('form')
+let aviso = document.getElementById("terminos").checked;
+
 function sendEmail() {
+ 
   Email.send({
       Host : "smtp.mailtrap.io",
       Username : "71e4b9403ab5c0",
