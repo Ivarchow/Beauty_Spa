@@ -70,12 +70,17 @@ form{
   color: white;
   padding: 0.25rem 4.75rem;
   border: none;
+  margin-top: 5%;
 }
 .botonGuardar:hover{
   background-color: #AA3053;
 }
 
 /*Checked Buttons*/
+.botonesCont{
+  margin-top: 4%;
+
+}
 
 .btn-outline-danger{
   border-radius: 20px;
