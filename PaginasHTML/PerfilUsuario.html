@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Adding CSS stylesheet -->
+    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
+    <link rel="shortcut icon" href="/images/logo/image2.png">
+
 
 </head>
 <body>
@@ -73,10 +77,11 @@
 <div class="box1">
   <a>Perfil</a>
 </div><!-- box1 -->
-<div class="box2">
-  <i class="uil uil-user-circle"></i>
-  <i class="uil uil-camera-plus"></i>
-</div><!-- box2 -->
+
+<!--Foto de perfil-->
+
+<!--Foto de perfil-->
+
 <div class="box3">
 <input type="text" id="InputName editor" placeholder="Nombre y Apellido" contenteditable="true" required> 
 </div><!-- box3 -->
@@ -91,12 +96,13 @@
 
 </div><!-- box6 -->
 <div class="box7">
-  <input type="text" id="InputGender editor" list="listgender" placeholder="Genero" required> 
-  <datalist id="listgender editor">
+  
+  <select type="text" id="InputGender editor" list="listgender" placeholder="Genero" required> 
+  
   <option label="Mujer" value="Mujer">
   <option label="Hombre" value="Hombre">
   <option label="Otr@" value="Otr@">
-  </datalist>
+  </select>
 
 </div><!-- box7 -->
 <div class="box8">
@@ -201,4 +207,5 @@ var editorBtn = document.getElementById('editorBtn');
 </script>
 
 </body>
+
 </html>

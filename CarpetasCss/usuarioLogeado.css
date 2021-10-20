@@ -55,6 +55,11 @@ main{ /*Esto tambien ayuda al footer*/
   color: black;
 }
 
+form{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
 
 .serviciosFav{
   float: left;
