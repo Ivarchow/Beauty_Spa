@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIVINITE-CrearCuenta</title>
+    <link rel="shortcut icon" href="/images/logo/image2.png"> 
     <!-- CSS -->
-    <link rel="stylesheet" href="../CarpetasCss/PerfilUsuario.css" type="text/css">
+    <link rel="stylesheet" href="../CarpetasCss/CatalogoServicios.css" type="text/css">
     <link rel="stylesheet" href="/CarpetasCss/navbar.css">
     <link rel="stylesheet" href="/CarpetasCss/footer.css">
-    <link rel="shortcut icon" href="/images/logo/image2.png">
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -70,71 +70,110 @@
 </div><!-- navbar -->
 
 <div class="content">
-<div class="box1">
-  <a>Perfil</a>
-</div><!-- box1 -->
-<div class="box2">
-  <i class="uil uil-user-circle"></i>
-  <i class="uil uil-camera-plus"></i>
-</div><!-- box2 -->
-<div class="box3">
-<input type="text" id="InputName editor" placeholder="Nombre y Apellido" contenteditable="true" required> 
-</div><!-- box3 -->
-<div class="box4">
-  <input type="tel" id="InputPhone editor" placeholder="Telefono" title="Un número de teléfono válido debe tener 10 dígitos" required> 
-</div><!-- box4 -->
-<div class="box5">
-<input type="email" id="InputEmail editor" name="emails" multiple placeholder="E-mail" required>  
-</div><!-- box5 -->
-<div class="box6">
-<input type="text" id="InputBirth editor" id="validationDefault03" placeholder="Fecha de nacimiento" required> 
 
-</div><!-- box6 -->
-<div class="box7">
-  <input type="text" id="InputGender editor" list="listgender" placeholder="Genero" required> 
-  <datalist id="listgender editor">
-  <option label="Mujer" value="Mujer">
-  <option label="Hombre" value="Hombre">
-  <option label="Otr@" value="Otr@">
-  </datalist>
+    <!--CSS Cartas-->
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+    <!--Fetch-->
+    <script src="/Carpetajs/FetchCarta.js"></script>
 
-</div><!-- box7 -->
-<div class="box8">
-<a>Servicios favoritos</a>
-</div><!-- box8 -->
-<div class="box9">
-  <a>Porfavor seleccione los servicios de los cuales le gustaria mantenerse informado de promociones.</a>
-</div><!-- box9 -->
-<div class="box10">
+  <div class="box1">
+    <a>Servicios</a>
+  </div><!-- box1 -->
 
-  <ul class="ks-cboxtags">
-    <li><input type="checkbox" id="checkboxOne" value="Masajes"><label for="checkboxOne">Masajes</label></li>
+  <div class="category_list" style="text-align: center;">
+    <a href="#" class="category_item" category="all" >Todo</a>
+    <a href="#" class="category_item" category="nails" >Uñas</a>
+    <a href="#" class="category_item" category="skin" >Cuidado de la piel</a>
+    <a href="#" class="category_item" category="pest"  >Pestañas y cejas</a>
+    <a href="#" class="category_item" category="fac"  >Faciales</a>
+    <a href="#" class="category_item" category="pedi"  >Pedicure y manicure</a>
+    <a href="#" class="category_item" category="makeup"  >Maquillaje</a>
+    <a href="#" class="category_item" category="estetica"  >Estética</a>
+    <a href="#" class="category_item" category="massage"  >Masajes</a>
+</div><!-- category_list -->
 
-    <li><input type="checkbox" id="checkboxTwo" value="Uñas"><label for="checkboxTwo">Uñas</label></li>
+<div class="tarjetitasdeservicios">
+  
+<section class="products-list" >
+  <div class="product-item" category="nails" >
 
-    <li><input type="checkbox" id="checkboxThree" value="Cejas"><label for="checkboxThree">Cejas</label></li>
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="nails">
 
-    <li><input type="checkbox" id="checkboxFour" value="Limpieza"><label for="checkboxFour">Limpieza</label></li>
+      </div>
+  </div>
+</section>
 
-    <li><input type="checkbox" id="checkboxFive" value="Maquillaje"><label for="checkboxFive">Maquillaje</label></li>
 
-    <li><input type="checkbox" id="checkboxSix" value="Pestañas"><label for="checkboxSix">Pestañas</label></li>
+<section class="products-list" >
 
-    <li><input type="checkbox" id="checkboxSeven" value="Peinados"><label for="checkboxSeven">Peinados</label></li>
+  <div class="product-item" category="skin" >
 
-    <li><input type="checkbox" id="checkboxEight" value="Piel"><label for="checkboxEight">Piel</label></li>
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="skin">
 
-    <li><input type="checkbox" id="checkboxNine" value="Eventos"><label for="checkboxNine">Eventos</label></li>
-  </ul>
+      </div>
+  </div>
 
-</div><!-- box10 -->
-<div class="box11">
-  <button id="editorBtn" type="button">Editar</button>
-</div><!-- box11 -->
-<div class="box12">
+</section>
 
-</div><!-- box12 -->
 
+<section class="products-list">
+  <div class="product-item" category="pest">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="pest">
+
+      </div>
+  </div>
+</section>
+
+<section class="products-list">
+  <div class="product-item" category="fac">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="fac">
+
+      </div>
+  </div>
+</section>
+
+<section class="products-list">
+  <div class="product-item" category="pedi">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="pedi">
+
+      </div>
+  </div>
+</section>
+
+<section class="products-list">
+  <div class="product-item" category="makeup">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="makeup">
+
+      </div>
+  </div>
+</section>
+
+<section class="products-list">
+  <div class="product-item" category="estetica">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="estetica">
+
+      </div>
+  </div>
+</section>
+
+
+<section class="products-list">
+  <div class="product-item" category="massage">
+
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;" id="massage">
+
+      </div>
+  </div>
+</section>
+
+</div><!-- tarjetitasdeservicios -->
 </div><!-- content -->
 
   <!-- ingresar codigo del contact -->
@@ -182,26 +221,5 @@
 
 
 </div><!-- grid -->
-
-<!-- Codigo para editar contenido -->
-<script>
-var editorBtn = document.getElementById('editorBtn');
-	var element = document.getElementById('editor');
-
-	editorBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-
-  if (element.isContentEditable) {
-    // Disable Editing
-    element.contentEditable = 'false';
-    editorBtn.innerHTML = 'Editar';
-    // You could save any changes here.
-  } else {
-    element.contentEditable = 'true';
-    editorBtn.innerHTML = 'Guardar';
-  }
-	});
-</script>
-
 </body>
 </html>

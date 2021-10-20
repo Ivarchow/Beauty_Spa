@@ -20,6 +20,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: small;
+  background-color: white;
+  color: black;
 }
 .fa-envelope,.fa-whatsapp,.fa-phone {
   color: black;
@@ -32,16 +34,19 @@
   display: inline-flex;
   place-self: center;
   justify-content: center;
+  background-color: white;
 }
 .foo3{
   display: inline-flex;
   place-self: center;
   justify-content: center;
+  background-color: white;
 }
 .foo4{
   display: inline-flex;
   place-self: center;
   justify-content: center;
+  background-color: white;
 }
 .foo5{
   grid-row: 2;
@@ -96,6 +101,8 @@ span{
   grid-row: 3;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background-color: rgb(0, 0, 0);
+  border: none;
 }
 .foo10{
   grid-column: 1;
@@ -103,10 +110,10 @@ span{
   text-align: left; 
   align-self: center;
   margin-left: 30px;
+  color: white;
 }
 .foo11{
   grid-column: 2;
-  background-color: orange;
 }
 .MClogo{
   text-align: right;  
@@ -140,7 +147,7 @@ span{
 }
 @media only screen and (max-width: 880px){
   .footer{
-    grid-template-rows: 30px 40px 30px;
+    grid-template-rows: 30px 40px 40px;
   }
   .foo1{
     font-size: x-small;
@@ -170,7 +177,7 @@ span{
 } 
 @media only screen and (max-width: 730px){
   .footer{
-    grid-template-rows: 30px 65px 30px;
+    grid-template-rows: 30px 65px 60px;
   }
   .foo5{
     grid-row: 2;
@@ -235,7 +242,6 @@ span{
   .foo11{
     grid-row: 2;
     grid-column: 1/-1;
-    background-color: orange;
   }
   .MClogo{
     text-align: right;  
