@@ -26,6 +26,7 @@ html, body{
   display: grid; 
   color: white;
 }
+
 /* ingresar codigo del contact */
 .footer{
   grid-row: 3;
@@ -129,7 +130,7 @@ html, body{
   margin-left: 20px;
   margin-right: 20px;
 }
-.box7 input{
+.box7 select{
   width: 20rem;
   height: 2rem;
   padding-left: 20px;

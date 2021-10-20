@@ -1,11 +1,8 @@
 
 /*Foto de perfil*/
 
-img{
-  height: 200px;
-}
-
 .profile-pic-div{
+  margin-top: 10%;
   height: 200px;
   width: 200px;
   position: relative;
@@ -59,6 +56,17 @@ main{ /*Esto tambien ayuda al footer*/
   color: black;
 }
 
+.formulaCentrada{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.parentDiv{
+  margin-top: -7%;
+
+}
+
 .serviciosFav{
   float: left;
 }
@@ -68,12 +76,17 @@ main{ /*Esto tambien ayuda al footer*/
   color: white;
   padding: 0.25rem 4.75rem;
   border: none;
+  margin-top: 5%;
 }
 .botonGuardar:hover{
   background-color: #AA3053;
 }
 
 /*Checked Buttons*/
+.botonesCont{
+  margin-top: 4%;
+
+}
 
 .btn-outline-danger{
   border-radius: 20px;
