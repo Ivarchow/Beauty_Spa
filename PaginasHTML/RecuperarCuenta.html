@@ -12,61 +12,53 @@
     <link rel="shortcut icon" href="/images/logo/image2.png">
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <!-- <link rel="stylesheet" href="/CarpetasCss/PaginaDeInicio.css">  -->
+    <!-- <link rel="stylesheet" href="/CarpetasCss/Contacto.scss"> -->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+
 </head>
 <body>
   <div class="grid">
 <!-- ingresar codigo de navbar  -->
-      <div class="navbar">
-        <header class="header">
-          <div class="header-top">
-            <div class="LogoEmpresa" >
-              <a href="/PaginasHTML/PaginaDeInicio.html">
-              <div class="p1">DIVINITE</div>
-              <div class="p2">BEAUTY SPA</div>
-              </a>
-            </div><!--LogoEmpresa -->
-            <div class="n3">
-              <div class="nav-links2">
-              <a class = "active" href="/PaginasHTML/AñadirServicios.html"></a><i class="fas fa-shopping-bag"></i></a>
-              <span></span>
-              <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
-              <span></span>
-              </div><!--nav-links2 -->
-              <div class="header-btn"><i class="fas fa-bars"></i></a></div>
-          </div>
-            </div><!--n3 -->
-            
-          <nav  class="header-menu">
-            <ul>
-              <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
-              <li><a href="/PaginasHTML/aboutUs.html">Nosotros</a></li>
-              <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
-              <li><a href="#">Reservados</a></li>
-              <li><a href="/PaginasHTML/aboutUsContacto.html">Contacto</a></li>
-              <li><a href="Ingreso.HTML">Ingresar</a></li>
-            </ul>
-          </nav>
-        </header>
-      
-        <script>
-          const header_btn = document.querySelector('.header-btn')
-          const header_menu = document.querySelector('.header-menu')
-          header_btn.addEventListener('click', () => {
-            if (header_menu.style.display != 'block') {
-              header_menu.style.display = 'block'
-              header_btn.innerHTML = '<i class="fas fa-times"></i>'
-            } else {
-              header_menu.style.display = 'none'
-              header_btn.innerHTML = '<i class="fas fa-bars"></i>'
-            }
-          })
-        </script>
-      </div><!-- navbar -->
+
+ <!--Navbar!-->
+ <header class="header">
+  <nav class="navbar">
+    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
+    <ul class="nav-menu">
+
+      <li class="nav-item">
+        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
+      <li class="nav-item">
+        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+<!--End Navbar!-->
   
   <!-- codigo de login -->
   <div class="content">
@@ -88,7 +80,7 @@
   <div class="space">
 
   </div>
-  </div><!-- content -->
+</div><!-- content -->
   <!-- ingresar codigo del contact -->
   <div class="footer">
     <div class="foo1">
@@ -122,15 +114,13 @@
       <span></span>
       <a href="#"> FAQs </a>
     </div><!-- foo8 --></div><!-- foo5 -->
-    <div class="foo9">
-    <div class="foo10">
-      <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
-      </div><!-- foo10 -->
-    <div class="foo11">
-      <div class= "MClogo"><img src="../MCLARICH/MClogo.svg" alt=""></div>
-    </div><!-- foo11 -->
-  </div><!-- foo9 -->
-  </div><!-- footer -->
+    <!-- <div class="foo9"> -->
+    <!-- <div class="foo10"> -->
+      <!-- <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p> -->
+      <!-- </div>foo10 -->
+    <!-- <div class="foo11"> -->
+      <!-- <div class= "MClogo"><img src="../MCLARICH/MClogo.svg" alt=""></div> -->
+    <!-- </div>foo11 -->
     </div><!-- grid -->
   </body>
   </html>

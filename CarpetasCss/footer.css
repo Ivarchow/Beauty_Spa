@@ -12,7 +12,7 @@
   color: #fff;
 }
 .footer{
-  grid-template-rows: 40px 70px 40px;
+  grid-template-rows: 40px 70px;
   display: grid;
 }
 .foo1{
@@ -97,7 +97,7 @@
 span{
   margin-left: 6px;
 }
-.foo9{
+/* .foo9{
   grid-row: 3;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,15 +114,15 @@ span{
 }
 .foo11{
   grid-column: 2;
-}
-.MClogo{
+} */
+/* .MClogo{
   text-align: right;  
   margin-right: 30px;
   align-self: center;
 }
 .MClogo img{
   height: 3rem;
-}
+} */
 @media only screen and (max-width: 2000px){
   span{
     margin-left: 4px;

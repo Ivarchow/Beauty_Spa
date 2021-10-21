@@ -1,8 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    background: #fa4299;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+/* ingresar codigo del contenido */
+.ContenidoControl{
+    height: 100%;
+}
+.NavCambio{
+    margin-bottom: 3rem;
+}
 .disñoNavBar{
-    color: rgb(109, 107, 107);
-    font-size: 25px;
+    color: #644747;
+    font-size: 20px;
 }
 .disñoNavBar:hover{
-    transform: scale(1.2);
-    color: rgb(248, 43, 231);
+    color: #AA3053;
+}
+.tab-pane{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }

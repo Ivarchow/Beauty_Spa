@@ -54,18 +54,18 @@
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
 }
-.navbar a:hover {
+/* .navbar a:hover {
   font-size: 17px;
   color: #FFCCD3;
-}
+} */
 .fas{
   font-size: 22px;
   color: white;
   cursor: pointer;
 }
-.fas:hover{
+/* .fas:hover{
   color: #FFCCD3;
-}
+} */
 
 
 .header-btn {
