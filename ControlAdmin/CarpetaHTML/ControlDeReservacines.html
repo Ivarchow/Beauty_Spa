@@ -22,6 +22,8 @@
     <script src="/ControlAdmin/CarpetaJS/FetchUsuarios.js"></script>
     <script src="/ControlAdmin/CarpetaJS/ServiciosCRUD.js"></script>
 
+
+
     <title>Control De Servicios</title>
 </head>
 
@@ -80,49 +82,24 @@
         <!--SERVICIO-->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-            <table class="table table-hover" style="width: 96%; text-align: center; margin: auto;">
+            <table class="table table-hover" id="Tabla-Usuarios" style="width: 96%; text-align: center; margin: auto;">
                 <thead>
                     <tr>
+                        <th scope="col">Cliente ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Código</th>
+                        <th scope="col">Código canjeado</th>
+                        <th scope="col">Télefono</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Cumpleaños</th>
                         <th scope="col">Servicio</th>
                         <th scope="col">Hora</th>
                         <th scope="col">Reservado</th>
-                        <th scope="col">Cliente_Id</th>
-                        <th scope="col">Nombre del cliente</th>
-                        <th scope="col">Código</th>
-                        <th scope="col">Código Canjeado</th>
-                        <th scope="col">Télefono Cliente</th>
-                        <th scope="col">Correo del cliente</th>
-                        <th scope="col">Cumpleaños</th>
 
                     </tr>
                 </thead>
 
-                <tbody id="Tabla-Usuarios">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
+                <tbody>
                 </tbody>
             </table>
 
@@ -379,6 +356,8 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="/ControlAdmin/CarpetaJS/ServiciosCRUD.js"></script>
+        <!--Fetch-->
+        <script src="/Carpetajs/FetchUsuario.js"></script>
 
 
 </body>
