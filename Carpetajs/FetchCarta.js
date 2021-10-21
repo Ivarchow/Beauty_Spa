@@ -102,8 +102,8 @@ function generatorCols() {
             col.style.display= "inline-block";
             col.style.paddingBottom = "2%";
             col.id = arrIds[varCtlrIds];
-            console.log(col);
             document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
+            console.log(col);
             varCtlrIds++;
         }
         varCtrlCols=0;
@@ -136,11 +136,12 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
+                    console.log(Servicios.id);
                     varCtlrCards++;
                 }
                 if(Servicios.Categoria=="Cuidado de la piel"){
@@ -158,7 +159,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -180,7 +181,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -202,7 +203,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -224,7 +225,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -246,7 +247,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -268,7 +269,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -290,7 +291,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button>\n' +
+                            '<button id="btn'+Servicios.id+'">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -304,7 +305,7 @@ function getCartas(){
 
 
 function btn(){
-    let btn= document.querySelector("button");
+    let btn= document.querySelector("#btn0");
     btn.addEventListener("click", btnRes);
 }
 
