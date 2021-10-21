@@ -4,9 +4,21 @@ const arrNUmberServices=[];
 const arrServicios = ["nails", "skin", "pest", "fac", "pedi", "makeup", "estetica", "massage"];
 
 
+
 window.onload = () => {
     countServicesLenght();
 };
+
+let retardo = setTimeout(()=>{
+    generatorCols();
+    getCartas();
+    clearTimeout(retardo);
+},1000)  
+
+let retardo1 = setTimeout(()=>{
+    btn();
+    clearTimeout(retardo1);
+},3000)  
 
 
 function generatorArrys(tamañoJson) {
@@ -66,7 +78,7 @@ async function countServicesLenght() {
         arrNUmberServices.push(Servicio7);
         arrNUmberServices.push(Servicio8);
         console.log(arrNUmberServices);
-        generatorCols();
+        // generatorCols();
 
 
     } catch (error) {
@@ -86,7 +98,8 @@ function generatorCols() {
         for (varCtrlCols; varCtrlCols < arrNUmberServices[varCtlrService]; varCtrlCols++) {
             
             let col = document.createElement('div');
-            col.className = "col";
+            // col.className = "col-4";
+            col.style.display= "inline-block";
             col.style.paddingBottom = "2%";
             col.id = arrIds[varCtlrIds];
             console.log(col);
@@ -96,12 +109,12 @@ function generatorCols() {
         varCtrlCols=0;
         
     }
-    getCartas();
+    // getCartas();
 }
     
 function getCartas(){
         let varCtlrCards=0;
-    
+        
         for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
     
         fetch(URLS[varCtrlFetch])
@@ -287,4 +300,15 @@ function getCartas(){
         })
         .catch(err => console.log(err));
     }
+}
+
+
+function btn(){
+    let btn= document.querySelector("button");
+    btn.addEventListener("click", btnRes);
+}
+
+function btnRes(){
+    let cuerpo = document.querySelector("body");
+    cuerpo.style.background="blue";
 }
