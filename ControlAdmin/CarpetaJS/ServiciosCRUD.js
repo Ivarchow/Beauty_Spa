@@ -21,6 +21,7 @@ window.onload = () => {
     let pre = Number(document.getElementById("exampleInputPrice").value);
     let imgn = document.getElementById("exampleInputImage").value;
     let duracion = Number(document.getElementById("exampleImputDuration").value);
+    let clasification = document.getElementById("exampleInputClas").value;
   
     if(nom == "" && pre == "" && text == "" && imgn == ""){
       alert("No puedes agregar tarjetas vacias.");
@@ -35,6 +36,7 @@ window.onload = () => {
       requisitos.texto = text;
       requisitos.img = imgn;
       requisitos.duracion = duracion;
+      requisitos.clasification = clasification;
   
       var local = JSON.stringify(requisitos);
       for(let cont=0; cont<i; cont++){
@@ -75,6 +77,7 @@ window.onload = () => {
             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                 '<p>ID: '+serv.id+'</p>\n' +
                 '<p>Precio: $'+serv.precio+'</p>\n' +
+                '<p>Clasificación: '+serv.clasification+'</p>\n' +
                 '<p>'+serv.texto+'</p>\n' +
             '</div>\n' +
             '<button>\n' +
@@ -104,6 +107,7 @@ window.onload = () => {
     let pri = document.getElementById("exampleInputPrice1").value;
     let ima = document.getElementById("exampleInputImage1").value;
     let dur = document.getElementById("exampleImputDuration1").value;
+    let clasi = document.getElementById("exampleInputClas1").value;
     for(let cont=0; cont<i; cont++){
       let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
       if(service != null){
@@ -113,8 +117,9 @@ window.onload = () => {
           let pre = Number(pri);
           let imgn = ima;
           let duracion = Number(dur);
+          let clasifi = clasi;
     
-          if(nom == "" && pre == "" && text == "" && imgn == ""){
+          if(nom == "" && pre == "" && text == "" && imgn == "" && duracion == "" && clasi == ""){
             alert("No puedes agregar tarjetas vacias.");
           }else if(isNaN(pre) || isNaN(duracion)){
             alert("Debes ingresar solo los números en el precio y la duración.");
@@ -125,7 +130,8 @@ window.onload = () => {
           requisitos.precio = pre;
           requisitos.texto = text;
           requisitos.img = imgn;
-          requisitos.duracion = duracion; 
+          requisitos.duracion = duracion;
+          requisitos.clasification = clasifi;
     
           var local = JSON.stringify(requisitos);
           localStorage.setItem(`servicios${cambio}`, local);
@@ -179,6 +185,7 @@ window.onload = () => {
                   '<div class="overflow-auto example" style="height: 200px; ">\n' +
                     '<p>ID: '+service.id+'</p>\n' +
                     '<p>Precio: $'+service.precio+'</p>\n' +
+                    '<p>Clasificación: '+service.clasification+'</p>\n' +
                     '<p>'+service.texto+'</p>\n' +
                   '</div>\n' +
                   '<button>\n' +
@@ -197,6 +204,7 @@ window.onload = () => {
         document.getElementById("exampleInputPrice1").value = servi.precio;
         document.getElementById("exampleInputImage1").value = servi.img;
         document.getElementById("exampleImputDuration1").value = servi.duracion;
+        document.getElementById("exampleInputClas1").value = servi.clasification;
       }
     }else{
       alert("Debes ingresar un ID");
@@ -209,6 +217,7 @@ window.onload = () => {
     document.getElementById("exampleInputPrice").value = null;
     document.getElementById("exampleInputImage").value = null;
     document.getElementById("exampleImputDuration").value = null;
+    document.getElementById("exampleInputClas").value = null;
   }
   function clean1(){
     document.getElementById("exampleInputName1").value = null;
@@ -216,6 +225,7 @@ window.onload = () => {
     document.getElementById("exampleInputPrice1").value = null;
     document.getElementById("exampleInputImage1").value = null;
     document.getElementById("exampleImputDuration1").value = null;
+    document.getElementById("exampleInputClas1").value = null;
   }
 
   function search(ser){
@@ -235,6 +245,7 @@ window.onload = () => {
               '<div class="overflow-auto example" style="height: 200px; ">\n' +
                 '<p>ID: '+service.id+'</p>\n' +
                 '<p>Precio: $'+service.precio+'</p>\n' +
+                '<p>Clasificación: '+service.clasification+'</p>\n' +
                 '<p>'+service.texto+'</p>\n' +
               '</div>\n' +
               '<button>\n' +
@@ -253,6 +264,7 @@ window.onload = () => {
     document.getElementById("exampleInputPrice1").value = servi.precio;
     document.getElementById("exampleInputImage1").value = servi.img;
     document.getElementById("exampleImputDuration1").value = servi.duracion;
+    document.getElementById("exampleInputClas1").value = servi.clasification;
   }
   
   };
