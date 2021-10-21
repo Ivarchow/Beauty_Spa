@@ -1,12 +1,190 @@
-{
-    "Usuarios": [
+[
       {
-        "Categoria": "Unas",
-        "id": 0,
-        "titulo": "Gelish liso 1 PRUEBA/BORRAR",
-        "img": "/imagenes/gelish1.jpeg",
-        "precio": 150,
-        "Descripcion": "Aplicación de esmalte en gel semipermanente en uña natural con terminado en alto brillo"
+        "id": 1,
+        "nombre": "Alexei Gastaldi",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "alexeigastaldi@gmail.com",
+        "cumple": "29/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 2,
+        "nombre": "Candy Pacheco",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "candypacheco@gmail.com",
+        "cumple": "15/08/98",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 3,
+        "nombre": "Christian Hérnandez",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "christianhernandez@gmail.com",
+        "cumple": "12/10/98",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
+      },
+      {
+        "id": 4,
+        "nombre": "Rafal Salcedo",
+        "codigo": 1234,
+        "codigoC": 9898,
+        "tel": 33554097,
+        "correo": "rafalsalsa@gmail.com",
+        "cumple": "12/05/95",
+        "servicio": "Uñas",
+        "hora": "17:00",
+        "reservado": "Sí"
       }
-    ]
-  }
+]
+  
