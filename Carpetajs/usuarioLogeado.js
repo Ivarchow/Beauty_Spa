@@ -1,3 +1,38 @@
+let j = sessionStorage.getItem("j");
+//guardar / actualizar cambios
+(function(){
+  var usr = JSON.parse(localStorage.getItem(`usuario${j}`));
+  var nombre = document.getElementById("validationDefault01").value = usr.nombre;
+  var fechaDeNacimiento = document.getElementById("validationDefault03").value = usr.cumple;
+  var telefono = document.getElementById("validationDefault04").value = usr.phone;
+  var correoElectronico = document.getElementById("validationDefault05").value = usr.mail;
+  var genero = document.getElementById("dropGenero").value = usr.gender;
+  var contraseña = document.getElementById("validationDefault06").value = usr.password;
+})();
+
+document.getElementById("btnGuardarCambios").addEventListener("click",guardarCambios);
+function guardarCambios(){
+  let name = document.getElementById("validationDefault01").value;
+  let birthdate = document.getElementById("validationDefault03").value;
+  let phone = document.getElementById("validationDefault04").value;
+  let email = document.getElementById("validationDefault05").value;
+  let gender = document.getElementById("dropGenero").value;
+  let contra = document.getElementById("validationDefault06").value;
+  let profile = new Object();
+  profile.id = j;
+  profile.nombre = name;
+  profile.phone = phone;
+  profile.mail = email;
+  profile.password = contra;
+  profile.gender = gender;
+  profile.cumple = birthdate;
+  profile.img = "/images/logo/divinite3.png";
+  var local = JSON.stringify(profile);
+  localStorage.setItem(`usuario${j}`, local);
+}
+
+//guardar / actualizar cambios
+
 //Declarando HTML elements
 
 const imgDiv = document.querySelector('.profile-pic-div');
@@ -36,3 +71,4 @@ file.addEventListener('change',function(){
   }
 
 });
+

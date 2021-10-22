@@ -69,6 +69,7 @@ function crear(){
       // Si el correo no esta dado de alta, el objeto se convierte en formato JSON y se guarda en almacenamiento local
       var local = JSON.stringify(user);
       localStorage.setItem(`usuario${j}`, local);
+      sessionStorage.setItem("j",j);
 
       //Se da un alert avisando que se creo la cuenta
       alert("Cuenta creada satisfactoriamente");
@@ -76,9 +77,10 @@ function crear(){
       //Se incrementa el contador de usuarios y se actualiza en el almacenamiento local
       j++;
       localStorage.setItem("j", j);
+      
 
       //Se redirecciona a la página principal
-      location.href ="/PaginasHTML/PaginaDeInicio.html";
+      location.href ="/PaginasHTML/usuarioLogeado.html";
     }
   }
 }

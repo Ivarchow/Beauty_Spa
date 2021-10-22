@@ -77,7 +77,7 @@
 <div class="container">
 <!--Foto de perfil-->
     <div class="profile-pic-div">
-      <img src="/Imagenes/usuarioLERG.jpeg" alt="" id="photo">
+      <img src="/images/logo/divinite3.png" alt="" id="photo">
       <input type="file" id="file">
       <label for="file" id="uploadBtn">Actualizar Foto</label>
     </div>
@@ -89,13 +89,8 @@
       <div class="col col-sm-5 parentDiv">
 
         <div class="col">
-          <label for="validationDefault01">Nombre(s)</label>
-          <input type="text" class="form-control" placeholder="Nombre(s)" id="validationDefault01" required>
-        </div>
-      
-        <div class="col">
-          <label for="validationDefault02">Apellidos</label>
-          <input type="text" class="form-control" placeholder="Apellidos" id="validationDefault02"  required>
+          <label for="validationDefault01">Nombre(s) y Apellidos</label>
+          <input type="text" class="form-control" placeholder="Nombre(s) y Apellidos" id="validationDefault01" required>
         </div>
       
         <div class="col">
@@ -120,6 +115,11 @@
             <option value="2">Hombre</option>
             <option value="3">Otr@</option>
           </select>
+        </div>
+
+        <div class="col">
+          <label for="validationDefault06">Contraseña</label>
+          <input type="password" class="form-control" placeholder="Contraseña" id="validationDefault06" required>
         </div>
       
       </div>
@@ -183,7 +183,7 @@
 
 
 <div class="col-12">
-  <button class="btn btn-primary botonGuardar" type="submit">Guardar</button>
+  <button class="btn btn-primary botonGuardar" type="submit" id="btnGuardarCambios">Guardar</button>
 </div>
 
 
