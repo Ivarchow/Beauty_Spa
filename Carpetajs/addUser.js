@@ -52,6 +52,7 @@ function crear(){
     user.password = pass;
     user.gender = gender;
     user.cumple = cumple;
+    user.img = "/images/logo/divinite3.png";
 
     // Con un bucle se busca usuario a usuario si el correo ya fue dado de alta, si es así la bandera cambia a true
     for(let cont=0; cont<j; cont++){
