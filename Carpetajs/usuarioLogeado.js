@@ -71,4 +71,10 @@ file.addEventListener('change',function(){
   }
 
 });
+//display password
+  function viewpassword(){
+    var show = document.getElementById('validationDefault06')
+      if(show.type =='password'){show.type='text';}
+      else{show.type='password';}
+  }
 
