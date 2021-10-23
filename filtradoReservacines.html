@@ -14,6 +14,10 @@
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
     <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
+    <link rel="stylesheet" href="/CarpetasCss/ServiciosReservados.css">
+
+    
 
     
 
@@ -92,77 +96,19 @@
     <section class="products-list" >
         <div class="product-item" category="Reservado" >
 
-            <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;">
-
-
-                <div class="container cuerpoCartaReservados">
-                    <div class="row">
-                      <div class="col-5">
-            
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-4">
-                              <div class="contenido1">
-                                <img src="/Icons/Bag_red2.svg" alt="">
-                              </div>
-                            </div>
-                            <div class="col-8">
-                              <div class="contenido2">
-                                <h4>Tratamiento Nutragel</h4>
-                                <br>
-                                <h6>Precio: <br><span style="color: red;">$100.00</span></h6><br>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <form>
-                          <div class="mb-3">
-                            <label>Fecha</label>
-                            <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
-                          </div>
-                          <div class="mb-3">
-            
-                            <label>Hora: <br>
-                              <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
-                              <datalist id="horarioCita">
-                                <option value="9:00">
-                                <option value="9:30">
-                                <option value="10:00">
-                                <option value="10:30">
-                                <option value="11:00">
-                                <option value="11:30">
-                                <option value="12:00">
-                                <option value="12:30">
-                                <option value="13:00">
-                                <option value="13:30">
-                                <option value="14:00">
-                                <option value="14:30">
-                                <option value="15:00">
-                                <option value="15:30">
-                                <option value="16:00">
-                                <option value="16:30">
-                                <option value="17:00">
-                                <option value="17:30">
-                                <option value="18:00">
-                                <option value="18:30">                         
-                              </datalist>
-            
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-3">
-                        <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
-                          <button class="btn btn-primary botonRes" id="btnReservar" type="button">Reservar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-
+          <div class="products-container">
+            <div class="product-header">
+              <h5 class="product-title">PRODUCT</h5>
+              <h5 class="price">PRICE</h5>
+              <h5 class="quantity">QUANTITY</h5>
+              <h5 class="total">TOTAL</h5>
             </div>
+            <div class="products">
+          
+            </div>
+          </div>
+
+
         </div>
     </section>
 
@@ -171,106 +117,46 @@
 
         <div class="product-item" category="En proceso" >
 
-            <div class="row row-cols-1 row-cols-md-3 g-4" style="width: 98%; margin-left: 1%; margin-right: 1%;">
 
-
-                <div class="container cuerpoCartaReservados">
-                    <div class="row">
-                      <div class="col-5">
-            
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-4">
-                              <div class="contenido1">
-                                <img src="/Icons/Bag_red2.svg" alt="">
-                              </div>
-                            </div>
-                            <div class="col-8">
-                              <div class="contenido2">
-                                <h4>Gelish Mate</h4>
-                                <br>
-                                <h6>Precio: <br><span style="color: red;">$180.00</span></h6><br>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <form>
-                          <div class="mb-3">
-                            <label>Fecha</label>
-                            <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
-                          </div>
-                          <div class="mb-3">
-            
-                            <label>Hora: <br>
-                              <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
-                              <datalist id="horarioCita">
-                                <option value="9:00">
-                                <option value="9:30">
-                                <option value="10:00">
-                                <option value="10:30">
-                                <option value="11:00">
-                                <option value="11:30">
-                                <option value="12:00">
-                                <option value="12:30">
-                                <option value="13:00">
-                                <option value="13:30">
-                                <option value="14:00">
-                                <option value="14:30">
-                                <option value="15:00">
-                                <option value="15:30">
-                                <option value="16:00">
-                                <option value="16:30">
-                                <option value="17:00">
-                                <option value="17:30">
-                                <option value="18:00">
-                                <option value="18:30">                         
-                              </datalist>
-            
-                          </div>
-                        </form>
-                      </div>
-                      <div class="col-3">
-                        <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
-                          <button class="btn btn-primary botonRes" type="button">Reservar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-
-
-            </div>
         </div>
 
     </section>
- 
 
-    <!--FOOTER CANDY-->
 
-    <footer id="pieDePagina" class="footer">
 
-        <ul class="r-footer">
-          <li>
-            <h2 class="titulosDebajo"><a href="#">Buzón de sugerencias</a> </h2>
-          </li>
-      
-          <li class="features">
-            <h2 class="titulosDebajo" style="text-align: center;"><a href="#">(c) Divinité Guadalajara</a></h2>
-          </li>
-      
-          <li class="tresCosas">
-            <h2 class="titulosDebajo"><a href="/PaginasHTML/AvisoDePrivasidad.html">Política de privacidad |</a></h2>
-            <h2 class="titulosDebajo"><a href="#">&nbsp;Cultura |</a></h2>
-            <h2 class="titulosDebajo"><a href="#">&nbsp;FAQ's </a></h2>
-          </li>
-      
-        </ul>
-      
-      </footer>
+
+<!--Footer Luis-->
+
+<div class="container contactosV" style="text-align: center;">
+  <div class="row">
+    <div class="col">
+      <i class="cp cp-phone"></i> 83 8888 8888
+    </div>
+    <div class="col">
+      <i class="cp cp-whatsapp-o"></i> (+52) 123 456 7890
+    </div>
+    <div class="col">
+      <i class="cp cp-envelope"></i> email@divinite.com
+    </div>
+  </div>
+</div>
+
+<footer class="footerPrueba">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="/PaginasHTML/emailPrueba.html">Buzón de sugerencias</a>
+    </div>
+    <div class="col">
+      (c) DIVINITÉ Guadalajara
+    </div>
+    <div class="col">
+      <a href="/PaginasHTML/AvisoDePrivasidad.html">Políticas de privacidad</a>|<a href="/PaginasHTML/emailPrueba.html">FAQs</a>
+    </div>
+  </div>
+</div>
+</footer>
+<!--Footer Luis-->
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
