@@ -1,318 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Cambio del link-->
+    <title>Divinité| Beauty Studio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-
-    <!--CSS-->
-    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
     <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
     <link rel="stylesheet" href="/CarpetasCss/ServiciosReservados.css">
-    <script src="/Carpetajs/filtro.js"></script>
-    <script src="/Carpetajs/jquery-3.2.1.js"></script>
-    <script src="/Carpetajs/ServiciosReservados.js"></script>
-    <script src="//pull.cappuccicons.com/cpf.js"></script>
-    <link rel="shortcut icon" href="/images/logo/image2.png">
+    <script src="/Carpetajs/FetchCarta.js" async></script>
 
-    <title>Servicios Reservados</title>
-  </head>
-  <body>
- <!--Navbar!-->
- <header class="header">
-    <nav class="navbar">
-      <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-      <ul class="nav-menu">
-
-        <li class="nav-item">
-          <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
-        <li class="nav-item">
-          <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </header>
-  <br>
-  
-  <!--End Navbar!-->
-<h1 class="titulo2h1">Servicios Reservados</h1>
-
-<!--Filtrado "TODOS-RESERVADO-PROCESO"-->
-<div class="category_list">
-
-  <a href="#" class="category_item " category="all">Todo</a>
-  <!-- #region   <a href="#" class="category_item" category="nails"  style="font-size: large;">Todos</a>-->
-  <a href="#" class="category_item " category="reservado">Reservados</a>
-  <a href="#" class="category_item " category="proceso">En proceso</a>
-</div>
-
-
-
-<!--Filtrado "TODOS-RESERVADO-PROCESO"-->
-
-<section class="products-list">
-  <div class="product-item" category="reservado">
-
-    <div class="row row-cols-1 row-cols-md-1 g-4 cartalarga" style="width: 90%; margin-left: 5%; margin-right: 1%;">
-
-      <div class="container cuerpoCartaReservados">
-        <div class="row">
-          <div class="col-5">
-
-            <div class="container">
-              <div class="row">
-                <div class="col-4">
-                  <div class="contenido1">
-                    <img src="/Icons/Bag_red2.svg" alt="">
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="contenido2">
-                    <h4>Tratamiento Nutragel</h4>
-                    <br>
-                    <h6>Precio: <br><span style="color: red;">$100.00</span></h6><br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <form>
-              <div class="mb-3">
-                <label>Fecha</label>
-                <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
-              </div>
-              <div class="mb-3">
-
-                <label>Hora: <br>
-                  <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
-                  <datalist id="horarioCita">
-                    <option value="9:00">
-                    <option value="9:30">
-                    <option value="10:00">
-                    <option value="10:30">
-                    <option value="11:00">
-                    <option value="11:30">
-                    <option value="12:00">
-                    <option value="12:30">
-                    <option value="13:00">
-                    <option value="13:30">
-                    <option value="14:00">
-                    <option value="14:30">
-                    <option value="15:00">
-                    <option value="15:30">
-                    <option value="16:00">
-                    <option value="16:30">
-                    <option value="17:00">
-                    <option value="17:30">
-                    <option value="18:00">
-                    <option value="18:30">                         
-                  </datalist>
-
-              </div>
-            </form>
-          </div>
-          <div class="col-3">
-            <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
-              <button class="btn btn-primary botonRes" id="btnReservar" type="button">Reservar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="products-list">
-  <div class="product-item" category="reservado">
-
-    <div class="row row-cols-1 row-cols-md-1 g-4 cartalarga" style="width: 90%; margin-left: 5%; margin-right: 1%;">
-
-      <div class="container cuerpoCartaReservados">
-        <div class="row">
-          <div class="col-5">
-
-            <div class="container">
-              <div class="row">
-                <div class="col-4">
-                  <div class="contenido1">
-                    <img src="/Icons/Bag_red2.svg" alt="">
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="contenido2">
-                    <h4>Tratamiento Nutragel</h4>
-                    <br>
-                    <h6>Precio: <br><span style="color: red;">$100.00</span></h6><br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <form>
-              <div class="mb-3">
-                <label>Fecha</label>
-                <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
-              </div>
-              <div class="mb-3">
-
-                <label>Hora: <br>
-                  <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
-                  <datalist id="horarioCita">
-                    <option value="9:00">
-                    <option value="9:30">
-                    <option value="10:00">
-                    <option value="10:30">
-                    <option value="11:00">
-                    <option value="11:30">
-                    <option value="12:00">
-                    <option value="12:30">
-                    <option value="13:00">
-                    <option value="13:30">
-                    <option value="14:00">
-                    <option value="14:30">
-                    <option value="15:00">
-                    <option value="15:30">
-                    <option value="16:00">
-                    <option value="16:30">
-                    <option value="17:00">
-                    <option value="17:30">
-                    <option value="18:00">
-                    <option value="18:30">                         
-                  </datalist>
-
-              </div>
-            </form>
-          </div>
-          <div class="col-3">
-            <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
-              <button class="btn btn-primary botonRes" type="button">Reservar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="products-list">
-  <div class="product-item" category="proceso">
-
-    <div class="row row-cols-1 row-cols-md-1 g-4 cartalarga" style="width: 90%; margin-left: 5%; margin-right: 1%;">
     
-      <div class="container cuerpoCartaReservados">
-        <div class="row">
-          <div class="col-5">
 
-            <div class="container">
-              <div class="row">
-                <div class="col-4">
-                  <div class="contenido1">
-                    <img src="/Icons/Bag_red2.svg" alt="">
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="contenido2">
-                    <h4>Tratamiento Nutragel</h4>
-                    <br>
-                    <h6>Precio: <br><span style="color: red;">$100.00</span></h6><br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <form>
-              <div class="mb-3">
-                <label>Fecha</label>
-                <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
-              </div>
-              <div class="mb-3">
+    
 
-                <label>Hora: <br>
-                  <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
-                  <datalist id="horarioCita">
-                    <option value="9:00">
-                    <option value="9:30">
-                    <option value="10:00">
-                    <option value="10:30">
-                    <option value="11:00">
-                    <option value="11:30">
-                    <option value="12:00">
-                    <option value="12:30">
-                    <option value="13:00">
-                    <option value="13:30">
-                    <option value="14:00">
-                    <option value="14:30">
-                    <option value="15:00">
-                    <option value="15:30">
-                    <option value="16:00">
-                    <option value="16:30">
-                    <option value="17:00">
-                    <option value="17:30">
-                    <option value="18:00">
-                    <option value="18:30">                         
-                  </datalist>
+    <title>Servicios</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <script src="/Carpetajs/jquery-3.2.1.js"></script>
+    <script src="/Carpetajs/filtro.js"></script>
+    <script src="/Carpetajs/ServiciosReservados.js"></script>
+    <!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="shortcut icon" href="/images/logo/image2.png">
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
 
-              </div>
-            </form>
-          </div>
-          <div class="col-3">
-            <div class="d-grid gap-2 col-6 mx-auto BotonReservar">
-              <button class="btn btn-primary botonRes" type="button">Reservar</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!--CSS Cartas-->
+    <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!-- Encabezado del proyecto -->
+<!--Navbar!-->
+<header class="header">
+  <nav class="navbar">
+    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
+    <ul class="nav-menu">
+
+      <li class="nav-item">
+        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
+      </li>
+      <li class="nav-item bag">
+         <a href="#bag" class="shoppingBag">
+          <i class="cp cp-shopping-bag ">
+
+            <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
+              <!-- 99+ -->
+            </span>
+
+          </i>
+        </a> 
+      </li>
+      <li class="nav-item">
+        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+<!--End Navbar!-->
+
+    <h1 class="tituloh1" style="padding: 20px;">Servicios Beauty Spa</h1>
+
+
+    <!-- FILA 1 -->
+    <!-- UÑAS -->
+
+    <div class="category_list" style="text-align: center;">
+
+        <a href="#" class="category_item" category="all" style="font-size: large;">Todo</a>
+        <a href="#" class="category_item" category="Reservado"  style="font-size: large;">Reservado</a>
+        <a href="#" class="category_item" category="En proceso"  style="font-size: large;">En proceso</a>
     </div>
 
-  </div>
-</section>
+<!--style="background-color: rgba(255, 224, 253, 0.082); box-shadow: 0 0 10px; padding: 2%;"-->
+    <section class="products-list" >
+        <div class="product-item" category="Reservado" >
+
+          <div class="products-container">
+            <div class="product-header">
+              <h5 class="product-title">PRODUCT</h5>
+              <h5 class="price">PRICE</h5>
+              <h5 class="quantity">QUANTITY</h5>
+              <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products">
+          
+            </div>
+          </div>
 
 
+        </div>
+    </section>
 
 
+    <section class="products-list" >
+
+        <div class="product-item" category="En proceso" >
 
 
-<!--Filtrado "TODOS-RESERVADO-PROCESO END.."-->
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
 
 
@@ -320,41 +138,42 @@
 <!--Footer Luis-->
 
 <div class="container contactosV" style="text-align: center;">
-    <div class="row">
-      <div class="col">
-        <i class="cp cp-phone"></i> 83 8888 8888
-      </div>
-      <div class="col">
-        <i class="cp cp-whatsapp-o"></i> (+52) 123 456 7890
-      </div>
-      <div class="col">
-        <i class="cp cp-envelope"></i> emai@divinite.com
-      </div>
+  <div class="row">
+    <div class="col">
+      <i class="cp cp-phone"></i> 83 8888 8888
+    </div>
+    <div class="col">
+      <i class="cp cp-whatsapp-o"></i> (+52) 123 456 7890
+    </div>
+    <div class="col">
+      <i class="cp cp-envelope"></i> email@divinite.com
     </div>
   </div>
-  
-  <footer class="footerPrueba">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <a href="">Buzón de sugerencias</a>
-      </div>
-      <div class="col">
-        (c) DIVINITÉ Guadalajara
-      </div>
-      <div class="col">
-        <a href="#">Políticas de privacidad</a>|<a href="#">FAQs</a>
-      </div>
-    </div>
-  </div>
-  </footer>
-  <!--Footer Luis-->
+</div>
 
+<footer class="footerPrueba">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="/PaginasHTML/emailPrueba.html">Buzón de sugerencias</a>
+    </div>
+    <div class="col">
+      (c) DIVINITÉ Guadalajara
+    </div>
+    <div class="col">
+      <a href="/PaginasHTML/AvisoDePrivasidad.html">Políticas de privacidad</a>|<a href="/PaginasHTML/emailPrueba.html">FAQs</a>
+    </div>
+  </div>
+</div>
+</footer>
+<!--Footer Luis-->
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-
-  </body>
+</body>
 </html>
