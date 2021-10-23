@@ -9,15 +9,16 @@ window.onload = () => {
     countServicesLenght();
 };
 
-let retardo = setTimeout(()=>{
+let retardoFetchMain = setTimeout(()=>{
     generatorCols();
     getCartas();
-    clearTimeout(retardo);
+    clearTimeout(retardoFetchMain);
 },1000)  
 
-let retardo1 = setTimeout(()=>{
+let retardoFetchCartas = setTimeout(()=>{
     btn();
-    clearTimeout(retardo1);
+    cargaDeReservacion();
+    clearTimeout(retardoFetchCartas);
 },3000)  
 
 
@@ -102,7 +103,7 @@ function generatorCols() {
             col.style.display= "inline-block";
             col.style.paddingBottom = "2%";
             col.id = arrIds[varCtlrIds];
-            document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(false));
+            document.getElementById(arrServicios[varCtlrService]).appendChild(col.cloneNode(true));
             console.log(col);
             varCtlrIds++;
         }
@@ -136,12 +137,11 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
-                    console.log(Servicios.id);
                     varCtlrCards++;
                 }
                 if(Servicios.Categoria=="Cuidado de la piel"){
@@ -159,7 +159,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -181,7 +181,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -203,7 +203,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -225,7 +225,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -247,7 +247,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -269,7 +269,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -291,7 +291,7 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button id="btn'+Servicios.id+'">\n' +
+                            '<button class="btnReservar">\n' +
                                 'Reservar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
@@ -304,12 +304,108 @@ function getCartas(){
 }
 
 
+
+
+let arrCarrito = [
+    {
+        tituloRvdo: "gelish prueba 1", //Servicio/0
+        precio: 150,
+        img: "/imagenes/gelish1.jpeg",
+        Reservado: 0
+    },
+    {
+        tituloRvdo: "gelish prueba 2",
+        precio: 250,
+        img: "/imagenes/gelish1.jpeg",
+        Reservado: 0
+    },
+    {
+        tituloRvdo: "gelish prueba 3",
+        precio: 350,
+        img: "/imagenes/gelish1.jpeg",
+        Reservado: 0
+    }
+];
+
+var jsonserviciosreservados;
+
 function btn(){
-    let btn= document.querySelector("#btn0");
-    btn.addEventListener("click", btnRes);
+    let btnReservacion = document.querySelectorAll(".btnReservar");
+    for(let varCtlrClick=0; varCtlrClick<btnReservacion.length;varCtlrClick++){
+        btnReservacion[varCtlrClick].addEventListener('click',()=>{
+            SelectServicio(varCtlrClick);
+            let retardoFetchMain1 = setTimeout(()=>{
+                serviciosNum(jsonserviciosreservados);
+                totalcost(jsonserviciosreservados);
+                clearTimeout(retardoFetchMain1);
+            },800) 
+            
+        }); 
+         
+    }
 }
 
-function btnRes(){
-    let cuerpo = document.querySelector("body");
-    cuerpo.style.background="blue";
+function cargaDeReservacion(){
+    let productosEnCarrito = localStorage.getItem('serviciosNum');
+    if(productosEnCarrito){
+        document.querySelector('.bag span').textContent= productosEnCarrito;
+    }
+}
+
+function serviciosNum(arrCarritoProductos){
+   let productosEnCarrito = localStorage.getItem('serviciosNum');
+   productosEnCarrito = parseInt(productosEnCarrito);
+
+   if(productosEnCarrito){
+    localStorage.setItem('serviciosNum',productosEnCarrito + 1);
+    document.querySelector('.bag span').textContent= productosEnCarrito +1;
+   }else{
+    localStorage.setItem('serviciosNum',1);
+    document.querySelector('.bag span').textContent=1;
+   }
+   setItems(arrCarritoProductos);
+}
+function setItems(arrCarritoProductos){
+    let carritoItems= localStorage.getItem("serviciosencarrito");
+    carritoItems =JSON.parse(carritoItems);
+
+    if(carritoItems!=null){
+        if(carritoItems[arrCarritoProductos.titulo]==undefined){
+            carritoItems={
+                ...carritoItems,
+                [arrCarritoProductos.titulo]: arrCarritoProductos
+            }
+        }
+        carritoItems[arrCarritoProductos.titulo].Carrito +=1
+    }else{
+        arrCarritoProductos.Carrito=1;
+        carritoItems={
+            [arrCarritoProductos.titulo]: arrCarritoProductos
+        }
+    }
+    localStorage.setItem("serviciosencarrito", JSON.stringify(carritoItems));
+}
+
+function SelectServicio(uno){ //5
+
+    fetch("http://localhost:3000/Servicios/"+uno) //servicio/5
+    .then(response => response.json())
+    .then(Servicios =>{
+        jsonserviciosreservados=Servicios;
+    })
+    .catch(err => console.log(err));
+}
+
+function totalcost(servicioreservado){
+    // console.log("el costo es: ", cost.precio);
+    let costototal = localStorage.getItem("preciocarrito");
+    console.log("el precio de mi carrito es: ",costototal);
+    console.log(typeof costototal);
+
+    if(costototal!=null){
+        costototal = parseInt(costototal);
+        localStorage.setItem("preciocarrito",costototal + servicioreservado.precio);
+    }else{
+        localStorage.setItem("preciocarrito", servicioreservado.precio);
+    }
 }
