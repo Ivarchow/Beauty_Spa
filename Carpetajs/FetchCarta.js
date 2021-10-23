@@ -18,6 +18,7 @@ let retardoFetchMain = setTimeout(()=>{
 let retardoFetchCartas = setTimeout(()=>{
     btn();
     cargaDeReservacion();
+    displayCart();
     clearTimeout(retardoFetchCartas);
 },3000)  
 
@@ -407,5 +408,17 @@ function totalcost(servicioreservado){
         localStorage.setItem("preciocarrito",costototal + servicioreservado.precio);
     }else{
         localStorage.setItem("preciocarrito", servicioreservado.precio);
+    }
+}
+
+function displayCart(){
+    let cartItems = localStorage.getItem("serviciosencarrito");
+    cartItems = JSON.parse(cartItems);
+    let productContainer = document.querySelector(".products");
+    console.log("antes del if");
+    console.log(cartItems);
+    console.log(productContainer);
+    if(cartItems && productContainer){
+        console.log("runing");
     }
 }
