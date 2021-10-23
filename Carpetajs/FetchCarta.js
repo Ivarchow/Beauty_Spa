@@ -95,8 +95,10 @@ function generatorCols() {
     for (let varCtlrService = 0; varCtlrService < arrServicios.length; varCtlrService++) {
 
         console.log(arrServicios[varCtlrService]);
-        
 
+        let tagsids = document.querySelector("#nails");
+        if(tagsids){
+        
         for (varCtrlCols; varCtrlCols < arrNUmberServices[varCtlrService]; varCtrlCols++) {
             
             let col = document.createElement('div');
@@ -108,6 +110,7 @@ function generatorCols() {
             console.log(col);
             varCtlrIds++;
         }
+    }
         varCtrlCols=0;
         
     }
@@ -414,11 +417,28 @@ function totalcost(servicioreservado){
 function displayCart(){
     let cartItems = localStorage.getItem("serviciosencarrito");
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".products");
-    console.log("antes del if");
+    let productContainer = document.querySelector(".products-container");
     console.log(cartItems);
-    console.log(productContainer);
     if(cartItems && productContainer){
-        console.log("runing");
+        productContainer.innerHTML='';
+        Object.values(cartItems).map(item=>{
+            productContainer.innerHTML += 
+
+        `<div class="product">
+        <ion-icon name="close-circle"></ion-icon>
+        <img class="tamañoimg" src="${item.img}">
+        <span>${item.titulo}</span>
+        </div>
+        <div class="price">${item.precio},00</div>
+        <div class="quantity">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+        <span>${item.Carrito}</span>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        <div class="total">
+        $${item.Carrito * item.precio},00
+        </div>
+        `;
+        });
     }
 }
