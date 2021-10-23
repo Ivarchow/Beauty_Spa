@@ -2,12 +2,20 @@ let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
   var usr = JSON.parse(localStorage.getItem(`usuario${j}`));
+  var generoso = 0;
+  if(usr.gender == "Mujer"){
+    generoso = 1;
+  }if(usr.gender == "Hombre"){
+    generoso = 2;
+  }if(usr.gender == "Otr@"){
+    generoso = 3;
+  }
   var nombre = document.getElementById("validationDefault01").value = usr.nombre;
   var fechaDeNacimiento = document.getElementById("validationDefault03").value = usr.cumple;
   var telefono = document.getElementById("validationDefault04").value = usr.phone;
   var correoElectronico = document.getElementById("validationDefault05").value = usr.mail;
-  var genero = document.getElementById("dropGenero").value = usr.gender;
-  var contraseña = document.getElementById("validationDefault06").value = usr.password;
+  var genero = document.getElementById("dropGenero").value = generoso;
+  var contraseña = document.getElementById("validationDefault06").value = atob(usr.password);
 })();
 
 document.getElementById("btnGuardarCambios").addEventListener("click",guardarCambios);
@@ -23,7 +31,7 @@ function guardarCambios(){
   profile.nombre = name;
   profile.phone = phone;
   profile.mail = email;
-  profile.password = contra;
+  profile.password = btoa(contra);
   profile.gender = gender;
   profile.cumple = birthdate;
   profile.img = "/images/logo/divinite3.png";
@@ -71,6 +79,7 @@ file.addEventListener('change',function(){
   }
 
 });
+
 //display password
   function viewpassword(){
     var show = document.getElementById('validationDefault06')
