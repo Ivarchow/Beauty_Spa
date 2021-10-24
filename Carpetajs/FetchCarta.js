@@ -19,6 +19,7 @@ let retardoFetchCartas = setTimeout(()=>{
     btn();
     cargaDeReservacion();
     displayCart();
+    clickborrar();
     clearTimeout(retardoFetchCartas);
 },3000)  
 
@@ -401,7 +402,6 @@ function SelectServicio(uno){ //5
 }
 
 function totalcost(servicioreservado){
-    // console.log("el costo es: ", cost.precio);
     let costototal = localStorage.getItem("preciocarrito");
     console.log("el precio de mi carrito es: ",costototal);
     console.log(typeof costototal);
@@ -417,28 +417,57 @@ function totalcost(servicioreservado){
 function displayCart(){
     let cartItems = localStorage.getItem("serviciosencarrito");
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".products-container");
+    let productContainer = document.querySelector(".products");
     console.log(cartItems);
+    let costototal = localStorage.getItem("preciocarrito");
     if(cartItems && productContainer){
         productContainer.innerHTML='';
         Object.values(cartItems).map(item=>{
             productContainer.innerHTML += 
 
         `<div class="product">
-        <ion-icon name="close-circle"></ion-icon>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-danger">borrar</button>
+        </div>
         <img class="tamañoimg" src="${item.img}">
         <span>${item.titulo}</span>
         </div>
         <div class="price">${item.precio},00</div>
         <div class="quantity">
-        <ion-icon name="arrow-back-outline"></ion-icon>
         <span>${item.Carrito}</span>
-        <ion-icon name="arrow-forward-outline"></ion-icon>
         </div>
         <div class="total">
         $${item.Carrito * item.precio},00
         </div>
         `;
         });
+        productContainer.innerHTML += `
+    <div class="basketTotalContainer">
+      <h4 class="basketTotalTitle">
+      Precio total: 
+      </h4>
+      <h4 class="basketTotal">
+        $${costototal},00
+        </h4>
+        </div>`;
+
     }
 }
+function clickborrar(){
+    let btnBorrar = document.querySelectorAll("btn-danger");
+for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
+    btnBorrar[varCtlrClick].addEventListener('click',()=>{
+        borrarServicio(varCtlrClick);
+    });
+     
+}
+}
+
+function borrarServicio(arrCarritoProductos){
+    let carritoItems = localStorage.getItem("serviciosencarrito");
+    carritoItems = JSON.parse(carritoItems);
+    localStorage.removeItem(carritoItems[arrCarritoProductos]);
+  
+}
+
+
