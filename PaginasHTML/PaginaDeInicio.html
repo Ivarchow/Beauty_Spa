@@ -12,14 +12,14 @@
 
   <!-- Adding CSS stylesheet -->
   <link rel="stylesheet" href="/CarpetasCss/PaginaDeInicio.css" />
-  <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+  
   <script src="//pull.cappuccicons.com/cpf.js"></script>
   <title>Divinité Beauty Spa</title>
   <script src="//pull.cappuccicons.com/cpf.js"></script>
   <script src="https://kit.fontawesome.com/aa37fc0000.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="/images/logo/image2.png">
   <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
-
+<link rel="stylesheet" href="/CarpetasCss/navbaralexe.css">
 </head>
 
 <body>
@@ -36,37 +36,54 @@
   </div>
   <div class="wrapper">
 
-  <!--Navbar!-->
-  <header class="header">
-    <nav class="navbar">
-      <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-      <ul class="nav-menu">
-
-        <li class="nav-item">
-          <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
-        </li>
-        <li class="nav-item">
-          <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
-        <li class="nav-item">
-          <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </header>
-  <!--End Navbar!-->
+     <!-- ingresar codigo de navbar  -->
+     <div class="navbarr">
+      <header class="headerr">
+        <div class="headerr-top">
+          <div class="LogoEmpresa">
+            <a href="Inicio.html">
+              <div class="p1">DIVINITE</div>
+              <div class="p2">BEAUTY SPA</div>
+            </a>
+          </div>
+          <!--LogoEmpresa -->
+          <div class="n3">
+            <div class="navr-links2">
+              <a class="active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+              <span></span>
+              <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+              <span></span>
+            </div>
+            <!--nav-links2 -->
+            <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+          </div>
+        </div>
+        <!--n3 -->
+        <nav class="headerr-menu">
+          <ul>
+            <li><a href="Inicio.html">Inico</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="CatalogoServicios.html">Servicios</a></li>
+            <li><a href="ServiciosReservados.html">Reservados</a></li>
+            <li><a href="BuzonSugerencias.html">Contacto</a></li>
+            <li><a href="CrearCuenta.html">Ingresar / Cerrar sesion</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script>
+        const header_btn = document.querySelector('.headerr-btn')
+        const header_menu = document.querySelector('.headerr-menu')
+        header_btn.addEventListener('click', () => {
+          if (header_menu.style.display != 'block') {
+            header_menu.style.display = 'block'
+            header_btn.innerHTML = '<i class="fas fa-times"></i>'
+          } else {
+            header_menu.style.display = 'none'
+            header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+          }
+        })
+      </script>
+    </div><!-- navbar -->
 
 
   <div style="width: 50%; margin: auto;">
@@ -86,9 +103,14 @@
 
   <div class="container animado" style="padding-top:2%;">
     <div class="row">
-      <div class="col-sm-5" style="text-align: end; padding: 2%; margin: auto;">
-          <img src="/images/Seccion1/imagen1.jpeg" class="img-fluid" style="width: 150%;">
-      </div>
+       <div class="col-sm-5" style="text-align: end; padding: 2%; margin: auto;">
+      <div class="s21">
+        <div class="imagenspace21">
+          </a><img src="/images/Seccion1/imagen1.jpeg" alt="">
+        </div><!-- imagenspace21 -->
+      </div><!-- s21 -->
+      </div> 
+
 
 
       <div class="col-sm-7" style="margin: auto; text-align: start;">
@@ -169,10 +191,15 @@
 
 
       <div class="col-sm-5" style="margin: auto; padding: 2%;">
-        <img src="/images/Seccion2/imagen4.png" class="img-fluid" style="width: 150%;">
-    
-  
+      <div class="s22">
+        <div class="imagenspace22">
+          </a><img src="/images/Seccion2/imagen4.png" alt=""></a>
+        </div><!-- imagenspace22 -->
+      </div><!-- s22 -->
       </div>
+
+
+
     </div>
   </div>
 
@@ -187,9 +214,15 @@
 
   <div class="container animado" >
     <div class="row">
+
       <div class="col-sm-5" style="text-align: center; padding: 2%; margin: auto;">
-          <img src="/images/Seccion3/imagen1.png" class="img-fluid" style="width: 150%;">
-      </div>
+        <div class="s23">
+          <div class="imagenspace23">
+            <img src="/images/Seccion3/imagen1.png" alt="">
+          </div><!-- imagenspace23 -->
+        </div><!-- s23 -->
+      </div> 
+      
 
 
       <div class="col-sm-7" style="margin: auto;">
@@ -267,10 +300,14 @@
 
 
       <div class="col-sm-5" style="margin: auto; padding: 2%;">
-        <img src="/images/Seccion4/imagen4.png" class="img-fluid" style="width: 150%;">
-    
-  
-      </div>
+             <div class="s24">
+        <div class="imagenspace24">
+          </a><img src="/images/Seccion4/imagen4.png" alt=""></a>
+        </div><!-- imagenspace24 -->
+      </div><!-- s24 -->
+      </div> 
+
+      
     </div>
   </div>
    <!--************************SECCION3*********************-->
@@ -366,7 +403,6 @@
 
 </div>
 
-  <script src="/Carpetajs/navbar.js"></script>
   <script src="/Carpetajs/PaginaDeinicio.js"></script>
 
 </body>

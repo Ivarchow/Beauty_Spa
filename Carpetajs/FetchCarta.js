@@ -349,13 +349,14 @@ function btn(){
          
     }
 }
-
+// INCREMENTO DE NUMEROS EN LA BOLSA
 function cargaDeReservacion(){
     let productosEnCarrito = localStorage.getItem('serviciosNum');
     if(productosEnCarrito){
         document.querySelector('.bag span').textContent= productosEnCarrito;
     }
 }
+// INCREMENTO DE NUMEROS EN LA BOLSA
 
 function serviciosNum(arrCarritoProductos){
    let productosEnCarrito = localStorage.getItem('serviciosNum');
@@ -372,7 +373,7 @@ function serviciosNum(arrCarritoProductos){
 }
 function setItems(arrCarritoProductos){
     let carritoItems= localStorage.getItem("serviciosencarrito");
-    carritoItems =JSON.parse(carritoItems);
+    carritoItems = JSON.parse(carritoItems);
 
     if(carritoItems!=null){
         if(carritoItems[arrCarritoProductos.titulo]==undefined){
@@ -454,7 +455,7 @@ function displayCart(){
     }
 }
 function clickborrar(){
-    let btnBorrar = document.querySelectorAll("btn-danger");
+    let btnBorrar = document.querySelectorAll(".btn-danger");
 for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
     btnBorrar[varCtlrClick].addEventListener('click',()=>{
         borrarServicio(varCtlrClick);
@@ -465,8 +466,11 @@ for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
 
 function borrarServicio(arrCarritoProductos){
     let carritoItems = localStorage.getItem("serviciosencarrito");
+    console.log(carritoItems);
     carritoItems = JSON.parse(carritoItems);
-    localStorage.removeItem(carritoItems[arrCarritoProductos]);
+    console.log(carritoItems);
+    console.log(arrCarritoProductos);
+    console.log(carritoItems[arrCarritoProductos]);
   
 }
 

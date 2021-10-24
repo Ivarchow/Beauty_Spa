@@ -87,9 +87,6 @@
   transition: transform 300ms, box-shadow 300ms;
   border: none;
 }
-.box:hover{
-  transform: scale(1.25);
-}
 
 /*animacion cartas Ivar*/
 .animado{
@@ -369,9 +366,74 @@ fieldset[disabled] .btn-sample.active {
 }
 /*Footer Luis*/
 
+/* CODIGO ALEXEI IMAGENES */
+.s21{
+  margin: auto;
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #AA3053;
+}
+.imagenspace21 img{
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  bottom: 20px;
+  margin: auto;
+  left: 20px;
+  z-index: -5;
+}
 
+.s22{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #FDAAB5;
+}
+.imagenspace22 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  top: 20px;
+  left: 20px;
+  z-index: -5;
+}
 
+.s23{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #AA3053;
+}
+.imagenspace23 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  bottom: 20px;
+  right: 25px;
+  z-index: -5;
+}
 
+.s24{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #FD5060;
+}
+.imagenspace24 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  bottom: -20px;
+  right: 25px;
+  z-index: -5;
+}
 
 
 
