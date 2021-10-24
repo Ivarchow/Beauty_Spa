@@ -142,8 +142,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -164,8 +164,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -186,8 +186,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -208,8 +208,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -230,8 +230,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -252,8 +252,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -274,8 +274,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -296,8 +296,8 @@ function getCartas(){
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
                                 '<p>'+Servicios.Descripcion+'</p>\n' +
                             '</div>\n' +
-                            '<button class="btnReservar">\n' +
-                                'Reservar\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
                             '</button>\n' +
                         '</figcaption>\n' +
                     '</figure>';
@@ -335,7 +335,7 @@ let arrCarrito = [
 var jsonserviciosreservados;
 
 function btn(){
-    let btnReservacion = document.querySelectorAll(".btnReservar");
+    let btnReservacion = document.querySelectorAll(".btnSeleccionar");
     for(let varCtlrClick=0; varCtlrClick<btnReservacion.length;varCtlrClick++){
         btnReservacion[varCtlrClick].addEventListener('click',()=>{
             SelectServicio(varCtlrClick);
