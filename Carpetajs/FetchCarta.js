@@ -21,7 +21,7 @@ let retardoFetchCartas = setTimeout(()=>{
     displayCart();
     clickborrar();
     clearTimeout(retardoFetchCartas);
-},3000)  
+},1500)  
 
 
 function generatorArrys(tamañoJson) {
@@ -343,7 +343,7 @@ function btn(){
                 serviciosNum(jsonserviciosreservados);
                 totalcost(jsonserviciosreservados);
                 clearTimeout(retardoFetchMain1);
-            },800) 
+            },500) 
             
         }); 
          
@@ -458,20 +458,13 @@ function clickborrar(){
     let btnBorrar = document.querySelectorAll(".btn-danger");
 for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
     btnBorrar[varCtlrClick].addEventListener('click',()=>{
-        borrarServicio(varCtlrClick);
+        localStorage.clear();
+        alert("se han borrado todos lo servcios");
+        location.reload();
     });
      
 }
 }
 
-function borrarServicio(arrCarritoProductos){
-    let carritoItems = localStorage.getItem("serviciosencarrito");
-    console.log(carritoItems);
-    carritoItems = JSON.parse(carritoItems);
-    console.log(carritoItems);
-    console.log(arrCarritoProductos);
-    console.log(carritoItems[arrCarritoProductos]);
-  
-}
 
 
