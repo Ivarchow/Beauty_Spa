@@ -2,7 +2,7 @@ let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
   var usr = JSON.parse(localStorage.getItem(`usuario${j}`));
-  var generoso = 0;
+  var generoso;
   if(usr.gender == "Mujer"){
     generoso = 1;
   }if(usr.gender == "Hombre"){
@@ -27,6 +27,7 @@ function guardarCambios(){
   let email = document.getElementById("validationDefault05").value;
   let gender = document.getElementById("dropGenero").value;
   let contra = document.getElementById("validationDefault06").value;
+  let img = document.getElementById("photo").src;
   let profile = new Object();
   profile.id = j;
   profile.nombre = name;
