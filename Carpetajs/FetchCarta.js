@@ -426,36 +426,136 @@ function displayCart(){
         Object.values(cartItems).map(item=>{
             productContainer.innerHTML += 
 
-        `<div class="product">
-        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-danger">borrar</button>
+        // `<div class="product">
+        // <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        // <button type="button" class="btn btn-danger">borrar</button>
+        // </div>
+        // <img class="tamañoimg" src="${item.img}">
+        // <span>${item.titulo}</span>
+        // </div>
+        // <div class="price">${item.precio},00</div>
+        // <div class="quantity">
+        // <span>${item.Carrito}</span>
+        // </div>
+        // <div class="total">
+        // $${item.Carrito * item.precio},00
+        // </div>
+        // `;
+
+
+        `
+        <tr style="bottom: 5%;">
+        <td style="width: 25%;">
+
+
+
+        <h3 style=" color: red">${item.titulo}</h3>
+        <img style="width: 50%;" src="${item.img}">
+        </td>
+    
+        <td>
+
+        <h3>${item.precio},00</h3>
+
+        </td>
+
+        <td>
+        <h3>${item.Carrito}</h3>
+        </td>
+
+        <td>
+        
+        <form style=" margin: auto;">
+        <div class="mb-3" style="margin: auto; width: 280px;">
+          <label>Fecha</label>
+          <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
         </div>
-        <img class="tamañoimg" src="${item.img}">
-        <span>${item.titulo}</span>
+        <div class="mb-3" >
+          <label>Hora: <br>
+            <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
+            <datalist id="horarioCita">
+              <option value="9:00">
+              <option value="9:30">
+              <option value="10:00">
+              <option value="10:30">
+              <option value="11:00">
+              <option value="11:30">
+              <option value="12:00">
+              <option value="12:30">
+              <option value="13:00">
+              <option value="13:30">
+              <option value="14:00">
+              <option value="14:30">
+              <option value="15:00">
+              <option value="15:30">
+              <option value="16:00">
+              <option value="16:30">
+              <option value="17:00">
+              <option value="17:30">
+              <option value="18:00">
+              <option value="18:30">                         
+            </datalist>
         </div>
-        <div class="price">${item.precio},00</div>
-        <div class="quantity">
-        <span>${item.Carrito}</span>
+      </form>
+
+        </td>
+
+
+        <td >
+
+
+          <div>
+          <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
         </div>
-        <div class="total">
-        $${item.Carrito * item.precio},00
-        </div>
-        `;
+
+
+        </td>
+
+        <td>
+
+        <h3>$${item.Carrito * item.precio},00</h3>
+
+        </td>
+
+      </tr>`;
+
         });
+
         productContainer.innerHTML += `
-    <div class="basketTotalContainer">
-      <h4 class="basketTotalTitle">
-      Precio total: 
-      </h4>
-      <h4 class="basketTotal">
-        $${costototal},00
-        </h4>
-        </div>`;
+
+        <table class="table" style="width: 95%; margin: auto;">
+        <thead style="text-align: center;">
+          <tr>
+          <th scope="col"><h2></h2></th>
+          <th scope="col"><h2></h2></th>
+          <th scope="col"><h2></h2></th>
+          <th scope="col"><h2></h2></th>
+          <th scope="col"><h2></h2></th>
+            <th scope="col"><h2>Total</h2></th>
+          </tr>
+        </thead>
+        <tbody class="products" style="text-align: center;">
+          <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+          <div>
+          <button class="btn borrar" style="background-color: red" type="button"><h3 style="color: white">ELIMINAR TODO</h3></button>
+        </div>
+          </td>
+          <td style="background-color: #AB3053"><h2 style="color: white">${costototal}$</h2></td>
+          </tr>
+
+        </tbody>
+      </table>`;
+
 
     }
 }
 function clickborrar(){
-    let btnBorrar = document.querySelectorAll(".btn-danger");
+    let btnBorrar = document.querySelectorAll(".borrar");
 for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
     btnBorrar[varCtlrClick].addEventListener('click',()=>{
         localStorage.clear();

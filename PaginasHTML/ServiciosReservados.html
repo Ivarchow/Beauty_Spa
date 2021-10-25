@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
     <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
     <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
-    <link rel="stylesheet" href="/CarpetasCss/ServiciosReservados.css">
+  
+
     <script src="/Carpetajs/FetchCarta.js" async></script>
+    <link rel="stylesheet" href="/CarpetasCss/navbaralexe.css">
 
     
 
@@ -47,49 +49,59 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <!-- Encabezado del proyecto -->
-<!--Navbar!-->
-<header class="header">
-  <nav class="navbar">
-    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-    <ul class="nav-menu">
-
-      <li class="nav-item">
-        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
-      </li>
-      <li class="nav-item bag">
-         <a href="#bag" class="shoppingBag">
-          <i class="cp cp-shopping-bag ">
-
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2 bag">
+          <a class="active" href="/PaginasHTML/ServiciosReservados.html"><i class="fas fa-shopping-bag"> 
             <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
-              <!-- 99+ -->
-            </span>
-
-          </i>
-        </a> 
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-      </li>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+          </span></i></a>
+          <span></span>
+          <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
     </div>
-  </nav>
-</header>
-<!--End Navbar!-->
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+        <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div>
+<!-- final de codigo de navbar  -->
 
-    <h1 class="tituloh1" style="padding: 20px;">Servicios Beauty Spa</h1>
+    <h1 class="tituloh1" style="padding: 20px;">Reservaciones</h1>
 
 
     <!-- FILA 1 -->
@@ -103,22 +115,25 @@
     </div>
 
 <!--style="background-color: rgba(255, 224, 253, 0.082); box-shadow: 0 0 10px; padding: 2%;"-->
-    <section class="products-list" >
+    <section class="products-list"  >
         <div class="product-item" category="Reservado" >
 
-          <div class="products-container">
-            <div class="product-header">
-              <h5 class="product-title">PRODUCT</h5>
-              <h5 class="price">PRICE</h5>
-              <h5 class="quantity">QUANTITY</h5>
-              <h5 class="total">TOTAL</h5>
-            </div>
-            <div class="products">
-          
-            </div>
-          </div>
+              <table class="table" style="width: 95%; margin: auto;">
+                <thead style="text-align: center;">
+                  <tr >
+                    <th scope="col"><h2>Producto</h2></th>
+                    <th scope="col"><h2>Precio</h2></th>
+                    <th scope="col"><h2>Cantidad</h2></th>
+                    <th scope="col"><h2>Reservación</h2></th>
+                    <th scope="col"><h2>Acción</h2></th>
+                    <th scope="col"><h2>Total</h2></th>
+                  </tr>
+                </thead>
+                <tbody class="products" style="text-align: center;">
+                  
 
-
+                </tbody>
+              </table>
         </div>
     </section>
 
@@ -130,10 +145,7 @@
 
         </div>
 
-    </section>
-
-
-
+      </section>
 
 <!--Footer Luis-->
 
