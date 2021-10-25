@@ -495,6 +495,9 @@ function displayCart(){
               <option value="18:00">
               <option value="18:30">                         
             </datalist>
+            <div>
+            <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
+          </div>
         </div>
       </form>
 
@@ -504,9 +507,7 @@ function displayCart(){
         <td >
 
 
-          <div>
-          <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
-        </div>
+
 
 
         </td>
