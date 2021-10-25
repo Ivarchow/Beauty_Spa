@@ -16,6 +16,7 @@ let j = sessionStorage.getItem("j");
   var correoElectronico = document.getElementById("validationDefault05").value = usr.mail;
   var genero = document.getElementById("dropGenero").value = generoso;
   var contraseña = document.getElementById("validationDefault06").value = atob(usr.password);
+  document.getElementById("imagen").innerHTML = `<img src="`+usr.img+`" alt="" id="photo">`;
 })();
 
 document.getElementById("btnGuardarCambios").addEventListener("click",guardarCambios);
@@ -34,7 +35,7 @@ function guardarCambios(){
   profile.password = btoa(contra);
   profile.gender = gender;
   profile.cumple = birthdate;
-  profile.img = "/images/logo/divinite3.png";
+  profile.img = img;
   var local = JSON.stringify(profile);
   localStorage.setItem(`usuario${j}`, local);
 }
