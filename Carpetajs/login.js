@@ -12,6 +12,7 @@ function login(){
     if(usuario != null){
       if(usuario.mail === email && usuario.password === pass){
         bandera = true;
+        sessionStorage.setItem("j", cont);
       }
     }
   }

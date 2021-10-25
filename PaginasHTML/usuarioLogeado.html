@@ -44,7 +44,7 @@
           <li class="nav-item">
             <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
           <li class="nav-item">
-            <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
+            <a onclick="login()" href="#" class="shoppingBag"><i class="cp cp-user"></i></a>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -232,6 +232,17 @@
 <!--Footer Luis-->
 
 </body>
+
+<script>
+  function login(){
+    let j = sessionStorage.getItem("j");
+    if(j == null){
+      location.href ="/PaginasHTML/Ingreso.HTML";
+    }else{
+      location.href ="/PaginasHTML/usuarioLogeado.html";
+    }
+  }
+</script>
 
 <script src="/Carpetajs/usuarioLogeado.js"></script>
 
