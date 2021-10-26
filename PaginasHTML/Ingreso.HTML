@@ -7,7 +7,7 @@
   <title>DIVINITE-Ingreso</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../CarpetasCss/Ingreso.css" type="text/css">
-  <!-- <link rel="stylesheet" href="/CarpetasCss/navbar.css"> -->
+  <link rel="stylesheet" href="/CarpetasCss/navbar.css">
   <link rel="shortcut icon" href="/images/logo/image2.png">
   <link rel="stylesheet" href="/CarpetasCss/footer.css">
 
@@ -24,7 +24,7 @@
     <link rel="shortcut icon" href="/images/logo/image2.png">
     <script src="//pull.cappuccicons.com/cpf.js"></script>
 
-    <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
+    <!-- <link rel="stylesheet" href="/CarpetasCss/Contacto.css"> -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
 
@@ -38,35 +38,55 @@
 <!-- ingresar codigo de navbar  -->
 
  <!--Navbar!-->
- <header class="header">
-  <nav class="navbar">
-    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-    <ul class="nav-menu">
-
-      <li class="nav-item">
-        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
-      <li class="nav-item">
-        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+ <div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2 bag">
+          <a class="active" href="/PaginasHTML/ServiciosReservados.html"><i class="fas fa-shopping-bag"> 
+            <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
+          </span></i></a>
+          <span></span>
+          <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
     </div>
-  </nav>
-</header>
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+        <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
 <!--End Navbar!-->
 <!-- codigo de login -->
 <div class="content">
@@ -133,29 +153,19 @@
     </div><!-- foo4 --></div><!-- foo1 -->
     <div class="foo5">
     <div class="foo6">
-      <a href="#"> Buzon de sugerencias</a>
+      <a href="emailPrueba.html"> Buzon de sugerencias</a>
     </div><!-- foo6 -->
     <div class="foo7">
       <p>(c) DIVINITE Guadalajara</p>
     </div><!-- foo7 -->
     <div class="foo8">
-      <a href="/PaginasHTML/AvisoDePrivasidad.html"> Politica de Privacidad </a>
+      <a href="AvisoDePrivasidad.html"> Politica de Privacidad </a>
       <span></span>
       <p>  |  </p>
       <span></span>
-      <a href="#"> Cultura </a>
-      <span></span>
-      <p>  |  </p>
-      <span></span>
-      <a href="#"> FAQs </a>
+      <a href="emailPrueba.html"> FAQs </a>
     </div><!-- foo8 --></div><!-- foo5 -->
-    <!-- <div class="foo9"> -->
-    <!-- <div class="foo10"> -->
-      <!-- <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p> -->
-      <!-- </div>foo10 -->
-    <!-- <div class="foo11"> -->
-      <!-- <div class= "MClogo"><img src="../MCLARICH/MClogo.svg" alt=""></div> -->
-    <!-- </div>foo11 -->
+  </div><!-- footer -->
   </div><!-- grid -->
 </body>
 <!-- display password -->
