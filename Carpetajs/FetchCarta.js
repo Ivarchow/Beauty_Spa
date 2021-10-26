@@ -141,7 +141,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -163,7 +163,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -185,7 +185,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -207,7 +207,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -229,7 +229,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios.precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -251,7 +251,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios.precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -273,7 +273,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios.precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -295,7 +295,7 @@ function getCartas(){
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
                                 '<p>Precio: '+Servicios.precio+'$</p>\n' +
                                 '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
