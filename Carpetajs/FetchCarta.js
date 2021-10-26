@@ -50,15 +50,15 @@ async function countServicesLenght() {
             if (Products.categoria == "nails") {
                 Servicio1++;
             }
-             if (Servicios.categoria == "Cuidado de la piel") {
+            if (Servicios.categoria == "Cuidado de la piel") {
                  Servicio2++;
-             }
-             if (Servicios.categoria == "Pestañas y cejas") {
+            }
+            if (Servicios.categoria == "Pestañas y cejas") {
                  Servicio3++;
             }
             if (Servicios.categoria == "Faciales") {
                  Servicio4++;
-             }
+            }
             // if (Servicios.categoria == "Pedicure y manicure") {
             //     Servicio5++;
             // }
@@ -74,9 +74,9 @@ async function countServicesLenght() {
             
         }
         arrNUmberServices.push(Servicio1);
-         arrNUmberServices.push(Servicio2);
-        // arrNUmberServices.push(Servicio3);
-        // arrNUmberServices.push(Servicio4);
+        arrNUmberServices.push(Servicio2);
+        arrNUmberServices.push(Servicio3);
+        arrNUmberServices.push(Servicio4);
         // arrNUmberServices.push(Servicio5);
         // arrNUmberServices.push(Servicio6);
         // arrNUmberServices.push(Servicio7);
@@ -150,20 +150,20 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.categoria=="Cuidado de la piel"){
+                if(Servicios[varCtrlFetch].categoria=="Cuidado de la piel"){
                     let elemento1 = document.getElementById(arrIds[varCtlrCards]);
                     elemento1.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios.titulo+'</h1>\n' +
-                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
+                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -172,20 +172,20 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.Categoria=="Pestañas y cejas"){
+                if(Servicios[varCtrlFetch].categoria=="Pestañas y cejas"){
                     let elemento = document.getElementById(arrIds[varCtlrCards]);
                     elemento.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios.titulo+'</h1>\n' +
-                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
+                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -194,20 +194,20 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.Categoria=="Faciales"){
+                if(Servicios[varCtrlFetch].categoria=="Faciales"){
                     let elemento = document.getElementById(arrIds[varCtlrCards]);
                     elemento.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios.titulo+'</h1>\n' +
-                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
+                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
