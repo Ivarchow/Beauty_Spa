@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-PerfilUsuario</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CarpetasCss/TEST_UL.CSS" type="text/css">
+    <link rel="stylesheet" href="/CarpetasCss/navbar.css">
+    <link rel="stylesheet" href="/CarpetasCss/footer.css">
+    <!-- Bootstrap -->
+
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+
+</head>
+<body>
+  <div class="grid">
+<!-- ingresar codigo de navbar  -->
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2 bag">
+          <a class="active" href="/PaginasHTML/ServiciosReservados.html"><i class="fas fa-shopping-bag"> 
+            <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
+          </span></i></a>
+          <span></span>
+          <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
+    </div>
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+        <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
+  
+<!-- codigo de perfil usuario -->
+<div class="content">
+
+<div class="space1">
+  <p>Perfil de usuario </p>
+</div><!-- space1 -->
+<div class="space2">
+  <div class="profile-pic-div">
+    <img src="/images/logo/image2.png" alt="" id="photo">
+    <input type="file" id="file">
+    <label for="file" id="uploadBtn"><i class="uil uil-camera-plus"></i></label>
+    <!-- <span></span><i class="uil uil-camera-plus"></i> -->
+    </div>
+</div><!-- space2 -->
+<div class="space3">
+  <input type="text" class="form-control" placeholder="Nombre(s) y Apellidos" id="validationDefault01" required>
+</div><!-- space3 -->
+<div class="space4">
+  <input type="date" class="form-control" placeholder="e9ac" id="validationDefault03" title="Ingrese su fecha de nacimiento" required>
+</div><!-- space4 -->
+<div class="space5">
+  <input type="tel" class="form-control" placeholder="Telefono" id="validationDefault04" title="Un número de teléfono válido debe tener 10 dígitos" required>
+</div><!-- space5 -->
+<div class="space6">
+  <input type="email" class="form-control" placeholder="Correo Electronico" id="validationDefault05"  required>
+</div><!-- space6 -->
+<div class="space7">
+  <!-- <select type="text" id="InputGender editor" list="listgender" placeholder="Genero" title="Ingrese el genero con el que mas se identifica" required> 
+    <option label="Mujer" value="Mujer">Mujer</option>
+    <option label="Hombre" value="Hombre">Hombre</option>
+    <option label="Otr@" value="Otr@">Otr@</option>
+    </select> -->
+
+    <select type="text" name="gender" id="InputGender editor" placeholder="Genero" title="Ingrese el genero con el que mas se identifica" required>
+      <option label="Mujer" value="Mujer">Mujer</option>
+      <option label="Hombre" value="Hombre">Hombre</option>
+      <option label="Otr@" value="Otr@">Otr@</option>
+    </select>
+
+</div><!-- space7 -->
+<div class="space8">
+  <p>Serivicios favoritos </p>
+</div><!-- space8 -->
+<div class="space9">
+  <p>Porfavor seleccione los servicios de los cuales le gustaria mantenerse informado de promociones </p>
+</div><!-- space9 -->
+<div class="space10">
+  <ul class="boxtags">
+    <li><input type="checkbox" id="checkboxOne" value="Masajes"><label for="checkboxOne">Masajes</label></li>
+
+    <li><input type="checkbox" id="checkboxTwo" value="Uñas"><label for="checkboxTwo">Uñas</label></li>
+
+    <li><input type="checkbox" id="checkboxThree" value="Cejas"><label for="checkboxThree">Cejas</label></li>
+
+    <li><input type="checkbox" id="checkboxFour" value="Limpieza"><label for="checkboxFour">Limpieza</label></li>
+
+    <li><input type="checkbox" id="checkboxFive" value="Maquillaje"><label for="checkboxFive">Maquillaje</label></li>
+
+    <li><input type="checkbox" id="checkboxSix" value="Pestañas"><label for="checkboxSix">Pestañas</label></li>
+
+    <li><input type="checkbox" id="checkboxSeven" value="Peinados"><label for="checkboxSeven">Peinados</label></li>
+
+    <li><input type="checkbox" id="checkboxEight" value="Piel"><label for="checkboxEight">Piel</label></li>
+
+    <li><input type="checkbox" id="checkboxNine" value="Eventos"><label for="checkboxNine">Eventos</label></li>
+  </ul>
+</div><!-- space10 -->
+<div class="space11">
+  <button id="editorBtn" type="button">Editar</button>
+</div><!-- space11 -->
+<div class="space12">
+
+</div><!-- space12 -->
+</div><!-- content -->
+<!-- ingresar codigo del contact -->
+<div class="footer">
+  <div class="foo1">
+  <div class="foo2">
+    <i class="fas fa-phone"></i>
+    <p> 83-8888-8888 </p>
+  </div><!-- foo2 -->
+  <div class="foo3">
+    <i class="fab fa-whatsapp"></i>
+    <p>  (+52) 81-4566-7890</p>
+  </div><!-- foo3 -->
+  <div class="foo4">
+    <i class="fas fa-envelope"></i>
+    <p> email@divinite.com</p>
+  </div><!-- foo4 -->
+  </div><!-- foo1 -->
+  <div class="foo5">
+  <div class="foo6">
+    <a href="emailPrueba.html"> Buzon de sugerencias</a>
+  </div><!-- foo6 -->
+  <div class="foo7">
+    <p>(c) DIVINITE Guadalajara</p>
+  </div><!-- foo7 -->
+  <div class="foo8">
+    <a href="AvisoDePrivasidad.html"> Politica de Privacidad </a>
+    <span></span>
+    <p>  |  </p>
+    <span></span>
+    <a href="emailPrueba.html"> FAQs </a>
+  </div><!-- foo8 -->
+  </div><!-- foo5 -->
+</div><!-- footer -->
+</div><!-- grid -->
+
+<script>
+//declearing html elements
+
+const imgDiv = document.querySelector('.profile-pic-div');
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadBtn');
+
+//if user hover on img div 
+
+imgDiv.addEventListener('mouseenter', function(){
+    uploadBtn.style.display = "block";
+});
+
+//if we hover out from img div
+
+imgDiv.addEventListener('mouseleave', function(){
+    uploadBtn.style.display = "none";
+});
+
+//lets work for image showing functionality when we choose an image to upload
+
+//when we choose a foto to upload
+
+file.addEventListener('change', function(){
+    //this refers to file
+    const choosedFile = this.files[0];
+
+    if (choosedFile) {
+
+        const reader = new FileReader(); //FileReader is a predefined function of JS
+
+        reader.addEventListener('load', function(){
+            img.setAttribute('src', reader.result);
+        });
+
+        reader.readAsDataURL(choosedFile);
+
+        //Allright is done
+
+        //please like the video
+        //comment if have any issue related to vide & also rate my work in comment section
+
+        //And aslo please subscribe for more tutorial like this
+
+        //thanks for watching
+    }
+});
+</script>
+
+</body>
+</html>
