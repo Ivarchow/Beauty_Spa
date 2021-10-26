@@ -1,24 +1,22 @@
-let j = localStorage.getItem("j");
-let bandera = false;
 document.getElementById("Login").addEventListener("click", login);
 
 function login(){
   let email = document.getElementById("InputEmail").value;
   let pass = document.getElementById("Show").value;
-  pass = btoa(pass);
+  //pass = btoa(pass);
 
-  for(let cont=0; cont<j; cont++){
-    let usuario = JSON.parse(localStorage.getItem(`usuario${cont}`));
-    if(usuario != null){
-      if(usuario.mail === email && usuario.password === pass){
-        bandera = true;
-        sessionStorage.setItem("j", cont);
-      }
-    }
-  }
-  if(bandera){
-    location.href ="/PaginasHTML/PaginaDeInicio.html";
-  }else{
-    alert("Correo o contraseña invalidos");
-  }
+  fetch('../CarpetaJson/users.json')  //link para el GET de todos los usuarios
+  .then(respuesta => respuesta.json()) 
+  .then(usuarios => {
+      usuarios.forEach(usuario => {
+        if(usuario != null){
+          if(usuario.email === email && usuario.pass === pass){
+            sessionStorage.setItem("j", usuario.id);
+            location.href ="/PaginasHTML/PaginaDeInicio.html";
+          }
+        }
+      });
+      console.log("Credenciales invalidas")
+  })
+  .catch(error => console.log('Hubo un error : ' + error.message))
 }

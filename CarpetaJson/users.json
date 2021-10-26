@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "nombre": "Christian Hernández",
+    "phone": "3321709727",
+    "email": "chalcahe@gmail.com",
+    "pass": "97319821",
+    "gender": "Hombre",
+    "cumple": "1998-10-12",
+    "img": "/images/logo/divinite3.png"
+  },
+  {
+    "id": "2",
+    "nombre": "Christian Castillo",
+    "phone": "3321709732",
+    "email": "hola@gmail.com",
+    "pass": "97319821",
+    "gender": "Hombre",
+    "cumple": "1998-10-12",
+    "img": "/images/logo/divinite3.png"
+  },
+  {
+    "id": "4",
+    "nombre": "Alejandro Castillo",
+    "phone": "3321719832",
+    "email": "adios@gmail.com",
+    "pass": "97319821",
+    "gender": "Hombre",
+    "cumple": "1998-10-12",
+    "img": "/images/logo/divinite3.png"
+  }
+]

@@ -1,25 +1,30 @@
 let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
-  var usr = JSON.parse(localStorage.getItem(`usuario${j}`));
-  var generoso;
-  if(usr.gender == "Mujer"){
-    generoso = 1;
-  }if(usr.gender == "Hombre"){
-    generoso = 2;
-  }if(usr.gender == "Otr@"){
-    generoso = 3;
-  }
-  var nombre = document.getElementById("validationDefault01").value = usr.nombre;
-  var fechaDeNacimiento = document.getElementById("validationDefault03").value = usr.cumple;
-  var telefono = document.getElementById("validationDefault04").value = usr.phone;
-  var correoElectronico = document.getElementById("validationDefault05").value = usr.mail;
-  var genero = document.getElementById("dropGenero").value = generoso;
-  var contraseña = document.getElementById("validationDefault06").value = atob(usr.password);
-  document.getElementById("imagen").innerHTML = `<img src="`+usr.img+`" alt="" id="photo">`;
+  fetch('../CarpetaJson/users.json') //link para el GET de todos los usuarios
+  .then(respuesta => respuesta.json())
+  .then(usuarios => {
+    var usr = usuarios[j-1];
+    var generoso;
+    if(usr.gender == "Mujer"){
+      generoso = 1;
+    }if(usr.gender == "Hombre"){
+      generoso = 2;
+    }if(usr.gender == "Otr@"){
+      generoso = 3;
+    }
+    document.getElementById("validationDefault01").value = usr.nombre;
+    document.getElementById("validationDefault03").value = usr.cumple;
+    document.getElementById("validationDefault04").value = usr.phone;
+    document.getElementById("validationDefault05").value = usr.email;
+    document.getElementById("dropGenero").value = generoso;
+    document.getElementById("validationDefault06").value = atob(usr.pass);
+    document.getElementById("imagen").innerHTML = `<img src="`+usr.img+`" alt="" id="photo">`;
+  });
 })();
 
 document.getElementById("btnGuardarCambios").addEventListener("click",guardarCambios);
+
 function guardarCambios(){
   let name = document.getElementById("validationDefault01").value;
   let birthdate = document.getElementById("validationDefault03").value;
@@ -28,17 +33,26 @@ function guardarCambios(){
   let gender = document.getElementById("dropGenero").value;
   let contra = document.getElementById("validationDefault06").value;
   let img = document.getElementById("photo").src;
+  var genero;
+    if(gender == 1){
+      genero = "Mujer";
+    }if(gender == 2){
+      genero = "Hombre";
+    }if(gender == 3){
+      genero = "Otr@";
+    }
   let profile = new Object();
   profile.id = j;
   profile.nombre = name;
   profile.phone = phone;
   profile.mail = email;
   profile.password = btoa(contra);
-  profile.gender = gender;
+  profile.gender = genero;
   profile.cumple = birthdate;
   profile.img = img;
   var local = JSON.stringify(profile);
-  localStorage.setItem(`usuario${j}`, local);
+  //localStorage.setItem(`usuario${j}`, local);
+  console.log(local);
 }
 
 //guardar / actualizar cambios
