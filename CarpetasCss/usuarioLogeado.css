@@ -2,7 +2,7 @@
 /*Foto de perfil*/
 
 .profile-pic-div{
-  margin-top: 10%;
+  margin-top: 15vh;
   height: 200px;
   width: 200px;
   position: relative;
@@ -12,6 +12,7 @@
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid grey;
+  display: block;
 }
 
 #photo{
@@ -54,6 +55,7 @@ main{ /*Esto tambien ayuda al footer*/
 .tituloPerfil{
   text-align: center;
   color: black;
+  display: block;
 }
 
 .formulaCentrada{
@@ -69,6 +71,7 @@ main{ /*Esto tambien ayuda al footer*/
 
 .serviciosFav{
   float: left;
+  display: block;
 }
 
 .botonGuardar{
@@ -84,13 +87,19 @@ main{ /*Esto tambien ayuda al footer*/
 
 /*Checked Buttons*/
 .botonesCont{
-  margin-top: 4%;
+  margin-top: 7%;
+  display: block;
 
 }
 
 .btn-outline-danger{
   border-radius: 20px;
   margin: 5px;
+}
+
+.btn-check{
+  display: inline;
+  margin: 5vw;
 }
 
 /*Checked Buttons*/
