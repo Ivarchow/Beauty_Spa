@@ -143,6 +143,7 @@ html, body{
   display: grid;
   min-height: 10rem;
   max-height: auto;
+  
 }
 .space8 textarea{
   width: 100%;
@@ -152,6 +153,8 @@ html, body{
   font-size: large;
   margin-top: 10px;
   margin-bottom: 10px;
+  min-width: fit-content;
+  resize: vertical;
 }
 .space9{
   grid-row: 9;
