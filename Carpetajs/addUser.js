@@ -23,38 +23,59 @@ function crear(){
     alert("Debes aceptar los términos y condiciones.");
   }else{
     pass = btoa(pass);
-    var corr = false;
-    var usrid;
 
     var user = new Object();
+    user.cel = phone;
     user.nombre = nom;
-    user.phone = phone;
-    user.mail = email;
-    user.password = pass;
-    user.gender = gender;
+    user.email = email;
+    user.contraseña = pass;
     user.cumple = cumple;
-    user.img = "/images/logo/divinite3.png";
+    user.genero = gender;
+    user.foto_perfil = "/images/logo/divinite3.png";
+    var local = JSON.stringify(user);
 
-    fetch('../CarpetaJson/users.json')  //link para el GET de todos los usuarios
+    fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
         usuarios.forEach(usuario => {
           if(usuario != null){
-            if(usuario.email === user.mail){
-              corr = true;
+            if(usuario.email === user.email){
+              alert("correo con cuenta ya registrada");
             }
           }
         });
-        if(corr){
-          alert("Cuenta con correo ya existente.");
-        }else{
-          var local = JSON.stringify(user);
-          //fetch('localhost:8080/ApiRest/User/add') //link para el POST de un usuario
-          //sessionStorage.setItem("j", );
-          alert("Cuenta creada satisfactoriamente");
-          location.href ="/PaginasHTML/usuarioLogeado.html";
-        }
+        return false
     })
     .catch(error => console.log('Hubo un error : ' + error.message))
+
+    //var local = JSON.stringify(user);
+    //sessionStorage.setItem("j", );
+    /*alert("Cuenta creada satisfactoriamente");
+    location.href ="/PaginasHTML/usuarioLogeado.html";*/
+
+    // Ejemplo implementando el metodo POST:
+    /*async function postData(url = 'http://localhost:8080/ApiRest/User', data = {}) {
+    // Opciones por defecto estan marcadas con un *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'no-cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin,  strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    postData('http://localhost:8080/ApiRest/User', { local })
+    .then(data => {
+      console.log(data); // JSON data parsed by `data.json()` call
+    });*/
+
   }
 }
