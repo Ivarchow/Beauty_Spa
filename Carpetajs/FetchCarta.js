@@ -50,13 +50,13 @@ async function countServicesLenght() {
             if (Products.categoria == "nails") {
                 Servicio1++;
             }
-            if (Servicios.categoria == "Cuidado de la piel") {
+            if (Products.categoria == "Cuidado de la piel") {
                  Servicio2++;
             }
-            if (Servicios.categoria == "Pestañas y cejas") {
+            if (Products.categoria == "Pestañas y cejas") {
                  Servicio3++;
             }
-            if (Servicios.categoria == "Faciales") {
+            if (Products.categoria == "Faciales") {
                  Servicio4++;
             }
             // if (Servicios.categoria == "Pedicure y manicure") {
