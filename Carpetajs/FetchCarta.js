@@ -445,6 +445,13 @@ function displayCart(){
 
         `
         <tr style="bottom: 5%;">
+        <td>
+        
+        <div>
+        <button class="btn eliminar" style="background-color: red" type="button"><h3 style="color: white">Eliminar</h3></button>
+      </div>
+
+        </td>
         <td style="width: 25%;">
 
 
@@ -495,19 +502,14 @@ function displayCart(){
               <option value="18:00">
               <option value="18:30">                         
             </datalist>
-            <div>
-            <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
-          </div>
         </div>
+
+        <div>
+        <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
+      </div>
+
+
       </form>
-
-        </td>
-
-
-        <td >
-
-
-
 
 
         </td>
@@ -556,12 +558,16 @@ function displayCart(){
     }
 }
 function clickborrar(){
-    let btnBorrar = document.querySelectorAll(".borrar");
+    let btnBorrar = document.querySelectorAll(".eliminar");
 for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
     btnBorrar[varCtlrClick].addEventListener('click',()=>{
-        localStorage.clear();
-        alert("se han borrado todos lo servcios");
-        location.reload();
+        let cartItems = localStorage.getItem("serviciosencarrito");
+        cartItems = JSON.parse(cartItems);
+        let obj = Object.values(cartItems)[varCtlrClick];
+        console.log(obj);
+        // localStorage.clear();
+        // alert("se han borrado todos lo servcios");
+        // location.reload();
     });
      
 }
