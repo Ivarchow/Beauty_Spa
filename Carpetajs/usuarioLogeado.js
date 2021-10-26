@@ -1,25 +1,25 @@
 let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
-  fetch('../CarpetaJson/users.json') //link para el GET de todos los usuarios
+  fetch('http://localhost:8080/ApiRest/User') //link para el GET de todos los usuarios
   .then(respuesta => respuesta.json())
   .then(usuarios => {
     var usr = usuarios[j-1];
     var generoso;
-    if(usr.gender == "Mujer"){
+    if(usr.genero == "Mujer"){
       generoso = 1;
-    }if(usr.gender == "Hombre"){
+    }if(usr.genero == "Hombre"){
       generoso = 2;
-    }if(usr.gender == "Otr@"){
+    }if(usr.genero == "Otr@"){
       generoso = 3;
     }
     document.getElementById("validationDefault01").value = usr.nombre;
     document.getElementById("validationDefault03").value = usr.cumple;
-    document.getElementById("validationDefault04").value = usr.phone;
+    document.getElementById("validationDefault04").value = usr.cel;
     document.getElementById("validationDefault05").value = usr.email;
     document.getElementById("dropGenero").value = generoso;
-    document.getElementById("validationDefault06").value = atob(usr.pass);
-    document.getElementById("imagen").innerHTML = `<img src="`+usr.img+`" alt="" id="photo">`;
+    document.getElementById("validationDefault06").value = usr.contraseña//atob(usr.pass);
+    document.getElementById("imagen").innerHTML = `<img src="`+usr.foto_perfil+`" alt="" id="photo">`;
   });
 })();
 
