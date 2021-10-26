@@ -15,7 +15,7 @@ html, body{
   flex-grow:1
 }
 .grid{
-  grid-template-rows: 60px auto auto;
+  grid-template-rows:  60px auto 60px;
   display: grid;
   height: 100%;
   width: 100%;
@@ -31,7 +31,8 @@ html, body{
 /* ingresar codigo del contact */
 .footer{
   grid-row: 3;
-  height: auto;
+  display: grid; 
+  height: 100%;
 }
 /* ingresar codigo del contenido */
 .content{
