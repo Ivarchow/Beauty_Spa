@@ -12,24 +12,24 @@
   background: #fa4299;
   color: #fff;
 }
-.navbar{
+.navbarr{
   z-index: 5;
   position: sticky;
   top: 0;
 }
-.header {
-  background-color: rgba(0, 0, 0, 0.842) ;
+.headerr {
+  background-color: rgb(0, 0, 0) ;
   padding: 10px 20px 10px 20px;
   color: white;
   align-self: center;
 }
 
-.header-top {
+.headerr-top {
   display: flex;
   justify-content: space-between;
 }
 
-.navbar > .nav-header > .LogoEmpresa {
+.navbarr > .navr-header > .LogoEmpresa {
   display: inline-block;
   padding: 10px 0px 10px 0px;
   color: white;
@@ -54,25 +54,25 @@
   font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
 }
-/* .navbar a:hover {
+.navbarr a:hover {
   font-size: 17px;
   color: #FFCCD3;
-} */
+}
 .fas{
   font-size: 22px;
   color: white;
   cursor: pointer;
 }
-/* .fas:hover{
+.fas:hover{
   color: #FFCCD3;
-} */
+}
 
 
-.header-btn {
+.headerr-btn {
   font-size: 20px;
 }
 
-.header-menu {
+.headerr-menu {
   display: none;
   animation: header_menu_active 2s;
 }
@@ -93,7 +93,7 @@
   }
 }
 
-.header-menu ul {
+.headerr-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -109,21 +109,21 @@
   font-family: 'Montserrat';
 }
 
-.header-menu a {
+.headerr-menu a {
   color: white;
   text-decoration: none;
 }
 
 @media screen and (max-width: 400px) {
-  .navbar{
+  .navbarr{
     height: 70px;
     padding: 0;
   }
-  .navbar > .nav-header > .LogoEmpresa {
+  .navbarr > .nav-headerr > .LogoEmpresa {
     padding: 0;
     margin: 0;
   }
-  .header-top {
+  .headerr-top {
     margin: 0;
   }
   .LogoEmpresa{

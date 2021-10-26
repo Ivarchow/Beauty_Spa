@@ -14,20 +14,58 @@ html, body{
 }
 
 /* ingresar codigo del contenido */
+
 .ContenidoControl{
-    height: 100%;
+height: 100%;
 }
-.NavCambio{
-    margin-bottom: 3rem;
+.Titulito{
+margin-bottom: 2rem;
 }
-.disñoNavBar{
-    color: #644747;
-    font-size: 20px;
+.Titulito button{
+color: #644747;
+font-size: 1.2rem;
+font-weight: 600;
 }
-.disñoNavBar:hover{
-    color: #AA3053;
+.Titulito button:hover{
+color: #AA3053;
 }
-.tab-pane{
-    margin-left: 2rem;
-    margin-right: 2rem;
+.tabpane1{
+margin-left: 2rem;
+margin-right: 2rem;
+}
+/* //////////// */
+.Titulito2{
+margin-bottom: 2rem;
+}
+.Titulito2 button{
+color: #644747;
+font-size: 1rem;
+font-weight: 600;
+}
+.Titulito2 button:hover{
+color: #AA3053;
+}
+/* //////////// */
+.ContenedorAS{
+padding-left: 1rem;
+}
+.AST1{
+padding-top: 8px;
+font-weight: 500;
+}
+.AST2 .AST3 .AST4 .AST5 .AST6{
+padding-top: 4px;
+font-weight: 500;
+}
+
+
+.ContenedorAS2{
+border: 3px solid #644747 ;
+border-radius: .5rem;
+min-height: 40rem;
+max-height: auto ;
+}
+.ASBtn button{
+background-color:  #AA3053;
+border: none;
 }

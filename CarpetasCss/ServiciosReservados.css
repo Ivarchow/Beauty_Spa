@@ -1,3 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+html, body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+.grid{
+  grid-template-rows: 60px auto auto;
+  display:grid;
+  height: 100%;
+  width: 100%;
+}
+.navbar{
+  grid-row: 1;
+}
+.foo{
+  grid-row: 3;
+  height: auto;
+}
+.contenido{
+  grid-row: 2;
+  display: grid;
+  min-height: 1000px;
+}
+
+
 /* pagina carrito */
 
 .precioTotal{
@@ -6,3 +41,4 @@
   margin-left: 50%;
   margin-bottom: 100000%;
 }
+

@@ -62,25 +62,25 @@
 
 <div class="ContenidoControl">
     <!--NAVEGACION-->
-    <nav>
+    <nav class="Titulito">
         <div class="nav nav-tabs NavCambio" id="nav-tab" role="tablist" style="justify-content: space-around; margin-top: 2%;">
 
-            <button class="nav-link active disñoNavBar" id="nav-home-tab" data-bs-toggle="tab"
+            <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
                 data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
                 aria-selected="true">Servicios</button>
 
-            <button class="nav-link disñoNavBar" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+            <button class="nav-link " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                 type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Añadir Servicio</button>
 
-            <button class="nav-link disñoNavBar" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
+            <button class="nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
                 type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Añdir Usuario</button>
 
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
         <!--SERVICIO-->
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="overflow-auto" style="height: 540px;">
+        <div class="tabpane1 tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="overflow-auto" style="height: 800px;">
             <table class="table table-hover" id="Tabla-Usuarios" style="width: 96%; text-align: center; margin: auto;">
                 <thead>
                     <tr>
@@ -109,12 +109,12 @@
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
             <!-- Inicio CRUD Servicios -->
             <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist"
+                <div class="Titulito2 nav nav-tabs" id="nav-tab" role="tablist"
                     style="justify-content: space-around; margin-top: 2%;">
-                    <button class="nav-link active disñoNavBar" id="nav-home-tab" data-bs-toggle="tab"
+                    <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-home1" type="button" role="tab" aria-controls="nav-home"
                         aria-selected="true">Añadir Servicios</button>
-                    <button class="nav-link disñoNavBar" id="nav-profile-tab" data-bs-toggle="tab"
+                    <button class="nav-link " id="nav-profile-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-profile1" type="button" role="tab" aria-controls="nav-profile"
                         aria-selected="false">Editar Servicio</button>
                 </div>
@@ -125,58 +125,58 @@
                 <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-4 ContenedorAS">
                                 <!-- Inicio del form addServices -->
                                 <form>
                                     <div class="mb-3">
-                                        <label for="exampleInputName" class="form-label">Nombre del producto:</label>
+                                        <label for="exampleInputName" class="form-label AST1">Nombre del producto:</label>
                                         <input type="text" class="form-control" id="exampleInputName"
                                             placeholder="Ingrese el nombre del producto" autofocus>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputClas" class="form-label">Clasificación:</label>
+                                        <label for="exampleInputClas" class="form-label AST2">Clasificación:</label>
                                         <input type="text" class="form-control" id="exampleInputClas"
                                             placeholder="Clasificación del producto" autofocus>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputDescription" class="form-label">Descripción del
+                                        <label for="exampleInputDescription" class="form-label AST3">Descripción del
                                             producto:</label>
                                         <input type="text" class="form-control" id="exampleInputDescription"
                                             placeholder="Descripción">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleImputDuration" class="form-label">Duración:</label>
+                                        <label for="exampleImputDuration" class="form-label AST4">Duración:</label>
                                         <input type="text" class="form-control" id="exampleImputDuration"
                                             placeholder="Duración en minutos (e.j. 60)">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputPrice" class="form-label">Costo:</label>
+                                        <label for="exampleInputPrice" class="form-label AST5">Costo:</label>
                                         <input type="text" class="form-control" id="exampleInputPrice"
                                             placeholder="Costo del producto (e.j. 270)">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputImage" class="form-label">Imagen:</label>
+                                        <label for="exampleInputImage" class="form-label AST6">Imagen:</label>
                                         <input type="text" class="form-control" id="exampleInputImage"
                                             placeholder="Link de la imagen">
                                     </div>
-                                    <div class="mb-3">
-                                        <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                            id="Crear">create</button>
-                                        <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                            id="eliminar">delete</button>
+                                    <div class="mb-3 ASBtn">
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="Crear">Crear</button>
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="eliminar">Eliminar</button>
                                     </div>
-                                    <div class="mb-3">
-                                        <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                            id="mostrar">show</button>
-                                        <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                            id="ocultar">hide</button>
+                                    <div class="mb-3 ASBtn">
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="mostrar">Mostrar</button>
+                                        <button type="button" class="btn ASBtn btn-primary col-md-5 col-sm-12 col-xs-12"
+                                            id="ocultar">Ocultar</button>
                                     </div>
                                 </form>
                                 <!-- Fin del form addServices -->
                             </div>
                             <div class="col-8">
                                 <!--  div to show the cards -->
-                                <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+                                <div class="container ContenedorAS2" style="margin-top: 20px; margin-bottom: 20px;">
                                     <div class="row row-cols-1 row-cols-md-2 g-4"
                                         style=" max-height: 550px; width: 98%; margin-left: 1%; margin-right: 1%; overflow-y: scroll;"
                                         id="list-items">
@@ -205,9 +205,9 @@
                                                 <input type="text" class="form-control col-md-5" id="searchService"
                                                     placeholder="ID del servicio" style="margin-top: 0;">
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-5 ASBtn">
                                                 <button type="button" class="btn btn-primary"
-                                                    id="buscar">search</button>
+                                                    id="buscar">Buscar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -242,16 +242,16 @@
                                         <input type="text" class="form-control" id="exampleInputImage1"
                                             placeholder="Link de la imagen">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 ASBtn">
                                         <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
-                                            id="editar">edit</button>
+                                            id="editar">Editar</button>
                                     </div>
                                 </form>
                                 <!-- Fin del form EditServices -->
                             </div>
                             <div class="col-8">
                                 <!--  div to show the cards -->
-                                <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+                                <div class="container ContenedorAS2" style="margin-top: 20px; margin-bottom: 20px;">
                                     <div class="row row-cols-1 row-cols-md-2 g-4"
                                         style=" max-height: 550px; width: 98%; margin-left: 1%; margin-right: 1%; overflow-y: scroll;"
                                         id="list-items1">
@@ -273,7 +273,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 ASBtn">
 
                         <form>
 
@@ -303,7 +303,7 @@
                         </form>
                     </div>
 
-                    <div class="col-8">
+                    <div class="col-8 ContenedorAS2">
                     </div>
                 </div>
             </div>
