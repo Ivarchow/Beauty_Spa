@@ -32,9 +32,10 @@ function crear(){
     user.cumple = cumple;
     user.genero = gender;
     user.foto_perfil = "/images/logo/divinite3.png";
-    var local = JSON.stringify(user);
+    user.fecha_registro = "2021-10-26 00:00:00";
+    //var local = JSON.stringify(user);
 
-    fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
+    /*fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
         usuarios.forEach(usuario => {
@@ -46,36 +47,22 @@ function crear(){
         });
         return false
     })
-    .catch(error => console.log('Hubo un error : ' + error.message))
+    .catch(error => console.log('Hubo un error : ' + error.message))*/
 
     //var local = JSON.stringify(user);
     //sessionStorage.setItem("j", );
     /*alert("Cuenta creada satisfactoriamente");
     location.href ="/PaginasHTML/usuarioLogeado.html";*/
 
-    // Ejemplo implementando el metodo POST:
-    /*async function postData(url = 'http://localhost:8080/ApiRest/User', data = {}) {
-    // Opciones por defecto estan marcadas con un *
-    const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'no-cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      headers: {
+    fetch("http://localhost:8080/ApiRest/User", {
+      method: 'POST', // or 'PUT'
+      mode: 'no-cors',
+      body: JSON.stringify(user), // data can be `string` or {object}!
+      headers:{
         'Content-Type': 'application/json'
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin,  strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
-    });
-    return response.json(); // parses JSON response into native JavaScript objects
-    }
-
-    postData('http://localhost:8080/ApiRest/User', { local })
-    .then(data => {
-      console.log(data); // JSON data parsed by `data.json()` call
-    });*/
-
+      }
+    }).then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
   }
 }
