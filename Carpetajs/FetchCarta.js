@@ -40,7 +40,7 @@ async function countServicesLenght() {
 
     try {
         let Servicio1 = 0, Servicio2 = 0, Servicio3 = 0, Servicio4 = 0, Servicio5 = 0, Servicio6 = 0, Servicio7 = 0, Servicio8 = 0;
-        const respuestaServicios = await fetch("http://localhost:3000/Servicios");
+        const respuestaServicios = await fetch("/CarpetaJson/db.json");
         const jsonServicios = await respuestaServicios.json();
         const lengthServicios = await jsonServicios.length;
         console.log(lengthServicios);
@@ -124,24 +124,24 @@ function getCartas(){
         
         for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
     
-        fetch(URLS[varCtrlFetch])
+        fetch("/CarpetaJson/db.json")
         .then(response => response.json())
         .then(Servicios =>{
     
-                if(Servicios.Categoria=="Unas"){
+                if(Servicios[varCtrlFetch].Categoria=="Unas"){
                     let elemento = document.getElementById(arrIds[varCtlrCards]);
                     elemento.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios.titulo+'</h1>\n' +
-                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
+                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios.duracion+'$</p>\n' +
-                                '<p>'+Servicios.Descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'$</p>\n' +
+                                '<p>'+Servicios[varCtrlFetch].Descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
