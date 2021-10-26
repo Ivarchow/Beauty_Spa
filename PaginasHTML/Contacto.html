@@ -141,13 +141,14 @@ for (i = 0; i < acc.length; i++) {
 
 
 <div class="space6">
+  <form method="POST" class="contact-form">
   <input name="name" type="text" id="name"  placeholder="Nombre" required>
 </div><!-- space6 -->
 <div class="space7">
   <input name="email" type="email" id="email"  placeholder="Email" required>
 </div><!-- space7 -->
 <div class="space8">
-  <textarea name="message" id="message" placeholder="Escribe aqui tus comentarios... :)" required></textarea>
+  <textarea name="message" id="message" placeholder="Escribe aquí tus comentarios... :)" required></textarea>
 </div><!-- space8 -->
 <div class="space9">
  <button class="send" type="button" value="Send Email" onclick='sendEmail()'>Enviar</button>
@@ -159,9 +160,8 @@ for (i = 0; i < acc.length; i++) {
   <div class="alert alert-danger" role="alert" id="alert" hidden>
     ¡Error! Favor de llenar correctamente los campos
   </div>
+</form>
 </div><!-- space10 -->
-
-
 
 
 
