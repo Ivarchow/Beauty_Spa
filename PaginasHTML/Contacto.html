@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-BuzonSugerencias</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CarpetasCss/ContactoEmail.css" type="text/css">
+    <link rel="stylesheet" href="/CarpetasCss/navbar.css">
+    <link rel="stylesheet" href="/CarpetasCss/footer.css">
+    <!-- Bootstrap -->
+
+    <!-- Logocabecera -->
+    <link rel="shortcut icon" href="/Imagenes/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid">
+ <!--Navbar!-->
+ <!-- ingresar codigo de navbar  -->
+ <div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITÉ</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2">
+          <a class="active" href="ServiciosReservados.html"></a><i class="fas fa-shopping-bag"></i></a>
+          <span></span>
+          <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
+    </div>
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inicio</a></li>
+        <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div>
+<!-- navbar -->
+<!--End Navbar!-->
+  
+  <!-- codigo de buzon -->
+  <div class="content">
+    
+    <div class="space1">
+      <div class="logo"></a><img src="/images/logo/image2.png" alt=""></a></div>
+  </div><!-- space1 -->
+
+  <div class="space2">
+    <p>FAQ</p>
+  </div><!-- space2 -->
+
+  <!--INICIO DE ACORDEÓN-->
+  <div class="space3">
+    <button class="accordion">¿Es accesible para personas en silla de ruedas?</button>
+    <div class="panel">
+      <span></span>
+      <p>Sí, nuestras instalaciones cuentan con rampa en la zona de entrada, así como espacios amplios dentro de las mismas.</p>
+      <span></span>
+    </div>
+    <button class="accordion">¿Es seguro ir en pandemia?</button>
+    <div class="panel">
+      <span></span>
+      <p>Sí, contamos con todos los protocolos establecidos con el fin de que nuestros socios tengan una experiencia segura y placentera.</p>
+      <span></span>
+    </div>
+    <button class="accordion">¿Aceptan pagos con tarjeta de crédito?</button>
+    <div class="panel">
+      <span></span>
+      <p>Aceptamos tarjetas de crédito y débito VISA y MasterCard.</p>
+      <span></span>
+    </div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</div><!-- space3 -->
+
+  <div class="space4">
+    <p>Buzón de sugerencias</p>
+  </div><!-- space4 -->
+
+  <div class="space5"> 
+    <div class="buzonmensaje">
+      <h3>Queremos saber de ti</h3>
+      <br>
+      <p>Cuéntanos tus experiencias, déjanos tus datos de contacto y nosotros nos comunicamos contigo.
+      </p>
+    </div><!-- fcmensaje -->
+</div><!-- space5 -->
+
+
+
+
+<div class="space6">
+  <input name="name" type="text" id="name"  placeholder="Nombre" required>
+</div><!-- space6 -->
+<div class="space7">
+  <input name="email" type="email" id="email"  placeholder="Email" required>
+</div><!-- space7 -->
+<div class="space8">
+  <textarea name="message" id="message" placeholder="Escribe aqui tus comentarios... :)" required></textarea>
+</div><!-- space8 -->
+<div class="space9">
+ <button class="send" type="button" value="Send Email" onclick='sendEmail()'>Enviar</button>
+</div><!-- space9 -->
+<div class="space10">
+  <div class="alert alert-success" role="alert" id="goodAlert" hidden>
+    ¡Mensaje enviado!
+  </div>
+  <div class="alert alert-danger" role="alert" id="alert" hidden>
+    ¡Error! Favor de llenar correctamente los campos
+  </div>
+</div><!-- space10 -->
+
+
+<form method="POST" class="contact-form">
+
+  <p class="block"><!--Contenedor para nombre-->
+      <input name="name" type="text" id="name"  placeholder="Ingresa tu nombre" required>
+  </p>
+
+  <p class="block"><!--Contenedor para mail-->
+      <input name="email" type="email" id="email"  placeholder="Ingresa tu email" required>
+  </p>
+
+  <p class="block"><!--Contenedor para mensaje-->
+  <textarea name="message" id="message" cols="" rows="2" placeholder="Escribe tu mensaje" required></textarea>
+</p> 
+
+
+
+
+
+  <div class="block2">
+
+    <button type="button"  value="Send Email" onclick='sendEmail()'   ><a href="#bag" class="flecha"></a><i class="cp cp-arrow-right"></i> </button>
+
+  </div>
+</div>
+<div class="alert alert-success" role="alert" id="goodAlert" hidden>
+  ¡Mensaje enviado!
+</div>
+<div class="alert alert-danger" role="alert" id="alert" hidden>
+  Error, favor de llenar correctamente los campos
+</div>
+
+</form>
+
+
+
+<div class="space11"> 
+  <p>Siguenos en redes sociales</p> 
+</div><!-- space11 -->
+<div class="space12"> 
+  <i class="fab fa-facebook-square"></i>
+  <i class="fab fa-instagram"></i>
+</div><!-- space13 -->
+<div class="spacespace"> 
+<div class="space13"> 
+  <p>¿Todavia no creas tu cuenta?  ¡Que esperas!</p> 
+  <p>Crea tu perfil y mantente al dia con nuestras promociones y servicios </p> 
+</div><!-- space13 -->
+<div class="space14"> 
+  <a href="CrearCuenta.html"><button class="btn" type="button" id="crearcuenta">Crear cuenta</button></a>
+</div><!-- space14 -->
+</div><!-- spacespace -->
+<div class="space15"> 
+
+</div><!-- space15 -->
+
+  </div><!-- content -->
+
+<!-- ingresar codigo del contact -->
+<div class="footer">
+  <div class="foo1">
+  <div class="foo2">
+    <i class="fas fa-phone"></i>
+    <p> 83-8888-8888 </p>
+  </div><!-- foo2 -->
+  <div class="foo3">
+    <i class="fab fa-whatsapp"></i>
+    <p>  (+52) 81-4566-7890</p>
+  </div><!-- foo3 -->
+  <div class="foo4">
+    <i class="fas fa-envelope"></i>
+    <p> email@divinite.com</p>
+  </div><!-- foo4 --></div><!-- foo1 -->
+  <div class="foo5">
+  <div class="foo6">
+    <a href="emailPrueba.html"> Buzón de sugerencias</a>
+  </div><!-- foo6 -->
+  <div class="foo7">
+    <p>(c) DIVINITÉ Guadalajara</p>
+  </div><!-- foo7 -->
+  <div class="foo8">
+    <a href="AvisoDePrivasidad.html"> Política de Privacidad </a>
+    <span></span>
+    <p>  |  </p>
+    <span></span>
+    <a href="emailPrueba.html"> FAQs </a>
+  </div><!-- foo8 --></div><!-- foo5 -->
+</div><!-- footer -->
+  </div><!-- grid -->
+
+  <!--Scripts-->
+
+  </body>
+  </html>

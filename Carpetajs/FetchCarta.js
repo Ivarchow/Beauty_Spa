@@ -20,6 +20,7 @@ let retardoFetchCartas = setTimeout(()=>{
     cargaDeReservacion();
     displayCart();
     clickborrar();
+    btnReservar();
     clearTimeout(retardoFetchCartas);
 },1500)  
 
@@ -472,14 +473,14 @@ function displayCart(){
 
         <td>
         
-        <form style=" margin: auto;">
+        <form role="form" onsubmit="dateAndTimeSelect(event);" style=" margin: auto;">
         <div class="mb-3" style="margin: auto; width: 280px;">
           <label>Fecha</label>
-          <input type="date" name="fecha" step="1" class="form-control form-control-lg"/>
+          <input type="date" name="selectfecha" id="selectfecha" step="1" class="form-control form-control-lg" required/>
         </div>
         <div class="mb-3" >
           <label>Hora: <br>
-            <input list="horarioCita" name="Hora" class="form-control form-control-lg"/></label>
+            <input list="horarioCita" name="selecthora" id="selecthora" class="form-control form-control-lg" required/></label>
             <datalist id="horarioCita">
               <option value="9:00">
               <option value="9:30">
@@ -505,7 +506,7 @@ function displayCart(){
         </div>
 
         <div>
-        <button class="btn" style="background-color: #AB3053" type="button"><h3 style="color: white">Reservar</h3></button>
+        <button class="btn almacenar" style="background-color: #AB3053" type="submit"><h3 style="color: white">Reservar</h3></button>
       </div>
 
 
@@ -573,5 +574,31 @@ for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
 }
 }
 
+//const dateAndTimeSelect = e => {
+//    let formReservar = {
+//        selectfecha: document.getElementById('selectfecha').value,
+//        selecthora: document.getElementById('selecthora').value
+/*    }
+    localStorage.setItem('formReservar',JSON.stringify(formReservar));
+    console.log(localStorage.getItem('formReservar'));
+    e.preventDefault();
+}*/
 
+function btnReservar(){
+    let reservarServicio = document.querySelectorAll('.almacenar');
+    let reservarServicio1 = document.querySelectorAll('#selectfecha');
+    let reservarServicio2 = document.querySelectorAll('#selecthora');
 
+    for (let i = 0; i < reservarServicio.length; i++){
+        reservarServicio[i].addEventListener('click', e=>{
+
+            let formReservar = {
+                selectfecha: reservarServicio1[i].value,
+                selecthora: reservarServicio2[i].value
+            }
+            localStorage.setItem('formReservar',JSON.stringify(formReservar));
+            console.log(localStorage.getItem('formReservar'));
+            e.preventDefault();
+        } )
+    }
+}
