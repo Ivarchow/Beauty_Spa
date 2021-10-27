@@ -104,47 +104,40 @@ window.onload = () => {
   }
   
   function editar(){
-    let cambio = document.getElementById("searchService").value;
+    let cambio = Number(document.getElementById("searchService").value);
     let name = document.getElementById("exampleInputName1").value;
     let desc = document.getElementById("exampleInputDescription1").value;
-    let pri = document.getElementById("exampleInputPrice1").value;
+    let pri = Number(document.getElementById("exampleInputPrice1").value);
     let ima = document.getElementById("exampleInputImage1").value;
-    let dur = document.getElementById("exampleImputDuration1").value;
+    let dur = Number(document.getElementById("exampleImputDuration1").value);
     let clasi = document.getElementById("exampleInputClas1").value;
-    
-    /*for(let cont=0; cont<i; cont++){
-      let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-      if(service != null){
-        if(service.id == cambio){
-          let nom = name;
-          let text = desc;
-          let pre = Number(pri);
-          let imgn = ima;
-          let duracion = Number(dur);
-          let clasifi = clasi;
-    
-          if(nom == "" && pre == "" && text == "" && imgn == "" && duracion == "" && clasi == ""){
-            alert("No puedes agregar tarjetas vacias.");
-          }else if(isNaN(pre) || isNaN(duracion)){
-            alert("Debes ingresar solo los números en el precio y la duración.");
-          }else{
-          var requisitos = new Object();
-          requisitos.id = cambio;
-          requisitos.nombre = nom;
-          requisitos.precio = pre;
-          requisitos.texto = text;
-          requisitos.img = imgn;
-          requisitos.duracion = duracion;
-          requisitos.clasification = clasifi;
-    
-          var local = JSON.stringify(requisitos);
-          localStorage.setItem(`servicios${cambio}`, local);
-          }
+
+    if(name == "" && pri == "" && desc == "" && ima == "" && dur == "" && clasi == ""){
+      alert("No puedes agregar tarjetas vacias.");
+    }else if(isNaN(pri) || isNaN(dur)){
+      alert("Debes ingresar solo los números en el precio y la duración.");
+    }else{
+      var service = new Object();
+      service.product_id = cambio;
+      service.nombre_servicio = name;
+      service.categoria_servicio = clasi;
+      service.descripcion = desc;
+      service.duracion_servicio = dur;
+      service.precio = pri;
+      service.img = ima;
+
+      fetch("http://localhost:8080/ApiRest/Products", {
+        method: 'PUT', // or 'POST'
+        body: JSON.stringify(service), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
         }
-      }
-    }*/
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => console.log('Success:', response));
+    }
     //ocultar1();
-    search(cambio);
+    //search(cambio);
   }
   
   function eliminar(){
