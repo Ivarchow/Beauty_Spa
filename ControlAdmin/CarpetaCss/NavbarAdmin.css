@@ -57,6 +57,17 @@
 .navbarr a:hover {
   color: #FFCCD3;
 }
+.iccon{
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: 10px;
+
+}
+.iccon:hover{
+  color: #FFCCD3;
+}
 .uil{
   font-size: 2rem;
   color: white;
@@ -67,6 +78,7 @@
 .uil:hover{
   color: #FFCCD3;
 }
+
 .headerr-btn {
   font-size: 20px;
 }
