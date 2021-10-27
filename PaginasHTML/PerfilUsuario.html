@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVINITE-CrearCuenta</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CarpetasCss/PerfilUsuario.css" type="text/css">
+    <link rel="stylesheet" href="/CarpetasCss/navbar.css">
+    <link rel="stylesheet" href="/CarpetasCss/footer.css">
+    <link rel="shortcut icon" href="/images/logo/image2.png">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Adding CSS stylesheet -->
+    <link rel="stylesheet" href="/CarpetasCss/usuarioLogeado.css">
+    <link rel="shortcut icon" href="/images/logo/image2.png">
+
+    <!-- <link rel="stylesheet" href="/CarpetasCss/Contacto.css"> -->
+    <link rel="stylesheet" href="/CarpetasCss/PaginaDeInicio.css"> 
+    <link rel="stylesheet" href="/CarpetasCss/Contacto.scss">
+    <script src="//pull.cappuccicons.com/cpf.js"></script>
+
+</head>
+<body>
+<div class="grid">   
+<!-- ingresar codigo de navbar  -->
+
+ <!--Navbar!-->
+ <div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITE</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2 bag">
+          <a class="active" href="/PaginasHTML/ServiciosReservados.html"><i class="fas fa-shopping-bag"> 
+            <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
+          </span></i></a>
+          <span></span>
+          <a class="active" href="#"></a><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
+    </div>
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+        <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesion</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbar -->
+<!--End Navbar!-->
+
+
+
+
+<div class="content">
+<div class="box1">
+  <a>Perfil</a>
+</div><!-- box1 -->
+
+<!--Foto de perfil-->
+
+<!--Foto de perfil-->
+
+<div class="box3">
+<input type="text" id="InputName editor" placeholder="Nombre y Apellido" contenteditable="true" required> 
+</div><!-- box3 -->
+<div class="box4">
+  <input type="tel" id="InputPhone editor" placeholder="Telefono" title="Un número de teléfono válido debe tener 10 dígitos" required> 
+</div><!-- box4 -->
+<div class="box5">
+<input type="email" id="InputEmail editor" name="emails" multiple placeholder="E-mail" required>  
+</div><!-- box5 -->
+<div class="box6">
+<input type="text" id="InputBirth editor" id="validationDefault03" placeholder="Fecha de nacimiento" required> 
+
+</div><!-- box6 -->
+<div class="box7">
+  
+  <select type="text" id="InputGender editor" list="listgender" placeholder="Genero" required> 
+  
+  <option label="Mujer" value="Mujer">
+  <option label="Hombre" value="Hombre">
+  <option label="Otr@" value="Otr@">
+  </select>
+
+</div><!-- box7 -->
+<div class="box8">
+<a>Servicios favoritos</a>
+</div><!-- box8 -->
+<div class="box9">
+  <a>Porfavor seleccione los servicios de los cuales le gustaria mantenerse informado de promociones.</a>
+</div><!-- box9 -->
+<div class="box10">
+
+  <ul class="ks-cboxtags">
+    <li><input type="checkbox" id="checkboxOne" value="Masajes"><label for="checkboxOne">Masajes</label></li>
+
+    <li><input type="checkbox" id="checkboxTwo" value="Uñas"><label for="checkboxTwo">Uñas</label></li>
+
+    <li><input type="checkbox" id="checkboxThree" value="Cejas"><label for="checkboxThree">Cejas</label></li>
+
+    <li><input type="checkbox" id="checkboxFour" value="Limpieza"><label for="checkboxFour">Limpieza</label></li>
+
+    <li><input type="checkbox" id="checkboxFive" value="Maquillaje"><label for="checkboxFive">Maquillaje</label></li>
+
+    <li><input type="checkbox" id="checkboxSix" value="Pestañas"><label for="checkboxSix">Pestañas</label></li>
+
+    <li><input type="checkbox" id="checkboxSeven" value="Peinados"><label for="checkboxSeven">Peinados</label></li>
+
+    <li><input type="checkbox" id="checkboxEight" value="Piel"><label for="checkboxEight">Piel</label></li>
+
+    <li><input type="checkbox" id="checkboxNine" value="Eventos"><label for="checkboxNine">Eventos</label></li>
+  </ul>
+
+</div><!-- box10 -->
+<div class="box11">
+  <button id="editorBtn" type="button">Editar</button>
+</div><!-- box11 -->
+<div class="box12">
+
+</div><!-- box12 -->
+
+</div><!-- content -->
+
+  <!-- ingresar codigo del contact -->
+  <div class="footer">
+    <div class="foo1">
+    <div class="foo2">
+      <i class="fas fa-phone"></i>
+      <p> 83-8888-8888 </p>
+    </div><!-- foo2 -->
+    <div class="foo3">
+      <i class="fab fa-whatsapp"></i>
+      <p>  (+52) 81-4566-7890</p>
+    </div><!-- foo3 -->
+    <div class="foo4">
+      <i class="fas fa-envelope"></i>
+      <p> email@divinite.com</p>
+    </div><!-- foo4 --></div><!-- foo1 -->
+    <div class="foo5">
+    <div class="foo6">
+      <a href="emailPrueba.html"> Buzon de sugerencias</a>
+    </div><!-- foo6 -->
+    <div class="foo7">
+      <p>(c) DIVINITE Guadalajara</p>
+    </div><!-- foo7 -->
+    <div class="foo8">
+      <a href="AvisoDePrivasidad.html"> Politica de Privacidad </a>
+      <span></span>
+      <p>  |  </p>
+      <span></span>
+      <a href="emailPrueba.html"> FAQs </a>
+    </div><!-- foo8 --></div><!-- foo5 -->
+  </div><!-- footer -->
+
+
+</div><!-- grid -->
+
+<!-- Codigo para editar contenido -->
+<script>
+var editorBtn = document.getElementById('editorBtn');
+	var element = document.getElementById('editor');
+
+	editorBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  if (element.isContentEditable) {
+    // Disable Editing
+    element.contentEditable = 'false';
+    editorBtn.innerHTML = 'Editar';
+    // You could save any changes here.
+  } else {
+    element.contentEditable = 'true';
+    editorBtn.innerHTML = 'Guardar';
+  }
+	});
+</script>
+
+</body>
+
+</html>

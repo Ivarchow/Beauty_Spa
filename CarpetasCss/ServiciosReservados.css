@@ -10,7 +10,7 @@
 }
 html, body{
   display: grid;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 .grid{
@@ -21,17 +21,25 @@ html, body{
 }
 .navbar{
   grid-row: 1;
+  display: grid;
+
 }
 .foo{
   grid-row: 3;
   height: auto;
+  margin-bottom: 0;
+  display: grid;
+
 }
 .contenido{
   grid-row: 2;
   display: grid;
-  min-height: 1000px;
+  height: auto;
 }
-
+.datos{
+  display: grid;
+  height: 100%;
+}
 
 /* pagina carrito */
 
