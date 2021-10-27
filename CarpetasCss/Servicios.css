@@ -1,4 +1,7 @@
-
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -9,8 +12,48 @@ body {
   line-height: 1.6;
   font-family: 'Quicksand', sans-serif;
   padding: 0 ;
+
+  display: grid;
+  height: 100%;
+  width: 100%;
 }
 
+.grid{
+  grid-template-rows: 60px auto auto;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  min-height: 1000px;
+}
+/* ingresar codigo de navbar */
+.navbarr{
+  grid-row: 1;
+  background:#000000;
+  display: grid; 
+  color: white;
+}
+/* ingresar codigo del contact */
+.FOO{
+  grid-row: 3;
+  display: grid;
+  height: 100%;
+  margin-bottom: 0;
+}
+/* ingresar codigo del contenido */
+.content{
+  grid-row: 2;
+  display: grid; 
+
+  height: auto;
+
+}
+
+
+
+
+
+
+/* ------------------ */
 .linea {
   border-top: 2px solid #634646;
   height: 1px;
@@ -29,8 +72,11 @@ body {
   color: #aa3053;
   font-weight: bold;
   font-size: 45px;
-
+  margin: 20px;
+height: fit-content;
 }
+
+
 
 .tamañoimagenes{
   max-width: 100px;
@@ -195,6 +241,7 @@ fieldset[disabled] .btn-samplex.active {
     flex-wrap: wrap;
     margin-bottom: 50px;
     font-size: 13px;
+    max-height: 55px;
   }
   div.category_list a {
     display: inline-block;
@@ -306,82 +353,83 @@ fieldset[disabled] .btn-samplex.active {
 
 /*****************************CARTA SERVICIO IVAR*******************************************/
  *, *:before, *:after {
-	 box-sizing: border-box;
-	 outline: none;
+  box-sizing: border-box;
+  outline: none;
 }
- figure {
-	 position: relative;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 width: 375px;
-	 height: 550px;
-	 border-radius: 10px;
-	 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-	 overflow: hidden;
+figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
 }
- figure:hover {
-	 box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+figure:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
- figure:hover img {
-	 transform: scale(1.25);
+figure:hover img {
+  transform: scale(1.25);
 }
- figure:hover figcaption {
-	 bottom: 0;
-     height: 70%; /* tamaño del box de VER MAS*/
+figure:hover figcaption {
+  bottom: 0;
+    height: 70%; /* tamaño del box de VER MAS*/
 }
- figure h1 {
-	 position: absolute;
-	 top: 50px;
-	 left: 20px;
-	 margin-right: 5%;
-	 padding: 0;
-	 color: rgb(250, 250, 250);
-   background-color: #AA3053;
-	 font-size: 40px;
-	 font-weight: 900px;
-	 line-height: 1;
+figure h1 {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  margin-right: 5%;
+  padding: 0;
+  color: #644747;
+  background-color: #fff4f8d2;
+  font-size: 40px;
+  font-weight: 900px;
+  line-height: 1;
+  font-style: bold;
 }
- figure img {
-	 height: 100%;
-	 transition: 0.25s;
+figure img {
+  height: 100%;
+  transition: 0.25s;
 }
- figure figcaption {
-	 position: absolute;
-	 bottom: -58%;
-	 left: 0;
-	 width: 100%;
-	 margin: 0;
-	 padding: 30px;
-	 background-color: #AB3053;
-	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-	 color: white;
-	 line-height: 1;
-	 transition: 0.25s;
+figure figcaption {
+  position: absolute;
+  bottom: -58%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  background-color: #FFCCD3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: black;
+  line-height: 1;
+  transition: 0.25s;
 }
- figure figcaption h3 {
-	 margin: 0 0 40px;
-	 padding: 0;
+figure figcaption h3 {
+  margin: 0 0 40px;
+  padding: 0;
 }
- figure figcaption p {
-	 font-size: 25px;
-	 line-height: 1.2;
+figure figcaption p {
+  font-size: 25px;
+  line-height: 1.2;
 }
- figure figcaption button {
-	 position: relative;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 margin: 15px 0 0;
-	 padding: 10px 30px;
-	 background-color: #000000;
-	 border: none;
-	 border-radius: 5px;
-	 color: white;
-	 font-size: 30px;
+figure figcaption button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0 0;
+  padding: 10px 30px;
+  background-color: #644747  ;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 30px;
 }
- 
+
 .example {
   overflow-y: scroll; /* Add the ability to scroll */
 }
