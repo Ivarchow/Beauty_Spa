@@ -19,7 +19,7 @@ let j = sessionStorage.getItem("j");
     document.getElementById("validationDefault05").value = usr.email;
     document.getElementById("dropGenero").value = generoso;
     document.getElementById("validationDefault06").value = atob(usr.contraseña);
-    document.getElementById("imagen").innerHTML = `<img src="`+usr.foto_perfil+`" alt="" id="photo">`;
+    document.getElementById("photo").setAttribute('src',usr.foto_perfil);
   });
 })();
 
