@@ -1,7 +1,7 @@
 let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
-  fetch('http://localhost:8080/ApiRest/User') //link para el GET de todos los usuarios
+  fetch('http://localhost:8081/ApiRest/User') //link para el GET de todos los usuarios
   .then(respuesta => respuesta.json())
   .then(usuarios => {
     var usr = usuarios[j-1];
@@ -42,17 +42,20 @@ function guardarCambios(){
       genero = "Otr@";
     }
   let profile = new Object();
-  profile.id = j;
+  profile.cliente_id = 5;
+  profile.cel = phone;
   profile.nombre = name;
-  profile.phone = phone;
-  profile.mail = email;
-  profile.password = btoa(contra);
-  profile.gender = genero;
+  profile.email = email;
+  profile.contraseña = contra//btoa(contra);
   profile.cumple = birthdate;
-  profile.img = img;
-  var local = JSON.stringify(profile);
+  profile.genero = genero;
+  profile.foto_perfil = img;
+  profile.fecha_registro = "2021-10-26 00:00:00";
+  actualizardatos(profile);
+  // var local = JSON.stringify(profile);
   //localStorage.setItem(`usuario${j}`, local);
-  console.log(local);
+  // console.log(local);
+
 }
 
 //guardar / actualizar cambios
@@ -102,4 +105,16 @@ file.addEventListener('change',function(){
       if(show.type =='password'){show.type='text';}
       else{show.type='password';}
   }
+function actualizardatos(nuevainfo){
 
+  fetch("http://localhost:8081/ApiRest/User", {
+    method: 'PUT', // or 'PUT'
+    body: JSON.stringify(nuevainfo), // data can be `string` or {object}!
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+  .catch(error => console.error('Error:', error))
+  .then(response => console.log('Success:', response));
+
+}

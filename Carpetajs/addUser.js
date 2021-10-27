@@ -25,6 +25,7 @@ function crear(){
     pass = btoa(pass);
 
     var user = new Object();
+    user.cliente_id = 6;
     user.cel = phone;
     user.nombre = nom;
     user.email = email;
@@ -54,9 +55,8 @@ function crear(){
     /*alert("Cuenta creada satisfactoriamente");
     location.href ="/PaginasHTML/usuarioLogeado.html";*/
 
-    fetch("http://localhost:8080/ApiRest/User", {
+    fetch("http://localhost:8081/ApiRest/User", {
       method: 'POST', // or 'PUT'
-      mode: 'no-cors',
       body: JSON.stringify(user), // data can be `string` or {object}!
       headers:{
         'Content-Type': 'application/json'
