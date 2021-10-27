@@ -91,12 +91,25 @@
 
 
 /************************************ */
-var lastuser=0;
+var lastuser = Number(sessionStorage.getItem("last")) + 1;
 document.getElementById("Crear").addEventListener("click", main);
 
 function main(){
+  count();
   let usr = crear();
   emailp(usr);
+  //redirect();
+}
+
+function count(){
+  fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
+    .then(respuesta => respuesta.json()) 
+    .then(usuarios => {
+        usuarios.forEach(usuarios => {
+          sessionStorage.setItem("last", usuarios.cliente_id);
+        });
+    })
+    .catch(error => console.log('Hubo un error : ' + error.message))
 }
 
 function crear(){
@@ -124,7 +137,7 @@ function crear(){
     pass = btoa(pass);
 
     var user = new Object();
-    user.cliente_id =1;
+    user.cliente_id = lastuser;
     user.cel = phone;
     user.nombre = nom;
     user.email = email;
@@ -133,14 +146,13 @@ function crear(){
     user.genero = gender;
     user.foto_perfil = "/images/logo/divinite3.png";
     user.fecha_registro = "2021-10-26 00:00:00";
-    console.log("uno");
     return user;
   }
 }
 
 function emailp(user){
   let bandera;
-  fetch('http://localhost:8081/ApiRest/User')  //link para el GET de todos los usuarios
+  fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
         usuarios.forEach(usuarios => {
@@ -157,11 +169,10 @@ function emailp(user){
         }
     })
     .catch(error => console.log('Hubo un error : ' + error.message))
-    console.log("dos")
 }
 
 function adduser(user){
-  fetch("http://localhost:8081/ApiRest/User", {
+  fetch("http://localhost:8080/ApiRest/User", {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(user), // data can be `string` or {object}!
       headers:{
@@ -171,6 +182,8 @@ function adduser(user){
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
     sessionStorage.setItem("j", user.cliente_id);
-    location.href = "/PaginasHTML/usuarioLogeado.html";
-    console.log("tres");
 }
+
+/*function redirect(){
+  location.href = "/PaginasHTML/usuarioLogeado.html";
+}*/

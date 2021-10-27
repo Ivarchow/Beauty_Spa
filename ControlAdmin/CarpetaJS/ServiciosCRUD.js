@@ -1,19 +1,34 @@
 window.onload = () => {
-
-  if(localStorage.getItem("i") != 0){
-    if(localStorage.getItem("i") == null){
-      localStorage.setItem("i", 0);
-    }
-    i = localStorage.getItem("i");
-  }else{
-    i = 0;
-  }
   document.getElementById("Crear").addEventListener("click", crear);
   document.getElementById("mostrar").addEventListener("click", mostrar);
   document.getElementById("ocultar").addEventListener("click", ocultar);
   document.getElementById("editar").addEventListener("click", editar);
   document.getElementById("eliminar").addEventListener("click", eliminar);
   document.getElementById("buscar").addEventListener("click", buscar);
+  
+  function postmethod(service){
+    fetch("http://localhost:8080/ApiRest/Products", {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(service), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+  }
+
+  function putmethod(service){
+    fetch("http://localhost:8080/ApiRest/Products", {
+      method: 'PUT', // or 'PUT'
+      body: JSON.stringify(service), // data can be `string` or {object}!
+      headers:{
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log('Success:', response));
+  }
   
   function crear(){
     let nom = document.getElementById("exampleInputName").value;
@@ -28,7 +43,6 @@ window.onload = () => {
     }else if(isNaN(pre) || isNaN(duracion)){
       alert("Debes ingresar solo los números en el precio y la duración.");
     }else{
-      var duplicado = false
       var requisitos = new Object();
       requisitos.id = i;
       requisitos.nombre = nom;
@@ -38,57 +52,46 @@ window.onload = () => {
       requisitos.duracion = duracion;
       requisitos.clasification = clasification;
   
-      var local = JSON.stringify(requisitos);
-      for(let cont=0; cont<i; cont++){
-        let servicio = JSON.parse(localStorage.getItem(`servicios${cont}`));
-        if(servicio != null){
-          if(requisitos.nombre == servicio.nombre || requisitos.texto == servicio.texto){
-            duplicado = true;
-          }
-        }
-      }
-      if(duplicado){
-        alert("Servicio duplicado");
-      }else{
-        localStorage.setItem(`servicios${i}`, local);
-        i++;
-        localStorage.setItem("i", i);
-      }
-    clean();
-    mostrar();
+      postmethod(requisitos);
+
+      clean();
+      mostrar();
     }
   }
   
   function mostrar(){
     clean();
     ocultar();
-    var j = localStorage.getItem("i");
-    for(var cont=0; cont<j; cont++){
-      if(localStorage.getItem(`servicios${cont}`) != null){
-        var serv = JSON.parse(localStorage.getItem(`servicios${cont}`));
-        const itemHTML = 
-        '<figure class="image-block" style="margin: auto;">\n' +
-          '<h1>'+ serv.nombre+'</h1>\n' +
-          '<img src="'+serv.img+'"/>\n' +
-          '<figcaption>\n' +
-            '<h3>\n' +
+    fetch('http://localhost:8080/ApiRest/Products')  //link para el GET de todos los usuarios
+    .then(respuesta => respuesta.json()) 
+    .then(productos => {
+      productos.forEach(producto => {
+        if(producto != null){
+          const itemHTML = 
+          '<figure class="image-block" style="margin: auto;">\n' +
+            '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+            '<img src="'+producto.img+'"/>\n' +
+            '<figcaption>\n' +
+              '<h3>\n' +
                 'Ver Más\n' +
-            '</h3>\n' +
-            '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                '<p>ID: '+serv.id+'</p>\n' +
-                '<p>Precio: $'+serv.precio+'</p>\n' +
-                '<p>Clasificación: '+serv.clasification+'</p>\n' +
-                '<p>'+serv.texto+'</p>\n' +
-            '</div>\n' +
-            '<button>\n' +
+              '</h3>\n' +
+              '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                '<p>ID: '+producto.product_id+'</p>\n' +
+                '<p>Precio: $'+producto.precio+'</p>\n' +
+                '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+                '<p>'+producto.descripcion+'</p>\n' +
+              '</div>\n' +
+              '<button>\n' +
                 'Reservar\n' +
-            '</button>\n' +
-          '</figcaption>\n' +
-        '</figure>';
-        const itemsContainer = document.getElementById("list-items");
-        itemsContainer.innerHTML += itemHTML;
-      }
-    }
+              '</button>\n' +
+            '</figcaption>\n' +
+          '</figure>';
+          const itemsContainer = document.getElementById("list-items");
+          itemsContainer.innerHTML += itemHTML;
+        }
+      });
+  })
+  .catch(error => console.log('Hubo un error : ' + error.message))
   }
   
   function ocultar(){
@@ -170,41 +173,38 @@ window.onload = () => {
       if(isNaN(search)){
         alert("El ID debe ser un numero.");
       }else{
-        for(let cont=0; cont<i; cont++){
-          var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-          if(service != null){
-            if(service.id == search){
-              const itemHTML1 = 
-              '<figure class="image-block" style="margin: auto;">\n' +
-                '<h1>'+ service.nombre+'</h1>\n' +
-                '<img src="'+service.img+'"/>\n' +
-                '<figcaption>\n' +
-                  '<h3>\n' +
-                    'Ver Más\n' +
-                  '</h3>\n' +
-                  '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                    '<p>ID: '+service.id+'</p>\n' +
-                    '<p>Precio: $'+service.precio+'</p>\n' +
-                    '<p>Clasificación: '+service.clasification+'</p>\n' +
-                    '<p>'+service.texto+'</p>\n' +
-                  '</div>\n' +
-                  '<button>\n' +
-                    'Reservar\n' +
-                  '</button>\n' +
-                '</figcaption>\n' +
-              '</figure>';
-              const itemsContainer = document.getElementById("list-items1");
-              itemsContainer.innerHTML += itemHTML1;
-            }
-          }
-        }
-        let servi = JSON.parse(localStorage.getItem(`servicios${search}`));
-        document.getElementById("exampleInputName1").value = servi.nombre;
-        document.getElementById("exampleInputDescription1").value = servi.texto;
-        document.getElementById("exampleInputPrice1").value = servi.precio;
-        document.getElementById("exampleInputImage1").value = servi.img;
-        document.getElementById("exampleImputDuration1").value = servi.duracion;
-        document.getElementById("exampleInputClas1").value = servi.clasification;
+        fetch(`http://localhost:8080/ApiRest/Products/${search}`)
+        .then(respuesta => respuesta.json()) 
+        .then(producto => {
+          const itemHTML1 = 
+          '<figure class="image-block" style="margin: auto;">\n' +
+            '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+            '<img src="'+producto.img+'"/>\n' +
+            '<figcaption>\n' +
+              '<h3>\n' +
+                'Ver Más\n' +
+              '</h3>\n' +
+              '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                '<p>ID: '+producto.product_id+'</p>\n' +
+                '<p>Precio: $'+producto.precio+'</p>\n' +
+                '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+                '<p>'+producto.descripcion+'</p>\n' +
+              '</div>\n' +
+              '<button>\n' +
+                'Reservar\n' +
+              '</button>\n' +
+            '</figcaption>\n' +
+          '</figure>';
+          const itemsContainer = document.getElementById("list-items1");
+          itemsContainer.innerHTML += itemHTML1;
+          document.getElementById("exampleInputName1").value = producto.nombre_servicio;
+          document.getElementById("exampleInputDescription1").value = producto.descripcion;
+          document.getElementById("exampleInputPrice1").value = producto.precio;
+          document.getElementById("exampleInputImage1").value = producto.img;
+          document.getElementById("exampleImputDuration1").value = producto.duracion_servicio;
+          document.getElementById("exampleInputClas1").value = producto.categoria_servicio;
+        })
+        .catch(error => console.log('Hubo un error : ' + error.message))
       }
     }else{
       alert("Debes ingresar un ID");
