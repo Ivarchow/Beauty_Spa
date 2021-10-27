@@ -74,7 +74,7 @@ html, body{
   background-color: white;
   z-index: 0;
   grid-template-rows: repeat(auto 21);
-  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-columns: 13% 37% 37% 13%;
 }
 .space1{
   grid-row: 1;

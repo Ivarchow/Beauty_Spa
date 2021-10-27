@@ -15,7 +15,7 @@ html, body{
   flex-grow:1
 }
 .grid{
-  grid-template-rows:  60px auto 60px;
+  grid-template-rows:  60px auto 70px;
   display: grid;
   height: 100%;
   width: 100%;
@@ -39,10 +39,10 @@ html, body{
   grid-row: 2;
   display: grid; 
   height: 100%;
-  width: 100%;
+  width: auto;
   background-color: white;
   grid-template-rows: 14rem 9rem repeat(auto 17);
-  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-columns: 13% 37% 37% 13%;
   z-index: 0;
 }
 .space1{
