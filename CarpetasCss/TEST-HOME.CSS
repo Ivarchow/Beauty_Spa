@@ -1,0 +1,375 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+.grid{
+  grid-template-rows: 57px auto auto;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+/* ingresar codigo de navbar */
+.navbarr{
+  grid-row: 1;
+  background:black;
+  display: grid; 
+  color: white;
+}
+/* ingresar codigo del contact */
+.footer{
+  grid-row: 3;
+  height: auto;
+}
+/* ingresar codigo del video */
+.cover{
+  height: 100vh;
+  width: 100%;
+  z-index: -6;
+}
+.parallax{
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+.parallax__container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translateZ(0);
+}
+.cover video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+  background: #000;
+  
+} 
+/* ingresar codigo del contenido */
+.content{
+  grid-row: 2;
+  display: grid; 
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 0;
+  grid-template-rows: 14rem 9rem repeat(auto 19);
+  grid-template-columns: 5% 1fr 1fr 5%;
+}
+
+/* //////////////////// */
+
+
+.espacioado-texto{
+  margin: 1em 0;
+}
+
+.espaciado-card-izq{
+  padding-left: 0;
+  padding-right: 5%;
+}
+.espacioado-card-der{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 15%;
+}
+.imagen-circulo{
+  background: none;
+  border-radius: 50%;
+}
+
+.box{    
+  transition: transform 300ms, box-shadow 300ms;
+  border: none;
+}
+
+/*animacion cartas Ivar*/
+.animado{
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.mostrarArriba{
+  animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+0%{
+  transform: translateX(-60px);
+}
+100%{
+  transform: translateX(0);
+}
+}
+/*animacion cartas Ivar*/
+
+
+/*animacion boton Luis*/
+.btnanimado{
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.mostrarArriba1{
+  animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+0%{
+  transform: translateX(-60px);
+}
+100%{
+  transform: translateX(0);
+}
+}
+
+.btnanimado a{
+  color: white;
+}
+
+/*animacion boton Luis*/
+
+
+.image--overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 62, 63, 0.6);
+  color: #FCA9B4;
+  display: flex;
+  /*FUENTE*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.image--overlay:hover{
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.image--title{
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.punto-vista{
+  min-height: 50vh;
+  width: 100%;
+}
+
+
+/*.letters{
+	animation: jsLetter 4s 1;
+}
+
+.logo{
+	animation: logoAnimation 3s 3s 1;
+}
+
+@keyframes jsLetter{
+  0%{ 
+		color: red;		
+    transform: rotate(0deg); 
+  }
+  100%{
+		color: white;		
+    transform: rotate(360deg);		
+  } 
+}
+@keyframes logoAnimation{
+  0%{ 
+		color: black;		
+    transform: scale(0); 
+  }
+	100%{ 
+		color: yellow;		
+    transform: scale(1);
+  } 
+}*/
+
+
+/*Btn flotante*/
+.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #FCA9B4; 
+  border: 0;
+  border-radius: 45px;
+  margin: 20px;
+} 
+ 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #AA3053; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  background-image: none; 
+} 
+ 
+.btn-sample.disabled, 
+.btn-sample[disabled], 
+fieldset[disabled] .btn-sample, 
+.btn-sample.disabled:hover, 
+.btn-sample[disabled]:hover, 
+fieldset[disabled] .btn-sample:hover, 
+.btn-sample.disabled:focus, 
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus, 
+.btn-sample.disabled:active, 
+.btn-sample[disabled]:active, 
+fieldset[disabled] .btn-sample:active, 
+.btn-sample.disabled.active, 
+.btn-sample[disabled].active, 
+fieldset[disabled] .btn-sample.active { 
+  background-color: #FCA9B4; 
+  border-color: #FFFFFF; 
+} 
+ 
+.btn-sample .badge { 
+  color: #FCA9B4; 
+  background-color: #FFFFFF; 
+}
+/*Btn flotante*/
+
+
+/*continer bootstrap prueba luis*/
+.figuritas69 {
+  font-size: 70px;
+
+}
+
+.figuritas69 :hover{
+  color: #AA3053;
+}
+
+.redesLink{
+  color: #FCA9B4;
+}
+
+.horarioServ0{ 
+  padding: 15%;
+  font-family: Century Gothic;
+}
+
+.horarioServ{ 
+  font-family: Century Gothic;
+}
+
+.conocenosText{
+  font-size: 300%;
+  text-align: center;
+}
+
+.mapita{
+  position: relative;
+  display: block;
+  margin-top: 5%;
+}
+
+.btnCrearCuenta a{
+  color: white;
+}
+
+
+/* CODIGO ALEXEI IMAGENES */
+.s21{
+  margin: auto;
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #AA3053;
+}
+.imagenspace21 img{
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  bottom: 20px;
+  margin: auto;
+  left: 20px;
+  z-index: -5;
+}
+
+.s22{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #FDAAB5;
+}
+.imagenspace22 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  top: 20px;
+  left: 20px;
+  z-index: -5;
+}
+
+.s23{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #AA3053;
+}
+.imagenspace23 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  bottom: 20px;
+  right: 25px;
+  z-index: -5;
+}
+
+.s24{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  border: 3px solid #FD5060;
+}
+.imagenspace24 img{
+  position: relative;
+  margin: auto;
+  height: 18rem;
+  width: 18rem;
+  bottom: -20px;
+  right: 25px;
+  z-index: -5;
+}
+
+
+
+
+
