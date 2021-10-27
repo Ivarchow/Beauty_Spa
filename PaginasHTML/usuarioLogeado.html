@@ -17,6 +17,15 @@
     <link rel="stylesheet" href="/CarpetasCss/Contacto.css">
     <script src="//pull.cappuccicons.com/cpf.js"></script>
     <link rel="shortcut icon" href="/images/logo/image2.png">
+
+    <link rel="stylesheet" href="/CarpetasCss/navbar.css">
+
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </head>
 
 
@@ -24,7 +33,7 @@
 
 
 <!--Navbar!-->
-    <header class="header">
+    <!-- <header class="header">
       <nav class="navbar">
         <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
         <ul class="nav-menu">
@@ -52,7 +61,63 @@
           <span class="bar"></span>
         </div>
       </nav>
-    </header>
+    </header> -->
+
+    <div class="navbarr">
+      <header class="headerr">
+        <div class="headerr-top">
+          <div class="LogoEmpresa">
+            <a href="/PaginasHTML/PaginaDeInicio.html">
+              <div class="p1">DIVINITE</div>
+              <div class="p2">BEAUTY SPA</div>
+            </a>
+          </div>
+          <!--LogoEmpresa -->
+          <div class="n3">
+            <div class="navr-links2 bag">
+              <a class="active" href="/PaginasHTML/ServiciosReservados.html">
+                <!-- <i class="fas fa-shopping-bag">  -->
+                  <ion-icon class="iccon" name="bag"></ion-icon>
+                <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
+              </span></i></a>
+              <span></span>
+              <a class="active" href="#"></a>
+              <ion-icon class="iccon" name="person-circle"></ion-icon>
+            </a>
+              <span></span>
+            </div>
+            <!--nav-links2 -->
+            <div class="headerr-btn"> 
+              <ion-icon class="iccon" name="menu"></ion-icon>
+            </a></div>
+          </div>
+        </div>
+        <!--n3 -->
+        <nav class="headerr-menu">
+          <ul>
+            <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
+            <li><a href="/PaginasHTML/aboutUsContacto.html">Nosotros</a></li>
+            <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+            <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+            <li><a href="/PaginasHTML/emailPrueba.html">Contacto</a></li>
+            <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesion</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script>
+        const header_btn = document.querySelector('.headerr-btn')
+        const header_menu = document.querySelector('.headerr-menu')
+        header_btn.addEventListener('click', () => {
+          if (header_menu.style.display != 'block') {
+            header_menu.style.display = 'block'
+            header_btn.innerHTML = '<i class="uil uil-times"></i>'
+          } else {
+            header_menu.style.display = 'none'
+            header_btn.innerHTML = '  <ion-icon class="iccon" name="menu"></ion-icon>'
+          }
+        })
+      </script>
+    </div><!-- navbar -->
 <!--End Navbar!-->
 
 

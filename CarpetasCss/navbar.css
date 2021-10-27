@@ -67,7 +67,28 @@
 .fas:hover{
   color: #FFCCD3;
 }
+/* ///////////// */
 
+.iccon {
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: 10px;
+}
+.iccon:hover {
+  color: #FFCCD3;
+}
+.uil{
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.uil:hover{
+  color: #FFCCD3;
+}
+/* ///////////// */
 
 .headerr-btn {
   font-size: 20px;
