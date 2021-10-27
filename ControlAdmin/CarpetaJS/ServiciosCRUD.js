@@ -111,7 +111,8 @@ window.onload = () => {
     let ima = document.getElementById("exampleInputImage1").value;
     let dur = document.getElementById("exampleImputDuration1").value;
     let clasi = document.getElementById("exampleInputClas1").value;
-    for(let cont=0; cont<i; cont++){
+    
+    /*for(let cont=0; cont<i; cont++){
       let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
       if(service != null){
         if(service.id == cambio){
@@ -141,7 +142,7 @@ window.onload = () => {
           }
         }
       }
-    }
+    }*/
     //ocultar1();
     search(cambio);
   }
@@ -150,14 +151,11 @@ window.onload = () => {
     let borrar = window.prompt("Ingrese el id del producto que desea eliminar: ","");
     if(borrar != ""){ 
       Number(borrar);
-      for(let cont=0; cont<i; cont++){
-        let service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-        if(service != null){
-          if(service.id == borrar){
-            localStorage.removeItem(`servicios${cont}`);
-          }
-        }
-      }
+      fetch(`http://localhost:8080/ApiRest/Products/${borrar}`, {
+        method: 'DELETE', // or 'PUT'
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => console.log('Success:', response));
       ocultar();
       mostrar();
     }else{
@@ -230,41 +228,38 @@ window.onload = () => {
 
   function search(ser){
     ocultar1();
-    for(let cont=0; cont<i; cont++){
-      var service = JSON.parse(localStorage.getItem(`servicios${cont}`));
-      if(service != null){
-        if(service.id == ser){
-          const itemHTML1 = 
-          '<figure class="image-block" style="margin: auto;">\n' +
-            '<h1>'+ service.nombre+'</h1>\n' +
-            '<img src="'+service.img+'"/>\n' +
-            '<figcaption>\n' +
-              '<h3>\n' +
-                'Ver Más\n' +
-              '</h3>\n' +
-              '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                '<p>ID: '+service.id+'</p>\n' +
-                '<p>Precio: $'+service.precio+'</p>\n' +
-                '<p>Clasificación: '+service.clasification+'</p>\n' +
-                '<p>'+service.texto+'</p>\n' +
-              '</div>\n' +
-              '<button>\n' +
-                'Reservar\n' +
-              '</button>\n' +
-            '</figcaption>\n' +
-          '</figure>';
-          const itemsContainer = document.getElementById("list-items1");
-          itemsContainer.innerHTML += itemHTML1;
-        }
-      }
-    }
-    let servi = JSON.parse(localStorage.getItem(`servicios${ser}`));
-    document.getElementById("exampleInputName1").value = servi.nombre;
-    document.getElementById("exampleInputDescription1").value = servi.texto;
-    document.getElementById("exampleInputPrice1").value = servi.precio;
-    document.getElementById("exampleInputImage1").value = servi.img;
-    document.getElementById("exampleImputDuration1").value = servi.duracion;
-    document.getElementById("exampleInputClas1").value = servi.clasification;
+    fetch(`http://localhost:8080/ApiRest/Products/${ser}`)
+    .then(respuesta => respuesta.json()) 
+    .then(producto => {
+      const itemHTML1 = 
+        '<figure class="image-block" style="margin: auto;">\n' +
+          '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+          '<img src="'+producto.img+'"/>\n' +
+          '<figcaption>\n' +
+            '<h3>\n' +
+              'Ver Más\n' +
+            '</h3>\n' +
+            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+              '<p>ID: '+producto.product_id+'</p>\n' +
+              '<p>Precio: $'+producto.precio+'</p>\n' +
+              '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+              '<p>'+producto.descripcion+'</p>\n' +
+            '</div>\n' +
+            '<button>\n' +
+              'Reservar\n' +
+            '</button>\n' +
+          '</figcaption>\n' +
+        '</figure>';
+      const itemsContainer = document.getElementById("list-items1");
+      itemsContainer.innerHTML += itemHTML1;
+      document.getElementById("exampleInputName1").value = producto.nombre_servicio;
+      document.getElementById("exampleInputDescription1").value = producto.descripcion;
+      document.getElementById("exampleInputPrice1").value = producto.precio;
+      document.getElementById("exampleInputImage1").value = producto.img;
+      document.getElementById("exampleImputDuration1").value = producto.duracion_servicio;
+      document.getElementById("exampleInputClas1").value = producto.categoria_servicio;
+    })
+    .catch(error => console.log('Hubo un error : ' + error.message))
   }
   
   };
