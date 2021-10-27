@@ -1,10 +1,19 @@
 window.onload = () => {
-  document.getElementById("Crear").addEventListener("click", crear);
+  count();
+  var lastServ = Number(sessionStorage.getItem("lastServ")) + 1;
+  document.getElementById("Crear").addEventListener("click", main);
   document.getElementById("mostrar").addEventListener("click", mostrar);
   document.getElementById("ocultar").addEventListener("click", ocultar);
   document.getElementById("editar").addEventListener("click", editar);
   document.getElementById("eliminar").addEventListener("click", eliminar);
   document.getElementById("buscar").addEventListener("click", buscar);
+
+  function main(){
+    let product = crear();
+    postmethod(product);
+    clean();
+    mostrar();
+  }
   
   function postmethod(service){
     fetch("http://localhost:8080/ApiRest/Products", {
@@ -18,16 +27,15 @@ window.onload = () => {
     .then(response => console.log('Success:', response));
   }
 
-  function putmethod(service){
-    fetch("http://localhost:8080/ApiRest/Products", {
-      method: 'PUT', // or 'PUT'
-      body: JSON.stringify(service), // data can be `string` or {object}!
-      headers:{
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
+  function count(){
+    fetch('http://localhost:8080/ApiRest/Products')  //link para el GET de todos los usuarios
+      .then(respuesta => respuesta.json()) 
+      .then(products => {
+          products.forEach(products => {
+            sessionStorage.setItem("lastServ", products.product_id);
+          });
+      })
+      .catch(error => console.log('Hubo un error : ' + error.message))
   }
   
   function crear(){
@@ -44,18 +52,15 @@ window.onload = () => {
       alert("Debes ingresar solo los números en el precio y la duración.");
     }else{
       var requisitos = new Object();
-      requisitos.id = i;
-      requisitos.nombre = nom;
+      requisitos.product_id = lastServ;
+      requisitos.nombre_servicio = nom;
+      requisitos.categoria_servicio = clasification;
+      requisitos.descripcion = text;
+      requisitos.duracion_servicio = duracion;
       requisitos.precio = pre;
-      requisitos.texto = text;
       requisitos.img = imgn;
-      requisitos.duracion = duracion;
-      requisitos.clasification = clasification;
-  
-      postmethod(requisitos);
 
-      clean();
-      mostrar();
+      return requisitos;
     }
   }
   
