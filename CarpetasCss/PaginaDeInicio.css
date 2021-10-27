@@ -19,6 +19,7 @@ html, body{
   height: 100%;
   width: 100%;
   position: relative;
+  background-color: white;
 }
 .navbarr{
   grid-row: 1;
@@ -27,6 +28,7 @@ html, body{
   position: sticky;
   top: 10px;
   z-index: 1000;
+  margin: 0;
 }
 .content{
   grid-row: 2;
@@ -99,12 +101,12 @@ html, body{
   
 }
 
-.wrapper {
+/* .wrapper {
   position: relative;
   z-index: 1;
   background: rgb(255, 255, 255);
   overflow: hidden;
-}
+} */
 
 .espacioado-texto{
   margin: 1em 0;

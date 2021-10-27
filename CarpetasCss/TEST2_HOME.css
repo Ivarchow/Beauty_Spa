@@ -14,7 +14,7 @@ html, body{
   width: 100%;
 }
 .grid{
-  grid-template-rows: 57px auto auto;
+  grid-template-rows: 60px auto 70px;
   display: grid;
   height: 100%;
   width: 100%;
@@ -70,11 +70,11 @@ html, body{
   grid-row: 2;
   display: grid; 
   height: 100%;
-  width: 100%;
+  width: auto;
   background-color: white;
   z-index: 0;
-  grid-template-rows: 14rem 9rem repeat(auto 19);
-  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-rows: repeat(auto 21);
+  grid-template-columns: 10% 40% 40% 10%;
 }
 .space1{
   grid-row: 1;
@@ -86,6 +86,7 @@ html, body{
   background-color: white;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  height: 15rem;
 }
 .logo img{
   width: 10rem;
@@ -99,6 +100,7 @@ html, body{
   place-items: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  height: 10rem;
 }
 .space2 h4{
   font-weight: 700;
@@ -118,7 +120,7 @@ html, body{
   justify-self: center;
   place-self: center;
   position: relative;
-  height: 20rem;
+  height: 30rem;
 }
 .s21{
   position: relative;
@@ -208,7 +210,7 @@ html, body{
   justify-self: center;
   place-self: center;
   position: relative;
-  height: 20rem;
+  height: 30rem;
 }
 .s22{
   position: relative;
@@ -244,7 +246,7 @@ html, body{
   justify-self: center;
   place-self: center;
   position: relative;
-  height: 20rem;
+  height: 30rem;
 }
 .s23{
   position: relative;
@@ -317,7 +319,7 @@ html, body{
   justify-self: center;
   place-self: center;
   position: relative;
-  height: 20rem;
+  height: 30rem;
 }
 .s24{
   position: relative;
