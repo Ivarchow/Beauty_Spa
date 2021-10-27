@@ -242,7 +242,7 @@ html, body{
 /*Btn flotante*/
 .btn-sample { 
   color: #FFFFFF; 
-  background-color: #FCA9B4; 
+  background-color: #FD5060; 
   border: 0;
   border-radius: 45px;
   margin: 20px;
@@ -279,12 +279,12 @@ fieldset[disabled] .btn-sample:active,
 .btn-sample.disabled.active, 
 .btn-sample[disabled].active, 
 fieldset[disabled] .btn-sample.active { 
-  background-color: #FCA9B4; 
+  background-color: #FD5060; 
   border-color: #FFFFFF; 
 } 
  
 .btn-sample .badge { 
-  color: #FCA9B4; 
+  color: #FD5060; 
   background-color: #FFFFFF; 
 }
 /*Btn flotante*/
@@ -301,7 +301,7 @@ fieldset[disabled] .btn-sample.active {
 }
 
 .redesLink{
-  color: #FCA9B4;
+  color: #AA3053;
 }
 
 .horarioServ0{ 
