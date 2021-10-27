@@ -1,7 +1,7 @@
 let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
-  fetch(`http://localhost:8081/ApiRest/User/${j}`) //link para el GET de todos los usuarios
+  fetch(`http://localhost:8080/ApiRest/User/${j}`) //link para el GET de todos los usuarios
   .then(respuesta => respuesta.json())
   .then(usuario => {
     var usr = usuario;
@@ -18,8 +18,8 @@ let j = sessionStorage.getItem("j");
     document.getElementById("validationDefault04").value = usr.cel;
     document.getElementById("validationDefault05").value = usr.email;
     document.getElementById("dropGenero").value = generoso;
-    document.getElementById("validationDefault06").value = usr.contraseña//atob(usr.pass);
-    document.getElementById("imagen").innerHTML = `<img src="`+usr.foto_perfil+`" alt="" id="photo">`;
+    document.getElementById("validationDefault06").value = atob(usr.contraseña);
+    document.getElementById("photo").setAttribute('src',usr.foto_perfil);
   });
 })();
 
@@ -46,16 +46,12 @@ function guardarCambios(){
   profile.cel = phone;
   profile.nombre = name;
   profile.email = email;
-  profile.contraseña = contra//btoa(contra);
+  profile.contraseña = btoa(contra);
   profile.cumple = birthdate;
   profile.genero = genero;
   profile.foto_perfil = img;
   profile.fecha_registro = "2021-10-26 00:00:00";
   actualizardatos(profile);
-  // var local = JSON.stringify(profile);
-  //localStorage.setItem(`usuario${j}`, local);
-  // console.log(local);
-
 }
 
 //guardar / actualizar cambios
@@ -107,7 +103,7 @@ file.addEventListener('change',function(){
   }
 function actualizardatos(nuevainfo){
 
-  fetch("http://localhost:8081/ApiRest/User", {
+  fetch("http://localhost:8080/ApiRest/User", {
     method: 'PUT', // or 'PUT'
     body: JSON.stringify(nuevainfo), // data can be `string` or {object}!
     headers:{

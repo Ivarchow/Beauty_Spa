@@ -1,4 +1,4 @@
-const URLS = [];
+// const URLS = [];
 const arrIds = [];
 const arrNUmberServices=[];
 const arrServicios = ["nails", "skin", "pest", "fac", "pedi", "makeup", "estetica", "massage"];
@@ -19,7 +19,7 @@ let retardoFetchCartas = setTimeout(()=>{
     btn();
     cargaDeReservacion();
     displayCart();
-    clickborrar();
+    // clickborrar();
     btnReservar();
     clearTimeout(retardoFetchCartas);
 },1500)  
@@ -27,20 +27,20 @@ let retardoFetchCartas = setTimeout(()=>{
 
 function generatorArrys(tamañoJson) {
     for (let varCtlrGenerator = 0; varCtlrGenerator < tamañoJson; varCtlrGenerator++) {
-        let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
+        // let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
         let ids = "carta" + varCtlrGenerator;
-        URLS.push(url);
+        // URLS.push(url);
         arrIds.push(ids);
     }
     console.log(arrIds);
-    console.log(URLS);
+    // console.log(URLS);
 }
 
 async function countServicesLenght() {
 
     try {
         let Servicio1 = 0, Servicio2 = 0, Servicio3 = 0, Servicio4 = 0, Servicio5 = 0, Servicio6 = 0, Servicio7 = 0, Servicio8 = 0;
-        const respuestaServicios = await fetch("http://localhost:8080/ApiRest/Products");
+        const respuestaServicios = await fetch("http://localhost:8081/ApiRest/Products");
         const jsonServicios = await respuestaServicios.json();
         const lengthServicios = await jsonServicios.length;
         console.log(lengthServicios);
@@ -77,10 +77,10 @@ async function countServicesLenght() {
         arrNUmberServices.push(Servicio2);
         arrNUmberServices.push(Servicio3);
         arrNUmberServices.push(Servicio4);
-        // arrNUmberServices.push(Servicio5);
-        // arrNUmberServices.push(Servicio6);
-        // arrNUmberServices.push(Servicio7);
-        // arrNUmberServices.push(Servicio8);
+        arrNUmberServices.push(Servicio5);
+        arrNUmberServices.push(Servicio6);
+        arrNUmberServices.push(Servicio7);
+        arrNUmberServices.push(Servicio8);
         console.log(arrNUmberServices);
         // generatorCols();
 
@@ -104,7 +104,6 @@ function generatorCols() {
         for (varCtrlCols; varCtrlCols < arrNUmberServices[varCtlrService]; varCtrlCols++) {
             
             let col = document.createElement('div');
-            // col.className = "col-4";
             col.style.display= "inline-block";
             col.style.paddingBottom = "2%";
             col.id = arrIds[varCtlrIds];
@@ -116,15 +115,14 @@ function generatorCols() {
         varCtrlCols=0;
         
     }
-    // getCartas();
 }
     
 function getCartas(){
         let varCtlrCards=0;
         
-        for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
+        for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
     
-        fetch("http://localhost:8080/ApiRest/Products")
+        fetch("http://localhost:8081/ApiRest/Products")
         .then(response => response.json())
         .then(Servicios =>{
     
@@ -310,39 +308,21 @@ function getCartas(){
 }
 
 
-
-
-let arrCarrito = [
-    {
-        tituloRvdo: "gelish prueba 1", //Servicio/0
-        precio: 150,
-        img: "/imagenes/gelish1.jpeg",
-        Reservado: 0
-    },
-    {
-        tituloRvdo: "gelish prueba 2",
-        precio: 250,
-        img: "/imagenes/gelish1.jpeg",
-        Reservado: 0
-    },
-    {
-        tituloRvdo: "gelish prueba 3",
-        precio: 350,
-        img: "/imagenes/gelish1.jpeg",
-        Reservado: 0
-    }
-];
-
 var jsonserviciosreservados;
+let arrCarritoServicios =[];
 
 function btn(){
     let btnReservacion = document.querySelectorAll(".btnSeleccionar");
     for(let varCtlrClick=0; varCtlrClick<btnReservacion.length;varCtlrClick++){
         btnReservacion[varCtlrClick].addEventListener('click',()=>{
-            SelectServicio(varCtlrClick);
+    
+             SelectServicio(varCtlrClick);
+
+            
             let retardoFetchMain1 = setTimeout(()=>{
-                serviciosNum(jsonserviciosreservados);
-                totalcost(jsonserviciosreservados);
+                arrCarritoServicios.push(jsonserviciosreservados);
+                console.log(arrCarritoServicios);
+                document.querySelector('.bag span').textContent= arrCarritoServicios.length;
                 clearTimeout(retardoFetchMain1);
             },500) 
             
@@ -350,6 +330,20 @@ function btn(){
          
     }
 }
+
+function SelectServicio(numeroDeServicio){ //5
+
+    fetch("http://localhost:8081/ApiRest/Products") //servicio/5
+    .then(response => response.json())
+    .then(Servicios =>{
+        jsonserviciosreservados = Servicios[numeroDeServicio].id;
+    })
+    .catch(err => console.log(err));
+}
+
+
+
+
 // INCREMENTO DE NUMEROS EN LA BOLSA
 function cargaDeReservacion(){
     let productosEnCarrito = localStorage.getItem('serviciosNum');
@@ -357,64 +351,38 @@ function cargaDeReservacion(){
         document.querySelector('.bag span').textContent= productosEnCarrito;
     }
 }
-// INCREMENTO DE NUMEROS EN LA BOLSA
 
-function serviciosNum(arrCarritoProductos){
-   let productosEnCarrito = localStorage.getItem('serviciosNum');
-   productosEnCarrito = parseInt(productosEnCarrito);
+// hacer una array con todos las posciones de las cartas almacenadas en la tabla de productos y depues juntar los datos del usuarios y servicios seleccionandos y depues almacenarlos en la tabla de reservaciones y por ultimo desplegarlos en la pagina de reservaciones
 
-   if(productosEnCarrito){
-    localStorage.setItem('serviciosNum',productosEnCarrito + 1);
-    document.querySelector('.bag span').textContent= productosEnCarrito +1;
-   }else{
-    localStorage.setItem('serviciosNum',1);
-    document.querySelector('.bag span').textContent=1;
-   }
-   setItems(arrCarritoProductos);
-}
-function setItems(arrCarritoProductos){
-    let carritoItems= localStorage.getItem("serviciosencarrito");
-    carritoItems = JSON.parse(carritoItems);
+// function setItems(arrCarritoProductos){
+//         fetch("http://localhost:8081/ApiRest/Order", {
+//             method: 'POST', // or 'PUT'
+//             body: JSON.stringify(arrCarritoProductos), // data can be `string` or {object}!
+//             headers:{
+//               'Content-Type': 'application/json'
+//             }
+//           }).then(res => res.json())
+//           .catch(error => console.error('Error:', error))
+//           .then(response => console.log('Success:', response));
+// }
 
-    if(carritoItems!=null){
-        if(carritoItems[arrCarritoProductos.titulo]==undefined){
-            carritoItems={
-                ...carritoItems,
-                [arrCarritoProductos.titulo]: arrCarritoProductos
-            }
-        }
-        carritoItems[arrCarritoProductos.titulo].Carrito +=1
-    }else{
-        arrCarritoProductos.Carrito=1;
-        carritoItems={
-            [arrCarritoProductos.titulo]: arrCarritoProductos
-        }
-    }
-    localStorage.setItem("serviciosencarrito", JSON.stringify(carritoItems));
-}
+// function getCartas(){
+//         let varCtlrCards=0;
+        
+//         for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
+    
+//         fetch("http://localhost:8081/ApiRest/Products")
+//         .then(response => response.json())
+//         .then(Servicios =>{
 
-function SelectServicio(uno){ //5
+            
+    
 
-    fetch("http://localhost:3000/Servicios/"+uno) //servicio/5
-    .then(response => response.json())
-    .then(Servicios =>{
-        jsonserviciosreservados=Servicios;
-    })
-    .catch(err => console.log(err));
-}
+//         })
+//         .catch(err => console.log(err));
+//     }
+// }
 
-function totalcost(servicioreservado){
-    let costototal = localStorage.getItem("preciocarrito");
-    console.log("el precio de mi carrito es: ",costototal);
-    console.log(typeof costototal);
-
-    if(costototal!=null){
-        costototal = parseInt(costototal);
-        localStorage.setItem("preciocarrito",costototal + servicioreservado.precio);
-    }else{
-        localStorage.setItem("preciocarrito", servicioreservado.precio);
-    }
-}
 
 function displayCart(){
     let cartItems = localStorage.getItem("serviciosencarrito");
@@ -426,24 +394,6 @@ function displayCart(){
         productContainer.innerHTML='';
         Object.values(cartItems).map(item=>{
             productContainer.innerHTML += 
-
-        // `<div class="product">
-        // <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-        // <button type="button" class="btn btn-danger">borrar</button>
-        // </div>
-        // <img class="tamañoimg" src="${item.img}">
-        // <span>${item.titulo}</span>
-        // </div>
-        // <div class="price">${item.precio},00</div>
-        // <div class="quantity">
-        // <span>${item.Carrito}</span>
-        // </div>
-        // <div class="total">
-        // $${item.Carrito * item.precio},00
-        // </div>
-        // `;
-
-
         `
         <tr style="bottom: 5%;">
         <td>
@@ -558,21 +508,21 @@ function displayCart(){
 
     }
 }
-function clickborrar(){
-    let btnBorrar = document.querySelectorAll(".eliminar");
-for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
-    btnBorrar[varCtlrClick].addEventListener('click',()=>{
-        let cartItems = localStorage.getItem("serviciosencarrito");
-        cartItems = JSON.parse(cartItems);
-        let obj = Object.values(cartItems)[varCtlrClick];
-        console.log(obj);
-        // localStorage.clear();
-        // alert("se han borrado todos lo servcios");
-        // location.reload();
-    });
+// function clickborrar(){
+//     let btnBorrar = document.querySelectorAll(".eliminar");
+// for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
+//     btnBorrar[varCtlrClick].addEventListener('click',()=>{
+//         let cartItems = localStorage.getItem("serviciosencarrito");
+//         cartItems = JSON.parse(cartItems);
+//         let obj = Object.values(cartItems)[varCtlrClick];
+//         console.log(obj);
+//         // localStorage.clear();
+//         // alert("se han borrado todos lo servcios");
+//         // location.reload();
+//     });
      
-}
-}
+// }
+// }
 
 //const dateAndTimeSelect = e => {
 //    let formReservar = {
