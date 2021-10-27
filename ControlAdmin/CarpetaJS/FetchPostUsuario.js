@@ -5,5 +5,14 @@ const addPostUser = document.querySelector('.addPostUser');
 
 addPostUser.addEventListener('submit', (e) => {
   e.preventDefault();
-  fetch('http://localhost:8080/ApiRest/User')
+  fetch('http://localhost:8080/ApiRest/User', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+
+
+    })
+  })  
 })
