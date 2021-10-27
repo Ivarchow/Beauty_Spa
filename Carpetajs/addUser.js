@@ -91,7 +91,7 @@
 
 
 /************************************ */
-
+var lastuser=0;
 document.getElementById("Crear").addEventListener("click", main);
 
 function main(){
@@ -124,7 +124,7 @@ function crear(){
     pass = btoa(pass);
 
     var user = new Object();
-    user.cliente_id = 6;
+    user.cliente_id =1;
     user.cel = phone;
     user.nombre = nom;
     user.email = email;
@@ -140,12 +140,12 @@ function crear(){
 
 function emailp(user){
   let bandera;
-  fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
+  fetch('http://localhost:8081/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
-        usuarios.forEach(usuario => {
-          if(usuario != null){
-            if(usuario.email === user.email){
+        usuarios.forEach(usuarios => {
+          if(usuarios != null){
+            if(usuarios.email === user.email){
               bandera = true;
             }
           }
@@ -161,7 +161,7 @@ function emailp(user){
 }
 
 function adduser(user){
-  fetch("http://localhost:8080/ApiRest/User", {
+  fetch("http://localhost:8081/ApiRest/User", {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(user), // data can be `string` or {object}!
       headers:{
