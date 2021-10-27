@@ -40,7 +40,7 @@ async function countServicesLenght() {
 
     try {
         let Servicio1 = 0, Servicio2 = 0, Servicio3 = 0, Servicio4 = 0, Servicio5 = 0, Servicio6 = 0, Servicio7 = 0, Servicio8 = 0;
-        const respuestaServicios = await fetch("http://localhost:8081/ApiRest/Products");
+        const respuestaServicios = await fetch("http://localhost:8080/ApiRest/Products");
         const jsonServicios = await respuestaServicios.json();
         const lengthServicios = await jsonServicios.length;
         console.log(lengthServicios);
@@ -122,7 +122,7 @@ function getCartas(){
         
         for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
     
-        fetch("http://localhost:8081/ApiRest/Products")
+        fetch("http://localhost:8080/ApiRest/Products")
         .then(response => response.json())
         .then(Servicios =>{
     
@@ -333,7 +333,7 @@ function btn(){
 
 function SelectServicio(numeroDeServicio){ //5
 
-    fetch("http://localhost:8081/ApiRest/Products") //servicio/5
+    fetch("http://localhost:8080/ApiRest/Products") //servicio/5
     .then(response => response.json())
     .then(Servicios =>{
         jsonserviciosreservados = Servicios[numeroDeServicio].id;
