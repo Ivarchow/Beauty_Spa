@@ -140,13 +140,12 @@ function crear(){
 
 function emailp(user){
   let bandera;
-  fetch('http://localhost:8081/ApiRest/User')  //link para el GET de todos los usuarios
+  fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
         usuarios.forEach(usuario => {
           if(usuario != null){
             if(usuario.email === user.email){
-              //alert("Correo con cuenta ya creada");
               bandera = true;
             }
           }
@@ -162,7 +161,7 @@ function emailp(user){
 }
 
 function adduser(user){
-  fetch("http://localhost:8081/ApiRest/User", {
+  fetch("http://localhost:8080/ApiRest/User", {
       method: 'POST', // or 'PUT'
       body: JSON.stringify(user), // data can be `string` or {object}!
       headers:{
@@ -171,7 +170,7 @@ function adduser(user){
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
-   sessionStorage.setItem("j", user.cliente_id);
-   location.href = "/PaginasHTML/usuarioLogeado.html";
+    sessionStorage.setItem("j", user.cliente_id);
+    location.href = "/PaginasHTML/usuarioLogeado.html";
     console.log("tres");
 }

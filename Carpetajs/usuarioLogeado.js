@@ -1,10 +1,10 @@
 let j = sessionStorage.getItem("j");
 //guardar / actualizar cambios
 (function(){
-  fetch('http://localhost:8081/ApiRest/User') //link para el GET de todos los usuarios
+  fetch(`http://localhost:8081/ApiRest/User/${j}`) //link para el GET de todos los usuarios
   .then(respuesta => respuesta.json())
-  .then(usuarios => {
-    var usr = usuarios[j-1];
+  .then(usuario => {
+    var usr = usuario;
     var generoso;
     if(usr.genero == "Mujer"){
       generoso = 1;
