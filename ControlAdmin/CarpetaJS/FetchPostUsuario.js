@@ -1,6 +1,7 @@
-count();
+window.onload = () => { count();
 var lastuser; 
 document.getElementById("guardarUser").addEventListener("click", main);
+document.getElementById("guardarUser").addEventListener("click", mostrar);
 // var lastuser = Number(sessionStorage.getItem("last")) + 1;
 
 
@@ -77,9 +78,51 @@ function adduser(user){
     sessionStorage.setItem("j", user.cliente_id);
 }
 
+function mostrar(){
+  fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
+  .then(respuesta => respuesta.json()) 
+  .then(usuarios => {
+    usuarios.forEach(user => {
+      if(user != null){
+        const itemHTML = 
+        `<table class="table table-hover" id="Tabla-Usuarios" style="width: 96%; text-align: center; margin: auto;">
+                <thead>
+                    <tr>
+                        <th scope="col">Cliente ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Télefono</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Cumpleaños</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Reservado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>${user.cliente_id}</td>
+                <td>${user.nombre}</td>
+                <td>${user.cel}</td>
+                <td>${user.email}</td>
+                <td>${user.cumple}</td>
+                <td>${user.servicio}</td>
+                <td>${user.hora}</td>
+                <td>${user.reservado}</td>
+                </tr>
+                </tbody>
+            </table>`
+
+        const itemsContainer = document.getElementById("mostrarUser");
+        itemsContainer.innerHTML += itemHTML;
+      }
+    });
+})
+.catch(error => console.log('Hubo un error : ' + error.message))
+}
 
 
 
+}
 
 
 

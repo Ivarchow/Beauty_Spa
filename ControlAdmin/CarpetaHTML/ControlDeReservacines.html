@@ -328,7 +328,7 @@
                             </div>
                             <div class="col-8">
                                 <!--  div to show the cards -->
-                                <div class="container ContenedorAS2" style="margin-top: 20px; margin-bottom: 20px;">
+                                <div class="container ContenedorAS2" id= "mostrarUser" style="margin-top: 20px; margin-bottom: 20px;">
                                 </div>
                                 <!-- End show cards -->
                             </div>
@@ -346,12 +346,11 @@
                                 <!-- Inicio del form EditServices -->
                                 <form>
                                     <div class="mb-3">
-                                        <label for="searchService" class="form-label">Ingrese el servicio a
-                                            buscar:</label>
+                                        <label for="searchService" class="form-label">Ingrese número del cliente al que desea añadir servicio:</label>
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <input type="text" class="form-control col-md-5" id="searchService"
-                                                    placeholder="ID del servicio" style="margin-top: 0;">
+                                                    placeholder="ID del cliente" style="margin-top: 0;">
                                             </div>
                                             <div class="col-md-5 ASBtn">
                                                 <button type="button" class="btn btn-primary"
@@ -360,35 +359,35 @@
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputName1" class="form-label">Nombre del producto:</label>
+                                        <label for="exampleInputClas1" class="form-label">Categoría:</label>
+                                        <input type="text" class="form-control" id="exampleInputClas1" list="listcat"
+                                            placeholder="Clasificación del producto" autofocus> 
+                                            <datalist id="listcat">
+                                                <option label="nails" value="nails">
+                                                <option label="Cuidado de la piel" value="Cuidado de la piel">
+                                                <option label="Pestañas y cejas" value="Pestañas y cejas">
+                                                <option label="Faciales" value="Faciales">
+                                                <option label="Pedicure y manicure" value="Pedicure y manicure">
+                                                <option label="Maquillaje" value="Maquillaje">
+                                                <option label="Estetica" value="Estetica">
+                                                <option label="Masajes" value="Masajes">
+
+                                                </datalist>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputName1" class="form-label">Nombre del servicio:</label>
                                         <input type="text" class="form-control" id="exampleInputName1"
-                                            placeholder="Ingrese el nombre del producto" autofocus>
+                                            placeholder="Ingrese el nombre del servicio" autofocus>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="exampleInputDescription1" class="form-label">Fecha de reserva:</label>
+                                        <input type="date" class="form-control" id="exampleInputDescription1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleInputClas1" class="form-label">Clasificación:</label>
-                                        <input type="text" class="form-control" id="exampleInputClas1"
-                                            placeholder="Clasificación del producto" autofocus>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputDescription1" class="form-label">Descripción del
-                                            producto:</label>
-                                        <input type="text" class="form-control" id="exampleInputDescription1"
-                                            placeholder="Descripción">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleImputDuration1" class="form-label">Duración:</label>
+                                        <label for="exampleImputDuration1" class="form-label">Hora de reserva:</label>
                                         <input type="text" class="form-control" id="exampleImputDuration1"
-                                            placeholder="Duración del servicio">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputPrice" class="form-label">Costo:</label>
-                                        <input type="text" class="form-control" id="exampleInputPrice1"
-                                            placeholder="Costo del producto">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputImage" class="form-label">Imagen:</label>
-                                        <input type="text" class="form-control" id="exampleInputImage1"
-                                            placeholder="Link de la imagen">
+                                            placeholder="Ejemplo: 17:00">
                                     </div>
                                     <div class="mb-3 ASBtn">
                                         <button type="button" class="btn btn-primary col-md-5 col-sm-12 col-xs-12"
