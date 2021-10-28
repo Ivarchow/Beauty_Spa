@@ -25,6 +25,8 @@
     <link rel="shortcut icon" href="/images/logo/image2.png"> <!--Cambio del link-->
     <script src="//pull.cappuccicons.com/cpf.js"></script>
     <script src="https://kit.fontawesome.com/aa37fc0000.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/CarpetasCss/navbar.css">
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -32,35 +34,53 @@
 
  
  <!--Navbar!-->
- <header class="header">
-  <nav class="navbar">
-    <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-logo">DIVINITÉ</a>
-    <ul class="nav-menu">
-
-      <li class="nav-item">
-        <a href="/PaginasHTML/Servicios.html" class="nav-link"><i class="cp cp-eyelash"></i>&nbsp;&nbsp;Servicios</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/aboutUsContacto.html" class="nav-link"><i class="cp cp-flower"></i>&nbsp;&nbsp;Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/emailPrueba.html" class="nav-link"><i class="cp cp-chat"></i>&nbsp;&nbsp;Contáctanos</a>
-      </li>
-      <li class="nav-item">
-        <a href="/PaginasHTML/PaginaDeInicio.html" class="nav-link"><i class="cp cp-home"></i>&nbsp;&nbsp;Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a href="#bag" class="shoppingBag"><i class="cp cp-shopping-bag"></i></a>
-      <li class="nav-item">
-        <a href="/PaginasHTML/Ingreso.HTML" class="shoppingBag"><i class="cp cp-user"></i></a>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+ <div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
+      <div class="LogoEmpresa">
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITÉ</div>
+          <div class="p2">BEAUTY SPA</div>
+        </a>
+      </div>
+      <!--LogoEmpresa -->
+      <div class="n3">
+        <div class="navr-links2">
+          <a class="active" href="ServiciosReservados.html"><i class="fas fa-shopping-bag"></i></a>
+          <span></span>
+          <a class="active" href="usuarioLogeado.html"><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
     </div>
-  </nav>
-</header>
+    <!--n3 -->
+    <nav class="headerr-menu">
+      <ul>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inicio</a></li>
+        <li><a href="/PaginasHTML/Nosotros.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/Contacto.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
+    header_btn.addEventListener('click', () => {
+      if (header_menu.style.display != 'block') {
+        header_menu.style.display = 'block'
+        header_btn.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        header_menu.style.display = 'none'
+        header_btn.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+    })
+  </script>
+</div><!-- navbarr -->
 <!--End Navbar!-->
     <!--LOGOS IVAR-->
 
@@ -307,13 +327,13 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <a href="/PaginasHTML/emailPrueba.html">Buzón de sugerencias</a>
+      <a href="Contacto.html">Buzón de sugerencias</a>
     </div>
     <div class="col">
       (c) DIVINITÉ Guadalajara
     </div>
     <div class="col">
-      <a href="/PaginasHTML/AvisoDePrivasidad.html">Políticas de privacidad</a>|<a href="/PaginasHTML/emailPrueba.html">FAQs</a>
+      <a href="AvisoDePrivasidad.html">Políticas de privacidad</a>|<a href="Contacto.html">FAQs</a>
     </div>
   </div>
 </div>

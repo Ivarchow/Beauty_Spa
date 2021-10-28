@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIVINITE-CrearCuenta</title>
+  <title>DIVINITE-Servicios</title>
     <link rel="shortcut icon" href="/images/logo/image2.png"> 
     <!-- CSS -->
     <link rel="stylesheet" href="../CarpetasCss/CatalogoServicios.css" type="text/css">
@@ -22,41 +22,42 @@
 <body>
 <div class="grid">   
 <!-- ingresar codigo de navbar  -->
-<div class="navbar">
-  <header class="header">
-    <div class="header-top">
+<div class="navbarr">
+  <header class="headerr">
+    <div class="headerr-top">
       <div class="LogoEmpresa">
-          <a href="/PaginasHTML/PaginaDeInicio.html">
-          <div class="p1">DIVINITE</div>
+        <a href="/PaginasHTML/PaginaDeInicio.html">
+          <div class="p1">DIVINITÉ</div>
           <div class="p2">BEAUTY SPA</div>
-          </a>
-      </div><!--LogoEmpresa -->
+        </a>
+      </div>
+      <!--LogoEmpresa -->
       <div class="n3">
-        <div class="nav-links2">
-        <a class = "active" href="/PaginasHTML/AñadirServicios.html"></a><i class="fas fa-shopping-bag"></i></a>
-        <span></span>
-        <a class = "active" href="#"></a><i class="fas fa-user-circle"></i></a>
-        <span></span>
-        </div><!--nav-links2 -->
-        <div class="header-btn"><i class="fas fa-bars"></i></a></div>
+        <div class="navr-links2">
+          <a class="active" href="ServiciosReservados.html"><i class="fas fa-shopping-bag"></i></a>
+          <span></span>
+          <a class="active" href="usuarioLogeado.html"><i class="fas fa-user-circle"></i></a>
+          <span></span>
+        </div>
+        <!--nav-links2 -->
+        <div class="headerr-btn"><i class="fas fa-bars"></i></a></div>
+      </div>
     </div>
-      </div><!--n3 -->
-      
-    <nav  class="header-menu">
+    <!--n3 -->
+    <nav class="headerr-menu">
       <ul>
-        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inico</a></li>
-        <li><a href="/PaginasHTML/aboutUs.html">Nosotros</a></li>
+        <li><a href="/PaginasHTML/PaginaDeInicio.html">Inicio</a></li>
+        <li><a href="/PaginasHTML/Nosotros.html">Nosotros</a></li>
         <li><a href="/PaginasHTML/Servicios.html">Servicios</a></li>
-        <li><a href="#">Reservados</a></li>
-        <li><a href="/PaginasHTML/aboutUsContacto.html">Contacto</a></li>
-        <li><a href="Ingreso.HTML">Ingresar</a></li>
+        <li><a href="/PaginasHTML/ServiciosReservados.html">Reservados</a></li>
+        <li><a href="/PaginasHTML/Contacto.html">Contacto</a></li>
+        <li><a href="/PaginasHTML/Ingreso.HTML">Ingresar / Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
-
   <script>
-    const header_btn = document.querySelector('.header-btn')
-    const header_menu = document.querySelector('.header-menu')
+    const header_btn = document.querySelector('.headerr-btn')
+    const header_menu = document.querySelector('.headerr-menu')
     header_btn.addEventListener('click', () => {
       if (header_menu.style.display != 'block') {
         header_menu.style.display = 'block'
@@ -67,7 +68,8 @@
       }
     })
   </script>
-</div><!-- navbar -->
+</div>
+<!-- navbar -->
 
 <div class="content">
 
@@ -193,30 +195,18 @@
     </div><!-- foo4 --></div><!-- foo1 -->
     <div class="foo5">
     <div class="foo6">
-      <a href="#"> Buzon de sugerencias</a>
+      <a href="Contacto.html"> Buzón de sugerencias</a>
     </div><!-- foo6 -->
     <div class="foo7">
-      <p>(c) DIVINITE Guadalajara</p>
+      <p>(c) DIVINITÉ Guadalajara</p>
     </div><!-- foo7 -->
     <div class="foo8">
-      <a href="#"> Politica de Privacidad </a>
+      <a href="AvisoDePrivasidad.html"> Política de Privacidad </a>
       <span></span>
       <p>  |  </p>
       <span></span>
-      <a href="#"> Cultura </a>
-      <span></span>
-      <p>  |  </p>
-      <span></span>
-      <a href="#"> FAQs </a>
+      <a href="Contacto.html"> FAQs </a>
     </div><!-- foo8 --></div><!-- foo5 -->
-    <div class="foo9">
-    <div class="foo10">
-      <p> Desarrollado por MCLARICH dev studio | Generation Guadalajara </p>
-      </div><!-- foo10 -->
-    <div class="foo11">
-      <div class= "MClogo"><img src="../MCLARICH/MCLogoWhite.svg.png" alt=""></div>
-    </div><!-- foo11 -->
-  </div><!-- foo9 -->
   </div><!-- footer -->
 
 

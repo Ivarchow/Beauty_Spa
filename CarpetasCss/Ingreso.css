@@ -38,7 +38,7 @@ html, body{
   color: #644747;
   display: grid; 
   /* grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 10rem 3rem 6rem; */
-  grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 3rem 6rem;
+  grid-template-rows: 15rem 5rem 4rem 4rem 2rem 2rem 6rem 3rem 2rem;
   text-align: center;
   place-items: center;
   width: 30rem;

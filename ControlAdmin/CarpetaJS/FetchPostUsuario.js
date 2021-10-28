@@ -1,8 +1,11 @@
-var lastuser = Number(sessionStorage.getItem("last")) + 1;
+count();
+var lastuser; 
 document.getElementById("guardarUser").addEventListener("click", main);
+// var lastuser = Number(sessionStorage.getItem("last")) + 1;
+
 
 function main(){
-  count();
+  lastuser = sessionStorage.getItem("last");
   let usr = crear();
   emailp(usr);
   //redirect();
@@ -12,9 +15,9 @@ function count(){
   fetch('http://localhost:8080/ApiRest/User')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
-        usuarios.forEach(usuarios => {
-          sessionStorage.setItem("last", usuarios.cliente_id);
-        });
+      usuarios.forEach(usuarios => {
+        sessionStorage.setItem("last", Number(usuarios.cliente_id)+1);
+      });
     })
     .catch(error => console.log('Hubo un error : ' + error.message))
 }
@@ -25,13 +28,6 @@ function crear(){
   let email = document.getElementById("correo").value;
   let cumple = document.getElementById("inputBirth").value;
   let gender = document.getElementById("gender").value;
-
-  if(phone.length < 8 || phone.length > 15){
-    alert("Número de telefono invalido");
-  }else if(!terms){
-    alert("Debes aceptar los términos y condiciones.");
-  }else{
-    pass = btoa(pass);
 
     var user = new Object();
     user.cliente_id = lastuser;
@@ -44,7 +40,7 @@ function crear(){
     user.foto_perfil = "/images/logo/divinite3.png";
     user.fecha_registro = "2021-10-26 00:00:00";
     return user;
-  }
+  
 }
 
 function emailp(user){

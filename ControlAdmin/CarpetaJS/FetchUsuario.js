@@ -9,8 +9,6 @@ function cargarUsuarios(){
                 row.innerHTML += `
                     <td>${usuario.cliente_id}</td>
                     <td>${usuario.nombre}</td>
-                    <td>${usuario.codigo}</td>
-                    <td>${usuario.codigoC}</td>
                     <td>${usuario.cel}</td>
                     <td>${usuario.email}</td>
                     <td>${usuario.cumple}</td>

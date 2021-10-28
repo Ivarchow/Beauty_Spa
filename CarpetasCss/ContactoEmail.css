@@ -39,7 +39,7 @@ html, body{
   width: 100%;
   background-color: white;
   grid-template-rows: 14rem repeat(auto 14);
-  grid-template-columns: 5% 1fr 5%;
+  grid-template-columns: 12% 1fr 12%;
   z-index: 0;
 }
 .space1{
