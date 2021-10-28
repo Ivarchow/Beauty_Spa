@@ -58,8 +58,8 @@ padding-top: 4px;
 font-weight: 500;
 }
 
-
-/* .ContenedorAS2{
+/* 
+.ContenedorAS2{
 border: 3px solid #644747 ;
 border-radius: .5rem;
 min-height: 40rem;
@@ -70,6 +70,6 @@ background-color:  #AA3053;
 border: none;
 }
 .ASBtn button:hover{
-    background-color: #FD5060    ;
-    border: none;
-    }
+background-color: #FD5060    ;
+border: none;
+}
