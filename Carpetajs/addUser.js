@@ -121,7 +121,7 @@ function crear(){
   let cumple = document.getElementById("InputBirth").value;
   let gender = document.getElementById("InputGender").value;
   let terms = document.getElementById("terms").checked;
-  let expReg =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  let expReg =  /^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
   if(!expReg.test(email)){
     alert("Debes utilizar una cuenta de correo valida.");
