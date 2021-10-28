@@ -1,6 +1,6 @@
 window.onload = () => {
   count();
-  var lastServ = Number(sessionStorage.getItem("lastServ")) + 1;
+  var lastServ;
   document.getElementById("Crear").addEventListener("click", main);
   document.getElementById("mostrar").addEventListener("click", mostrar);
   document.getElementById("ocultar").addEventListener("click", ocultar);
@@ -9,9 +9,9 @@ window.onload = () => {
   document.getElementById("buscar").addEventListener("click", buscar);
 
   function main(){
+    lastServ = Number(sessionStorage.getItem("lastServ"));
     let product = crear();
-    postmethod(product);
-    clean();
+    revisar(product);
     mostrar();
   }
   
@@ -25,6 +25,7 @@ window.onload = () => {
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
+    sessionStorage.setItem("lastServ", Number(service.product_id)+1);
   }
 
   function count(){
@@ -32,8 +33,28 @@ window.onload = () => {
       .then(respuesta => respuesta.json()) 
       .then(products => {
           products.forEach(products => {
-            sessionStorage.setItem("lastServ", products.product_id);
+            sessionStorage.setItem("lastServ", Number(products.product_id)+1);
+            lastServ = sessionStorage.getItem("lastServ");
           });
+      })
+      .catch(error => console.log('Hubo un error : ' + error.message))
+  }
+
+  function revisar(product){
+    let bandera = false;
+    fetch('http://localhost:8080/ApiRest/Products')  //link para el GET de todos los usuarios
+      .then(respuesta => respuesta.json()) 
+      .then(products => {
+          products.forEach(products => {
+            if(products.nombre_servicio == product.nombre_servicio || products.descripcion == product.descripcion){
+              bandera = true;
+            }
+          });
+          if(bandera){
+            alert("Servicios ya creado");
+          }else{
+            postmethod(product);
+          }
       })
       .catch(error => console.log('Hubo un error : ' + error.message))
   }
@@ -59,7 +80,6 @@ window.onload = () => {
       requisitos.duracion_servicio = duracion;
       requisitos.precio = pre;
       requisitos.img = imgn;
-
       return requisitos;
     }
   }
@@ -142,7 +162,7 @@ window.onload = () => {
       .then(response => console.log('Success:', response));
     }
     //ocultar1();
-    //search(cambio);
+    search(cambio);
   }
   
   function eliminar(){
