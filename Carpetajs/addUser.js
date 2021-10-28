@@ -91,11 +91,12 @@
 
 
 /************************************ */
-var lastuser = Number(sessionStorage.getItem("last")) + 1;
+count();
+var lastuser;
 document.getElementById("Crear").addEventListener("click", main);
 
 function main(){
-  count();
+  lastuser = sessionStorage.getItem("last");
   let usr = crear();
   emailp(usr);
   //redirect();
@@ -106,7 +107,7 @@ function count(){
     .then(respuesta => respuesta.json()) 
     .then(usuarios => {
         usuarios.forEach(usuarios => {
-          sessionStorage.setItem("last", usuarios.cliente_id);
+          sessionStorage.setItem("last", Number(usuarios.cliente_id)+1);
         });
     })
     .catch(error => console.log('Hubo un error : ' + error.message))
@@ -181,7 +182,7 @@ function adduser(user){
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
-    sessionStorage.setItem("j", user.cliente_id);
+    sessionStorage.setItem("last", Number(user.cliente_id)+1);
 }
 
 /*function redirect(){
