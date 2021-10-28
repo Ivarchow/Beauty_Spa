@@ -53,7 +53,7 @@
             <div class="navr-links2">
               <a class="active" href="ServiciosReservados.html"><i class="fas fa-shopping-bag"></i></a>
               <span></span>
-              <a class="active" href="usuarioLogeado.html"><i class="fas fa-user-circle"></i></a>
+              <a class="active" onclick="login()" href="#"><i class="fas fa-user-circle"></i></a>
               <span></span>
             </div>
             <!--nav-links2 -->
@@ -406,7 +406,15 @@
 
 </div><!-- content -->
 </div> <!-- wrapper -->
-
+  <script>
+    function login(){
+      if(sessionStorage.getItem("last") == null){
+        location.href = "/PaginasHTML/Ingreso.HTML";
+      }else{
+        location.href = "/PaginasHTML/usuarioLogeado.html";
+      }
+    }
+  </script>
   <script src="/Carpetajs/PaginaDeinicio.js"></script>
 
 </body>

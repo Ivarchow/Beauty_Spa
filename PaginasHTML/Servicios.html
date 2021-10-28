@@ -59,7 +59,7 @@
                 <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
               </span></i></a>
               <span></span>
-              <a class="active" href="usuarioLogeado.html"><i class="fas fa-user-circle"></i></a>
+              <a class="active" onclick="login()" href="#"><i class="fas fa-user-circle"></i></a>
               <span></span>
             </div>
             <!--nav-links2 -->
@@ -229,7 +229,15 @@
 </footer>
 <!--Footer Luis-->
 </div> <!--FOO -->
-
+  <script>
+    function login(){
+      if(sessionStorage.getItem("last") == null){
+        location.href = "/PaginasHTML/Ingreso.HTML";
+      }else{
+        location.href = "/PaginasHTML/usuarioLogeado.html";
+      }
+    }
+  </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"

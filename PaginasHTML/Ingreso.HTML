@@ -54,7 +54,7 @@
             <span class=" top-0 start-100 translate-middle badge rounded-pill " style=" background-color: rgb(241, 164, 231);">
           </span></i></a>
           <span></span>
-          <a class="active" href="usuarioLogeado.html"><i class="fas fa-user-circle"></i></a>
+          <a class="active" onclick="login()" href="#"><i class="fas fa-user-circle"></i></a>
           <span></span>
         </div>
         <!--nav-links2 -->
@@ -179,6 +179,15 @@ function viewpassword(){
     show.type='password';
     }
 }
+</script>
+<script>
+  function login(){
+    if(sessionStorage.getItem("last") == null){
+      location.href = "/PaginasHTML/Ingreso.HTML";
+    }else{
+      location.href = "/PaginasHTML/usuarioLogeado.html";
+    }
+  }
 </script>
 <script src="../Carpetajs/login.js"></script>
 <script src="/Carpetajs/navbar.js"></script>
