@@ -12,7 +12,6 @@ window.onload = () => {
     lastServ = Number(sessionStorage.getItem("lastServ"));
     let product = crear();
     revisar(product);
-    mostrar();
   }
   
   function postmethod(service){
@@ -26,6 +25,7 @@ window.onload = () => {
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
     sessionStorage.setItem("lastServ", Number(service.product_id)+1);
+    setTimeout(mostrar,1000);
   }
 
   function count(){
@@ -85,7 +85,7 @@ window.onload = () => {
   }
   
   function mostrar(){
-    clean();
+    //clean();
     ocultar();
     fetch('http://localhost:8080/ApiRest/Products')  //link para el GET de todos los usuarios
     .then(respuesta => respuesta.json()) 
@@ -161,8 +161,7 @@ window.onload = () => {
       .catch(error => console.error('Error:', error))
       .then(response => console.log('Success:', response));
     }
-    //ocultar1();
-    search(cambio);
+    setTimeout(function() {search (cambio)}, 1000);
   }
   
   function eliminar(){
@@ -174,8 +173,8 @@ window.onload = () => {
       }).then(res => res.json())
       .catch(error => console.error('Error:', error))
       .then(response => console.log('Success:', response));
-      ocultar();
-      mostrar();
+      setTimeout(mostrar,1000);
+
     }else{
       alert("Debes ingresar un número.");
     }

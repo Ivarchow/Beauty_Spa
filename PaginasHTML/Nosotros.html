@@ -285,5 +285,14 @@
   </div><!-- footer -->
 
   </div><!-- grid -->
+  <script>
+    function login(){
+      if(sessionStorage.getItem("last") == null){
+        location.href = "/PaginasHTML/Ingreso.HTML";
+      }else{
+        location.href = "/PaginasHTML/usuarioLogeado.html";
+      }
+    }
+  </script>
   </body>
   </html>

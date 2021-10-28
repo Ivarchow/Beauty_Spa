@@ -99,7 +99,6 @@ function main(){
   lastuser = sessionStorage.getItem("last");
   let usr = crear();
   emailp(usr);
-  //redirect();
 }
 
 function count(){
@@ -183,8 +182,9 @@ function adduser(user){
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
     sessionStorage.setItem("last", Number(user.cliente_id)+1);
+    setTimeout(redirect, 1000);
 }
 
-/*function redirect(){
+function redirect(){
   location.href = "/PaginasHTML/usuarioLogeado.html";
-}*/
+}

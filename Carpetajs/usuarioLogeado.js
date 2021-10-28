@@ -1,7 +1,7 @@
-let j = sessionStorage.getItem("j");
+let j = sessionStorage.getItem("last");
 //guardar / actualizar cambios
 (function(){
-  fetch(`http://localhost:8080/ApiRest/User/${j}`) //link para el GET de todos los usuarios
+  fetch(`http://localhost:8080/ApiRest/User/${j-1}`) //link para el GET de todos los usuarios
   .then(respuesta => respuesta.json())
   .then(usuario => {
     var usr = usuario;
