@@ -24,7 +24,7 @@ window.onload = () => {
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
-    sessionStorage.setItem("lastServ", Number(service.product_id)+1);
+    sessionStorage.setItem("lastServ", Number(service.id)+1);
     setTimeout(mostrar,1000);
   }
 
@@ -33,7 +33,7 @@ window.onload = () => {
       .then(respuesta => respuesta.json()) 
       .then(products => {
           products.forEach(products => {
-            sessionStorage.setItem("lastServ", Number(products.product_id)+1);
+            sessionStorage.setItem("lastServ", Number(products.id)+1);
             lastServ = sessionStorage.getItem("lastServ");
           });
       })
@@ -46,7 +46,7 @@ window.onload = () => {
       .then(respuesta => respuesta.json()) 
       .then(products => {
           products.forEach(products => {
-            if(products.nombre_servicio == product.nombre_servicio || products.descripcion == product.descripcion){
+            if(products.titulo == product.titulo || products.descripcion == product.descripcion){
               bandera = true;
             }
           });
@@ -73,13 +73,14 @@ window.onload = () => {
       alert("Debes ingresar solo los números en el precio y la duración.");
     }else{
       var requisitos = new Object();
-      requisitos.product_id = lastServ;
-      requisitos.nombre_servicio = nom;
-      requisitos.categoria_servicio = clasification;
+      requisitos.id = lastServ;
+      requisitos.titulo = nom;
+      requisitos.categoria = clasification;
       requisitos.descripcion = text;
-      requisitos.duracion_servicio = duracion;
+      requisitos.duracion = duracion;
       requisitos.precio = pre;
       requisitos.img = imgn;
+      requisitos.carrito = 0;
       return requisitos;
     }
   }
@@ -94,16 +95,16 @@ window.onload = () => {
         if(producto != null){
           const itemHTML = 
           '<figure class="image-block" style="margin: auto;">\n' +
-            '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+            '<h1>'+ producto.titulo+'</h1>\n' +
             '<img src="'+producto.img+'"/>\n' +
             '<figcaption>\n' +
               '<h3>\n' +
                 'Ver Más\n' +
               '</h3>\n' +
               '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                '<p>ID: '+producto.product_id+'</p>\n' +
+                '<p>ID: '+producto.id+'</p>\n' +
                 '<p>Precio: $'+producto.precio+'</p>\n' +
-                '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+                '<p>Clasificación: '+producto.categoria+'</p>\n' +
                 '<p>'+producto.descripcion+'</p>\n' +
               '</div>\n' +
               '<button>\n' +
@@ -143,13 +144,14 @@ window.onload = () => {
       alert("Debes ingresar solo los números en el precio y la duración.");
     }else{
       var service = new Object();
-      service.product_id = cambio;
-      service.nombre_servicio = name;
-      service.categoria_servicio = clasi;
+      service.id = cambio;
+      service.titulo = name;
+      service.categoria = clasi;
       service.descripcion = desc;
-      service.duracion_servicio = dur;
+      service.duracion = dur;
       service.precio = pri;
       service.img = ima;
+      service.carrito = 0;
 
       fetch("http://localhost:8080/ApiRest/Products", {
         method: 'PUT', // or 'POST'
@@ -193,16 +195,16 @@ window.onload = () => {
         .then(producto => {
           const itemHTML1 = 
           '<figure class="image-block" style="margin: auto;">\n' +
-            '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+            '<h1>'+ producto.titulo+'</h1>\n' +
             '<img src="'+producto.img+'"/>\n' +
             '<figcaption>\n' +
               '<h3>\n' +
                 'Ver Más\n' +
               '</h3>\n' +
               '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                '<p>ID: '+producto.product_id+'</p>\n' +
+                '<p>ID: '+producto.id+'</p>\n' +
                 '<p>Precio: $'+producto.precio+'</p>\n' +
-                '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+                '<p>Clasificación: '+producto.categoria+'</p>\n' +
                 '<p>'+producto.descripcion+'</p>\n' +
               '</div>\n' +
               '<button>\n' +
@@ -212,12 +214,12 @@ window.onload = () => {
           '</figure>';
           const itemsContainer = document.getElementById("list-items1");
           itemsContainer.innerHTML += itemHTML1;
-          document.getElementById("exampleInputName1").value = producto.nombre_servicio;
+          document.getElementById("exampleInputName1").value = producto.titulo;
           document.getElementById("exampleInputDescription1").value = producto.descripcion;
           document.getElementById("exampleInputPrice1").value = producto.precio;
           document.getElementById("exampleInputImage1").value = producto.img;
-          document.getElementById("exampleImputDuration1").value = producto.duracion_servicio;
-          document.getElementById("exampleInputClas1").value = producto.categoria_servicio;
+          document.getElementById("exampleImputDuration1").value = producto.duracion;
+          document.getElementById("exampleInputClas1").value = producto.categoria;
         })
         .catch(error => console.log('Hubo un error : ' + error.message))
       }
@@ -250,16 +252,16 @@ window.onload = () => {
     .then(producto => {
       const itemHTML1 = 
         '<figure class="image-block" style="margin: auto;">\n' +
-          '<h1>'+ producto.nombre_servicio+'</h1>\n' +
+          '<h1>'+ producto.titulo+'</h1>\n' +
           '<img src="'+producto.img+'"/>\n' +
           '<figcaption>\n' +
             '<h3>\n' +
               'Ver Más\n' +
             '</h3>\n' +
             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-              '<p>ID: '+producto.product_id+'</p>\n' +
+              '<p>ID: '+producto.id+'</p>\n' +
               '<p>Precio: $'+producto.precio+'</p>\n' +
-              '<p>Clasificación: '+producto.categoria_servicio+'</p>\n' +
+              '<p>Clasificación: '+producto.categoria+'</p>\n' +
               '<p>'+producto.descripcion+'</p>\n' +
             '</div>\n' +
             '<button>\n' +
@@ -269,12 +271,12 @@ window.onload = () => {
         '</figure>';
       const itemsContainer = document.getElementById("list-items1");
       itemsContainer.innerHTML += itemHTML1;
-      document.getElementById("exampleInputName1").value = producto.nombre_servicio;
+      document.getElementById("exampleInputName1").value = producto.titulo;
       document.getElementById("exampleInputDescription1").value = producto.descripcion;
       document.getElementById("exampleInputPrice1").value = producto.precio;
       document.getElementById("exampleInputImage1").value = producto.img;
-      document.getElementById("exampleImputDuration1").value = producto.duracion_servicio;
-      document.getElementById("exampleInputClas1").value = producto.categoria_servicio;
+      document.getElementById("exampleImputDuration1").value = producto.duracion;
+      document.getElementById("exampleInputClas1").value = producto.categoria;
     })
     .catch(error => console.log('Hubo un error : ' + error.message))
   }
