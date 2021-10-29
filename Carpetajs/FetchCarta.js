@@ -22,12 +22,12 @@ let retardoFetchCartas = setTimeout(()=>{
     // clickborrar();
     btnReservar();
     clearTimeout(retardoFetchCartas);
-},5000)  
+},1500)  
 
 
 function generatorArrys(tamañoJson) {
-    for (let varCtlrGenerator = 0; varCtlrGenerator < tamañoJson; varCtlrGenerator++) {
-         let url = "http://localhost:8080/ApiRest/Products/" + varCtlrGenerator;
+    for (let varCtlrGenerator = 1; varCtlrGenerator <= tamañoJson; varCtlrGenerator++) {
+        let url = "http://localhost:8080/ApiRest/Products/" + varCtlrGenerator;
         let ids = "carta" + varCtlrGenerator;
          URLS.push(url);
         arrIds.push(ids);
@@ -92,7 +92,7 @@ async function countServicesLenght() {
 
 function generatorCols() {
 
-    let varCtrlCols = 0, varCtlrIds=0;
+    let varCtrlCols = 0, varCtlrIds=1;
 
     for (let varCtlrService = 0; varCtlrService < arrServicios.length; varCtlrService++) {
 
@@ -118,7 +118,7 @@ function generatorCols() {
 }
     
 function getCartas(){
-        let varCtlrCards=0;
+        let varCtlrCards=1;
         
         for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
     
