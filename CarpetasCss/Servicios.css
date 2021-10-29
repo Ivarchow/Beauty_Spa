@@ -19,12 +19,10 @@ body {
 }
 
 .grid{
-  grid-template-rows: 60px auto auto;
+  grid-template-rows: 60px auto 70px;
   display: grid;
   height: 100%;
   width: 100%;
-  min-height: 1000px;
-  
 }
 /* ingresar codigo de navbar */
 .navbarr{
@@ -62,7 +60,7 @@ body {
 }
 .space3{
   grid-row: 3;
-  display: grid;
+  min-height: 42rem;
 }
 
 
