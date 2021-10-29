@@ -42,7 +42,7 @@ function guardarCambios(){
       genero = "Otr@";
     }
   let profile = new Object();
-  profile.cliente_id = 5;
+  profile.cliente_id = Number(j)-1;
   profile.cel = phone;
   profile.nombre = name;
   profile.email = email;
@@ -104,7 +104,7 @@ file.addEventListener('change',function(){
 function actualizardatos(nuevainfo){
 
   fetch("http://localhost:8080/ApiRest/User", {
-    method: 'PUT', // or 'PUT'
+    method: 'PUT', // or 'POST'
     body: JSON.stringify(nuevainfo), // data can be `string` or {object}!
     headers:{
       'Content-Type': 'application/json'
