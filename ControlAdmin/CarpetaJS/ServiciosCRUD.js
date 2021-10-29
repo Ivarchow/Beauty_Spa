@@ -24,6 +24,7 @@ window.onload = () => {
     }).then(res => res.json())
     .catch(error => console.error('Error:', error))
     .then(response => console.log('Success:', response));
+    alert("Servicio creado");
     sessionStorage.setItem("lastServ", Number(service.id)+1);
     setTimeout(mostrar,1000);
   }
@@ -51,7 +52,7 @@ window.onload = () => {
             }
           });
           if(bandera){
-            alert("Servicios ya creado");
+            alert("Servicio ya creado");
           }else{
             postmethod(product);
           }
