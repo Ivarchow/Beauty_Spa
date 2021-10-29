@@ -1,4 +1,4 @@
-// const URLS = [];
+const URLS = [];
 const arrIds = [];
 const arrNUmberServices=[];
 const arrServicios = ["nails", "skin", "pest", "fac", "pedi", "makeup", "estetica", "massage"];
@@ -17,23 +17,23 @@ let retardoFetchMain = setTimeout(()=>{
 
 let retardoFetchCartas = setTimeout(()=>{
     btn();
-    cargaDeReservacion();
-    displayCart();
+    // cargaDeReservacion();
+     displayCart();
     // clickborrar();
     btnReservar();
     clearTimeout(retardoFetchCartas);
-},1500)  
+},5000)  
 
 
 function generatorArrys(tamañoJson) {
     for (let varCtlrGenerator = 0; varCtlrGenerator < tamañoJson; varCtlrGenerator++) {
-        // let url = "http://localhost:3000/Servicios/" + varCtlrGenerator;
+         let url = "http://localhost:8080/ApiRest/Products/" + varCtlrGenerator;
         let ids = "carta" + varCtlrGenerator;
-        // URLS.push(url);
+         URLS.push(url);
         arrIds.push(ids);
     }
     console.log(arrIds);
-    // console.log(URLS);
+     console.log(URLS);
 }
 
 async function countServicesLenght() {
@@ -59,18 +59,18 @@ async function countServicesLenght() {
             if (Products.categoria == "Faciales") {
                  Servicio4++;
             }
-            // if (Servicios.categoria == "Pedicure y manicure") {
-            //     Servicio5++;
-            // }
-            // if (Servicios.categoria == "Maquillaje") {
-            //     Servicio6++;
-            // }
-            // if (Servicios.categoria == "Estetica") {
-            //     Servicio7++;
-            // }
-            // if (Servicios.categoria == "Masajes") {
-            //     Servicio8++;
-            // }
+            if (Products.categoria == "Pedicure y manicure") {
+                Servicio5++;
+            }
+            if (Products.categoria == "Maquillaje") {
+                Servicio6++;
+            }
+            if (Products.categoria == "Estetica") {
+                Servicio7++;
+            }
+            if (Products.categoria == "Masajes") {
+                Servicio8++;
+            }
             
         }
         arrNUmberServices.push(Servicio1);
@@ -86,7 +86,7 @@ async function countServicesLenght() {
 
 
     } catch (error) {
-        console.error("ERROR DE RESPUESTA DE SERVIDOR");
+        console.log(error);
     } finally { }
 }
 
@@ -120,26 +120,26 @@ function generatorCols() {
 function getCartas(){
         let varCtlrCards=0;
         
-        for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
+        for(let varCtrlFetch=0;varCtrlFetch<URLS.length;varCtrlFetch++ ){
     
-        fetch("http://localhost:8080/ApiRest/Products")
+        fetch(URLS[varCtrlFetch])
         .then(response => response.json())
         .then(Servicios =>{
     
-                if(Servicios[varCtrlFetch].categoria=="nails"){
+                if(Servicios.categoria=="nails"){
                     let elemento = document.getElementById(arrIds[varCtlrCards]);
                     elemento.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
-                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'min</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios.duracion+'min</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -148,20 +148,20 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios[varCtrlFetch].categoria=="Cuidado de la piel"){
+                if(Servicios.categoria=="Cuidado de la piel"){
                     let elemento1 = document.getElementById(arrIds[varCtlrCards]);
                     elemento1.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
-                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
                         '<figcaption>\n' +
                             '<h3>\n' +
                                 'Ver Más\n' +
                             '</h3>\n' +
                             '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'min</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios.duracion+'min</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
                             '</div>\n' +
                             '<button class="btnSeleccionar">\n' +
                                 'Seleccionar\n' +
@@ -170,53 +170,9 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios[varCtrlFetch].categoria=="Pestañas y cejas"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
-                    '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
-                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
-                        '<figcaption>\n' +
-                            '<h3>\n' +
-                                'Ver Más\n' +
-                            '</h3>\n' +
-                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'min</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
-                            '</div>\n' +
-                            '<button class="btnSeleccionar">\n' +
-                                'Seleccionar\n' +
-                            '</button>\n' +
-                        '</figcaption>\n' +
-                    '</figure>';
-                    varCtlrCards++;
-                }
-                if(Servicios[varCtrlFetch].categoria=="Faciales"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
-                    '<figure class="image-block" style="margin: auto;">\n' +
-                        '<h1>'+ Servicios[varCtrlFetch].titulo+'</h1>\n' +
-                        '<img src="'+Servicios[varCtrlFetch].img+'"/>\n' +
-                        '<figcaption>\n' +
-                            '<h3>\n' +
-                                'Ver Más\n' +
-                            '</h3>\n' +
-                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
-                                '<p>Precio: '+Servicios[varCtrlFetch].precio+'$</p>\n' +
-                                '<p>Duración: '+Servicios[varCtrlFetch].duracion+'min</p>\n' +
-                                '<p>'+Servicios[varCtrlFetch].descripcion+'</p>\n' +
-                            '</div>\n' +
-                            '<button class="btnSeleccionar">\n' +
-                                'Seleccionar\n' +
-                            '</button>\n' +
-                        '</figcaption>\n' +
-                    '</figure>';
-                    varCtlrCards++;
-                }
-                if(Servicios.Categoria=="Pedicure y manicure"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
+                if(Servicios.categoria=="Pestañas y cejas"){
+                    let elemento2 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento2.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
                         '<h1>'+ Servicios.titulo+'</h1>\n' +
                         '<img src="'+Servicios.img+'"/>\n' +
@@ -236,9 +192,9 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.Categoria=="Maquillaje"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
+                if(Servicios.categoria=="Faciales"){
+                    let elemento3 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento3.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
                         '<h1>'+ Servicios.titulo+'</h1>\n' +
                         '<img src="'+Servicios.img+'"/>\n' +
@@ -258,9 +214,9 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.Categoria=="Estetica"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
+                if(Servicios.categoria=="Pedicure y manicure"){
+                    let elemento4 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento4.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
                         '<h1>'+ Servicios.titulo+'</h1>\n' +
                         '<img src="'+Servicios.img+'"/>\n' +
@@ -280,9 +236,53 @@ function getCartas(){
                     '</figure>';
                     varCtlrCards++;
                 }
-                if(Servicios.Categoria=="Masajes"){
-                    let elemento = document.getElementById(arrIds[varCtlrCards]);
-                    elemento.innerHTML = 
+                if(Servicios.categoria=="Maquillaje"){
+                    let elemento5 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento5.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios.duracion+'min</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.categoria=="Estetica"){
+                    let elemento6 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento6.innerHTML = 
+                    '<figure class="image-block" style="margin: auto;">\n' +
+                        '<h1>'+ Servicios.titulo+'</h1>\n' +
+                        '<img src="'+Servicios.img+'"/>\n' +
+                        '<figcaption>\n' +
+                            '<h3>\n' +
+                                'Ver Más\n' +
+                            '</h3>\n' +
+                            '<div class="overflow-auto example" style="height: 200px; ">\n' +
+                                '<p>Precio: '+Servicios.precio+'$</p>\n' +
+                                '<p>Duración: '+Servicios.duracion+'min</p>\n' +
+                                '<p>'+Servicios.descripcion+'</p>\n' +
+                            '</div>\n' +
+                            '<button class="btnSeleccionar">\n' +
+                                'Seleccionar\n' +
+                            '</button>\n' +
+                        '</figcaption>\n' +
+                    '</figure>';
+                    varCtlrCards++;
+                }
+                if(Servicios.categoria=="Masajes"){
+                    let elemento7 = document.getElementById(arrIds[varCtlrCards]);
+                    elemento7.innerHTML = 
                     '<figure class="image-block" style="margin: auto;">\n' +
                         '<h1>'+ Servicios.titulo+'</h1>\n' +
                         '<img src="'+Servicios.img+'"/>\n' +
@@ -308,23 +308,29 @@ function getCartas(){
 }
 
 
-var jsonserviciosreservados;
-let arrCarritoServicios =[];
+var jsonserviciosreservados=0;
+var arrCarritoServicios =[];
+var costoTotal=0;
 
 function btn(){
     let btnReservacion = document.querySelectorAll(".btnSeleccionar");
     for(let varCtlrClick=0; varCtlrClick<btnReservacion.length;varCtlrClick++){
         btnReservacion[varCtlrClick].addEventListener('click',()=>{
-    
-             SelectServicio(varCtlrClick);
 
-            
-            let retardoFetchMain1 = setTimeout(()=>{
-                arrCarritoServicios.push(jsonserviciosreservados);
-                console.log(arrCarritoServicios);
-                document.querySelector('.bag span').textContent= arrCarritoServicios.length;
-                clearTimeout(retardoFetchMain1);
-            },500) 
+        SelectServicio(varCtlrClick);
+
+        let retardoFetchMain1 = setTimeout(()=>{
+
+        arrCarritoServicios.push(jsonserviciosreservados);
+
+        localStorage.setItem("serviciosReservados", JSON.stringify(arrCarritoServicios));
+
+        localStorage.setItem("cantidadServicios",arrCarritoServicios.length );
+
+        document.querySelector('.bag span').textContent = localStorage.getItem("cantidadServicios");
+                
+        clearTimeout(retardoFetchMain1);
+        },500) 
             
         }); 
          
@@ -336,26 +342,20 @@ function SelectServicio(numeroDeServicio){ //5
     fetch("http://localhost:8080/ApiRest/Products") //servicio/5
     .then(response => response.json())
     .then(Servicios =>{
+
         jsonserviciosreservados = Servicios[numeroDeServicio].id;
+
+        costoTotal = costoTotal + parseInt(Servicios[numeroDeServicio].precio);
     })
     .catch(err => console.log(err));
 }
 
 
 
-
-// INCREMENTO DE NUMEROS EN LA BOLSA
-function cargaDeReservacion(){
-    let productosEnCarrito = localStorage.getItem('serviciosNum');
-    if(productosEnCarrito){
-        document.querySelector('.bag span').textContent= productosEnCarrito;
-    }
-}
-
 // hacer una array con todos las posciones de las cartas almacenadas en la tabla de productos y depues juntar los datos del usuarios y servicios seleccionandos y depues almacenarlos en la tabla de reservaciones y por ultimo desplegarlos en la pagina de reservaciones
 
 // function setItems(arrCarritoProductos){
-//         fetch("http://localhost:8081/ApiRest/Order", {
+//         fetch("http://localhost:8080/ApiRest/Order", {
 //             method: 'POST', // or 'PUT'
 //             body: JSON.stringify(arrCarritoProductos), // data can be `string` or {object}!
 //             headers:{
@@ -371,7 +371,7 @@ function cargaDeReservacion(){
         
 //         for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
     
-//         fetch("http://localhost:8081/ApiRest/Products")
+//         fetch("http://localhost:8080/ApiRest/Products")
 //         .then(response => response.json())
 //         .then(Servicios =>{
 
@@ -385,129 +385,111 @@ function cargaDeReservacion(){
 
 
 function displayCart(){
-    let cartItems = localStorage.getItem("serviciosencarrito");
-    cartItems = JSON.parse(cartItems);
+
     let productContainer = document.querySelector(".products");
-    console.log(cartItems);
-    let costototal = localStorage.getItem("preciocarrito");
-    if(cartItems && productContainer){
-        productContainer.innerHTML='';
-        Object.values(cartItems).map(item=>{
-            productContainer.innerHTML += 
-        `
-        <tr style="bottom: 5%;">
-        <td>
+
+    let serviciosenCarrito = localStorage.getItem("cantidadServicios");
+    document.querySelector('.bag span').textContent = serviciosenCarrito;
+
+    let varprueba3 = localStorage.getItem("serviciosReservados");
+    varprueba3 = JSON.parse(varprueba3);
+
+    console.log(varprueba3);
+
+    if(productContainer){
+
+        for(let varprueba2 = 0; varprueba2 < varprueba3.length ; varprueba2++){
+        fetch("http://localhost:8080/ApiRest/Products")
+        .then(response => response.json())
+        .then(ServiciosRservados =>{
+            console.log(varprueba3[varprueba2]);
         
-        <div>
-        <button class="btn eliminar" style="background-color: red" type="button"><h3 style="color: white">Eliminar</h3></button>
-      </div>
+            productContainer.innerHTML += `
+            <tr style="bm: 5%;">
 
-        </td>
-        <td style="width: 25%;">
+            <td>
+            <div>
+            <button class="btn eliminar" style="background-color: red" type="button"><h3 style="color: white">Eliminar</h3></button>
+            </div>
+            </td>
 
-
-
-        <h3 style=" color: red">${item.titulo}</h3>
-        <img style="width: 50%;" src="${item.img}">
-        </td>
+            <td style="width: 25%;">
+            <h3 style=" color: red">${ServiciosRservados[varprueba3[varprueba2]].titulo}</h3>
+            <img style="width: 50%;" src="${ServiciosRservados[varprueba3[varprueba2]].img}">
+            </td>
+        
+            <td>
     
-        <td>
+            <h3>${ServiciosRservados[varprueba3[varprueba2]].precio},00</h3>
+    
+            </td>
+    
+            <td>
+            <h3>${ServiciosRservados[varprueba3[varprueba2]].carrito}</h3>
+            </td>
+    
+            <td>
+            
+            <form role="form" onsubmit="dateAndTimeSelect(event);" style=" margin: auto;">
+            <div class="mb-3" style="margin: auto; width: 280px;">
+              <label>Fecha</label>
+              <input type="date" name="selectfecha" id="selectfecha" step="1" class="form-control form-control-lg" required/>
+            </div>
+            <div class="mb-3" >
+              <label>Hora: <br>
+                <input list="horarioCita" name="selecthora" id="selecthora" class="form-control form-control-lg" required/></label>
+                <datalist id="horarioCita">
+                  <option value="9:00">
+                  <option value="9:30">
+                  <option value="10:00">
+                  <option value="10:30">
+                  <option value="11:00">
+                  <option value="11:30">
+                  <option value="12:00">
+                  <option value="12:30">
+                  <option value="13:00">
+                  <option value="13:30">
+                  <option value="14:00">
+                  <option value="14:30">
+                  <option value="15:00">
+                  <option value="15:30">
+                  <option value="16:00">
+                  <option value="16:30">
+                  <option value="17:00">
+                  <option value="17:30">
+                  <option value="18:00">
+                  <option value="18:30">                         
+                </datalist>
+            </div>
+    
+            <div>
+            <button class="btn almacenar" style="background-color: #AB3053" type="submit"><h3 style="color: white">Reservar</h3></button>
+          </div>
+    
+    
+          </form>
+    
+    
+            </td>
+    
+            <td>
+    
+            <h3>$${ServiciosRservados[varprueba3[varprueba2]].precio},00</h3>
+    
+            </td>
+    
+          </tr>`;
+    
 
-        <h3>${item.precio},00</h3>
-
-        </td>
-
-        <td>
-        <h3>${item.Carrito}</h3>
-        </td>
-
-        <td>
+        })
+        .catch(err => console.log(err));
         
-        <form role="form" onsubmit="dateAndTimeSelect(event);" style=" margin: auto;">
-        <div class="mb-3" style="margin: auto; width: 280px;">
-          <label>Fecha</label>
-          <input type="date" name="selectfecha" id="selectfecha" step="1" class="form-control form-control-lg" required/>
-        </div>
-        <div class="mb-3" >
-          <label>Hora: <br>
-            <input list="horarioCita" name="selecthora" id="selecthora" class="form-control form-control-lg" required/></label>
-            <datalist id="horarioCita">
-              <option value="9:00">
-              <option value="9:30">
-              <option value="10:00">
-              <option value="10:30">
-              <option value="11:00">
-              <option value="11:30">
-              <option value="12:00">
-              <option value="12:30">
-              <option value="13:00">
-              <option value="13:30">
-              <option value="14:00">
-              <option value="14:30">
-              <option value="15:00">
-              <option value="15:30">
-              <option value="16:00">
-              <option value="16:30">
-              <option value="17:00">
-              <option value="17:30">
-              <option value="18:00">
-              <option value="18:30">                         
-            </datalist>
-        </div>
-
-        <div>
-        <button class="btn almacenar" style="background-color: #AB3053" type="submit"><h3 style="color: white">Reservar</h3></button>
-      </div>
-
-
-      </form>
-
-
-        </td>
-
-        <td>
-
-        <h3>$${item.Carrito * item.precio},00</h3>
-
-        </td>
-
-      </tr>`;
-
-        });
-
-        productContainer.innerHTML += `
-
-        <table class="table" style="width: 95%; margin: auto;">
-        <thead style="text-align: center;">
-          <tr>
-          <th scope="col"><h2></h2></th>
-          <th scope="col"><h2></h2></th>
-          <th scope="col"><h2></h2></th>
-          <th scope="col"><h2></h2></th>
-          <th scope="col"><h2></h2></th>
-            <th scope="col"><h2>Total</h2></th>
-          </tr>
-        </thead>
-        <tbody class="products" style="text-align: center;">
-          <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-          <div>
-          <button class="btn borrar" style="background-color: red" type="button"><h3 style="color: white">ELIMINAR TODO</h3></button>
-        </div>
-          </td>
-          <td style="background-color: #AB3053"><h2 style="color: white">${costototal}$</h2></td>
-          </tr>
-
-        </tbody>
-      </table>`;
-
-
+     }
+    }else{
+        productContainer.innerHTML = "";
     }
-}
+    
+    }
 // function clickborrar(){
 //     let btnBorrar = document.querySelectorAll(".eliminar");
 // for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
