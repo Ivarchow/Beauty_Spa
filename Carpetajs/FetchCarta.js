@@ -13,16 +13,16 @@ let retardoFetchMain = setTimeout(()=>{
     generatorCols();
     getCartas();
     clearTimeout(retardoFetchMain);
-},1000)  
+},3500)  
 
 let retardoFetchCartas = setTimeout(()=>{
     btn();
     // cargaDeReservacion();
      displayCart();
     // clickborrar();
-    btnReservar();
+    // btnReservar();
     clearTimeout(retardoFetchCartas);
-},1500)  
+},5000)  
 
 
 function generatorArrys(tamañoJson) {
@@ -308,7 +308,7 @@ function getCartas(){
 }
 
 
-var jsonserviciosreservados=0;
+var jsonserviciosreservados;
 var arrCarritoServicios =[];
 var costoTotal=0;
 
@@ -328,6 +328,8 @@ function btn(){
         localStorage.setItem("cantidadServicios",arrCarritoServicios.length );
 
         document.querySelector('.bag span').textContent = localStorage.getItem("cantidadServicios");
+
+        localStorage.setItem("costoCarrito",costoTotal);
                 
         clearTimeout(retardoFetchMain1);
         },500) 
@@ -338,55 +340,26 @@ function btn(){
 }
 
 function SelectServicio(numeroDeServicio){ //5
+    numeroDeServicio++;
 
-    fetch("http://localhost:8080/ApiRest/Products") //servicio/5
+    fetch("http://localhost:8080/ApiRest/Products/"+numeroDeServicio) //servicio/5
     .then(response => response.json())
     .then(Servicios =>{
 
-        jsonserviciosreservados = Servicios[numeroDeServicio].id;
+        jsonserviciosreservados = Servicios.id;
 
-        costoTotal = costoTotal + parseInt(Servicios[numeroDeServicio].precio);
+        costoTotal = costoTotal + parseInt(Servicios.precio);
     })
     .catch(err => console.log(err));
 }
 
 
-
-// hacer una array con todos las posciones de las cartas almacenadas en la tabla de productos y depues juntar los datos del usuarios y servicios seleccionandos y depues almacenarlos en la tabla de reservaciones y por ultimo desplegarlos en la pagina de reservaciones
-
-// function setItems(arrCarritoProductos){
-//         fetch("http://localhost:8080/ApiRest/Order", {
-//             method: 'POST', // or 'PUT'
-//             body: JSON.stringify(arrCarritoProductos), // data can be `string` or {object}!
-//             headers:{
-//               'Content-Type': 'application/json'
-//             }
-//           }).then(res => res.json())
-//           .catch(error => console.error('Error:', error))
-//           .then(response => console.log('Success:', response));
-// }
-
-// function getCartas(){
-//         let varCtlrCards=0;
-        
-//         for(let varCtrlFetch=0;varCtrlFetch<arrIds.length;varCtrlFetch++ ){
-    
-//         fetch("http://localhost:8080/ApiRest/Products")
-//         .then(response => response.json())
-//         .then(Servicios =>{
-
-            
-    
-
-//         })
-//         .catch(err => console.log(err));
-//     }
-// }
-
-
 function displayCart(){
 
     let productContainer = document.querySelector(".products");
+
+    let total = document.querySelector(".total");
+
 
     let serviciosenCarrito = localStorage.getItem("cantidadServicios");
     document.querySelector('.bag span').textContent = serviciosenCarrito;
@@ -398,8 +371,8 @@ function displayCart(){
 
     if(productContainer){
 
-        for(let varprueba2 = 0; varprueba2 < varprueba3.length ; varprueba2++){
-        fetch("http://localhost:8080/ApiRest/Products")
+        for(let varprueba2 = 0; varprueba2 <= varprueba3.length-1 ; varprueba2++){
+        fetch("http://localhost:8080/ApiRest/Products/" + varprueba3[varprueba2])
         .then(response => response.json())
         .then(ServiciosRservados =>{
             console.log(varprueba3[varprueba2]);
@@ -414,18 +387,8 @@ function displayCart(){
             </td>
 
             <td style="width: 25%;">
-            <h3 style=" color: red">${ServiciosRservados[varprueba3[varprueba2]].titulo}</h3>
-            <img style="width: 50%;" src="${ServiciosRservados[varprueba3[varprueba2]].img}">
-            </td>
-        
-            <td>
-    
-            <h3>${ServiciosRservados[varprueba3[varprueba2]].precio},00</h3>
-    
-            </td>
-    
-            <td>
-            <h3>${ServiciosRservados[varprueba3[varprueba2]].carrito}</h3>
+            <h3 style=" color: red">${ServiciosRservados.titulo}</h3>
+            <img style="width: 50%;" src="${ServiciosRservados.img}">
             </td>
     
             <td>
@@ -433,11 +396,11 @@ function displayCart(){
             <form role="form" onsubmit="dateAndTimeSelect(event);" style=" margin: auto;">
             <div class="mb-3" style="margin: auto; width: 280px;">
               <label>Fecha</label>
-              <input type="date" name="selectfecha" id="selectfecha" step="1" class="form-control form-control-lg" required/>
+              <input type="date" name="selectfecha" step="1" class=" selectfecha form-control form-control-lg" required/>
             </div>
             <div class="mb-3" >
               <label>Hora: <br>
-                <input list="horarioCita" name="selecthora" id="selecthora" class="form-control form-control-lg" required/></label>
+                <input list="horarioCita" name="selecthora" class="selecthora form-control form-control-lg" required/></label>
                 <datalist id="horarioCita">
                   <option value="9:00">
                   <option value="9:30">
@@ -474,63 +437,140 @@ function displayCart(){
     
             <td>
     
-            <h3>$${ServiciosRservados[varprueba3[varprueba2]].precio},00</h3>
+            <h3>$${ServiciosRservados.precio},00</h3>
     
             </td>
     
           </tr>`;
+
     
 
         })
         .catch(err => console.log(err));
         
      }
+     total.innerHTML += `
+
+    <tr>
+       <td> </td>
+       <td> </td>
+       <td>
+       <div>
+       <button class="btn borrar" style="background-color: red" type="button"><h3 style="color: white">ELIMINAR TODO</h3></button>
+       </div>
+       </td>
+       <td style="background-color: #AB3053"><h2 style="color: white">${localStorage.getItem("costoCarrito")}$</h2></td>
+    </tr>
+`;
+
     }else{
-        productContainer.innerHTML = "";
+        productContainer.innerHTML = '';
     }
     
     }
-// function clickborrar(){
-//     let btnBorrar = document.querySelectorAll(".eliminar");
-// for(let varCtlrClick=0; varCtlrClick<btnBorrar.length;varCtlrClick++){
-//     btnBorrar[varCtlrClick].addEventListener('click',()=>{
-//         let cartItems = localStorage.getItem("serviciosencarrito");
-//         cartItems = JSON.parse(cartItems);
-//         let obj = Object.values(cartItems)[varCtlrClick];
-//         console.log(obj);
-//         // localStorage.clear();
-//         // alert("se han borrado todos lo servcios");
-//         // location.reload();
-//     });
-     
-// }
-// }
 
-//const dateAndTimeSelect = e => {
-//    let formReservar = {
-//        selectfecha: document.getElementById('selectfecha').value,
-//        selecthora: document.getElementById('selecthora').value
-/*    }
-    localStorage.setItem('formReservar',JSON.stringify(formReservar));
-    console.log(localStorage.getItem('formReservar'));
-    e.preventDefault();
-}*/
+const dateAndTimeSelect = e => {
 
-function btnReservar(){
     let reservarServicio = document.querySelectorAll('.almacenar');
-    let reservarServicio1 = document.querySelectorAll('#selectfecha');
-    let reservarServicio2 = document.querySelectorAll('#selecthora');
+    let fechaDeReservacion = document.querySelectorAll('.selectfecha');
+    let horaDeReservacion = document.querySelectorAll('.selecthora');
 
-    for (let i = 0; i < reservarServicio.length; i++){
-        reservarServicio[i].addEventListener('click', e=>{
+    for (let varCtlrBtnResrvar = 0; varCtlrBtnResrvar < reservarServicio.length; varCtlrBtnResrvar++){
+        reservarServicio[varCtlrBtnResrvar].addEventListener('click', e=>{
 
-            let formReservar = {
-                selectfecha: reservarServicio1[i].value,
-                selecthora: reservarServicio2[i].value
-            }
-            localStorage.setItem('formReservar',JSON.stringify(formReservar));
-            console.log(localStorage.getItem('formReservar'));
-            e.preventDefault();
+            alert("btnReservar");
+            console.log(fechaDeReservacion[varCtlrBtnResrvar].value,horaDeReservacion[varCtlrBtnResrvar].value);
+            verificarReserva(fechaDeReservacion[varCtlrBtnResrvar].value,horaDeReservacion[varCtlrBtnResrvar].value);
+
+
+
+
+            // let formReservar = {
+            //     selectfecha: reservarServicio1[i].value,
+            //     selecthora: reservarServicio2[i].value
+            // }
+            // localStorage.setItem('formReservar',JSON.stringify(formReservar));
+            // console.log(localStorage.getItem('formReservar'));
+            
+            // e.preventDefault();
         } )
     }
+
+        // let formReservar = {
+        //   selectfecha: document.getElementsByClassName('selectfecha').value,        
+        //   selecthora: document.getElementsByClassName('selecthora').value
+        // }
+        // localStorage.setItem('formReservar',JSON.stringify(formReservar));
+
+        // console.log(localStorage.getItem('formReservar'));
+
+        e.preventDefault();
+    }
+
+
+function verificarReserva(fechaDeReservacion,horaDeReservacion){
+        
+        fetch("http://localhost:8080/ApiRest/Order")
+        .then(response => response.json())
+        .then(Reservacion =>{
+            Reservacion.forEach(Reservacion=>{
+                if(Reservacion.orden_date==(fechaDeReservacion+" 00:00:00") && Reservacion.hora_reserva==horaDeReservacion ){
+                    alert("son iguales");
+
+                }else{
+                    agregarReserva();
+                }
+            });
+        })
+        .catch(err => console.log(err));
 }
+
+
+function agregarReserva(arrCarritoProductos){
+        fetch("http://localhost:8080/ApiRest/Order", {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(arrCarritoProductos), // data can be `string` or {object}!
+            headers:{
+              'Content-Type': 'application/json'
+            }
+          }).then(res => res.json())
+          .catch(error => console.error('Error:', error))
+          .then(response => console.log('Success:', response));
+}
+var nuevaReserva = Object();
+
+nuevaReserva.orden_id=7;
+nuevaReserva.orden_date=7;
+nuevaReserva.fecha_reserva=7;
+nuevaReserva.hora_reserva=7;
+nuevaReserva.cliente_id.cliente_id=1;
+
+
+
+// {
+//     "orden_id": 6,
+//     "orden_date": "2021-10-29 00:00:00",
+//     "fecha_reserva": "2021-10-29",
+//     "hora_reserva": "9:00",
+//     "cliente_id": {
+//         "cliente_id": 1,
+//         "cel": "3222638841",
+//         "nombre": "Candy Pacheco",
+//         "email": "Candy4@gmail.com",
+//         "contraseña": "sdverwetgerfq",
+//         "cumple": "15/08/1998",
+//         "genero": "M",
+//         "foto_perfil": " ",
+//         "fecha_registro": "2021-10-27 00:00:00"
+//     },
+//     "id": {
+//         "id": 1,
+//         "titulo": "RETIRO DE GELISH DE FÁCIL REMOCIÓN",
+//         "duracion": "15",
+//         "precio": "40",
+//         "img": " /images/Servicios/Nails1.jpeg",
+//         "carrito": "0",
+//         "descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior!",
+//         "categoria": "nails"
+//     }
+// }
