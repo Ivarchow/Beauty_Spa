@@ -24,6 +24,7 @@ body {
   height: 100%;
   width: 100%;
   min-height: 1000px;
+  
 }
 /* ingresar codigo de navbar */
 .navbarr{
@@ -45,15 +46,56 @@ body {
   display: grid; 
 
   height: auto;
+  position: relative;
+  grid-template-rows: auto auto auto;
+}
+
+.space1{
+  grid-row: 1;
+  position: sticky;
+  display: grid;
+}
+.space2{
+  grid-row: 2;
+  position: sticky;
+  display: grid;
+}
+.space3{
+  grid-row: 3;
+  display: grid;
+}
+
+
+/* ------------------ */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+.fa-arrow-up{
+
+  color: white; /* Text color */
 
 }
 
 
+#myBtn:hover {
+  background-color: #644747; /* Add a dark-grey background on hover */
+}
 
 
-
-
-/* ------------------ */
+/* ////////////////////// */
 .linea {
   border-top: 2px solid #634646;
   height: 1px;

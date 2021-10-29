@@ -32,6 +32,7 @@
     <!--CSS Cartas-->
     <link rel="stylesheet" href="/CarpetasCss/Servicios.css">
 
+    <script src="https://kit.fontawesome.com/409f561447.js" crossorigin="anonymous"></script>
         <!--Fetch-->
         <script src="/Carpetajs/FetchCarta.js"></script>
 
@@ -95,12 +96,13 @@
 <!-- final de codigo de navbar  -->
 <div class="content">
 
+  <div class="space1">
     <h1 class="tituloh1" >Servicios Beauty Spa</h1>
-
+  </div> <!-- space1 -->
 
     <!-- FILA 1 -->
     <!-- UÑAS -->
-
+    <div class="space2">
     <div class="category_list" style="text-align: center;">
 
         <a href="#" class="category_item" category="all" style="font-size: large;">Todo</a>
@@ -113,9 +115,9 @@
         <a href="#" class="category_item" category="estetica"  style="font-size: large;">Estética</a>
         <a href="#" class="category_item" category="massage"  style="font-size: large;">Masajes</a>
     </div>
-
+  </div> <!-- space2 -->
 <!--style="background-color: rgba(255, 224, 253, 0.082); box-shadow: 0 0 10px; padding: 2%;"-->
-
+<div class="space3">
     <section class="products-list" >
         <div class="product-item" category="nails" >
 
@@ -193,6 +195,11 @@
         </div>
     </section>
 
+  </div> <!-- space3 -->
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   </div> <!-- content -->
 
@@ -243,6 +250,33 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+    <!-- codigo de boton to top -->
+<script>
+  //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+
+
 
 
 </body>
