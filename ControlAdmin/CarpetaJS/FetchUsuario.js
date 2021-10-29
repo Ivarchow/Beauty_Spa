@@ -12,9 +12,6 @@ function cargarUsuarios(){
                     <td>${usuario.cel}</td>
                     <td>${usuario.email}</td>
                     <td>${usuario.cumple}</td>
-                    <td>${usuario.servicio}</td>
-                    <td>${usuario.hora}</td>
-                    <td>${usuario.reservado}</td>
                 `;
                 tabla.appendChild(row);                
             });
@@ -24,4 +21,9 @@ function cargarUsuarios(){
 
 cargarUsuarios();
 
+
+/*                    <td>${usuario.servicio}</td>
+                    <td>${usuario.hora}</td>
+                    <td>${usuario.reservado}</td>
+                    */
 
