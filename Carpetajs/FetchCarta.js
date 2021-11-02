@@ -474,62 +474,90 @@ const dateAndTimeSelect = e => {
     let reservarServicio = document.querySelectorAll('.almacenar');
     let fechaDeReservacion = document.querySelectorAll('.selectfecha');
     let horaDeReservacion = document.querySelectorAll('.selecthora');
+    let diaReservado =0;
 
     for (let varCtlrBtnResrvar = 0; varCtlrBtnResrvar < reservarServicio.length; varCtlrBtnResrvar++){
-        reservarServicio[varCtlrBtnResrvar].addEventListener('click', e=>{
+        reservarServicio[varCtlrBtnResrvar].addEventListener('click', b=>{
 
-            alert("btnReservar");
-            console.log(fechaDeReservacion[varCtlrBtnResrvar].value,horaDeReservacion[varCtlrBtnResrvar].value);
-            verificarReserva(fechaDeReservacion[varCtlrBtnResrvar].value,horaDeReservacion[varCtlrBtnResrvar].value);
-
-
-
-
-            // let formReservar = {
-            //     selectfecha: reservarServicio1[i].value,
-            //     selecthora: reservarServicio2[i].value
-            // }
-            // localStorage.setItem('formReservar',JSON.stringify(formReservar));
-            // console.log(localStorage.getItem('formReservar'));
+            diaReservado = Date.parse(fechaDeReservacion[varCtlrBtnResrvar].value);
+            verificarReserva(diaReservado+21600000,horaDeReservacion[varCtlrBtnResrvar].value);
             
-            // e.preventDefault();
+             b.preventDefault();
         } )
     }
-
-        // let formReservar = {
-        //   selectfecha: document.getElementsByClassName('selectfecha').value,        
-        //   selecthora: document.getElementsByClassName('selecthora').value
-        // }
-        // localStorage.setItem('formReservar',JSON.stringify(formReservar));
-
-        // console.log(localStorage.getItem('formReservar'));
-
         e.preventDefault();
     }
 
 
 function verificarReserva(fechaDeReservacion,horaDeReservacion){
+
+        let banderaAviso = false;
+        let time =  new Date();
+        let diaDehoy = Date.parse(time.toDateString());
+        let revervacionDB=0;
         
         fetch("http://localhost:8080/ApiRest/Order")
         .then(response => response.json())
         .then(Reservacion =>{
-            Reservacion.forEach(Reservacion=>{
-                if(Reservacion.orden_date==(fechaDeReservacion+" 00:00:00") && Reservacion.hora_reserva==horaDeReservacion ){
-                    alert("son iguales");
 
-                }else{
-                    agregarReserva();
+            if(fechaDeReservacion>=diaDehoy){
+                alert("fecha valida");
+                Reservacion.forEach(Reservacion=>{
+                revervacionDB = Date.parse(Reservacion.fecha_reserva);
+
+                console.log("atributo bd",revervacionDB);
+                console.log("fecha de formulario",fechaDeReservacion);
+                
+                console.log("atributo bd",Reservacion.hora_reserva);
+                console.log("hr de formulario",horaDeReservacion);
+
+                if(revervacionDB == fechaDeReservacion && Reservacion.hora_reserva == horaDeReservacion ){
+                    banderaAviso = true;
                 }
             });
+        }else{
+            alert("fecha invalida");
+        }
+        console.log("estado de la bandera", banderaAviso);
+
+        if (banderaAviso==false){
+            alert("Reservación exitosa");
+            reservacionexitosa(fechaDeReservacion,horaDeReservacion);
+            
+        }else if(banderaAviso==true){
+            alert("la fecha ya esta reservada");
+        }
         })
         .catch(err => console.log(err));
 }
 
 
-function agregarReserva(arrCarritoProductos){
+function reservacionexitosa(fecha,hora){
+
+    let arrIdsCarrito = localStorage.getItem("serviciosReservados");
+    arrIdsCarrito = JSON.parse(arrIdsCarrito);
+    console.log(arrIdsCarrito);
+    let nuevafecha = new Date(fecha);
+    console.log(nuevafecha);
+    
+    let nuevaReserva = new Object();
+
+    nuevaReserva.orden_id = 2;
+    nuevaReserva.orden_date = "2021-11-01 00:00:00";
+    nuevaReserva.fecha_reserva = nuevafecha;
+    nuevaReserva.hora_reserva = hora;
+    nuevaReserva.cliente = 2;
+    nuevaReserva.product = 1;
+    console.log(nuevaReserva);
+    agregarReserva(nuevaReserva);
+    
+
+}
+
+function agregarReserva(nuevaReservacion){
         fetch("http://localhost:8080/ApiRest/Order", {
             method: 'POST', // or 'PUT'
-            body: JSON.stringify(arrCarritoProductos), // data can be `string` or {object}!
+            body: JSON.stringify(nuevaReservacion), // data can be `string` or {object}!
             headers:{
               'Content-Type': 'application/json'
             }
@@ -537,40 +565,7 @@ function agregarReserva(arrCarritoProductos){
           .catch(error => console.error('Error:', error))
           .then(response => console.log('Success:', response));
 }
-var nuevaReserva = Object();
-
-nuevaReserva.orden_id=7;
-nuevaReserva.orden_date=7;
-nuevaReserva.fecha_reserva=7;
-nuevaReserva.hora_reserva=7;
-nuevaReserva.cliente_id.cliente_id=1;
 
 
 
-// {
-//     "orden_id": 6,
-//     "orden_date": "2021-10-29 00:00:00",
-//     "fecha_reserva": "2021-10-29",
-//     "hora_reserva": "9:00",
-//     "cliente_id": {
-//         "cliente_id": 1,
-//         "cel": "3222638841",
-//         "nombre": "Candy Pacheco",
-//         "email": "Candy4@gmail.com",
-//         "contraseña": "sdverwetgerfq",
-//         "cumple": "15/08/1998",
-//         "genero": "M",
-//         "foto_perfil": " ",
-//         "fecha_registro": "2021-10-27 00:00:00"
-//     },
-//     "id": {
-//         "id": 1,
-//         "titulo": "RETIRO DE GELISH DE FÁCIL REMOCIÓN",
-//         "duracion": "15",
-//         "precio": "40",
-//         "img": " /images/Servicios/Nails1.jpeg",
-//         "carrito": "0",
-//         "descripcion": "Cuidamos de tu uña natural y retiramos adecuadamente el gelish anterior!",
-//         "categoria": "nails"
-//     }
-// }
+
